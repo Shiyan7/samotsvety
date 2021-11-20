@@ -1,1 +1,7 @@
-/* @include font-face(Roboto, Roboto-Regular, 400); */
+
+@include font-face(TTCommons, TTCommons-Light, 300);
+@include font-face(TTCommons, TTCommons-Regular, 400);
+@include font-face(TTCommons, TTCommons-Medium, 500);
+@include font-face(TTCommons, TTCommons-Bold, 700);
+@include font-face(HeliosExt, HeliosExt-Regular, 400);
+@include font-face(HeliosExt, HeliosExt-Bold, 700);

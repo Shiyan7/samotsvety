@@ -1,4 +1,50 @@
 header.header 
     .container.header__container
-        +burger
+        .header__top
+            a.header__location(href="#")
+                +icon("location")
+                |САНКТ-ПЕТЕРБУРГ
+            ul.header-menu.list-reset
+                li.header-menu__item
+                    a.header-menu__link(href="#") Императорский ювелирный дом
+                li.header-menu__item
+                    a.header-menu__link(href="#") ДОСТАВКА И ОПЛАТА
+                li.header-menu__item
+                    a.header-menu__link(href="#") МАГАЗИНЫ
+        .header__bottom
+            .tell.header__tell
+                a.tell__value(href="tel:88005553298") 8 (800) 555-32-98
+                span.tell__desc Пн-Пт 10:00-20:00, Сб, Вс до 17:00
+            a.logo.header__logo(href="/")
+                img(src="img/logo.png", alt="Russkiye samotsvety")
+            ul.shop-nav.list-reset
+                li.shop-nav__item
+                    a.shop-nav__link(href="#")
+                        +icon("favorite-icon")
+                        span.shop-nav__quantity 2
+                li.shop-nav__item
+                    a.shop-nav__link(href="#")
+                        +icon("cart-icon")
+                        span.shop-nav__quantity 13
+                li.shop-nav__item
+                    a.shop-nav__link(href="#")
+                        +icon("cabinet-icon")
+                        span.shop-nav__quantity Войти
+        nav.nav
+            ul.nav__list.list-reset
+                li.nav__item
+                    a.nav__link(href="#") УКРАШЕНИЯ
+                li.nav__item
+                    a.nav__link(href="#") ДОМ&АКСЕССУАРЫ
+                li.nav__item
+                    a.nav__link(href="#") ПОМОЛОВКА
+                li.nav__item
+                    a.nav__link(href="#") ВЫСОКОЕ ЮВЕЛИРНОЕ ИСКУССТВО
+                li.nav__item
+                    a.nav__link.nav__link--gray(href="#") КОЛЛЕКЦИЯ
+                li.nav__item.nav__item--sep
+                    a.nav__link.nav__link--gray(href="#") АКЦИИ
+                li.nav__item
+                    a.nav__link(href="#")
+                        +icon("search-icon") 
         //button.btn-reset.modal-btn(data-graph-animation="custom" data-graph-path="first" data-graph-speed="500") Открыть окно

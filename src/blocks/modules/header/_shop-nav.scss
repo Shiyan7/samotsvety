@@ -1,0 +1,29 @@
+.shop-nav {
+    display: flex;
+    align-items: center;
+    font-family: "HeliosExt", sans-serif;
+    &__item {
+        &:not(:last-child) {
+            margin-right: 18px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 10px;
+        color: #000;
+        svg {
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+        }
+    }
+
+    &__quantity {
+        min-width: 18px;
+    }
+}
