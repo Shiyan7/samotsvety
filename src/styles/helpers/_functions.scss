@@ -1,0 +1,12 @@
+@function rem($px) {
+    @return ($px / 16) +rem;
+}
+@function vw($value, $base: $screen-width) {
+	@return $value / $base * 100vw;
+}
+@function vh($value, $base: $screen-height) {
+	@return $value / $base * 100vh;
+}
+@function vmin($value, $base: 320) {
+	@return $value / $base * 100vmin;
+}
