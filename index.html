@@ -41,7 +41,7 @@
           </div>
           <div class="header__middle">
             <ul class="header-actions list-reset">
-              <li class="header-actions__item"><a class="header-actions__link" href="#">
+              <li class="header-actions__item"><a class="header-actions__link" href="tel:88005553298">
                   <svg class="svg-icon tel">
                     <use xlink:href="./img/sprites/sprite.svg#tel"></use>
                   </svg></a></li>
@@ -110,7 +110,44 @@
           <!--button.btn-reset.modal-btn(data-graph-animation="custom" data-graph-path="first" data-graph-speed="500") Открыть окно-->
         </div>
       </header>
-      <main class="main"></main>
+      <main class="main">
+        <section class="hero">
+          <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hero-slide hero-slide--1">
+                  <div class="container hero-slide__container">
+                    <h1 class="g-title g-title--big hero__title">Заголовок</h1>
+                    <h2 class="g-title hero__subtitle">тригер - дополнительный текст</h2>
+                    <p class="hero__desc">наборный шрифт</p><a class="g-btn g-btn--black hero__link" href="#">Смотреть</a>
+                    <spam class="hero__caption">* Примечания, сноски</spam>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero-slide hero-slide--2">
+                  <div class="container hero-slide__container">
+                    <h1 class="g-title g-title--big g-title--white hero__title">Заголовок</h1>
+                    <h2 class="g-title hero__subtitle hero__subtitle--white">тригер - дополнительный текст</h2>
+                    <p class="hero__desc hero__desc--white">наборный шрифт</p><a class="g-btn hero__link g-btn--white" href="#">Смотреть</a>
+                    <spam class="hero__caption">* Примечания, сноски</spam>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn-reset g-slider-btn g-slider-btn--prev hero-slider__btn hero-slider__btn--prev">
+              <svg class="svg-icon arrow">
+                <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="btn-reset g-slider-btn g-slider-btn--next hero-slider__btn hero-slider__btn--next">
+              <svg class="svg-icon arrow">
+                <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </section>
+      </main>
       <footer class="footer"></footer>
       <!--include ../blocks/modules/modal/modal-->
     </div>
