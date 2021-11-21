@@ -12,10 +12,7 @@ body {
     font-family: "TTCommons", sans-serif;
     font-weight: 300;
     font-size: 12px;
-}
-
-input::-ms-clear {
-    display: none;
+    min-height: 100vh;
 }
 
 button::-moz-focus-inner {
@@ -37,6 +34,7 @@ img {
 
 .site-container {
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .list-reset {

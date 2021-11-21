@@ -6,13 +6,10 @@ mixin icon(name,mod)
     svg(class="svg-icon " + name)
       use(xlink:href="./img/sprites/sprite.svg#" + name)
 
-mixin burger(aria)
-  button.btn-reset.burger(aria-label=aria)
-    span.burger__line
-
-mixin nav(arr)
-  nav.nav
-    ul.nav__list.list-reset
-      each item in arr
-        li.nav__item
-          a.nav__link(href=item.link)= item.value
+mixin burger
+  button.btn-reset.menu-btn(aria-label="Кпопка бургер")
+    span.menu-btn__line
+    span.menu-btn__line
+    span.menu-btn__line
+    span.menu-btn__line
+    span.menu-btn__close

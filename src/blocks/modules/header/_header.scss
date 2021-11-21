@@ -1,8 +1,14 @@
 .header {
     font-family: "HeliosExt", sans-serif;
+    @media (max-width: 1024px) {
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
     &__container {
         padding-top: 5px;
         padding-bottom: 18px;
+        @media (max-width: 1024px) {
+            padding: 4px 20px;
+        }
     }
 
     &__top {
@@ -12,6 +18,10 @@
         padding-bottom: 6px;
         border-bottom: 1px solid rgba(217, 217, 217, 0.5);
         margin-bottom: 11px;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
 
     &__location {
@@ -27,8 +37,8 @@
         }
         svg {
             display: block;
-            width: 11px;
-            height: 15px;
+            width: 18px;
+            height: 18px;
             margin-right: 5px;
             object-fit: cover;
             fill: currentColor;
@@ -57,11 +67,98 @@
         }
     }
 
-    &__bottom {
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__middle {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 25px;
+        @media (max-width: 1024px) {
+            flex-direction: row-reverse;
+            position: relative;
+            margin-bottom: 0;
+            height: 68px;
+        }
+
+        @media (max-width: 576px) {
+            height: 57px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__search-form {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__shop-nav {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        @media (max-width: 1024px) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 171px;
+            height: 56px;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 576px) {
+            width: 137px;
+            height: 45px;
+        }
+    }
+    
+    &__tell {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &-actions {
+        display: none;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+            display: flex;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 20px;
+
+                @media (max-width: 576px) {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &__link {
+            svg {
+                display: block;
+                width: 30px;
+                height: 30px;
+
+                @media (max-width: 576px) {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
     }
 }
 
@@ -76,9 +173,10 @@
     &__desc {
         display: block;
         font-family: "TTCommons", sans-serif;
-        font-size: 12px;
-        line-height: 17px;
-        color: #111;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba(#000, 0.5);
     }
 }
 

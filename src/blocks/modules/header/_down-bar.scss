@@ -1,0 +1,58 @@
+.down-bar {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-family: "TTCommons", sans-serif;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+
+    @media (max-width: 1024px) {
+        display: flex;
+    }
+
+    &__item {
+        position: static;
+        width: 25%;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        line-height: 19px;
+        color: #111;
+        width: 100%;
+        padding: 8px 0 10px;
+        font-weight: 400;
+
+        svg {
+            display: block;
+            width: 26px;
+            height: 26px;
+            margin-bottom: 2px;
+            fill: transparent;
+        }
+
+        span {
+            margin-right: 0;
+        }
+    }
+
+    &__form {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        box-shadow: none;
+        z-index: 10;
+        padding: 0 20px;
+        .search-form__input {
+            width: 100%;
+        }
+    }
+}
