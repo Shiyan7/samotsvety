@@ -1,0 +1,30 @@
+.g-btn {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "HeliosExt", sans-serif;
+    font-weight: 400;
+    border: 1px solid transparent;
+    padding: 14px 81px 13px 82px;
+    background-color: #111;
+    transition: border 0.3s, color 0.3s, background-color 0.3s;
+
+    &--black {
+        &:hover {
+            border: 1px solid #111;
+            color: #111;
+            background-color: #fff;
+        }
+    }
+
+    &--white {
+        background-color: #fff;
+        color: #a39d94;
+        /* &:hover {
+            border: 1px solid currentColor;
+            background-color: transparent;
+        } */
+    }
+}

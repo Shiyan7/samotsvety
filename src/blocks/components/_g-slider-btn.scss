@@ -1,0 +1,32 @@
+.g-slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    transition: background-color 0.3s;
+
+    @media (min-width: 1025px) {
+        &:hover {
+            background-color: #111;
+    
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+
+    svg {
+        display: block;
+        width: 11px;
+        height: 20px;
+        fill: #111;
+        transition: fill 0.3s;
+    }
+
+    &--next {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}

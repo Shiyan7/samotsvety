@@ -1,6 +1,5 @@
 .menu-btn {
     display: none;
-    cursor: pointer;
     position: relative;
     z-index: 101;
 
@@ -14,8 +13,8 @@
     width: 22px;
     height: 1px;
     margin-bottom: 3px;
-    background-color: #000;
-    transition: transform 0.3s ease-in-out;
+    background-color: #111;
+    transition: transform 0.1s ease-in-out;
     transform-origin: left;
 
     &:nth-child(4) {
@@ -27,46 +26,45 @@
 @for $i from 1 through 4 {
     .menu-btn__line {
         &:nth-child(#{$i}) {
-            transition-delay: 0.4s + 0.15s * $i;
+            transition-delay: 0.2s + 0.15s * $i;
         }
     }
 }
 
 .menu-btn__close {
     display: block;
-    width: 20px;
-    height: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 20px;
+    height: 20px;
     transform: rotate(-45deg) translateX(-50%) translateY(-50%);
     transform-origin: top left;
 
-    &::before,
-    &::after {
-        content: '';
+    &:before, &:after {
+        content: "";
         display: block;
-        background-color: #000;
+        background-color: #111;
         position: absolute;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.1s ease-in-out;
     }
 
-    &::before {
-        width: 1px;
-        height: 20px;
+    &:before {
         top: 0;
         left: 50%;
+        width: 1px;
+        height: 20px;
         margin-left: -0.5px;
         transition-delay: 0.15s;
         transform: scaleY(0);
         transform-origin: top;
     }
 
-    &::after {
-        width: 20px;
-        height: 1px;
+    &:after {
         top: 50%;
         left: 0;
+        width: 20px;
+        height: 1px;
         margin-top: -0.5px;
         transition-delay: 0;
         transform: scaleX(0);
