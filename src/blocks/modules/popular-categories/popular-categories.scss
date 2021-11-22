@@ -1,11 +1,47 @@
 .popular-categories {
 
     &__container {
-
+        padding-bottom: 88px;
     }
 
     &__title {
-        margin-bottom: 67px;
+        margin-bottom: 56px;
     }
 
+    &__links {
+        margin-bottom: 15px;
+    }
+
+    &__list {
+        display: grid;
+        column-gap: 12px;
+        row-gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 63px;
+    }
+}
+
+.popular-category {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &--big {
+        grid-column: 2 span;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        max-height: 464px;
+        object-fit: cover;
+        margin-bottom: 31px;
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 13px;
+    }
 }
