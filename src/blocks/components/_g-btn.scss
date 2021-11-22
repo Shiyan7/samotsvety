@@ -43,4 +43,14 @@
         display: block;
         margin: 0 auto;
     }
+
+    &--light {
+        color: #fff;
+        background-color: #a39d94;
+
+        &:hover {
+            color: #a39d94;
+            background-color: #fff;
+        }
+    }
 }
