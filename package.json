@@ -73,6 +73,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.0.2",
+        "choices.js": "^9.0.1",
         "imask": "^6.0.7",
         "picturefill": "^3.0.3",
         "smart-grid": "^2.1.2",
