@@ -1,8 +1,8 @@
-import Swiper, { EffectFade, Navigation } from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const heroSlider = new Swiper('.hero-slider', {
-        modules: [EffectFade, Navigation],
+    new Swiper('.hero-slider', {
+        modules: [Navigation],
         navigation: {
             nextEl: '.hero-slider__btn--next',
             prevEl: '.hero-slider__btn--prev',

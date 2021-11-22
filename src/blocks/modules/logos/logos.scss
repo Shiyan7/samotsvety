@@ -1,0 +1,15 @@
+.logos {
+    &__container {
+        padding-top: 98px;
+        padding-bottom: 71px;
+    }
+
+    &__item {
+        width: auto;
+        svg {
+            display: block;
+            width: 580px;
+            height: 83px;
+        }
+    }
+}

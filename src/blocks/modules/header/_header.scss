@@ -3,11 +3,11 @@
     font-family: "HeliosExt", sans-serif;
     z-index: 70;
     @media (max-width: 1024px) {
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     &__container {
         padding-top: 5px;
-        padding-bottom: 15px;
+        padding-bottom: 17px;
         @media (max-width: 1024px) {
             padding: 4px 20px;
         }
@@ -114,14 +114,16 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 171px;
-            height: 56px;
             transform: translate(-50%, -50%);
         }
 
-        @media (max-width: 576px) {
-            width: 137px;
-            height: 45px;
+        svg {
+            width: 171px;
+            height: 56px;
+            @media (max-width: 576px) {
+                width: 137px;
+                height: 45px;
+            }
         }
     }
     
@@ -184,7 +186,7 @@
     }
 }
 
-.logo {
+.logo svg {
     display: block;
     width: 210px;
     height: 70px;

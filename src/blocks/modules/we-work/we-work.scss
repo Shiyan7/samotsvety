@@ -1,0 +1,62 @@
+.we-work {
+    &__container {
+        padding-bottom: 88px;
+        max-width: 1178px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        svg {
+            display: block;
+            margin: 0 auto 13px;
+        }
+    }
+
+    &__caption {
+        max-width: 185px;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 11px;
+        color: #111;
+    }
+
+    &__desc {
+        max-width: 236px;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        color: rgba(#000, 0.5);
+        text-align: center;
+    }
+
+    &-1 {
+        width: 87px;
+        height: 76px;
+    }
+
+    &-2 {
+        width: 102px;
+        height: 70px;
+    }
+
+    &-3 {
+        width: 97px;
+        height: 72px;
+    }
+
+    &-4 {
+        width: 80px;
+        height: 82px;
+    }
+
+    &-5 {
+        width: 94px;
+        height: 65px;
+    }
+}
