@@ -1,0 +1,140 @@
+.footer {
+    &__container {
+        padding-top: 67px;
+        padding-bottom: 46px;
+        border-top: 1px solid #111;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 700;
+        margin-bottom: 21px;
+    }
+
+    &__left {
+        display: flex;
+    }
+
+    &__col {
+        &:not(:last-child) {
+            margin-right: 138px;
+        }
+    }
+
+    &-menu {
+
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 13px;
+            }
+            &--2 {
+                &:not(:last-child) {
+                    margin-bottom: 17px;
+                }
+            }
+        }
+
+        &__link {
+            font-size: 10px;
+            line-height: 10px;
+            text-transform: uppercase;
+            color: #111;
+            font-family: "HeliosExt", sans-serif;
+            transition: color 0.2s;
+
+            &--2 {
+                font-size: 12px;
+                line-height: 12px;
+                color: rgba(#000, 0.5);
+
+                &:hover {
+                    color: #111;
+                }
+            }
+        }
+    }
+
+    &__tell {
+        margin-bottom: 29px;
+        .tell__desc {
+            margin-bottom: 3px;
+        }
+        .tell__value {
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &-contacts {
+        &__desc {
+            font-size: 16px;
+            line-height: 16px;
+            color: #111;
+        }
+    }
+
+    &-social {
+        display: flex;
+        align-items: center;
+        margin-bottom: 26px;
+        padding-left: 3px;
+        &__title {
+            display: block;
+            margin-bottom: 11px;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+
+        &__link {
+            display: block;
+            width: 24px;
+            height: 24px;
+            &:hover {
+                svg {
+                    fill: rgba(#111, 0.5);
+                }
+            }
+
+            svg {
+                transition: fill 0.3s;
+                fill: rgba(#111, 0.7);
+            }
+        }
+    }
+
+    &__address {
+        display: block;
+        line-height: 23px;
+        margin-bottom: 12px;
+    }
+
+    &__copy {
+        display: block;
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 5px;
+        color: rgba(#000, 0.5);
+        font-weight: 400;
+    }
+
+    &__desc {
+        margin: 0;
+        max-width: 854px;
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 400;
+        color: rgba(#000, 0.5);
+    }
+}
