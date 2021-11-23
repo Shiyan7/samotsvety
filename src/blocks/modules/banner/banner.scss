@@ -1,16 +1,35 @@
 .banner {
     background-color: #56323f;
+    overflow: hidden;
     &__container {
         display: flex;
         justify-content: space-between;
         padding-top: 37px;
         max-width: 1260px;
+        @media (max-width: 1024px) {
+            padding-top: 55px;
+            padding-bottom: 55px;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        @media (max-width: 576px) {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
     }
 
     &-left {
         padding-top: 8px;
         padding-bottom: 23px;
         margin-right: 20px;
+        @media (max-width: 1024px) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin-right: 0;
+            padding: 0;
+        }
     }
 
     &__subtitle {
@@ -18,11 +37,33 @@
         line-height: 16px;
         max-width: 297px;
         margin-bottom: 10px;
+        @media (max-width: 1024px) {
+            margin: 0 auto 20px;
+            font-size: 14px;
+            line-height: 19px;
+            text-transform: initial;
+            font-weight: 300;
+            font-family: "TTCommons", sans-serif;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 14px;
+        }
     }
 
     &__title {
         max-width: 500px;
         margin-bottom: 13px;
+        order: -1;
+        @media (max-width: 1024px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 576px) {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 13px;
+        }
     }
 
     &__desc {
@@ -32,11 +73,17 @@
         font-size: 18px;
         line-height: 24px;
         color: #fff;
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
 
     &__link {
         padding: 14px 32.5px 13px 32.5px;
         margin-bottom: 29px;
+        @media (max-width: 1024px) {
+            margin-bottom: 0;
+        }
     }
 
     &__caption {
@@ -45,6 +92,9 @@
         font-size: 14px;
         color: #fff;
         line-height: 19px;
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
 
     &__image {
@@ -52,22 +102,41 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        width: 241px;
-        height: 387px;
+        width: 240px;
+        height: 394px;
         flex-shrink: 0;
         margin-right: 20px;
-        background-image: url("data:image/svg+xml,%3Csvg width='240' height='387' viewBox='0 0 240 387' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23 0.5H217C229.426 0.5 239.5 10.5736 239.5 23V393.5H0.5V23C0.5 10.5736 10.5736 0.5 23 0.5Z' stroke='%23C4C4C4'/%3E%3Crect x='102.5' y='14.5' width='35' height='4' rx='2' stroke='%23C4C4C4'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg width='240' height='394' viewBox='0 0 240 394' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23 0.5H217C229.426 0.5 239.5 10.5736 239.5 23V393.5H0.5V23C0.5 10.5736 10.5736 0.5 23 0.5Z' stroke='%23C4C4C4'/%3E%3Crect x='102.5' y='14.5' width='35' height='4' rx='2' stroke='%23C4C4C4'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-size: contain;
+        margin-bottom: -2px;
+        @media (max-width: 1024px) {
+            margin: 0;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 576px) {
+            width: 171px;
+            height: 280px;
+            margin-bottom: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg width='171' height='280' viewBox='0 0 171 280' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 23C0.5 10.5736 10.5736 0.5 23 0.5H147.558C159.985 0.5 170.058 10.5736 170.058 23V279.5H0.5V23Z' stroke='%23C4C4C4'/%3E%3Crect x='72.9873' y='10.4493' width='24.5838' height='2.5533' rx='1.27665' stroke='%23C4C4C4'/%3E%3C/svg%3E%0A");
+        }
         img {
             display: block;
-            width: 221px;
-            height: 357px;
+            width: 220px;
+            height: 364px;
+            margin-bottom: 1px;
+            @media (max-width: 576px) {
+                width: 157px;
+                height: 260px;
+            }
         }
     }
 
     &-right {
         padding-top: 16px;
+        @media (max-width: 1024px) {
+            display: none;
+        }
         &__title {
             font-size: 20px;
             line-height: 24px;

@@ -8,9 +8,20 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: 1024px) {
+            display: grid;
+            row-gap: 44px;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__item {
+        &:last-child {
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
         svg {
             display: block;
             margin: 0 auto 13px;
@@ -23,6 +34,12 @@
         line-height: 20px;
         margin-bottom: 11px;
         color: #111;
+
+        @media (max-width: 576px) {
+            font-size: 13px;
+            line-height: 19px;
+            margin-bottom: 9px;
+        }
     }
 
     &__desc {
@@ -33,6 +50,15 @@
         line-height: 20px;
         color: rgba(#000, 0.5);
         text-align: center;
+
+        @media (max-width: 1024px) {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 13px;
+            line-height: 16px;
+        }
     }
 
     &-1 {
