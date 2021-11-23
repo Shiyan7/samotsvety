@@ -17,6 +17,8 @@
     }
 
     &__item {
+        display: flex;
+        flex-direction: column;
         &:last-child {
             @media (max-width: 1024px) {
                 display: none;

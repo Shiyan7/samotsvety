@@ -4,10 +4,19 @@
     &__container {
         padding-top: 39px;
         padding-bottom: 32px;
+        @media (max-width: 576px) {
+            padding-top: 28px;
+        }
     }
 
     &__title {
         margin-bottom: 15px;
+        @media (max-width: 576px) {
+            margin-bottom: 12px;
+            font-size: 18px;
+            line-height: 22px;
+            max-width: 264px;
+        }
     }
 
     &__subtitle {
@@ -17,6 +26,12 @@
         font-size: 18px;
         font-weight: 300;
         margin-bottom: 17px;
+        @media (max-width: 576px) {
+            font-size: 14px;
+            line-height: 18px;
+            max-width: 264px;
+            margin: 0 auto 17px;
+        }
     }
 
     &-social {
@@ -25,9 +40,16 @@
         justify-content: center;
         margin-bottom: 36px;
 
+        @media (max-width: 1024px) {
+            margin-bottom: 20px;
+        }
+
         &__item {
             &:not(:last-child) {
                 margin-right: 32px;
+                @media (max-width: 1024px) {
+                    margin-right: 15px;
+                }
             }
         }
 
@@ -38,16 +60,28 @@
             opacity: 0.7;
             transition: opacity 0.3s;
 
-            &:hover {
+            @media (max-width: 1024px) {
+                width: 42px;
+                height: 42px;
                 opacity: 1;
-                svg {
-                    fill: #fff;
+            }
+
+            @media (min-width: 1025px) {
+                &:hover {
+                    opacity: 1;
+                    svg {
+                        fill: #fff;
+                    }
                 }
             }
 
             svg {
                 transition: fill 0.3s;
                 fill: rgba(#fff, 0.5);
+
+                @media (max-width: 1024px) {
+                    fill: #fff;
+                }
             }
         }
     }
@@ -60,6 +94,12 @@
         color: #fff;
         text-align: center;
         text-transform: uppercase;
+
+        @media (max-width: 576px) {
+            text-transform: initial;
+            font-size: 13px;
+            line-height: 17px;
+        }
 
         span {
             font-weight: 600;

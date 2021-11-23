@@ -1,0 +1,113 @@
+.collections-section {
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 95px;
+        max-width: 1366px;
+        @media (max-width: 768px) {
+            padding-bottom: 52px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 54px;
+        @media (max-width: 1024px) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    &-slider {
+        margin-bottom: 51px;
+        @media (max-width: 768px) {
+            max-width: calc(100% - 70px);
+            overflow: visible;
+            padding-left: 35px;
+            padding-right: 35px;
+            margin-bottom: 0;
+            .swiper-wrapper {
+                margin-bottom: 20px;
+            }
+        }
+        &__btn {
+            position: absolute;
+            top: 39.1%;
+            z-index: 1;
+            &--prev {
+                left: 20px;
+                @media (max-width: 768px) {
+                    left: -15px;
+                }
+            }
+
+            &--next {
+                right: 18px;
+                @media (max-width: 768px) {
+                    right: -15px;
+                }
+            }
+        }
+        &__scrollbar {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+    }
+
+    &__link {
+        padding: 14px 62px 13px 63px;
+        @media (max-width: 768px) {
+            padding: 14px 30px 13px;
+        }
+    }
+}
+
+.collection-item {
+    max-width: 421px;
+    width: 100%;
+    &__image {
+        display: block;
+        width: 100%;
+        max-height: 463px;
+        margin-bottom: 21px;
+
+        img {
+            display: block;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        display: block;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 8px;
+        @media (max-width: 768px) {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        text-align: center;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+}
