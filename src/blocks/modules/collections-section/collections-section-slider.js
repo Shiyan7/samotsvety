@@ -7,7 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     new Swiper('.collections-section-slider', {
         modules: [Navigation, Scrollbar],
         slidesPerView: 'auto',
-        spaceBetween: 12,
+        spaceBetween: 6,
+        breakpoints: {
+            769: {
+                spaceBetween: 12
+            }
+        },
         scrollbar: {
             el: '.collections-section-slider__scrollbar',
         },
