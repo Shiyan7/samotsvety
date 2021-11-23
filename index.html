@@ -119,8 +119,7 @@
                   <div class="container hero-slide__container">
                     <h1 class="g-title g-title--big hero__title">Заголовок</h1>
                     <h2 class="g-title hero__subtitle">тригер - дополнительный текст</h2>
-                    <p class="hero__desc">наборный шрифт</p><a class="g-btn g-btn--black hero__link" href="#">Смотреть</a>
-                    <spam class="hero__caption">* Примечания, сноски</spam>
+                    <p class="hero__desc">наборный шрифт</p><a class="g-btn g-btn--black hero__link" href="#">Смотреть</a><span class="hero__caption">* Примечания, сноски</span>
                   </div>
                 </div>
               </div>
@@ -129,8 +128,7 @@
                   <div class="container hero-slide__container">
                     <h1 class="g-title g-title--big g-title--white hero__title">Заголовок</h1>
                     <h2 class="g-title hero__subtitle hero__subtitle--white">тригер - дополнительный текст</h2>
-                    <p class="hero__desc hero__desc--white">наборный шрифт</p><a class="g-btn hero__link g-btn--white" href="#">Смотреть</a>
-                    <spam class="hero__caption">* Примечания, сноски</spam>
+                    <p class="hero__desc hero__desc--white">наборный шрифт</p><a class="g-btn hero__link g-btn--white" href="#">Смотреть</a><span class="hero__caption">* Примечания, сноски</span>
                   </div>
                 </div>
               </div>
@@ -215,7 +213,7 @@
         <section class="popular-categories">
           <div class="container popular-categories__container">
             <h2 class="g-title g-title--center popular-categories__title">ПОПУЛЯрНЫЕ КАТЕГОРИИ</h2>
-            <ul class="cat-links list-reset popular-categories__links">
+            <ul class="cat-links list-reset popular-categories__links" data-simplebar>
               <li class="cat-links__item"><a class="cat-links__link" href="#">Новинки</a></li>
               <li class="cat-links__item"><a class="cat-links__link" href="#">На свадьбу</a></li>
               <li class="cat-links__item"><a class="cat-links__link" href="#">Женские</a></li>
@@ -227,14 +225,31 @@
               <li class="cat-links__item"><a class="cat-links__link" href="#">Необычные</a></li>
               <li class="cat-links__item"><a class="cat-links__link" href="#">Ещё</a></li>
             </ul>
-            <ul class="popular-categories__list list-reset">
-              <li class="popular-category"><a class="popular-category__image" href="#"> <img src="img/popular-category-1.jpg" alt="Кольца"></a><a class="popular-category__title g-title g-title--center" href="#">КОЛЬЦА</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
-              <li class="popular-category"><a class="popular-category__image" href="#"> <img src="img/popular-category-2.jpg" alt="Кольца"></a><a class="popular-category__title g-title g-title--center" href="#">СЕРЬГИ</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
-              <li class="popular-category"><a class="popular-category__image" href="#"> <img src="img/popular-category-3.jpg" alt="Кольца"></a><a class="popular-category__title g-title g-title--center" href="#">ПОДВЕСКИ</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
-              <li class="popular-category"><a class="popular-category__image" href="#"> <img src="img/popular-category-4.jpg" alt="Кольца"></a><a class="popular-category__title g-title g-title--center" href="#">БРОШИ</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
-              <li class="popular-category popular-category--big"><a class="popular-category__image" href="#"> <img src="img/popular-category-5.jpg" alt="Кольца"></a><a class="popular-category__title g-title g-title--center" href="#">Колье</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
-            </ul>
-            <button class="btn-reset g-btn g-btn--stroke g-btn--center popular-categories__more">показать ещЁ</button>
+            <div class="swiper popular-categories-slider" data-mobile="false">
+              <ul class="swiper-wrapper popular-categories__list list-reset">
+                <li class="swiper-slide popular-category"><a class="popular-category__image" href="#"> <img src="img/popular-category-1.jpg" alt="Кольца"></a><a class="popular-category__title g-title g-title--center" href="#">КОЛЬЦА</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
+                <li class="swiper-slide popular-category"><a class="popular-category__image" href="#"> <img src="img/popular-category-2.jpg" alt="СЕРЬГИ"></a><a class="popular-category__title g-title g-title--center" href="#">СЕРЬГИ</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
+                <li class="swiper-slide popular-category"><a class="popular-category__image" href="#"> <img src="img/popular-category-3.jpg" alt="ПОДВЕСКИ"></a><a class="popular-category__title g-title g-title--center" href="#">ПОДВЕСКИ</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
+                <li class="swiper-slide popular-category"><a class="popular-category__image" href="#"> <img src="img/popular-category-4.jpg" alt="БРОШИ"></a><a class="popular-category__title g-title g-title--center" href="#">БРОШИ</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
+                <li class="swiper-slide popular-category popular-category--big"><a class="popular-category__image" href="#"> <img src="img/popular-category-5.jpg" alt="Колье"></a><a class="popular-category__title g-title g-title--center" href="#">Колье</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
+                <li class="swiper-slide popular-category popular-category--big popular-category--hidden"><a class="popular-category__image" href="#"> <img src="img/popular-category-6.jpg" alt="БРАСЛЕТЫ"></a><a class="popular-category__title g-title g-title--center" href="#">БРАСЛЕТЫ</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
+                <li class="swiper-slide popular-category popular-category--hidden"><a class="popular-category__image" href="#"> <img src="img/popular-category-7.jpg" alt="цепи"></a><a class="popular-category__title g-title g-title--center" href="#">цепи</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
+                <li class="swiper-slide popular-category popular-category--hidden"><a class="popular-category__image" href="#"> <img src="img/popular-category-8.jpg" alt="запонки"></a><a class="popular-category__title g-title g-title--center" href="#">запонки</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
+                <li class="swiper-slide popular-category popular-category--big popular-category--hidden"><a class="popular-category__image" href="#"> <img src="img/popular-category-9.jpg" alt="зажимы для галстука"></a><a class="popular-category__title g-title g-title--center" href="#">зажимы для галстука</a><a class="popular-category__link g-link" href="#">Посмотреть</a></li>
+              </ul>
+              <div class="swiper-scrollbar g-scrollbar popular-categories-slider__scrollbar"></div>
+              <button class="btn-reset g-slider-btn g-slider-btn--prev popular-categories-slider__btn popular-categories-slider__btn--prev">
+                <svg class="svg-icon arrow">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <button class="btn-reset g-slider-btn g-slider-btn--next popular-categories-slider__btn popular-categories-slider__btn--next">
+                <svg class="svg-icon arrow">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <button class="btn-reset g-btn g-btn--stroke g-btn--center popular-categories__more more-categories">показать ещё</button><a class="g-btn g-btn--stroke g-btn--center popular-categories__link" href="#">показать ещё</a>
           </div>
         </section>
         <section class="banner">
@@ -267,7 +282,7 @@
             </div>
           </div>
         </section>
-        <section class="logos">
+        <div class="logos">
           <div class="logos__container">
             <div class="swiper logos-slider">
               <div class="swiper-wrapper">
@@ -324,7 +339,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </div>
         <section class="we-work">
           <h2 class="visually-hidden">Как мы работаем</h2>
           <div class="container we-work__container">
