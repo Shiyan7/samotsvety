@@ -1,0 +1,13 @@
+.g-scrollbar {
+    height: 3px;
+    background-color: rgba(#000, 0.05);
+    max-width: 50%;
+    margin: 0 auto 27px;
+
+    .swiper-scrollbar-drag {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        background-color: rgba(#000, 0.5);
+    }
+}

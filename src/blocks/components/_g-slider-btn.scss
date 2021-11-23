@@ -6,13 +6,6 @@
     height: 44px;
     transition: background-color 0.3s;
 
-    &.swiper-button-disabled {
-        pointer-events: none;
-        svg {
-            fill: rgba(#000, 0.5);
-        }
-    }
-
     @media (min-width: 1025px) {
         &:hover {
             background-color: #111;

@@ -10,6 +10,7 @@
     &-left {
         padding-top: 8px;
         padding-bottom: 23px;
+        margin-right: 20px;
     }
 
     &__subtitle {
@@ -47,12 +48,14 @@
     }
 
     &__image {
+        margin-top: auto;
         display: flex;
         align-items: flex-end;
         justify-content: center;
         width: 241px;
         height: 387px;
         flex-shrink: 0;
+        margin-right: 20px;
         background-image: url("data:image/svg+xml,%3Csvg width='240' height='387' viewBox='0 0 240 387' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23 0.5H217C229.426 0.5 239.5 10.5736 239.5 23V393.5H0.5V23C0.5 10.5736 10.5736 0.5 23 0.5Z' stroke='%23C4C4C4'/%3E%3Crect x='102.5' y='14.5' width='35' height='4' rx='2' stroke='%23C4C4C4'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-size: contain;

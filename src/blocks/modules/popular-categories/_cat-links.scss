@@ -1,6 +1,12 @@
 .cat-links {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
+    .simplebar-content {
+        display: flex;
+        align-items: center;
+    }
     &__item {
         &:not(:last-child) {
             margin-right: 9.5px;
@@ -8,6 +14,7 @@
     }
 
     &__link {
+        white-space: nowrap;
         display: block;
         color: rgba(#000, 0.5);
         text-transform: uppercase;

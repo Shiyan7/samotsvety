@@ -1,7 +1,7 @@
 section.popular-categories
     .container.popular-categories__container
         h2.g-title.g-title--center.popular-categories__title ПОПУЛЯрНЫЕ КАТЕГОРИИ
-        ul.cat-links.list-reset.popular-categories__links
+        ul.cat-links.list-reset.popular-categories__links(data-simplebar)
             li.cat-links__item
                 a.cat-links__link(href="#") Новинки
             li.cat-links__item
@@ -22,30 +22,59 @@ section.popular-categories
                 a.cat-links__link(href="#") Необычные
             li.cat-links__item
                 a.cat-links__link(href="#") Ещё
-        ul.popular-categories__list.list-reset
-            li.popular-category
-                a.popular-category__image(href="#") 
-                    img(src="img/popular-category-1.jpg", alt="Кольца")
-                a.popular-category__title.g-title.g-title--center(href="#") КОЛЬЦА
-                a.popular-category__link.g-link(href="#") Посмотреть
-            li.popular-category
-                a.popular-category__image(href="#") 
-                    img(src="img/popular-category-2.jpg", alt="Кольца")
-                a.popular-category__title.g-title.g-title--center(href="#") СЕРЬГИ
-                a.popular-category__link.g-link(href="#") Посмотреть
-            li.popular-category
-                a.popular-category__image(href="#") 
-                    img(src="img/popular-category-3.jpg", alt="Кольца")
-                a.popular-category__title.g-title.g-title--center(href="#") ПОДВЕСКИ
-                a.popular-category__link.g-link(href="#") Посмотреть
-            li.popular-category
-                a.popular-category__image(href="#") 
-                    img(src="img/popular-category-4.jpg", alt="Кольца")
-                a.popular-category__title.g-title.g-title--center(href="#") БРОШИ
-                a.popular-category__link.g-link(href="#") Посмотреть
-            li.popular-category.popular-category--big
-                a.popular-category__image(href="#") 
-                    img(src="img/popular-category-5.jpg", alt="Кольца")
-                a.popular-category__title.g-title.g-title--center(href="#") Колье
-                a.popular-category__link.g-link(href="#") Посмотреть
-        button.btn-reset.g-btn.g-btn--stroke.g-btn--center.popular-categories__more показать ещЁ
+        .swiper.popular-categories-slider(data-mobile="false")
+            ul.swiper-wrapper.popular-categories__list.list-reset
+                li.swiper-slide.popular-category
+                    a.popular-category__image(href="#") 
+                        img(src="img/popular-category-1.jpg", alt="Кольца")
+                    a.popular-category__title.g-title.g-title--center(href="#") КОЛЬЦА
+                    a.popular-category__link.g-link(href="#") Посмотреть
+                li.swiper-slide.popular-category
+                    a.popular-category__image(href="#") 
+                        img(src="img/popular-category-2.jpg", alt="СЕРЬГИ")
+                    a.popular-category__title.g-title.g-title--center(href="#") СЕРЬГИ
+                    a.popular-category__link.g-link(href="#") Посмотреть
+                li.swiper-slide.popular-category
+                    a.popular-category__image(href="#") 
+                        img(src="img/popular-category-3.jpg", alt="ПОДВЕСКИ")
+                    a.popular-category__title.g-title.g-title--center(href="#") ПОДВЕСКИ
+                    a.popular-category__link.g-link(href="#") Посмотреть
+                li.swiper-slide.popular-category
+                    a.popular-category__image(href="#") 
+                        img(src="img/popular-category-4.jpg", alt="БРОШИ")
+                    a.popular-category__title.g-title.g-title--center(href="#") БРОШИ
+                    a.popular-category__link.g-link(href="#") Посмотреть
+                li.swiper-slide.popular-category.popular-category--big
+                    a.popular-category__image(href="#") 
+                        img(src="img/popular-category-5.jpg", alt="Колье")
+                    a.popular-category__title.g-title.g-title--center(href="#") Колье
+                    a.popular-category__link.g-link(href="#") Посмотреть
+
+
+                li.swiper-slide.popular-category.popular-category--big.popular-category--hidden
+                    a.popular-category__image(href="#") 
+                        img(src="img/popular-category-6.jpg", alt="БРАСЛЕТЫ")
+                    a.popular-category__title.g-title.g-title--center(href="#") БРАСЛЕТЫ
+                    a.popular-category__link.g-link(href="#") Посмотреть
+                li.swiper-slide.popular-category.popular-category--hidden
+                    a.popular-category__image(href="#") 
+                        img(src="img/popular-category-7.jpg", alt="цепи")
+                    a.popular-category__title.g-title.g-title--center(href="#") цепи
+                    a.popular-category__link.g-link(href="#") Посмотреть
+                li.swiper-slide.popular-category.popular-category--hidden
+                    a.popular-category__image(href="#") 
+                        img(src="img/popular-category-8.jpg", alt="запонки")
+                    a.popular-category__title.g-title.g-title--center(href="#") запонки
+                    a.popular-category__link.g-link(href="#") Посмотреть
+                li.swiper-slide.popular-category.popular-category--big.popular-category--hidden
+                    a.popular-category__image(href="#") 
+                        img(src="img/popular-category-9.jpg", alt="зажимы для галстука")
+                    a.popular-category__title.g-title.g-title--center(href="#") зажимы для галстука
+                    a.popular-category__link.g-link(href="#") Посмотреть
+            .swiper-scrollbar.g-scrollbar.popular-categories-slider__scrollbar
+            button.btn-reset.g-slider-btn.g-slider-btn--prev.popular-categories-slider__btn.popular-categories-slider__btn--prev
+                +icon("arrow")
+            button.btn-reset.g-slider-btn.g-slider-btn--next.popular-categories-slider__btn.popular-categories-slider__btn--next
+                +icon("arrow")
+        button.btn-reset.g-btn.g-btn--stroke.g-btn--center.popular-categories__more.more-categories показать ещё
+        a.g-btn.g-btn--stroke.g-btn--center.popular-categories__link(href="#") показать ещё
