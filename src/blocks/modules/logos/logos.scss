@@ -8,14 +8,6 @@
         }
     }
 
-    &-slider {
-        .swiper-wrapper {
-            @media (max-width: 768px) {
-                margin-left: 300px;
-            }
-        }
-    }
-
     &__item {
         width: auto;
         svg {

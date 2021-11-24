@@ -74,8 +74,11 @@
     "dependencies": {
         "bootstrap": "^5.0.2",
         "choices.js": "^9.0.1",
+        "gsap": "^3.8.0",
+        "imagesloaded": "^4.1.4",
         "imask": "^6.0.7",
         "picturefill": "^3.0.3",
+        "scrolltrigger": "^1.0.1",
         "simplebar": "^5.3.6",
         "smart-grid": "^2.1.2",
         "svg4everybody": "^2.1.9",
