@@ -382,10 +382,87 @@
             </ul>
           </div>
         </section>
-        <section class="collections-section">
+        <section class="collections-section g-tabs">
           <div class="container collections-section__container">
             <h2 class="g-title g-title--center collections-section__title">КОЛЛЕКЦИИ</h2>
-            <div class="swiper collections-section-slider">
+            <ul class="g-tabs__list list-reset collections-section__tabs">
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn g-tabs__btn--active" data-tabs-path="decorations">украшения</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn" data-tabs-path="high-magnification-art">высокое увелирное искуссткво</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn" data-tabs-path="engagement">помоловка</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn" data-tabs-path="house">дом</button>
+              </li>
+            </ul>
+            <div class="swiper collections-section-slider g-tabs__content g-tabs__content--active" data-tabs-target="decorations">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-3.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">МИНИ</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-3.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">МИНИ</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+              </div>
+              <div class="swiper-scrollbar g-scrollbar collections-section-slider__scrollbar"></div>
+              <button class="btn-reset g-slider-btn g-slider-btn--prev collections-section-slider__btn collections-section-slider__btn--prev">
+                <svg class="svg-icon arrow">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <button class="btn-reset g-slider-btn g-slider-btn--next collections-section-slider__btn collections-section-slider__btn--next">
+                <svg class="svg-icon arrow">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="swiper collections-section-slider g-tabs__content" data-tabs-target="high-magnification-art">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-3.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">МИНИ</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-3.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">МИНИ</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+              </div>
+              <div class="swiper-scrollbar g-scrollbar collections-section-slider__scrollbar"></div>
+              <button class="btn-reset g-slider-btn g-slider-btn--prev collections-section-slider__btn collections-section-slider__btn--prev">
+                <svg class="svg-icon arrow">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <button class="btn-reset g-slider-btn g-slider-btn--next collections-section-slider__btn collections-section-slider__btn--next">
+                <svg class="svg-icon arrow">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="swiper collections-section-slider g-tabs__content" data-tabs-target="engagement">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-3.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">МИНИ</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+                <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-3.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">МИНИ</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
+              </div>
+              <div class="swiper-scrollbar g-scrollbar collections-section-slider__scrollbar"></div>
+              <button class="btn-reset g-slider-btn g-slider-btn--prev collections-section-slider__btn collections-section-slider__btn--prev">
+                <svg class="svg-icon arrow">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <button class="btn-reset g-slider-btn g-slider-btn--next collections-section-slider__btn collections-section-slider__btn--next">
+                <svg class="svg-icon arrow">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="swiper collections-section-slider g-tabs__content" data-tabs-target="house">
               <div class="swiper-wrapper">
                 <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
                 <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
@@ -477,6 +554,10 @@
                 <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">услуги</a></li>
                 <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">блог</a></li>
                 <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">правила продажи</a></li>
+                <li class="footer-menu__item footer-menu__item--2 footer-menu__item--hidden"><a class="footer-menu__link footer-menu__link--2" href="#">о компании</a></li>
+                <li class="footer-menu__item footer-menu__item--2 footer-menu__item--hidden"><a class="footer-menu__link footer-menu__link--2" href="#">новости</a></li>
+                <li class="footer-menu__item footer-menu__item--2 footer-menu__item--hidden"><a class="footer-menu__link footer-menu__link--2" href="#">контакты</a></li>
+                <li class="footer-menu__item footer-menu__item--2 footer-menu__item--hidden"><a class="footer-menu__link footer-menu__link--2" href="#">Пользовательское соглашение</a></li>
               </ul>
             </div>
             <div class="footer__col">
@@ -488,25 +569,27 @@
               </ul>
             </div>
             <div class="footer-contacts">
-              <div class="tell footer__tell"><span class="tell__desc footer-contacts__desc">Звоните бесплатно по России</span><a class="tell__value" href="tel:88005553298">8 (800) 555-32-98</a><span class="tell__desc footer-contacts__desc">Пн-Пт 10:00-20:00, Сб,Вс 10:00-17:00</span><span class="tell__caption">31 декабря и 1 января с 12:00 до 18:00</span></div><span class="footer-contacts__desc footer-social__title">Наши сообщества</span>
-              <ul class="footer-social list-reset">
-                <li class="footer-social__item"><a class="footer-social__link" href="#">
-                    <svg class="svg-icon telegram">
-                      <use xlink:href="./img/sprites/sprite.svg#telegram"></use>
-                    </svg></a></li>
-                <li class="footer-social__item"><a class="footer-social__link" href="#">
-                    <svg class="svg-icon instagram">
-                      <use xlink:href="./img/sprites/sprite.svg#instagram"></use>
-                    </svg></a></li>
-                <li class="footer-social__item"><a class="footer-social__link" href="#">
-                    <svg class="svg-icon vk">
-                      <use xlink:href="./img/sprites/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="footer-social__item"><a class="footer-social__link" href="#">
-                    <svg class="svg-icon facebook">
-                      <use xlink:href="./img/sprites/sprite.svg#facebook"></use>
-                    </svg></a></li>
-              </ul><span class="footer-contacts__desc footer__address">Санкт-Петербург, пл. Фаберже, 8 <br> +7 (812) 448-65-88</span><a class="footer-contacts__desc" href="mailto:market@russam.ru">market@russam.ru</a>
+              <div class="tell footer__tell"><span class="tell__desc footer-contacts__desc">Звоните бесплатно по России</span><a class="tell__value" href="tel:88005553298">8 (800) 555-32-98</a><span class="tell__desc footer-contacts__desc">Пн-Пт 10:00-20:00, Сб,Вс 10:00-17:00</span><span class="tell__caption">31 декабря и 1 января с 12:00 до 18:00</span></div>
+              <div class="footer-social"><span class="footer-contacts__desc footer-social__title">Наши сообщества</span>
+                <ul class="footer-social__list list-reset">
+                  <li class="footer-social__item"><a class="footer-social__link" href="#">
+                      <svg class="svg-icon telegram">
+                        <use xlink:href="./img/sprites/sprite.svg#telegram"></use>
+                      </svg></a></li>
+                  <li class="footer-social__item"><a class="footer-social__link" href="#">
+                      <svg class="svg-icon instagram">
+                        <use xlink:href="./img/sprites/sprite.svg#instagram"></use>
+                      </svg></a></li>
+                  <li class="footer-social__item"><a class="footer-social__link" href="#">
+                      <svg class="svg-icon vk">
+                        <use xlink:href="./img/sprites/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="footer-social__item"><a class="footer-social__link" href="#">
+                      <svg class="svg-icon facebook">
+                        <use xlink:href="./img/sprites/sprite.svg#facebook"></use>
+                      </svg></a></li>
+                </ul>
+              </div><span class="footer-contacts__desc footer__address">Санкт-Петербург, пл. Фаберже, 8 <br> +7 (812) 448-65-88</span><a class="footer-contacts__desc" href="mailto:market@russam.ru">market@russam.ru</a>
             </div>
           </div><span class="footer__copy">2020 © Русские самоцветы</span>
           <p class="footer__desc">Предложение не является публичной офертой. Цены на сайте и в розничной сети могут отличаться. Информация на сайте о товаре носит рекламный характер и расценивается как приглашение делать оферты на основании п.1 ст. 437 Гражданского кодекса РФ.</p>
