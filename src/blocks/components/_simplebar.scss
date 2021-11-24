@@ -3,6 +3,9 @@
     overflow: visible;
     max-width: 50%;
     margin: 0 auto;
+    @media (min-width: 1250px) {
+        display: none;
+    }
     &:before {
         @include pseudo();
         position: absolute;
