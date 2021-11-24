@@ -1,10 +1,12 @@
+import { tabs } from "../../components/tabs";
 import Swiper, {
     Navigation,
     Scrollbar
 } from 'swiper';
 
 document.addEventListener("DOMContentLoaded", () => {
-    new Swiper('.collections-section-slider', {
+
+    const collectionsSlider = new Swiper(".collections-section-slider", {
         modules: [Navigation, Scrollbar],
         slidesPerView: 'auto',
         spaceBetween: 6,
@@ -21,4 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
             prevEl: '.collections-section-slider__btn--prev',
         },
     });
+
+    tabs();
 });

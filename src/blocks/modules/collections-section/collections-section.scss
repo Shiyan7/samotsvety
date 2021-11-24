@@ -28,7 +28,11 @@
     }
 
     &-slider {
+        display: none;
         margin-bottom: 51px;
+        &.g-tabs__content--active {
+            display: block;
+        }
         @media (max-width: 768px) {
             max-width: calc(100% - 70px);
             overflow: visible;
@@ -70,6 +74,14 @@
         padding: 14px 62px 13px 63px;
         @media (max-width: 768px) {
             padding: 14px 30px 13px;
+        }
+    }
+
+    &__tabs {
+        margin-bottom: 33px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
         }
     }
 }
