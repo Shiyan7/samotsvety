@@ -96,9 +96,11 @@
         margin-bottom: 21px;
         overflow: hidden;
 
-        &:hover {
-            img {
-                transform: scale(1.08, 1.08);
+        @media (min-width: 1025px) {
+            &:hover {
+                img {
+                    transform: scale(1.08, 1.08);
+                }
             }
         }
 

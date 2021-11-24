@@ -177,15 +177,12 @@
             line-height: 44px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             color: #111;
         }
 
         &--white {
             color: #fff;
-            @media (max-width: 768px) {
-                color: #111;
-            }
         }
 
         @media (max-width: 576px) {
