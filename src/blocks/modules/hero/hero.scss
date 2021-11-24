@@ -160,6 +160,13 @@
             color: #111;
         }
 
+        &--white {
+            color: #fff;
+            @media (max-width: 768px) {
+                color: #111;
+            }
+        }
+
         @media (max-width: 576px) {
             font-size: 20px;
             line-height: 23px;

@@ -1,3 +1,12 @@
+.simplebar-content-wrapper {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
 .simplebar-track {
     height: 3px !important;
     overflow: visible;

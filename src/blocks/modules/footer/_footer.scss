@@ -167,18 +167,54 @@
         }
     }
 
-    &__tell {
-        margin-bottom: 29px;
-        .tell__desc {
-            margin-bottom: 3px;
+    &__desc {
+        display: block;
+        max-width: 854px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 400;
+        color: rgba(#000, 0.5);
+
+        @media (max-width: 576px) {
+            text-align: center;
         }
-        .tell__value {
+    }
+
+    &__tel {
+        margin-bottom: 29px;
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+
+        &--2 {
+            font-weight: 300;
+            color: #111;
+            margin-bottom: 14px;
+
+            @media (max-width: 576px) {
+                margin-bottom: 0;
+            }
+        }
+
+        .tel__desc {
+            margin-bottom: 3px;
+            font-weight: 300;
+        }
+        .tel__value {
+            display: inline-block;
             font-size: 32px;
             line-height: 44px;
             margin-bottom: 10px;
+
+            @media (max-width: 576px) {
+                font-size: 20px;
+                line-height: 24px;
+            }
         }
 
-        .tell__caption {
+        .tel__caption {
             @media (max-width: 576px) {
                 padding: 10px 0 7px;
                 width: 100%;
@@ -188,13 +224,15 @@
 
     &-contacts {
         @media (max-width: 1024px) {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
             grid-column: 3 span;
             margin-top: 40px;
         }
 
         @media (max-width: 576px) {
-            display: flex;
-            flex-direction: column;
+            align-items: center;
             width: 100%;
             margin-top: 10px;
             text-align: center;
@@ -253,7 +291,8 @@
     &__address {
         display: block;
         line-height: 23px;
-        margin-bottom: 12px;
+        color: #111;
+        font-style: normal;
     }
 
     &__copy {
@@ -263,19 +302,6 @@
         margin-bottom: 5px;
         color: rgba(#000, 0.5);
         font-weight: 400;
-
-        @media (max-width: 576px) {
-            text-align: center;
-        }
-    }
-
-    &__desc {
-        max-width: 854px;
-        margin: 0;
-        font-size: 14px;
-        line-height: 19px;
-        font-weight: 400;
-        color: rgba(#000, 0.5);
 
         @media (max-width: 576px) {
             text-align: center;

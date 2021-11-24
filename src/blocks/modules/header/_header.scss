@@ -127,7 +127,7 @@
         }
     }
     
-    &__tell {
+    &__tel {
         @media (max-width: 1024px) {
             display: none;
         }
@@ -166,7 +166,7 @@
     }
 }
 
-.tell {
+.tel {
     font-family: "HeliosExt", sans-serif;
     &__value {
         display: block;
