@@ -1,6 +1,11 @@
 .hero {
 
     &-slider {
+        @media (max-width: 767px) {
+            padding-bottom: 24px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
         &__btn {
             position: absolute;
             top: 50%;
@@ -9,25 +14,30 @@
 
             @media (max-width: 767px) {
                 top: auto;
-                bottom: 110px;
+                bottom: 130px;
                 transform: none;
             }
 
             @media (max-width: 576px) {
-                bottom: 90px;
+                bottom: 130px;
                 width: 28px;
                 height: 28px;
+
+                svg {
+                    width: 8px;
+                    height: 14px;
+                }
             }
 
             &--prev {
                 left: 37px;
 
                 @media (max-width: 1024px) {
-                    left: 0;
+                    left: 10px;
                 }
 
-                @media (max-width: 576px) {
-                    left: 10px;
+                @media (max-width: 767px) {
+                    left: 20px;
                 }
             }
 
@@ -35,15 +45,23 @@
                 right: 37px;
 
                 @media (max-width: 1024px) {
-                    right: 0;
+                    right: 10px;
                 }
 
-                @media (max-width: 576px) {
-                    right: 10px;
+                @media (max-width: 767px) {
+                    right: 20px;
                 }
             }
 
 
+        }
+
+        &__pag {
+            display: none;
+
+            @media (max-width: 767px) {
+                display: flex;
+            }
         }
     }
 
@@ -57,8 +75,8 @@
         }
 
         @media (max-width: 1140px) {
-            padding-left: 60px;
-            padding-right: 60px;
+            padding-left: 80px;
+            padding-right: 80px;
         }
 
         @media (max-width: 1024px) {
@@ -83,6 +101,8 @@
                 text-align: center;
                 padding-top: 28px;
                 padding-bottom: 28px;
+                margin-bottom: 11px;
+                border-bottom: 1px solid #d9d9d9;
             }
         }
 
@@ -144,6 +164,7 @@
                 background-color: #fff;
                 display: flex;
                 flex-direction: column;
+                padding: 0;
             }
         }
     }

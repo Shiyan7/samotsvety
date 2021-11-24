@@ -9,7 +9,11 @@
         padding-top: 5px;
         padding-bottom: 17px;
         @media (max-width: 1024px) {
-            padding: 4px 20px;
+            padding: 10px 20px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 0 20px;
         }
     }
 
@@ -89,6 +93,10 @@
         @media (max-width: 576px) {
             height: 57px;
         }
+
+        @media (max-width: 360px) {
+            height: 48px;
+        }
     }
 
     &__bottom {
@@ -117,12 +125,17 @@
             transform: translate(-50%, -50%);
         }
 
-        svg {
+        img {
             width: 171px;
             height: 56px;
             @media (max-width: 576px) {
                 width: 137px;
                 height: 45px;
+            }
+
+            @media (max-width: 360px) {
+                width: 110px;
+                height: 36px;
             }
         }
     }
@@ -197,7 +210,7 @@
     }
 }
 
-.logo svg {
+.logo img {
     display: block;
     width: 210px;
     height: 70px;

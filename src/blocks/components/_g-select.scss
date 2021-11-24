@@ -3,8 +3,9 @@
     min-width: 240px;
 
     @media (max-width: 1440px) {
-        min-width: vw(260);
+        min-width: vw(240);
     }
+    
 
     &:after {
         display: none;
