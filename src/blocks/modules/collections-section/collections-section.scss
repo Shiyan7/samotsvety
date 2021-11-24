@@ -50,14 +50,14 @@
             &--prev {
                 left: 20px;
                 @media (max-width: 768px) {
-                    left: -15px;
+                    left: -10px;
                 }
             }
 
             &--next {
                 right: 18px;
                 @media (max-width: 768px) {
-                    right: -15px;
+                    right: -10px;
                 }
             }
         }
@@ -96,7 +96,7 @@
         margin-bottom: 21px;
 
         @media (max-width: 768px) {
-            height: 280px;
+            height: auto;
         }
 
         img {

@@ -15,7 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
             mySwiper = new Swiper(popularCategoriesSlider, {
                 slidesPerView: 'auto',
                 spaceBetween: 6,
+                centeredSlides: true,
                 modules: [Navigation, Scrollbar],
+                breakpoints: {
+                    577: {
+                        centeredSlides: false,
+                    },
+                },
                 scrollbar: {
                     el: '.popular-categories-slider__scrollbar',
                 },

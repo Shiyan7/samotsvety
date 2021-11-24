@@ -9,10 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const collectionsSlider = new Swiper(".collections-section-slider", {
         modules: [Navigation, Scrollbar],
         slidesPerView: 'auto',
+        centeredSlides: true,
         spaceBetween: 6,
         breakpoints: {
+            577: {
+                centeredSlides: false,
+            },
             769: {
-                spaceBetween: 12
+                spaceBetween: 12,
+                centeredSlides: false,
             }
         },
         scrollbar: {
