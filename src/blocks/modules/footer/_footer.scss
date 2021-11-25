@@ -191,10 +191,13 @@
         &--2 {
             font-weight: 300;
             color: #111;
+            font-size: 16px;
+            line-height: 13px;
             margin-bottom: 14px;
 
             @media (max-width: 576px) {
-                margin-bottom: 0;
+                margin-bottom: 8px;
+                font-size: 14px;
             }
         }
 
@@ -241,6 +244,10 @@
             font-size: 16px;
             line-height: 16px;
             color: #111;
+            
+            @media (max-width: 576px) {
+                font-size: 14px;
+            }
         }
     }
 
@@ -293,6 +300,7 @@
         line-height: 23px;
         color: #111;
         font-style: normal;
+        margin-bottom: 2px;
     }
 
     &__copy {

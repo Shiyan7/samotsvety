@@ -8,7 +8,7 @@ const showDemo = () => {
 
     gsap.utils.toArray('.logos').forEach((section, index) => {
         const w = section.querySelector('.logos-slider .swiper-wrapper');
-        const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
+        const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -0.2] : [w.scrollWidth * -0.2, 0];
         gsap.fromTo(w, {
             x
         }, {

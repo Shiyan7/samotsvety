@@ -1,0 +1,45 @@
+.g-breadcrumbs {
+
+    &__container {
+        padding-top: 36px;
+        padding-bottom: 22px;
+    }
+    
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        position: relative;
+        padding-right: 5px;
+        margin-right: 6px;
+
+        &:not(:last-child) {
+            &:after {
+                @include pseudo();
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                width: 0.4px;
+                height: 10px;
+                background-color: rgba(#000, 0.5);
+            }
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba(#000, 0.5);
+        transition: color 0.3s;
+        &:hover {
+            color: #111;
+        }
+        &:not([href]) {
+            color: #111;
+        }
+    }
+
+}

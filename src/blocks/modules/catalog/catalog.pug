@@ -1,0 +1,23 @@
+section.catalog
+    .container.g-breadcrumbs__container
+        ul.g-breadcrumbs__list.list-reset
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="/") Главная
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="#") Результаты поиска
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link Кольца
+    .container.catalog__container
+        h1.g-title.g-title--center.catalog__title Кольца
+        .catalog__content
+            .catalog__top
+                button.btn-reset.g-btn.g-btn--stroke.catalog-toggle.catalog-toggle--active
+                    svg.catalog-toggle__icon(width="24" height="24")
+                        use.catalog-toggle__icon-opened(xlink:href="./img/sprites/sprite.svg#open-filters")
+                        use.catalog-toggle__icon-closed(xlink:href="./img/sprites/sprite.svg#close-filters")
+                    |Фильтры
+                span.catalog__quantity 356 товаров
+            .catalog__left
+                |filter
+            .catalog__grid
+                |grid

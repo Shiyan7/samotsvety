@@ -2,7 +2,7 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "gulp-pug-starter"
+	- const title = "Главная"
 
 block content
 	.site-container 
@@ -18,7 +18,6 @@ block content
 			include ../blocks/modules/questions/questions
 			include ../blocks/modules/info/info
 		include ../blocks/modules/footer/footer
-		//include ../blocks/modules/modal/modal
 block scripts
 	script(src="js/main.js")
 	script(src="js/vendor.js")

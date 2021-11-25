@@ -1,3 +1,9 @@
 import SimpleBar from "simplebar";
 
-new SimpleBar(document.querySelector("[data-simplebar]"));
+const simplebars = document.querySelectorAll("[data-simplebar]");
+
+if(simplebars) {
+    simplebars.forEach(el => {
+        new SimpleBar(el);
+    })
+}
