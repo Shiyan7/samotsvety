@@ -12,3 +12,11 @@
         font-style: normal;
     }
 }
+
+@mixin hover {
+    @media (min-width: 1025px) {
+        &:hover {
+            @content;
+        }
+    }
+}

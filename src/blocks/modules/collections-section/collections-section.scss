@@ -30,6 +30,13 @@
     &-slider {
         display: none;
         margin-bottom: 51px;
+
+        @include hover {
+            .collections-section-slider__btn {
+                transform: translateX(0%);
+            }
+        }
+
         &.g-filters__content--active {
             display: block;
         }
@@ -47,8 +54,12 @@
             position: absolute;
             z-index: 1;
             top: 39.1%;
+            transition: transform 0.3s ease-in-out;
             &--prev {
                 left: 20px;
+                @media (min-width: 1025px) {
+                    transform: translateX(-200%);
+                }
                 @media (max-width: 768px) {
                     left: -10px;
                 }
@@ -56,6 +67,9 @@
 
             &--next {
                 right: 18px;
+                @media (min-width: 1025px) {
+                    transform: translateX(200%);
+                }
                 @media (max-width: 768px) {
                     right: -10px;
                 }
