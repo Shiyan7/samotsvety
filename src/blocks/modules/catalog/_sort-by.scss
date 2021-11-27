@@ -37,6 +37,10 @@
             visibility: visible;
         }
 
+        .sort-by__current:after {
+            transform: rotate(180deg);
+        }
+
         @media (max-width: 576px) {
             .sort-by__select {
                 opacity: 1;
@@ -84,6 +88,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            transition: transform 0.3s;
             background-image: url(../img/down.svg);
         }
     }

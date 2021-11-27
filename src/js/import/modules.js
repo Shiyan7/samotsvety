@@ -9,5 +9,6 @@ import "%modules%/footer/footer-menu";
 import "%modules%/catalog/filters-toggle";
 import "%modules%/catalog/sort-by";
 import "%modules%/catalog/catalog-filter-top";
+import "%modules%/catalog/catalog-filter-more";
 import "%modules%/catalog/range-slider";
 import "%modules%/catalog/product-slider";

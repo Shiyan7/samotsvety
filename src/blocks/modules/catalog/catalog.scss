@@ -128,8 +128,10 @@
             min-height: 41px;
             padding: 0;
 
-            &:hover {
-                border: 1px solid currentColor;
+            @include hover {
+                &:hover {
+                    border: 1px solid currentColor;
+                }
             }
 
             &:not(:last-child) {
@@ -250,6 +252,10 @@
             }
             &--inner {
                 margin-left: 16px;
+            }
+
+            &--hidden {
+                display: none;
             }
         }
 
@@ -395,6 +401,31 @@
             &--blue {
                 background-color: rgba(#82cffb, 0.7);
             }
+
+            &--purple {
+                background-color: rgba(#9521bf, 0.7);
+            }
+
+            &--black {
+                background-color: rgba(#000000, 0.7);
+            }
+
+            &--gray {
+                background-color: rgba(#5e5e5e, 0.7);
+            }
+
+            &--pink {
+                background-color: rgba(#ffaA96, 0.7);
+            }
+
+            &--orange {
+                background-color: rgba(#ff8635, 0.7);
+            }
+
+            &--brown {
+                background-color: rgba(#77411c, 0.7);
+            }
+
         }
     }
 
@@ -423,7 +454,7 @@
                 margin-right: 10px;
             }
 
-            &:hover {
+            @include hover {
                 svg {
                     fill: #000;
 
