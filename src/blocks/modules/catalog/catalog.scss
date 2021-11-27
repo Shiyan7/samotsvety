@@ -629,12 +629,12 @@
     margin-right: 47px;
 
     @media (max-width: 576px) {
+        justify-content: center;
+        width: 50%;
         margin-right: 0;
         border: none;
         border-right: 1px solid #d9d9d9;
         padding: 6px 0;
-        width: 50%;
-        justify-content: center;
     }
 
     &.isOpen {
@@ -658,6 +658,7 @@
     &__icon {
         fill: #111;
         margin-right: 10px;
+        transition: fill 0.3s;
 
         &-closed {
             display: none;
