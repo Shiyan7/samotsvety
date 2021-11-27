@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const choices = new Choices(el, {
                 itemSelectText: '',
                 shouldSort: false,
+                noResultsText: 'Не найдено'
             });
         });
     }

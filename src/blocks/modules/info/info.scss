@@ -27,7 +27,13 @@
         line-height: 24px;
         margin-bottom: 21px;
 
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
         &.active {
+            -webkit-line-clamp: initial;
             max-height: 400px;
             &:after {
                 opacity: 0;
@@ -60,21 +66,12 @@
             }
         }
     }
-
-    &__link {
-        @media (max-width: 576px) {
-            display: none;
-        }
-    }
-
     &__more {
-        display: none;
-        margin: 0 auto;
         font-size: 13px;
-        width: 100%;
         padding: 6px 0 6px;
         @media (max-width: 576px) {
-            display: block;
+            width: 100%;
+            margin: 0 auto;
         }
     }
 }

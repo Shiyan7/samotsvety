@@ -77,6 +77,7 @@
         "gsap": "^3.8.0",
         "imagesloaded": "^4.1.4",
         "imask": "^6.0.7",
+        "nouislider": "^15.5.0",
         "picturefill": "^3.0.3",
         "scrolltrigger": "^1.0.1",
         "simplebar": "^5.3.6",

@@ -1,6 +1,6 @@
 .we-work {
     &__container {
-        padding-bottom: 73px;
+        padding-bottom: 120px;
         max-width: 1178px;
     }
 
@@ -19,7 +19,7 @@
     &__item {
         display: flex;
         flex-direction: column;
-        &:last-child {
+        &:nth-child(5) {
             @media (max-width: 1024px) {
                 display: none;
             }

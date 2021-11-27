@@ -2,19 +2,45 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    .swiper-pagination-bullet {
-        width: 26px;
-        height: 1px;
-        display: flex;
-        align-items: center;
-        background-color: #d9d9d9;
-        transition: background-color 0.3s;
-        cursor: pointer;
-        &:not(:last-child) {
-            margin-right: 4px;
+
+    &__item {
+        margin: 0 9px;
+    }
+
+    &__link {
+        display: block;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(#000, 0.2);
+        transition: color 0.3s;
+
+        &:hover {
+            svg {
+                fill: #111;
+            }
         }
-        &-active {
-            background-color: rgba(#000, 0.5);
+
+        svg {
+            display: block;
+            width: 11px;
+            height: 20px;
+            fill: rgba(#000, 0.5);
+            transition: fill 0.3s;
+            flex-shrink: 0;
+        }
+
+        &:hover {
+            color: #111;
+        }
+
+        &--current {
+            color: #111;
+        }
+
+        &--next {
+            svg {
+                transform: rotate(180deg);
+            }
         }
     }
 }

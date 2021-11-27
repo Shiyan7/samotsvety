@@ -1,4 +1,4 @@
-import { tabs } from "../../components/tabs";
+import { filters } from "../../components/filters";
 import Swiper, {
     Navigation,
     Scrollbar
@@ -29,5 +29,5 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    tabs();
+    filters();
 });

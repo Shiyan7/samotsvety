@@ -1,0 +1,79 @@
+.sort-by {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    z-index: 10;
+
+    &.isOpen {
+        .sort-by__list {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__caption {
+        font-size: 12px;
+        line-height: 17px;
+        margin-right: 3px;
+        color: #111;
+        pointer-events: none;
+    }
+
+    &__current {
+        position: relative;
+        font-size: 12px;
+        line-height: 17px;
+        text-transform: uppercase;
+        padding-right: 28px;
+        font-weight: 500;
+        color: #111;
+        cursor: pointer;
+
+        
+
+        &:after {
+            @include pseudo();
+            position: absolute;
+            top: -10px;
+            right: 0;
+            width: 28px;
+            height: 28px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url(../img/down.svg);
+        }
+    }
+
+    &__select {
+        min-width: 126px;
+    }
+
+    &__list {
+        position: absolute;
+        border-top: 1px solid #d9d9d9;
+        top: calc(100% + 6px);
+        right: 0;
+        padding: 4px 0;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        filter: drop-shadow(0 2px 5px rgba(#000, 0.1));
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    &__item {
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 20px;
+        color: rgba(#000, 0.5);
+        padding: 0 10px;
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #000;
+        }
+    }
+}

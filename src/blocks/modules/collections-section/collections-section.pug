@@ -1,17 +1,17 @@
-section.collections-section.g-tabs
+section.collections-section.g-filters
     .container.collections-section__container
         h2.g-title.g-title--center.collections-section__title КОЛЛЕКЦИИ
-        ul.g-tabs__list.list-reset.collections-section__tabs
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn.g-tabs__btn--active(data-tabs-path="decorations") украшения
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn(data-tabs-path="high-magnification-art") высокое увелирное искуссткво
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn(data-tabs-path="engagement") помолвка
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn(data-tabs-path="house") дом
+        ul.g-filters__list.list-reset.collections-section__filters
+            li.g-filters__item
+                button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="decorations") украшения
+            li.g-filters__item
+                button.btn-reset.g-filters__btn(data-filters-path="high-magnification-art") высокое увелирное искуссткво
+            li.g-filters__item
+                button.btn-reset.g-filters__btn(data-filters-path="engagement") помолвка
+            li.g-filters__item
+                button.btn-reset.g-filters__btn(data-filters-path="house") дом
 
-        .swiper.collections-section-slider.g-tabs__content.g-tabs__content--active(data-tabs-target="decorations")
+        .swiper.collections-section-slider.g-filters__content.g-filters__content--active(data-filters-target="decorations")
             .swiper-wrapper
                 .swiper-slide.collection-item
                     a.collection-item__image(href="#") 
@@ -48,7 +48,7 @@ section.collections-section.g-tabs
                 +icon("arrow")
             button.btn-reset.g-slider-btn.g-slider-btn--next.collections-section-slider__btn.collections-section-slider__btn--next
                 +icon("arrow")
-        .swiper.collections-section-slider.g-tabs__content(data-tabs-target="high-magnification-art")
+        .swiper.collections-section-slider.g-filters__content(data-filters-target="high-magnification-art")
             .swiper-wrapper
                 .swiper-slide.collection-item
                     a.collection-item__image(href="#") 
@@ -85,7 +85,7 @@ section.collections-section.g-tabs
                 +icon("arrow")
             button.btn-reset.g-slider-btn.g-slider-btn--next.collections-section-slider__btn.collections-section-slider__btn--next
                 +icon("arrow")
-        .swiper.collections-section-slider.g-tabs__content(data-tabs-target="engagement")
+        .swiper.collections-section-slider.g-filters__content(data-filters-target="engagement")
             .swiper-wrapper
                 .swiper-slide.collection-item
                     a.collection-item__image(href="#") 
@@ -122,7 +122,7 @@ section.collections-section.g-tabs
                 +icon("arrow")
             button.btn-reset.g-slider-btn.g-slider-btn--next.collections-section-slider__btn.collections-section-slider__btn--next
                 +icon("arrow")
-        .swiper.collections-section-slider.g-tabs__content(data-tabs-target="house")
+        .swiper.collections-section-slider.g-filters__content(data-filters-target="house")
             .swiper-wrapper
                 .swiper-slide.collection-item
                     a.collection-item__image(href="#") 

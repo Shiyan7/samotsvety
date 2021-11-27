@@ -1,0 +1,21 @@
+.popular-query {
+    &__title {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 16px;
+
+        @media (max-width: 576px) {
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__tabs {
+        width: 100%;
+        margin-bottom: 24px;
+        @media (min-width: 1250px) {
+            margin-bottom: 0;
+        }
+    }
+}

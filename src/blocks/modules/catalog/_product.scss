@@ -1,0 +1,255 @@
+.product {
+    position: relative;
+
+    &:before {
+        @include pseudo();
+        position: absolute;
+        z-index: 3;
+        top: -13px;
+        right: -13px;
+        bottom: -48px;
+        left: -13px;
+        width: calc(100% + 24px);
+        border: 1px solid rgba(#a39d94, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+        border-bottom: none;
+    }
+
+    @media (min-width: 1025px) {
+        &:hover {
+            &:before {
+                opacity: 1;
+                visibility: visible;
+            }
+    
+            .product-details {
+                max-height: 100px;
+                visibility: visible;
+                transition: max-height 0.3s, visibility 0.3s;
+            }
+    
+            .product__favorite {
+                opacity: 1;
+                z-index: 6;
+                visibility: visible;
+            }
+    
+            .product__caption {
+                z-index: 6;
+            }
+    
+            .product-slider {
+                z-index: 5;
+                &__pag {
+                    opacity: 1;
+                    visibility: visible;
+                }
+    
+                &__btn {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    &__caption {
+        position: absolute;
+        z-index: 3;
+        top: 14px;
+        left: 14px;
+        font-size: 14px;
+        line-height: 19px;
+        color: #111;
+    }
+
+    &__favorite {
+        display: block;
+        position: absolute;
+        z-index: 3;
+        opacity: 0;
+        visibility: hidden;
+        top: 14px;
+        right: 14px;
+        width: 20px;
+        height: 20px;
+        transition: opacity 0.3s, visibility 0.3s;
+
+        @media (min-width: 1025px) {
+            &:hover {
+                svg {
+                    fill: #000;
+                }
+            }
+        }
+
+        @media (max-width: 1025px) {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            fill: transparent;
+            transition: fill 0.3s;
+        }
+    }
+
+    &-details {
+        position: absolute;
+        z-index: 7;
+        top: 100%;
+        right: -13px;
+        left: -13px;
+        max-height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    &-slider {
+        max-width: 100%;
+        margin-bottom: 21px;
+        max-height: 272px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 12px;
+        }
+
+        &__btn {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            z-index: 6;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: opacity 0.3s, visibility 0.3s;
+
+            &--prev {
+                left: -9px;
+            }
+
+            &--next {
+                right: -9px;
+            }
+
+        }
+
+        &__pag {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            z-index: 6;
+            bottom: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.3s, visibility 0.3s;
+
+            .swiper-pagination-bullet {
+                width: 37px;
+                height: 2px;
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+
+        &:before {
+            @include pseudo();
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#000, 0.02);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 4;
+        display: block;
+        margin: 0;
+        font-size: 16px;
+        line-height: 17px;
+        font-weight: 300;
+        color: rgba(#000, 0.5);
+        margin-bottom: 8px;
+    }
+
+    &__price {
+        position: relative;
+        z-index: 4;
+        display: block;
+        font-size: 16px;
+        line-height: 12px;
+        font-weight: 400;
+        margin-bottom: 3px;
+    }
+
+    &__discount {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 4;
+    }
+
+    &__old-price {
+        color: #a39d94;
+        height: 10px;
+        padding-top: 3px;
+        margin-right: 11px;
+
+        span {
+            text-decoration-line: line-through;
+        }
+    }
+
+    &__percent {
+        display: block;
+        font-size: 12px;
+        line-height: 17px;
+        height: 10px;
+        padding: 0 5px 2px 6px;
+        color: rgba(#000, 0.5);
+        border: 1px solid rgba(#000, 0.2);
+    }
+
+    &__desc {
+        margin: 13px 0 10px;
+        font-size: 12px;
+        line-height: 12px;
+        color: rgba(#000, 0.5);
+        padding: 0 14px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14.5px 0 12.5px;
+    }
+}
+
+.filters-open {
+    @media (max-width: 768px) {
+        overflow: hidden;
+    }
+}

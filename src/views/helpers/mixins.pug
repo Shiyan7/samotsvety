@@ -13,3 +13,67 @@ mixin burger
     span.menu-btn__line
     span.menu-btn__line
     span.menu-btn__close
+
+
+mixin checkbox
+  .g-checkbox
+    input.g-checkbox__input(type="checkbox")
+    span.g-checkbox__switch
+
+mixin product
+  article.product
+    span.product__caption NEW
+    button.btn-reset.product__favorite
+      +icon("favorite")
+    .swiper.product-slider
+      .swiper-wrapper
+        .swiper-slide.product__image
+          img(src="img/product-1.jpg", alt="Продукт 1")
+        .swiper-slide.product__image
+          img(src="img/product-1.jpg", alt="Продукт 1")
+        .swiper-slide.product__image
+          img(src="img/product-1.jpg", alt="Продукт 1")
+        .swiper-slide.product__image
+          img(src="img/product-1.jpg", alt="Продукт 1")
+      .g-slider-pagination.product-slider__pag
+      button.btn-reset.g-slider-btn.g-slider-btn--prev.product-slider__btn.product-slider__btn--prev
+        +icon("arrow")
+      button.btn-reset.g-slider-btn.g-slider-btn--next.product-slider__btn.product-slider__btn--next
+        +icon("arrow")
+    a.product__title(href="#") Кольцо из белого золота с изумрудом и турмалинами
+    span.product__price от 77 975 ₽
+    .product__discount
+        span.product__old-price
+            span 150 000 
+            |₽
+        span.product__percent 15%
+    .product-details
+      p.product__desc Желтое золото , 5 бриллиантов, 3 сапфира
+      a.g-btn.g-btn--stroke.product__link(href="#") В корзину
+
+mixin pagination
+  ul.g-pagination.catalog__pagination.list-reset
+    li.g-pagination__item
+      a.g-pagination__link.g-pagination__link--prev(href="#")
+        +icon("arrow")
+    li.g-pagination__item
+      span.g-pagination__link.g-pagination__link--current 1
+    li.g-pagination__item
+      a.g-pagination__link(href="#") 2
+    li.g-pagination__item
+      a.g-pagination__link(href="#") 3
+    li.g-pagination__item
+      a.g-pagination__link(href="#") 4
+    li.g-pagination__item
+      a.g-pagination__link(href="#") 5
+    li.g-pagination__item
+      a.g-pagination__link(href="#") 6
+    li.g-pagination__item
+      a.g-pagination__link(href="#") 7
+    li.g-pagination__item
+      span.g-pagination__link ...
+    li.g-pagination__item
+      a.g-pagination__link(href="#") 33
+    li.g-pagination__item
+      a.g-pagination__link.g-pagination__link--next(href="#")
+        +icon("arrow")

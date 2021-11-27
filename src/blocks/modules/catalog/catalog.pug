@@ -1,4 +1,5 @@
 section.catalog
+    img.catalog__image(src="img/catalog-image.jpg", alt="Главная картинка")
     .container.g-breadcrumbs__container
         ul.g-breadcrumbs__list.list-reset
             li.g-breadcrumbs__item
@@ -9,15 +10,463 @@ section.catalog
                 a.g-breadcrumbs__link Кольца
     .container.catalog__container
         h1.g-title.g-title--center.catalog__title Кольца
+        ul.g-tabs.list-reset.catalog__tabs(data-simplebar)
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Новинки
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn На свадьбу
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Женские
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Мужские
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Детям
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Актуальная классика
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn На каждый день
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Для вечернего образа
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Необычные
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn.g-tabs__btn--more Ещё
+        .catalog__top
+            button.btn-reset.g-btn.g-btn--stroke.filters-toggle.filters-toggle--active
+                svg.filters-toggle__icon(width="24" height="24")
+                    use.filters-toggle__icon-opened(xlink:href="./img/sprites/sprite.svg#open-filters")
+                    use.filters-toggle__icon-closed(xlink:href="./img/sprites/sprite.svg#close-filters")
+                |Фильтры
+            span.catalog__quantity 356 товаров
+            
+            .sort-by.catalog__sort-by
+                span.sort-by__caption Сортировать по:
+                .sort-by__select
+                    span.sort-by__current Популярности
+                    ul.sort-by__list.list-reset(name="Sort by")
+                        li.sort-by__item Популярности
+                        li.sort-by__item новизне
+                        li.sort-by__item Возрастанию цены
+                        li.sort-by__item Убыванию цены
+                        li.sort-by__item Размеру скидки
         .catalog__content
-            .catalog__top
-                button.btn-reset.g-btn.g-btn--stroke.catalog-toggle.catalog-toggle--active
-                    svg.catalog-toggle__icon(width="24" height="24")
-                        use.catalog-toggle__icon-opened(xlink:href="./img/sprites/sprite.svg#open-filters")
-                        use.catalog-toggle__icon-closed(xlink:href="./img/sprites/sprite.svg#close-filters")
-                    |Фильтры
-                span.catalog__quantity 356 товаров
-            .catalog__left
-                |filter
-            .catalog__grid
-                |grid
+            .catalog-filters
+                .catalog-filters__top
+                    h2.catalog-filters__title.g-title Фильтры
+                    button.btn-reset.catalog-filters__close
+                        +icon("cross2")
+                .catalog-choice
+                    button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                        span УКРАШЕНИЯ
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="8" r="8" fill="inherit"/>
+                        <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                        <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                        </svg>
+                    button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                        span Кольца
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="8" r="8" fill="inherit"/>
+                        <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                        <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                        </svg>
+                    button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                        span ЗОЛОТЫЕ
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="8" r="8" fill="inherit"/>
+                        <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                        <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                        </svg>
+                    button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                        span 585
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="8" r="8" fill="inherit"/>
+                        <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                        <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                        </svg>
+                    button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                        span БРИЛЛИАНТЫ
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="8" r="8" fill="inherit"/>
+                        <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                        <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                        </svg>
+                    button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                        span 5 000 - 100 000
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="8" r="8" fill="inherit"/>
+                        <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                        <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                        </svg>
+                    
+                    button.btn-reset.catalog-choice__item.catalog-choice__reset
+                        span СБРОСИТЬ ВСЁ
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="8" r="8" fill="inherit"/>
+                        <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                        <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                        </svg>
+                .catalog-filter.catalog-filter
+                    .catalog-filter__top
+                        h2.catalog-filter__title ИЗДЕЛИЯ
+                        span.catalog-filter__toggle
+                    .catalog-filter__bottom
+                        .catalog-filter__content
+                            .catalog-filter__item(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__txt Кольца
+                            .catalog-filter__item(data-text="ОБРУЧАЛЬНЫЕ КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__txt ОБРУЧАЛЬНЫЕ КОЛЬЦА
+                            .catalog-filter__item(data-text="СЕРЬГИ")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__txt СЕРЬГИ
+                            .catalog-filter__item(data-text="ПОДВЕСКИ")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__txt ПОДВЕСКИ
+                            .catalog-filter__item(data-text="КОЛЬЕ")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__txt КОЛЬЕ
+                            .catalog-filter__item(data-text="БРОШИ")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__txt БРОШИ
+                            .catalog-filter__item(data-text="БРАСЛЕТЫ")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__txt БРАСЛЕТЫ
+                            .catalog-filter__item(data-text="ЦЕПИ")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__txt ЦЕПИ
+                            .catalog-filter__item(data-text="ЗАПОНКИ")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__txt ЗАПОНКИ
+                            .catalog-filter__item(data-text="ЗАЖИМЫ ДЛЯ ГАЛСТУКА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__txt ЗАЖИМЫ ДЛЯ ГАЛСТУКА
+                            button.btn-reset.catalog-filter__more.catalog-filter__txt Ещё
+                .catalog-filter.catalog-filter
+                    .catalog-filter__top
+                        h2.catalog-filter__title ЦЕНА
+                        span.catalog-filter__toggle
+                    .catalog-filter__bottom
+                        .catalog-filter__content
+                            .catalog-price
+                                .catalog-price__wrapper
+                                    label.catalog-price__label
+                                        span.catalog-filter__txt.catalog-price__txt от
+                                        input.catalog-price__input(type="text" id="input-0")
+                                    label.catalog-price__label
+                                        span.catalog-filter__txt.catalog-price__txt до
+                                        input.catalog-price__input(type="text" id="input-1")
+                                .catalog-price__element(id="range-slider")
+                .catalog-filter.catalog-filter
+                    .catalog-filter__top--2
+                        h2.catalog-filter__title ТОЛЬКО В НАЛИЧИИ
+                        +checkbox
+                .catalog-filter.catalog-filter
+                    .catalog-filter__top
+                        h2.catalog-filter__title РАЗМЕР
+                        span.catalog-filter__toggle
+                    .catalog-filter__bottom
+                        .catalog-filter__content
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 15
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 15.5
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 16
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 16.5
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 17
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 17.5
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 18
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 18.5
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 19
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 19.5
+                            button.btn-reset.catalog-filter__more.catalog-filter__txt Ещё
+                .catalog-filter.catalog-filter
+                    .catalog-filter__top
+                        h2.catalog-filter__title МАТЕРИАЛ
+                        span.catalog-filter__toggle
+                    .catalog-filter__bottom
+                        .catalog-filter__content
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt Золото
+                            .catalog-filter__item.catalog-filter__item--2.catalog-filter__item--inner(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt Белое
+                            .catalog-filter__item.catalog-filter__item--2.catalog-filter__item--inner(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt Красное
+                            .catalog-filter__item.catalog-filter__item--2.catalog-filter__item--inner(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt Жёлтое
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt Серебро
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt Платина
+                .catalog-filter.catalog-filter
+                    .catalog-filter__top
+                        h2.catalog-filter__title ПРОБА
+                        span.catalog-filter__toggle
+                    .catalog-filter__bottom
+                        .catalog-filter__content
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 585
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 750
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt 925
+                .catalog-filter.catalog-filter
+                    .catalog-filter__top
+                        h2.catalog-filter__title Вставки
+                        span.catalog-filter__toggle
+                    .catalog-filter__bottom
+                        .catalog-filter__content
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt БРИЛЛИАНТЫ
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt ИЗУМРУДЫ
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__txt РУБИНЫ
+                            button.btn-reset.catalog-filter__more.catalog-filter__txt Ещё
+                .catalog-filter.catalog-filter
+                    .catalog-filter__top
+                        h2.catalog-filter__title ФОРМА КАМНЯ
+                        span.catalog-filter__toggle
+                    .catalog-filter__bottom
+                        .catalog-filter__content.catalog-filter__content--2
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--1(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--1
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--2(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--2
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--3(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--3
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--4(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--4
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--5(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--5
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--6(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--6
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--7(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--7
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--8(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--8
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--9(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--9
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--10(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--10
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--11(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--11
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--12(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--12
+                            .catalog-filter__item.catalog-filter__item--2.stone-shape(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox.stone-shape__checkbox.stone-shape__checkbox--13(type="checkbox")
+                                    span.stone-shape__icon.stone-shape__icon--13
+                .catalog-filter.catalog-filter
+                    .catalog-filter__top
+                        h2.catalog-filter__title Цвет
+                        span.catalog-filter__toggle
+                    .catalog-filter__bottom
+                        .catalog-filter__content
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__color.catalog-filter__color--no-color
+                                    span.catalog-filter__txt БРИЛЛИАНТЫ
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__color.catalog-filter__color--white
+                                    span.catalog-filter__txt ИЗУМРУДЫ
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__color.catalog-filter__color--dark-blue
+                                    span.catalog-filter__txt РУБИНЫ
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__color.catalog-filter__color--green
+                                    span.catalog-filter__txt ИЗУМРУДЫ
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__color.catalog-filter__color--red
+                                    span.catalog-filter__txt РУБИНЫ
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__color.catalog-filter__color--yellow
+                                    span.catalog-filter__txt ИЗУМРУДЫ
+                            .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
+                                label.catalog-filter__label
+                                    input.catalog-filter__checkbox(type="checkbox")
+                                    span.catalog-filter__switch
+                                    span.catalog-filter__color.catalog-filter__color--blue
+                                    span.catalog-filter__txt РУБИНЫ
+                            button.btn-reset.catalog-filter__more.catalog-filter__txt Ещё
+                .catalog-filters__btns
+                    button.btn-reset.g-btn.g-btn--black.catalog-filters__btn.catalog-filters__show Показать (100)
+                    button.btn-reset.g-btn.g-btn--light.catalog-filters__btn.catalog-filters__reset
+                        +icon("reset")
+                        |Сбросить
+                    button.btn-reset.g-btn.g-btn--stroke.catalog-filters__btn.catalog-filters__all-filters Все фильтры
+            .catalog-grid
+                ul.catalog-list.list-reset
+                    - for(var i = 0; i < 12; i++)
+                        li.catalog-list__item
+                            +product
+                .we-work.catalog__we-work
+                    h2.visually-hidden Как мы работаем
+                    ul.we-work__list.list-reset
+                        li.we-work__item
+                            +icon("we-work-1")
+                            h3.g-title.g-title--center.we-work__caption Оплата при&nbsp;получении
+                            p.we-work__desc Оплачивайте заказ после проверки&nbsp;и примерки
+                        li.we-work__item
+                            +icon("we-work-2")
+                            h3.g-title.g-title--center.we-work__caption заказывайте изделия на выбор
+                            p.we-work__desc Выберите подходящий <br> размер или модель
+                        li.we-work__item
+                            +icon("we-work-3")
+                            h3.g-title.g-title--center.we-work__caption доставка <br> от 1 дня
+                            p.we-work__desc Пришлем фото изделия перед&nbsp;отправкой
+                        li.we-work__item
+                            +icon("we-work-4")
+                            h3.g-title.g-title--center.we-work__caption ГАРАНТИЯ <br> 2 ГОДА
+                            p.we-work__desc Починим изделие <br> или вернем деньги
+                ul.catalog-list.list-reset.catalog-list--2
+                    - for(var i = 0; i < 12; i++)
+                        li.catalog-list__item
+                            +product
+                button.btn-reset.g-btn.g-btn--stroke.catalog__more-products Показать ещё
+                +pagination
+                .popular-query
+                    h3.g-title.popular-query__title Популярный запрос
+                    ul.g-tabs.list-reset.popular-query__tabs(data-simplebar)
+                        li.g-tabs__item
+                            button.btn-reset.g-tabs__btn Новинки
+                        li.g-tabs__item
+                            button.btn-reset.g-tabs__btn На свадьбу
+                        li.g-tabs__item
+                            button.btn-reset.g-tabs__btn Женские
+                        li.g-tabs__item
+                            button.btn-reset.g-tabs__btn Мужские
+                        li.g-tabs__item
+                            button.btn-reset.g-tabs__btn Детям
+                        li.g-tabs__item
+                            button.btn-reset.g-tabs__btn Актуальная классика
+                        li.g-tabs__item
+                            button.btn-reset.g-tabs__btn На каждый день
+                        li.g-tabs__item
+                            button.btn-reset.g-tabs__btn.g-tabs__btn--more Ещё

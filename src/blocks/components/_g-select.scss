@@ -2,23 +2,27 @@
     margin-bottom: 0;
     min-width: 240px;
 
+    &.is-open {
+        .choices__inner:after {
+            z-index: 2;
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
     @media (max-width: 1440px) {
         min-width: vw(240);
     }
-    
+
 
     &:after {
         display: none;
     }
 
     &__inner {
+        position: relative;
         width: calc(100% - 52px);
         min-height: auto;
-        background-image: url(../img/down.svg);
-        background-size: 28px 28px;
         background-color: #fff;
-        background-position: top 5px right 6px;
-        background-repeat: no-repeat;
         border: 1px solid #A39D94 !important;
         border-radius: 0;
         padding: 11px 36px 9px 14px !important;
@@ -26,6 +30,20 @@
         line-height: 19px;
         font-weight: 400;
         color: #a39d94;
+
+        &:after {
+            @include pseudo();
+            position: absolute;
+            top: 50%;
+            right: 7px;
+            width: 28px;
+            height: 28px;
+            transform: translateY(-50%);
+            background-image: url(../img/down.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.2s;
+        }
     }
 
     &__list {
@@ -57,6 +75,12 @@
             padding-right: 14px;
             width: calc(100% - 16px);
             border: 1px solid #A39D94 !important;
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+
+            &.is-active {
+                opacity: 1;
+            }
 
             .choices__item {
                 padding: 4px 36px;
@@ -124,11 +148,14 @@
 .is-flipped .choices__list--dropdown {
     margin-bottom: -1px;
     border-radius: 0;
+    top: 100%;
+    bottom: auto;
+    margin-top: -41px;
 }
 
 .choices[data-type*="select-one"] .choices__input {
     border-bottom: 1px solid #a39d94;
-    width: calc(100% - 36px);
-    padding: 11px 36px 9px 14px !important;
+    width: calc(100% - 40px);
+    padding: 11px 40px 9px 14px !important;
     line-height: 19px;
 }

@@ -3,6 +3,10 @@
     &__container {
         padding-top: 36px;
         padding-bottom: 22px;
+
+        @media (max-width: 576px) {
+            padding-top: 28px;
+        }
     }
     
     &__list {
