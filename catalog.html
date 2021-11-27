@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
     <div class="site-container">
@@ -111,7 +111,7 @@
         </div>
       </header>
       <main class="main">
-        <section class="catalog">
+        <section class="catalog"><img class="catalog__image" src="img/catalog-image.jpg" alt="Главная картинка">
           <div class="container g-breadcrumbs__container">
             <ul class="g-breadcrumbs__list list-reset">
               <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link" href="/">Главная</a></li>
@@ -121,17 +121,1332 @@
           </div>
           <div class="container catalog__container">
             <h1 class="g-title g-title--center catalog__title">Кольца</h1>
-            <div class="catalog__content">
-              <div class="catalog__top">
-                <button class="btn-reset g-btn g-btn--stroke catalog-toggle catalog-toggle--active">
-                  <svg class="catalog-toggle__icon" width="24" height="24">
-                    <use class="catalog-toggle__icon-opened" xlink:href="./img/sprites/sprite.svg#open-filters"></use>
-                    <use class="catalog-toggle__icon-closed" xlink:href="./img/sprites/sprite.svg#close-filters"></use>
-                  </svg>Фильтры
-                </button><span class="catalog__quantity">356 товаров</span>
+            <ul class="g-tabs list-reset catalog__tabs" data-simplebar>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Новинки</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">На свадьбу</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Женские</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Мужские</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Детям</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Актуальная классика</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">На каждый день</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Для вечернего образа</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Необычные</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn g-tabs__btn--more">Ещё</button>
+              </li>
+            </ul>
+            <div class="catalog__top">
+              <button class="btn-reset g-btn g-btn--stroke filters-toggle filters-toggle--active">
+                <svg class="filters-toggle__icon" width="24" height="24">
+                  <use class="filters-toggle__icon-opened" xlink:href="./img/sprites/sprite.svg#open-filters"></use>
+                  <use class="filters-toggle__icon-closed" xlink:href="./img/sprites/sprite.svg#close-filters"></use>
+                </svg>Фильтры
+              </button><span class="catalog__quantity">356 товаров</span>
+              <div class="sort-by catalog__sort-by"><span class="sort-by__caption">Сортировать по:</span>
+                <div class="sort-by__select"><span class="sort-by__current">Популярности</span>
+                  <ul class="sort-by__list list-reset" name="Sort by">
+                    <li class="sort-by__item">Популярности</li>
+                    <li class="sort-by__item">новизне</li>
+                    <li class="sort-by__item">Возрастанию цены</li>
+                    <li class="sort-by__item">Убыванию цены</li>
+                    <li class="sort-by__item">Размеру скидки</li>
+                  </ul>
+                </div>
               </div>
-              <div class="catalog__left">filter</div>
-              <div class="catalog__grid">grid</div>
+            </div>
+            <div class="catalog__content">
+              <div class="catalog-filters">
+                <div class="catalog-filters__top">
+                  <h2 class="catalog-filters__title g-title">Фильтры</h2>
+                  <button class="btn-reset catalog-filters__close">
+                    <svg class="svg-icon cross2">
+                      <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog-choice">
+                  <button class="btn-reset catalog-choice__item catalog-choice__btn" data-choice-text="Кольца"><span>УКРАШЕНИЯ</span><svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9" cy="8" r="8" fill="inherit"/>
+<line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+<line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+</svg>
+                  </button>
+                  <button class="btn-reset catalog-choice__item catalog-choice__btn" data-choice-text="Кольца"><span>Кольца</span><svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9" cy="8" r="8" fill="inherit"/>
+<line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+<line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+</svg>
+                  </button>
+                  <button class="btn-reset catalog-choice__item catalog-choice__btn" data-choice-text="Кольца"><span>ЗОЛОТЫЕ</span><svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9" cy="8" r="8" fill="inherit"/>
+<line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+<line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+</svg>
+                  </button>
+                  <button class="btn-reset catalog-choice__item catalog-choice__btn" data-choice-text="Кольца"><span>585</span><svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9" cy="8" r="8" fill="inherit"/>
+<line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+<line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+</svg>
+                  </button>
+                  <button class="btn-reset catalog-choice__item catalog-choice__btn" data-choice-text="Кольца"><span>БРИЛЛИАНТЫ</span><svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9" cy="8" r="8" fill="inherit"/>
+<line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+<line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+</svg>
+                  </button>
+                  <button class="btn-reset catalog-choice__item catalog-choice__btn" data-choice-text="Кольца"><span>5 000 - 100 000</span><svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9" cy="8" r="8" fill="inherit"/>
+<line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+<line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+</svg>
+                  </button>
+                  <button class="btn-reset catalog-choice__item catalog-choice__reset"><span>СБРОСИТЬ ВСЁ</span><svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9" cy="8" r="8" fill="inherit"/>
+<line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+<line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+</svg>
+                  </button>
+                </div>
+                <div class="catalog-filter catalog-filter">
+                  <div class="catalog-filter__top">
+                    <h2 class="catalog-filter__title">ИЗДЕЛИЯ</h2><span class="catalog-filter__toggle"></span>
+                  </div>
+                  <div class="catalog-filter__bottom">
+                    <div class="catalog-filter__content">
+                      <div class="catalog-filter__item" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__txt">Кольца</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item" data-text="ОБРУЧАЛЬНЫЕ КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__txt">ОБРУЧАЛЬНЫЕ КОЛЬЦА</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item" data-text="СЕРЬГИ">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__txt">СЕРЬГИ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item" data-text="ПОДВЕСКИ">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__txt">ПОДВЕСКИ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item" data-text="КОЛЬЕ">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__txt">КОЛЬЕ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item" data-text="БРОШИ">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__txt">БРОШИ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item" data-text="БРАСЛЕТЫ">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__txt">БРАСЛЕТЫ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item" data-text="ЦЕПИ">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__txt">ЦЕПИ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item" data-text="ЗАПОНКИ">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__txt">ЗАПОНКИ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item" data-text="ЗАЖИМЫ ДЛЯ ГАЛСТУКА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__txt">ЗАЖИМЫ ДЛЯ ГАЛСТУКА</span>
+                        </label>
+                      </div>
+                      <button class="btn-reset catalog-filter__more catalog-filter__txt">Ещё</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-filter catalog-filter">
+                  <div class="catalog-filter__top">
+                    <h2 class="catalog-filter__title">ЦЕНА</h2><span class="catalog-filter__toggle"></span>
+                  </div>
+                  <div class="catalog-filter__bottom">
+                    <div class="catalog-filter__content">
+                      <div class="catalog-price">
+                        <div class="catalog-price__wrapper">
+                          <label class="catalog-price__label"><span class="catalog-filter__txt catalog-price__txt">от</span>
+                            <input class="catalog-price__input" type="text" id="input-0">
+                          </label>
+                          <label class="catalog-price__label"><span class="catalog-filter__txt catalog-price__txt">до</span>
+                            <input class="catalog-price__input" type="text" id="input-1">
+                          </label>
+                        </div>
+                        <div class="catalog-price__element" id="range-slider"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-filter catalog-filter">
+                  <div class="catalog-filter__top--2">
+                    <h2 class="catalog-filter__title">ТОЛЬКО В НАЛИЧИИ</h2>
+                    <div class="g-checkbox">
+                      <input class="g-checkbox__input" type="checkbox"/><span class="g-checkbox__switch"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-filter catalog-filter">
+                  <div class="catalog-filter__top">
+                    <h2 class="catalog-filter__title">РАЗМЕР</h2><span class="catalog-filter__toggle"></span>
+                  </div>
+                  <div class="catalog-filter__bottom">
+                    <div class="catalog-filter__content">
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">15</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">15.5</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">16</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">16.5</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">17</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">17.5</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">18</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">18.5</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">19</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">19.5</span>
+                        </label>
+                      </div>
+                      <button class="btn-reset catalog-filter__more catalog-filter__txt">Ещё</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-filter catalog-filter">
+                  <div class="catalog-filter__top">
+                    <h2 class="catalog-filter__title">МАТЕРИАЛ</h2><span class="catalog-filter__toggle"></span>
+                  </div>
+                  <div class="catalog-filter__bottom">
+                    <div class="catalog-filter__content">
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">Золото</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 catalog-filter__item--inner" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">Белое</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 catalog-filter__item--inner" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">Красное</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 catalog-filter__item--inner" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">Жёлтое</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">Серебро</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">Платина</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-filter catalog-filter">
+                  <div class="catalog-filter__top">
+                    <h2 class="catalog-filter__title">ПРОБА</h2><span class="catalog-filter__toggle"></span>
+                  </div>
+                  <div class="catalog-filter__bottom">
+                    <div class="catalog-filter__content">
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">585</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">750</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">925</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-filter catalog-filter">
+                  <div class="catalog-filter__top">
+                    <h2 class="catalog-filter__title">Вставки</h2><span class="catalog-filter__toggle"></span>
+                  </div>
+                  <div class="catalog-filter__bottom">
+                    <div class="catalog-filter__content">
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">БРИЛЛИАНТЫ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">ИЗУМРУДЫ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__txt">РУБИНЫ</span>
+                        </label>
+                      </div>
+                      <button class="btn-reset catalog-filter__more catalog-filter__txt">Ещё</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-filter catalog-filter">
+                  <div class="catalog-filter__top">
+                    <h2 class="catalog-filter__title">ФОРМА КАМНЯ</h2><span class="catalog-filter__toggle"></span>
+                  </div>
+                  <div class="catalog-filter__bottom">
+                    <div class="catalog-filter__content catalog-filter__content--2">
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--1" type="checkbox"><span class="stone-shape__icon stone-shape__icon--1"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--2" type="checkbox"><span class="stone-shape__icon stone-shape__icon--2"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--3" type="checkbox"><span class="stone-shape__icon stone-shape__icon--3"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--4" type="checkbox"><span class="stone-shape__icon stone-shape__icon--4"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--5" type="checkbox"><span class="stone-shape__icon stone-shape__icon--5"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--6" type="checkbox"><span class="stone-shape__icon stone-shape__icon--6"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--7" type="checkbox"><span class="stone-shape__icon stone-shape__icon--7"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--8" type="checkbox"><span class="stone-shape__icon stone-shape__icon--8"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--9" type="checkbox"><span class="stone-shape__icon stone-shape__icon--9"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--10" type="checkbox"><span class="stone-shape__icon stone-shape__icon--10"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--11" type="checkbox"><span class="stone-shape__icon stone-shape__icon--11"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--12" type="checkbox"><span class="stone-shape__icon stone-shape__icon--12"></span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2 stone-shape" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox stone-shape__checkbox stone-shape__checkbox--13" type="checkbox"><span class="stone-shape__icon stone-shape__icon--13"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-filter catalog-filter">
+                  <div class="catalog-filter__top">
+                    <h2 class="catalog-filter__title">Цвет</h2><span class="catalog-filter__toggle"></span>
+                  </div>
+                  <div class="catalog-filter__bottom">
+                    <div class="catalog-filter__content">
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__color catalog-filter__color--no-color"></span><span class="catalog-filter__txt">БРИЛЛИАНТЫ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__color catalog-filter__color--white"></span><span class="catalog-filter__txt">ИЗУМРУДЫ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__color catalog-filter__color--dark-blue"></span><span class="catalog-filter__txt">РУБИНЫ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__color catalog-filter__color--green"></span><span class="catalog-filter__txt">ИЗУМРУДЫ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__color catalog-filter__color--red"></span><span class="catalog-filter__txt">РУБИНЫ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__color catalog-filter__color--yellow"></span><span class="catalog-filter__txt">ИЗУМРУДЫ</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__item catalog-filter__item--2" data-text="КОЛЬЦА">
+                        <label class="catalog-filter__label">
+                          <input class="catalog-filter__checkbox" type="checkbox"><span class="catalog-filter__switch"></span><span class="catalog-filter__color catalog-filter__color--blue"></span><span class="catalog-filter__txt">РУБИНЫ</span>
+                        </label>
+                      </div>
+                      <button class="btn-reset catalog-filter__more catalog-filter__txt">Ещё</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-filters__btns">
+                  <button class="btn-reset g-btn g-btn--black catalog-filters__btn catalog-filters__show">Показать (100)</button>
+                  <button class="btn-reset g-btn g-btn--light catalog-filters__btn catalog-filters__reset">
+                    <svg class="svg-icon reset">
+                      <use xlink:href="./img/sprites/sprite.svg#reset"></use>
+                    </svg>Сбросить
+                  </button>
+                  <button class="btn-reset g-btn g-btn--stroke catalog-filters__btn catalog-filters__all-filters">Все фильтры</button>
+                </div>
+              </div>
+              <div class="catalog-grid">
+                <ul class="catalog-list list-reset">
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+                <div class="we-work catalog__we-work">
+                  <h2 class="visually-hidden">Как мы работаем</h2>
+                  <ul class="we-work__list list-reset">
+                    <li class="we-work__item">
+                      <svg class="svg-icon we-work-1">
+                        <use xlink:href="./img/sprites/sprite.svg#we-work-1"></use>
+                      </svg>
+                      <h3 class="g-title g-title--center we-work__caption">Оплата при&nbsp;получении</h3>
+                      <p class="we-work__desc">Оплачивайте заказ после проверки&nbsp;и примерки</p>
+                    </li>
+                    <li class="we-work__item">
+                      <svg class="svg-icon we-work-2">
+                        <use xlink:href="./img/sprites/sprite.svg#we-work-2"></use>
+                      </svg>
+                      <h3 class="g-title g-title--center we-work__caption">заказывайте изделия на выбор</h3>
+                      <p class="we-work__desc">Выберите подходящий <br> размер или модель</p>
+                    </li>
+                    <li class="we-work__item">
+                      <svg class="svg-icon we-work-3">
+                        <use xlink:href="./img/sprites/sprite.svg#we-work-3"></use>
+                      </svg>
+                      <h3 class="g-title g-title--center we-work__caption">доставка <br> от 1 дня</h3>
+                      <p class="we-work__desc">Пришлем фото изделия перед&nbsp;отправкой</p>
+                    </li>
+                    <li class="we-work__item">
+                      <svg class="svg-icon we-work-4">
+                        <use xlink:href="./img/sprites/sprite.svg#we-work-4"></use>
+                      </svg>
+                      <h3 class="g-title g-title--center we-work__caption">ГАРАНТИЯ <br> 2 ГОДА</h3>
+                      <p class="we-work__desc">Починим изделие <br> или вернем деньги</p>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="catalog-list list-reset catalog-list--2">
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="catalog-list__item">
+                    <article class="product"><span class="product__caption">NEW</span>
+                      <button class="btn-reset product__favorite">
+                        <svg class="svg-icon favorite">
+                          <use xlink:href="./img/sprites/sprite.svg#favorite"></use>
+                        </svg>
+                      </button>
+                      <div class="swiper product-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                          <div class="swiper-slide product__image"><img src="img/product-1.jpg" alt="Продукт 1"/></div>
+                        </div>
+                        <div class="g-slider-pagination product-slider__pag"></div>
+                        <button class="btn-reset g-slider-btn g-slider-btn--prev product-slider__btn product-slider__btn--prev">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="btn-reset g-slider-btn g-slider-btn--next product-slider__btn product-slider__btn--next">
+                          <svg class="svg-icon arrow">
+                            <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                          </svg>
+                        </button>
+                      </div><a class="product__title" href="#">Кольцо из белого золота с изумрудом и турмалинами</a><span class="product__price">от 77 975 ₽</span>
+                      <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
+                      <div class="product-details">
+                        <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p><a class="g-btn g-btn--stroke product__link" href="#">В корзину</a>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+                <button class="btn-reset g-btn g-btn--stroke catalog__more-products">Показать ещё</button>
+                <ul class="g-pagination catalog__pagination list-reset">
+                  <li class="g-pagination__item"><a class="g-pagination__link g-pagination__link--prev" href="#">
+                      <svg class="svg-icon arrow">
+                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                      </svg></a></li>
+                  <li class="g-pagination__item"><span class="g-pagination__link g-pagination__link--current">1</span></li>
+                  <li class="g-pagination__item"><a class="g-pagination__link" href="#">2</a></li>
+                  <li class="g-pagination__item"><a class="g-pagination__link" href="#">3</a></li>
+                  <li class="g-pagination__item"><a class="g-pagination__link" href="#">4</a></li>
+                  <li class="g-pagination__item"><a class="g-pagination__link" href="#">5</a></li>
+                  <li class="g-pagination__item"><a class="g-pagination__link" href="#">6</a></li>
+                  <li class="g-pagination__item"><a class="g-pagination__link" href="#">7</a></li>
+                  <li class="g-pagination__item"><span class="g-pagination__link">...</span></li>
+                  <li class="g-pagination__item"><a class="g-pagination__link" href="#">33</a></li>
+                  <li class="g-pagination__item"><a class="g-pagination__link g-pagination__link--next" href="#">
+                      <svg class="svg-icon arrow">
+                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                      </svg></a></li>
+                </ul>
+                <div class="popular-query">
+                  <h3 class="g-title popular-query__title">Популярный запрос</h3>
+                  <ul class="g-tabs list-reset popular-query__tabs" data-simplebar>
+                    <li class="g-tabs__item">
+                      <button class="btn-reset g-tabs__btn">Новинки</button>
+                    </li>
+                    <li class="g-tabs__item">
+                      <button class="btn-reset g-tabs__btn">На свадьбу</button>
+                    </li>
+                    <li class="g-tabs__item">
+                      <button class="btn-reset g-tabs__btn">Женские</button>
+                    </li>
+                    <li class="g-tabs__item">
+                      <button class="btn-reset g-tabs__btn">Мужские</button>
+                    </li>
+                    <li class="g-tabs__item">
+                      <button class="btn-reset g-tabs__btn">Детям</button>
+                    </li>
+                    <li class="g-tabs__item">
+                      <button class="btn-reset g-tabs__btn">Актуальная классика</button>
+                    </li>
+                    <li class="g-tabs__item">
+                      <button class="btn-reset g-tabs__btn">На каждый день</button>
+                    </li>
+                    <li class="g-tabs__item">
+                      <button class="btn-reset g-tabs__btn g-tabs__btn--more">Ещё</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -168,7 +1483,7 @@
         <section class="info">
           <div class="container info__container">
             <h2 class="g-title info__title">оФИЦИАЛЬНЫЙ САЙТ ЮВЕЛИРНЫХ ИЗДЕЛИЙ русские самоцветы</h2>
-            <p class="info__desc full-text">Интернет-галерея «Русские самоцветы» — уникальная онлайн-площадка, где представлена продукция собственного ювелирного завода. Официальный сайт ювелирного магазина содержит каталог украшений. В каталоге из более 4000 ювелирных изделий собраны украшения непревзойденного качества, которое гарантирует производитель из числа лидеров отрасли. Для каждого товара представлены не только качественные фотографии и видеоматериалы, но и <br> максимум полезной информации, которая помогает сделать выбор еще более комфортным, чем в салоне. Примерить украшения или посмотреть <br> Источник: © Русские Самоцветы</p><a class="g-link info__link" href="#">Читать дальше</a>
+            <p class="info__desc full-text">Интернет-галерея «Русские самоцветы» — уникальная онлайн-площадка, где представлена продукция собственного ювелирного завода. Официальный сайт ювелирного магазина содержит каталог украшений. В каталоге из более 4000 ювелирных изделий собраны украшения непревзойденного качества, которое гарантирует производитель из числа лидеров отрасли. Для каждого товара представлены не только качественные фотографии и видеоматериалы, но и <br> максимум полезной информации, которая помогает сделать выбор еще более комфортным, чем в салоне. Примерить украшения или посмотреть <br> Источник: © Русские Самоцветы <br> Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Маленькая, живет? Вскоре то подпоясал ее сбить первую курсивных, злых буквенных мир себя решила диких это она от всех свою жаренные.</p>
             <button class="btn-reset g-link read-more info__more">Читать дальше</button>
           </div>
         </section>
@@ -245,14 +1560,14 @@
                       </svg></a></li>
                 </ul>
               </div>
-              <address class="footer-contacts__desc footer__address">Санкт-Петербург, пл. Фаберже, 8</address><a class="footer__desc footer__tel--2" href="#">+7 (812) 448-65-88</a><a class="footer-contacts__desc" href="mailto:market@russam.ru">market@russam.ru</a>
+              <address class="footer-contacts__desc footer__address">Санкт-Петербург, пл. Фаберже, 8</address><a class="footer__desc footer__tel--2" href="#">+7 (812) 448-65-88</a><a class="footer-contacts__desc footer-contacts__mail" href="mailto:market@russam.ru">market@russam.ru</a>
             </div>
           </div><span class="footer__copy">2020 © Русские самоцветы</span>
           <p class="footer__desc">Предложение не является публичной офертой. Цены на сайте и в розничной сети могут отличаться. Информация на сайте о товаре носит рекламный характер и расценивается как приглашение делать оферты на основании п.1 ст. 437 Гражданского кодекса РФ.</p>
         </div>
       </footer>
     </div>
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
     <div class="site-container"> 
@@ -163,7 +163,7 @@
                 </div>
               </div>
             </div>
-            <div class="g-pagination hero-slider__pag"></div>
+            <div class="g-slider-pagination hero-slider__pag"></div>
             <button class="btn-reset g-slider-btn g-slider-btn--prev hero-slider__btn hero-slider__btn--prev">
               <svg class="svg-icon arrow">
                 <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
@@ -244,17 +244,37 @@
         <section class="popular-categories">
           <div class="container popular-categories__container">
             <h2 class="g-title g-title--center popular-categories__title">ПОПУЛЯрНЫЕ КАТЕГОРИИ</h2>
-            <ul class="cat-links list-reset popular-categories__links" data-simplebar>
-              <li class="cat-links__item"><a class="cat-links__link" href="#">Новинки</a></li>
-              <li class="cat-links__item"><a class="cat-links__link" href="#">На свадьбу</a></li>
-              <li class="cat-links__item"><a class="cat-links__link" href="#">Женские</a></li>
-              <li class="cat-links__item"><a class="cat-links__link" href="#">Мужские</a></li>
-              <li class="cat-links__item"><a class="cat-links__link" href="#">Детям</a></li>
-              <li class="cat-links__item"><a class="cat-links__link" href="#">Актуальная классика</a></li>
-              <li class="cat-links__item"><a class="cat-links__link" href="#">На каждый день</a></li>
-              <li class="cat-links__item"><a class="cat-links__link" href="#">Для вечернего образа</a></li>
-              <li class="cat-links__item"><a class="cat-links__link" href="#">Необычные</a></li>
-              <li class="cat-links__item"><a class="cat-links__link" href="#">Ещё</a></li>
+            <ul class="g-tabs list-reset popular-categories__tabs" data-simplebar>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Новинки</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">На свадьбу</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Женские</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Мужские</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Детям</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Актуальная классика</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">На каждый день</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Для вечернего образа</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn">Необычные</button>
+              </li>
+              <li class="g-tabs__item">
+                <button class="btn-reset g-tabs__btn g-tabs__btn--more">Ещё</button>
+              </li>
             </ul>
             <div class="swiper popular-categories-slider" data-mobile="false">
               <ul class="swiper-wrapper popular-categories__list list-reset">
@@ -413,24 +433,24 @@
             </ul>
           </div>
         </section>
-        <section class="collections-section g-tabs">
+        <section class="collections-section g-filters">
           <div class="container collections-section__container">
             <h2 class="g-title g-title--center collections-section__title">КОЛЛЕКЦИИ</h2>
-            <ul class="g-tabs__list list-reset collections-section__tabs">
-              <li class="g-tabs__item">
-                <button class="btn-reset g-tabs__btn g-tabs__btn--active" data-tabs-path="decorations">украшения</button>
+            <ul class="g-filters__list list-reset collections-section__filters">
+              <li class="g-filters__item">
+                <button class="btn-reset g-filters__btn g-filters__btn--active" data-filters-path="decorations">украшения</button>
               </li>
-              <li class="g-tabs__item">
-                <button class="btn-reset g-tabs__btn" data-tabs-path="high-magnification-art">высокое увелирное искуссткво</button>
+              <li class="g-filters__item">
+                <button class="btn-reset g-filters__btn" data-filters-path="high-magnification-art">высокое увелирное искуссткво</button>
               </li>
-              <li class="g-tabs__item">
-                <button class="btn-reset g-tabs__btn" data-tabs-path="engagement">помолвка</button>
+              <li class="g-filters__item">
+                <button class="btn-reset g-filters__btn" data-filters-path="engagement">помолвка</button>
               </li>
-              <li class="g-tabs__item">
-                <button class="btn-reset g-tabs__btn" data-tabs-path="house">дом</button>
+              <li class="g-filters__item">
+                <button class="btn-reset g-filters__btn" data-filters-path="house">дом</button>
               </li>
             </ul>
-            <div class="swiper collections-section-slider g-tabs__content g-tabs__content--active" data-tabs-target="decorations">
+            <div class="swiper collections-section-slider g-filters__content g-filters__content--active" data-filters-target="decorations">
               <div class="swiper-wrapper">
                 <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
                 <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
@@ -451,7 +471,7 @@
                 </svg>
               </button>
             </div>
-            <div class="swiper collections-section-slider g-tabs__content" data-tabs-target="high-magnification-art">
+            <div class="swiper collections-section-slider g-filters__content" data-filters-target="high-magnification-art">
               <div class="swiper-wrapper">
                 <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
                 <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
@@ -472,7 +492,7 @@
                 </svg>
               </button>
             </div>
-            <div class="swiper collections-section-slider g-tabs__content" data-tabs-target="engagement">
+            <div class="swiper collections-section-slider g-filters__content" data-filters-target="engagement">
               <div class="swiper-wrapper">
                 <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
                 <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
@@ -493,7 +513,7 @@
                 </svg>
               </button>
             </div>
-            <div class="swiper collections-section-slider g-tabs__content" data-tabs-target="house">
+            <div class="swiper collections-section-slider g-filters__content" data-filters-target="house">
               <div class="swiper-wrapper">
                 <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-1.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">моя прекрасная леди</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
                 <div class="swiper-slide collection-item"><a class="collection-item__image" href="#"> <img src="img/collection-2.jpg" alt="коллекция моя прекрасная леди"></a><a class="g-title collection-item__title" href="#">SHINE</a><a class="g-link collection-item__link" href="#">Посмотреть</a></div>
@@ -544,7 +564,7 @@
         <section class="info">
           <div class="container info__container">
             <h2 class="g-title info__title">оФИЦИАЛЬНЫЙ САЙТ ЮВЕЛИРНЫХ ИЗДЕЛИЙ русские самоцветы</h2>
-            <p class="info__desc full-text">Интернет-галерея «Русские самоцветы» — уникальная онлайн-площадка, где представлена продукция собственного ювелирного завода. Официальный сайт ювелирного магазина содержит каталог украшений. В каталоге из более 4000 ювелирных изделий собраны украшения непревзойденного качества, которое гарантирует производитель из числа лидеров отрасли. Для каждого товара представлены не только качественные фотографии и видеоматериалы, но и <br> максимум полезной информации, которая помогает сделать выбор еще более комфортным, чем в салоне. Примерить украшения или посмотреть <br> Источник: © Русские Самоцветы</p><a class="g-link info__link" href="#">Читать дальше</a>
+            <p class="info__desc full-text">Интернет-галерея «Русские самоцветы» — уникальная онлайн-площадка, где представлена продукция собственного ювелирного завода. Официальный сайт ювелирного магазина содержит каталог украшений. В каталоге из более 4000 ювелирных изделий собраны украшения непревзойденного качества, которое гарантирует производитель из числа лидеров отрасли. Для каждого товара представлены не только качественные фотографии и видеоматериалы, но и <br> максимум полезной информации, которая помогает сделать выбор еще более комфортным, чем в салоне. Примерить украшения или посмотреть <br> Источник: © Русские Самоцветы <br> Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Маленькая, живет? Вскоре то подпоясал ее сбить первую курсивных, злых буквенных мир себя решила диких это она от всех свою жаренные.</p>
             <button class="btn-reset g-link read-more info__more">Читать дальше</button>
           </div>
         </section>
@@ -621,14 +641,14 @@
                       </svg></a></li>
                 </ul>
               </div>
-              <address class="footer-contacts__desc footer__address">Санкт-Петербург, пл. Фаберже, 8</address><a class="footer__desc footer__tel--2" href="#">+7 (812) 448-65-88</a><a class="footer-contacts__desc" href="mailto:market@russam.ru">market@russam.ru</a>
+              <address class="footer-contacts__desc footer__address">Санкт-Петербург, пл. Фаберже, 8</address><a class="footer__desc footer__tel--2" href="#">+7 (812) 448-65-88</a><a class="footer-contacts__desc footer-contacts__mail" href="mailto:market@russam.ru">market@russam.ru</a>
             </div>
           </div><span class="footer__copy">2020 © Русские самоцветы</span>
           <p class="footer__desc">Предложение не является публичной офертой. Цены на сайте и в розничной сети могут отличаться. Информация на сайте о товаре носит рекламный характер и расценивается как приглашение делать оферты на основании п.1 ст. 437 Гражданского кодекса РФ.</p>
         </div>
       </footer>
     </div>
-    <script src="js/main.js"></script>
-    <script src="js/vendor.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/vendor.min.js"></script>
   </body>
 </html>
