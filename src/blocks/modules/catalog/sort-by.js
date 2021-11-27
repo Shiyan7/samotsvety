@@ -32,5 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    sortByClose.addEventListener("click", hiddenSort);
+    sortByClose?.addEventListener("click", hiddenSort);
 });

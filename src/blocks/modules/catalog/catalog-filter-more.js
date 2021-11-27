@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
         e.remove();
     }
 
-    moreFilters.forEach(el => el.addEventListener("click", (e) => {
-        loadMoreFilters(e.currentTarget)
-    }));
+    moreFilters?.forEach(el => {
+        el.addEventListener("click", (e) => {
+            loadMoreFilters(e.currentTarget);
+        });
+    });
 });
