@@ -1,7 +1,7 @@
 .footer {
     &__container {
         padding-top: 67px;
-        padding-bottom: 46px;
+        padding-bottom: 38px;
         border-top: 1px solid #111;
 
         @media (max-width: 576px) {
@@ -218,7 +218,7 @@
             color: #111;
             font-size: 16px;
             line-height: 13px;
-            margin-bottom: 14px;
+            margin-bottom: 17px;
 
             @media (max-width: 576px) {
                 margin-bottom: 8px;
@@ -315,7 +315,6 @@
             display: flex;
             align-items: center;
             margin-bottom: 26px;
-            padding-left: 3px;
             @media (max-width: 576px) {
                 justify-content: center;
             }
@@ -354,7 +353,7 @@
         line-height: 23px;
         color: #111;
         font-style: normal;
-        margin-bottom: 2px;
+        margin-bottom: 6px;
     }
 
     &__copy {

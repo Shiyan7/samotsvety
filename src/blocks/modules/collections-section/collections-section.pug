@@ -1,48 +1,40 @@
 section.collections-section.g-filters
     .container.collections-section__container
         h2.g-title.g-title--center.collections-section__title КОЛЛЕКЦИИ
-        ul.g-filters__list.list-reset.collections-section__filters
-            li.g-filters__item
-                button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="decorations") украшения
-            li.g-filters__item
-                button.btn-reset.g-filters__btn(data-filters-path="high-magnification-art") высокое увелирное искуссткво
-            li.g-filters__item
-                button.btn-reset.g-filters__btn(data-filters-path="engagement") помолвка
-            li.g-filters__item
-                button.btn-reset.g-filters__btn(data-filters-path="house") дом
+        +filters("collections-section__filters")
 
         .swiper.collections-section-slider.g-filters__content.g-filters__content--active(data-filters-target="decorations")
             .swiper-wrapper
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-1.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") моя прекрасная леди
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") моя прекрасная леди
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-2.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") SHINE
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") SHINE
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-3.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") МИНИ
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") МИНИ
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-1.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") моя прекрасная леди
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") моя прекрасная леди
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-2.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") SHINE
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") SHINE
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-3.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") МИНИ
-                    a.g-link.collection-item__link(href="#") Посмотреть
+                    a.g-title.collections-section-item__title(href="#") МИНИ
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
             .swiper-scrollbar.g-scrollbar.collections-section-slider__scrollbar
             button.btn-reset.g-slider-btn.g-slider-btn--prev.collections-section-slider__btn.collections-section-slider__btn--prev
                 +icon("arrow")
@@ -50,36 +42,36 @@ section.collections-section.g-filters
                 +icon("arrow")
         .swiper.collections-section-slider.g-filters__content(data-filters-target="high-magnification-art")
             .swiper-wrapper
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-1.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") моя прекрасная леди
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") моя прекрасная леди
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-2.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") SHINE
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") SHINE
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-3.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") МИНИ
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") МИНИ
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-1.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") моя прекрасная леди
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") моя прекрасная леди
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-2.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") SHINE
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") SHINE
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-3.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") МИНИ
-                    a.g-link.collection-item__link(href="#") Посмотреть
+                    a.g-title.collections-section-item__title(href="#") МИНИ
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
             .swiper-scrollbar.g-scrollbar.collections-section-slider__scrollbar
             button.btn-reset.g-slider-btn.g-slider-btn--prev.collections-section-slider__btn.collections-section-slider__btn--prev
                 +icon("arrow")
@@ -87,36 +79,36 @@ section.collections-section.g-filters
                 +icon("arrow")
         .swiper.collections-section-slider.g-filters__content(data-filters-target="engagement")
             .swiper-wrapper
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-1.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") моя прекрасная леди
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") моя прекрасная леди
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-2.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") SHINE
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") SHINE
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-3.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") МИНИ
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") МИНИ
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-1.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") моя прекрасная леди
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") моя прекрасная леди
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-2.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") SHINE
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") SHINE
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-3.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") МИНИ
-                    a.g-link.collection-item__link(href="#") Посмотреть
+                    a.g-title.collections-section-item__title(href="#") МИНИ
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
             .swiper-scrollbar.g-scrollbar.collections-section-slider__scrollbar
             button.btn-reset.g-slider-btn.g-slider-btn--prev.collections-section-slider__btn.collections-section-slider__btn--prev
                 +icon("arrow")
@@ -124,39 +116,39 @@ section.collections-section.g-filters
                 +icon("arrow")
         .swiper.collections-section-slider.g-filters__content(data-filters-target="house")
             .swiper-wrapper
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-1.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") моя прекрасная леди
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") моя прекрасная леди
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-2.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") SHINE
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") SHINE
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-3.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") МИНИ
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") МИНИ
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-1.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") моя прекрасная леди
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") моя прекрасная леди
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-2.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") SHINE
-                    a.g-link.collection-item__link(href="#") Посмотреть
-                .swiper-slide.collection-item
-                    a.collection-item__image(href="#") 
+                    a.g-title.collections-section-item__title(href="#") SHINE
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
+                .swiper-slide.collections-section-item
+                    a.collections-section-item__image(href="#") 
                         img(src="img/collection-3.jpg", alt="коллекция моя прекрасная леди")
-                    a.g-title.collection-item__title(href="#") МИНИ
-                    a.g-link.collection-item__link(href="#") Посмотреть
+                    a.g-title.collections-section-item__title(href="#") МИНИ
+                    a.g-link.collections-section-item__link(href="#") Посмотреть
             .swiper-scrollbar.g-scrollbar.collections-section-slider__scrollbar
             button.btn-reset.g-slider-btn.g-slider-btn--prev.collections-section-slider__btn.collections-section-slider__btn--prev
                 +icon("arrow")
             button.btn-reset.g-slider-btn.g-slider-btn--next.collections-section-slider__btn.collections-section-slider__btn--next
                 +icon("arrow")
-        a.g-btn.g-btn--stroke.collections-section__link(href="#") СМОТРЕТЬ ВСЕ КОЛЛЕКЦИИ
+        a.g-btn.g-btn--stroke.collections-section__link(href="collections.html") СМОТРЕТЬ ВСЕ КОЛЛЕКЦИИ

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if(flag == 0) {
             flag++;
             fullText.classList.add("active");
-            e.currentTarget.innerHTML = 'свернуть'
+            e.currentTarget.innerHTML = 'Свернуть'
         } else {
             flag--;
             fullText.classList.remove("active");

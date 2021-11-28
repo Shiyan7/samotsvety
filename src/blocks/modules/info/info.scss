@@ -1,11 +1,10 @@
 .info {
     &__container {
         padding-top: 79px;
-        padding-bottom: 83px;
+        padding-bottom: 37px;
 
         @media (max-width: 576px) {
             padding-top: 52px;
-            padding-bottom: 53px;
         }
     }
 
@@ -25,7 +24,7 @@
         margin: 0;
         font-size: 18px;
         line-height: 24px;
-        margin-bottom: 21px;
+        margin-bottom: 15px;
 
         display: -webkit-box;
         -webkit-line-clamp: 5;
@@ -67,9 +66,10 @@
         }
     }
     &__more {
-        font-size: 13px;
-        padding: 6px 0 6px;
+        font-size: 16px;
+        padding: 6px 0;
         @media (max-width: 576px) {
+            font-size: 14px;
             width: 100%;
             margin: 0 auto;
         }

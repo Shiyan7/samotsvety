@@ -13,11 +13,20 @@
     }
 
     &__container {
+        padding-top: 36px;
         padding-bottom: 88px;
 
         @media (max-width: 1024px) {
             padding-bottom: 28px;
         }
+
+        @media (max-width: 576px) {
+            padding-top: 28px;
+        }
+    }
+
+    &__breadcrumbs {
+        padding-bottom: 22px;
     }
 
     &__content {
@@ -620,8 +629,7 @@
     }
 
     &__more-products {
-        display: block;
-        margin: 0 auto 40px;
+        margin-bottom: 40px;
         padding: 14px 62.5px 13px 66.5px;
     }
 

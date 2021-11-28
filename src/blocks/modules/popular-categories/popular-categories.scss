@@ -157,6 +157,17 @@
         max-height: 464px;
         margin-bottom: 30px;
         overflow: hidden;
+
+        @include hover {
+            &:before {
+                opacity: 1;
+                visibility: visible;
+            }
+            img {
+                transform: scale(1.08, 1.08);
+            }
+        }
+        
         &:before {
             @include pseudo();
             position: absolute;
@@ -169,17 +180,6 @@
             z-index: 1;
             transition: opacity 0.3s, visibility 0.3s;
             background: rgba(162, 174, 181, 0.06);
-        }
-        @media (min-width: 1025px) {
-            &:hover {
-                &:before {
-                    opacity: 1;
-                    visibility: visible;
-                }
-                img {
-                    transform: scale(1.08, 1.08);
-                }
-            }
         }
 
         @media (max-width: 768px) {

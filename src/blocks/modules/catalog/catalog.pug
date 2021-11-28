@@ -1,14 +1,13 @@
 section.catalog
     img.catalog__image(src="img/catalog-image.jpg", alt="Главная картинка")
-    .container.g-breadcrumbs__container
-        ul.g-breadcrumbs__list.list-reset
+    .container.catalog__container
+        ul.g-breadcrumbs__list.catalog__breadcrumbs.list-reset
             li.g-breadcrumbs__item
                 a.g-breadcrumbs__link(href="/") Главная
             li.g-breadcrumbs__item
                 a.g-breadcrumbs__link(href="#") Результаты поиска
             li.g-breadcrumbs__item
                 a.g-breadcrumbs__link Кольца
-    .container.catalog__container
         h1.g-title.g-title--center.catalog__title Кольца
         ul.g-tabs.list-reset.catalog__tabs(data-simplebar)
             li.g-tabs__item
@@ -592,7 +591,7 @@ section.catalog
                     - for(var i = 0; i < 12; i++)
                         li.catalog-list__item
                             +product
-                button.btn-reset.g-btn.g-btn--stroke.catalog__more-products Показать ещё
+                button.btn-reset.g-btn.g-btn--stroke.g-btn--center.catalog__more-products Показать ещё
                 +pagination
                 .popular-query
                     h3.g-title.popular-query__title Популярный запрос

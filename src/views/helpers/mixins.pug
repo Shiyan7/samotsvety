@@ -14,7 +14,6 @@ mixin burger
     span.menu-btn__line
     span.menu-btn__close
 
-
 mixin checkbox
   .g-checkbox
     input.g-checkbox__input(type="checkbox")
@@ -77,3 +76,15 @@ mixin pagination
     li.g-pagination__item
       a.g-pagination__link.g-pagination__link--next(href="#")
         +icon("arrow")
+
+mixin filters(cls)
+  if(cls)
+    ul(class="g-filters__list list-reset " + cls)
+      li.g-filters__item
+          button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="decorations") украшения
+      li.g-filters__item
+          button.btn-reset.g-filters__btn(data-filters-path="engagement") помолвка
+      li.g-filters__item
+          button.btn-reset.g-filters__btn(data-filters-path="house") дом
+      li.g-filters__item
+          button.btn-reset.g-filters__btn(data-filters-path="high-magnification-art") высокое ювелирное искусство

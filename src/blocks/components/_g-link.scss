@@ -6,10 +6,8 @@
     text-decoration: underline;
     transition: color 0.3s;
 
-    @media (min-width: 1025px) {
-        &:hover {
-            color: #000;
-            text-decoration: underline;
-        }
+    @include hover {
+        color: #000;
+        text-decoration: underline;
     }
 }
