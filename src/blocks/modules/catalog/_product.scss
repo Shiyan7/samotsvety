@@ -17,44 +17,6 @@
         border-bottom: none;
     }
 
-    @media (min-width: 1025px) {
-        &:hover {
-            &:before {
-                opacity: 1;
-                visibility: visible;
-            }
-    
-            .product-details {
-                max-height: 100px;
-                visibility: visible;
-                transition: max-height 0.3s, visibility 0.3s;
-            }
-    
-            .product__favorite {
-                opacity: 1;
-                z-index: 6;
-                visibility: visible;
-            }
-    
-            .product__caption {
-                z-index: 6;
-            }
-    
-            .product-slider {
-                z-index: 5;
-                &__pag {
-                    opacity: 1;
-                    visibility: visible;
-                }
-    
-                &__btn {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-        }
-    }
-
     &__caption {
         position: absolute;
         z-index: 3;
@@ -137,7 +99,6 @@
             &--next {
                 right: -9px;
             }
-
         }
 
         &__pag {
@@ -183,9 +144,9 @@
     }
 
     &__title {
+        display: block;
         position: relative;
         z-index: 4;
-        display: block;
         margin: 0;
         font-size: 16px;
         line-height: 17px;
@@ -195,9 +156,9 @@
     }
 
     &__price {
+        display: block;
         position: relative;
         z-index: 4;
-        display: block;
         font-size: 16px;
         line-height: 12px;
         font-weight: 400;
@@ -227,9 +188,9 @@
         font-size: 12px;
         line-height: 17px;
         height: 10px;
-        padding: 0 5px 2px 6px;
-        color: rgba(#000, 0.5);
         border: 1px solid rgba(#000, 0.2);
+        padding: 0 5px 4px 6px;
+        color: rgba(#000, 0.5);
     }
 
     &__desc {
@@ -245,6 +206,42 @@
         align-items: center;
         justify-content: center;
         padding: 14.5px 0 12.5px;
+    }
+
+    @include hover {
+        &:before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .product-details {
+            max-height: 100px;
+            visibility: visible;
+            transition: max-height 0.3s, visibility 0.3s;
+        }
+
+        .product__favorite {
+            opacity: 1;
+            z-index: 6;
+            visibility: visible;
+        }
+
+        .product__caption {
+            z-index: 6;
+        }
+
+        .product-slider {
+            z-index: 5;
+            &__pag {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &__btn {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 }
 

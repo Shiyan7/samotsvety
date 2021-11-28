@@ -241,14 +241,22 @@
 
         &__item {
             cursor: pointer;
-            margin-bottom: 14px;
 
-            @media (max-width: 768px) {
-                margin-bottom: 20px;
+            &:not(:last-child) {
+                margin-bottom: 14px;
+
+                @media (max-width: 768px) {
+                    margin-bottom: 20px;
+                }
             }
 
             &--2 {
-                margin-bottom: 8px;
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                    @media (max-width: 768px) {
+                        margin-bottom: 15px;
+                    }
+                }
             }
             &--inner {
                 margin-left: 16px;
