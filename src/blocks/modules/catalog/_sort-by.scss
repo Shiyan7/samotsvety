@@ -9,7 +9,6 @@
         display: block;
         margin-left: 0;
         width: 50%;
-        z-index: 1000;
     }
 
     &__open {
@@ -31,6 +30,7 @@
     }
 
     &.isOpen {
+        z-index: 2000;
         .sort-by__list {
             display: block;
             opacity: 1;
