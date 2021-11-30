@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
         modules: [Navigation, Pagination],
         allowTouchMove: false,
         slidesPerView: 'auto',
+        breakpoints: {
+            1025: {
+                allowTouchMove: true,
+            },
+        },
         navigation: {
             nextEl: '.product-slider__btn--next',
             prevEl: '.product-slider__btn--prev',
