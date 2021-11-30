@@ -14,3 +14,4 @@ import "%modules%/catalog/range-slider";
 import "%modules%/catalog/product-slider";
 import "%modules%/card/card-slider";
 import "%modules%/perfect-combination/perfect-combination-slider";
+import "%modules%/wares/wares-slider";

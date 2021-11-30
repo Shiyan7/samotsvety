@@ -1,0 +1,130 @@
+.wares {
+    &__container {
+        padding-top: 71px;
+
+        @media (max-width: 1024px) {
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+
+        @media (max-width: 768px) {
+            padding-bottom: 30px;
+        }
+
+        @media (max-width: 576px) {
+            padding-bottom: 50px;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 44px;
+
+        @media (max-width: 576px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    &-slider {
+        padding: 52px 105px 139px;
+        padding-top: 52px;
+
+        @media (max-width: 576px) {
+            padding: 52px 0 139px;
+            margin-bottom: 23px;
+        }
+
+        &__wrapper {
+            @media (max-width: 576px) {
+                display: grid;
+                column-gap: 12px;
+                row-gap: 25px;
+                grid-template-columns: repeat(2, 1fr);
+                transform: none !important;
+            }
+        }
+
+        &__btn {
+            position: absolute;
+            z-index: 3;
+            top: 180px;
+
+            @media (max-width: 576px) {
+                display: none;
+            }
+
+            svg {
+                fill: rgba(#000, 0.5);
+            }
+
+            @media (max-width: 576px) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &--prev {
+                left: 0;
+            }
+
+            &--next {
+                right: 0;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            padding-bottom: 80px;
+        }
+
+        @media (max-width: 768px) {
+            padding-bottom: 30px;
+        }
+
+        @media (max-width: 576px) {
+            padding-bottom: 0;
+
+            &:before, &:after {
+                display: none;
+            }
+        }
+
+        &:before {
+            @include pseudo();
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 93px;
+            height: 100%;
+            background: linear-gradient(-90deg, rgba(255, 255, 255, 0.14) 0%, #fff 100%);
+            z-index: 2;
+        }
+
+        &:after {
+            @include pseudo();
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 93px;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.14) 0%, #fff 100%);
+            z-index: 2;
+        }
+    }
+
+    &__more {
+        display: none;
+        justify-content: center;
+        margin: 0 60px 34px;
+        padding: 13px 65.5px 14px;
+
+        @media (max-width: 576px) {
+            display: flex;
+        }
+    }
+    &__pagination {
+        display: none;
+        @media (max-width: 576px) {
+            display: flex;
+        }
+    }
+}

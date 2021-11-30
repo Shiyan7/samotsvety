@@ -22,7 +22,8 @@
         color: rgba(#000, 0.2);
         transition: color 0.3s;
 
-        &:hover {
+        @include hover {
+            color: #111;
             svg {
                 fill: #111;
             }
@@ -36,11 +37,7 @@
             transition: fill 0.3s;
             flex-shrink: 0;
         }
-
-        &:hover {
-            color: #111;
-        }
-
+        
         &--current {
             color: #111;
         }
