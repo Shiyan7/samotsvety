@@ -1,7 +1,16 @@
 .collections {
 
+    &--2 {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01));
+    }
+
     &__container {
         padding-top: 36px;
+
+        &--2 {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
 
         @media (max-width: 576px) {
             padding-top: 28px;
@@ -60,13 +69,24 @@
     &-item {
         position: relative;
         overflow: hidden;
-        padding: 176px 50px 44px 21px;
+        padding: 179px 50px 44px 21px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
 
-        &__link {
+        &--sm {
+            
+        }
+
+        &__content {
             @include hoverOnCard();
+            color: #111;
+
+            &--no-hover {
+                &:before {
+                    display: none;
+                }
+            }
         }
 
         &__back {
@@ -77,12 +97,29 @@
             left: -3px;
             color: rgba(#111, 0.03);
             text-transform: uppercase;
+            pointer-events: none;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+            line-height: 24px;
+            color: rgba(#000, 0.5);
+            margin-bottom: 3px;
         }
 
         &__title {
             font-size: 50px;
             line-height: 60px;
             margin-bottom: 180px;
+
+            &--2 {
+                margin-bottom: 43px;
+            }
+        }
+
+        &__link {
+            margin-bottom: 65px;
+            padding: 14px 39px 13px 40px;
         }
 
         &__desc {
