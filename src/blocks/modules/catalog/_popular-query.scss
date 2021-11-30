@@ -12,10 +12,16 @@
     }
 
     &__tabs {
+        flex-wrap: wrap;
         width: 100%;
         margin-bottom: 24px;
+
         @media (min-width: 1250px) {
             margin-bottom: 0;
+        }
+
+        .g-tabs__btn {
+            margin-bottom: 10px;
         }
     }
 }

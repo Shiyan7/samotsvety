@@ -1,7 +1,15 @@
 .we-work {
     &__container {
-        padding-bottom: 130px;
+        padding-bottom: 160px;
         max-width: 1178px;
+
+        @media (max-width: 1024px) {
+            padding-bottom: 130px;
+        }
+
+        @media (max-width: 768px) {
+            padding-bottom: 100px;
+        }
     }
 
     &__list {

@@ -109,29 +109,7 @@
             max-height: 463px;
             margin-bottom: 21px;
             overflow: hidden;
-            &:before {
-                @include pseudo();
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                opacity: 0;
-                visibility: hidden;
-                z-index: 1;
-                transition: opacity 0.3s, visibility 0.3s;
-                background: rgba(162, 174, 181, 0.06);
-            }
-    
-            @include hover {
-                &:before {
-                    opacity: 1;
-                    visibility: visible;
-                }
-                img {
-                    transform: scale(1.08, 1.08);
-                }
-            }
+            @include hoverOnCard();
             
     
             @media (max-width: 768px) {

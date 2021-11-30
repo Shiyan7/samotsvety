@@ -5,8 +5,9 @@ section.collections.g-filters
                 a.g-breadcrumbs__link(href="/") Главная
             li.g-breadcrumbs__item
                 a.g-breadcrumbs__link Коллекции
-        h1.g-title.g-title--center.collections__title Коллекции
-        +filters("collections__filters")
+        .collections__top
+            h1.g-title.g-title--center.collections__title Коллекции
+            +filters("collections__filters fix-block")
         ul.collections__list.list-reset
             li.collections-item.collections-item--1.collections-item--big
                 a.collections-item__link(href="#")
