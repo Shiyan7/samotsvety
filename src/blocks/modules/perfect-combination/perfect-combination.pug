@@ -5,7 +5,35 @@ section.perfect-combination
             ul.swiper-wrapper.perfect-combination__list.list-reset
                 - for(var i = 0; i < 3; i++)
                     li.swiper-slide.perfect-combination__item
-                        +product
+                        .product
+                            span.product__caption NEW
+                            button.btn-reset.product__favorite
+                                +icon("favorite")
+                            .swiper.product-slider
+                                .swiper-wrapper
+                                    .swiper-slide.product__image
+                                        img(src="img/perfect-combination-1.jpg", alt="Продукт 1")
+                                    .swiper-slide.product__image
+                                        img(src="img/perfect-combination-1.jpg", alt="Продукт 1")
+                                    .swiper-slide.product__image
+                                        img(src="img/perfect-combination-1.jpg", alt="Продукт 1")
+                                    .swiper-slide.product__image
+                                        img(src="img/perfect-combination-1.jpg", alt="Продукт 1")
+                                .g-slider-pagination.product-slider__pag
+                                button.btn-reset.g-slider-btn.g-slider-btn--prev.product-slider__btn.product-slider__btn--prev
+                                    +icon("arrow")
+                                button.btn-reset.g-slider-btn.g-slider-btn--next.product-slider__btn.product-slider__btn--next
+                                    +icon("arrow")
+                            a.product__title(href="card.html") Кольцо из белого золота с изумрудом и турмалинами
+                            span.product__price от 77 975 ₽
+                            .product__discount
+                                span.product__old-price
+                                    span 150 000 
+                                    |₽
+                                span.product__percent 15%
+                            .product-details
+                                p.product__desc Желтое золото , 5 бриллиантов, 3 сапфира
+                                a.g-btn.g-btn--stroke.product__link(href="#") В корзину
             .swiper-scrollbar.g-scrollbar.perfect-combination-slider__scrollbar
             button.btn-reset.g-slider-btn.g-slider-btn--prev.perfect-combination-slider__btn.perfect-combination-slider__btn--prev
                 +icon("arrow")

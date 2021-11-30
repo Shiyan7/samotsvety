@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 breakpoints: {
                     577: {
                         centeredSlides: false,
+                        slidesPerView: 2,
+                        spaceBetween: 30,
                     },
                 },
                 scrollbar: {
@@ -43,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 perfectCombinationSlider.dataset.mobile = "true";
             }
 
-            if (window.innerWidth >= 768) {
+            if (window.innerWidth > 768) {
                 perfectCombinationSlider.dataset.mobile = "false";
                 if (perfectCombinationSlider.classList.contains("swiper-initialized")) {
                     mySwiper.destroy();
