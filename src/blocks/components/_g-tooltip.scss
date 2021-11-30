@@ -1,0 +1,25 @@
+.g-tooltip {
+    position: relative;
+    &__btn {
+        display: block;
+        width: 28px;
+        height: 28px;
+        &:hover + .g-tooltip__txt, &:focus + .g-tooltip__txt {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    /* &__txt {
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 50%;
+        background-color: rgba(#000, 0.7);
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+    } */
+}

@@ -39,7 +39,7 @@ mixin product
         +icon("arrow")
       button.btn-reset.g-slider-btn.g-slider-btn--next.product-slider__btn.product-slider__btn--next
         +icon("arrow")
-    a.product__title(href="#") Кольцо из белого золота с изумрудом и турмалинами
+    a.product__title(href="card.html") Кольцо из белого золота с изумрудом и турмалинами
     span.product__price от 77 975 ₽
     .product__discount
         span.product__old-price
@@ -88,3 +88,58 @@ mixin filters(cls)
           button.btn-reset.g-filters__btn(data-filters-path="house") дом
       li.g-filters__item
           button.btn-reset.g-filters__btn(data-filters-path="high-magnification-art") высокое ювелирное искусство
+
+mixin tabs
+  ul.g-tabs.list-reset(data-simplebar)
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Новинки
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn На свадьбу
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Женские
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Мужские
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Детям
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Актуальная классика
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn На каждый день
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Для вечернего образа
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Необычные
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn Новинки
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn На свадьбу
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn Женские
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn На каждый день
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn Для вечернего образа
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn Необычные
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn Новинки
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn На свадьбу
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn Актуальная классика
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn На каждый день
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn Необычные
+    li.g-tabs__item.g-tabs__item--hidden
+        button.btn-reset.g-tabs__btn Детям
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn.g-tabs__btn--more
+            |Ещё
+            +icon("arrow")
+
+mixin tooltip
+  .g-tooltip
+    button.btn-reset.g-tooltip__btn(aria-describedby="tooltip1")
+      +icon("tooltip")
+    //.g-tooltip__txt(id="tooltip1" role="tooltip") Какой-то текст

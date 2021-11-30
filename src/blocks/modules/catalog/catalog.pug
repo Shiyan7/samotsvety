@@ -9,27 +9,7 @@ section.catalog
             li.g-breadcrumbs__item
                 a.g-breadcrumbs__link Кольца
         h1.g-title.g-title--center.catalog__title Кольца
-        ul.g-tabs.list-reset.catalog__tabs(data-simplebar)
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Новинки
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn На свадьбу
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Женские
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Мужские
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Детям
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Актуальная классика
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn На каждый день
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Для вечернего образа
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Необычные
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn.g-tabs__btn--more Ещё
+        +tabs
         .catalog__top
             button.btn-reset.g-btn.g-btn--stroke.filters-toggle.filters-toggle--active
                 svg.filters-toggle__icon(width="24" height="24")
@@ -38,7 +18,7 @@ section.catalog
                 |Фильтры
                 span.filters-toggle__quantity 8
             span.catalog__quantity 356 товаров
-            
+
             .sort-by.catalog__sort-by
                 button.btn-reset.sort-by__open.open-sort-by сортировка
                 span.sort-by__caption Сортировать по:

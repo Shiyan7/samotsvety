@@ -6,6 +6,7 @@ import Swiper, {
 document.addEventListener("DOMContentLoaded", () => {
     new Swiper('.product-slider', {
         modules: [Navigation, Pagination],
+        allowTouchMove: false,
         slidesPerView: 'auto',
         navigation: {
             nextEl: '.product-slider__btn--next',

@@ -15,10 +15,10 @@
                 @include pseudo();
                 position: absolute;
                 top: 50%;
-                transform: translateY(-50%);
                 right: 0;
                 width: 0.4px;
                 height: 10px;
+                transform: translateY(-50%);
                 background-color: rgba(#000, 0.5);
             }
         }
@@ -36,5 +36,4 @@
             color: #111;
         }
     }
-
 }

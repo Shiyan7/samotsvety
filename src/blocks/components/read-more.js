@@ -1,17 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const readMore = document.querySelector(".read-more");
-    const fullText = document.querySelector(".full-text")
-    let flag = 0;
-    readMore.addEventListener("click", (e) => {
+    const readMore = document.querySelectorAll(".read-more");
 
-        if(flag == 0) {
-            flag++;
-            fullText.classList.add("active");
-            e.currentTarget.innerHTML = 'Свернуть'
-        } else {
-            flag--;
-            fullText.classList.remove("active");
-            e.currentTarget.innerHTML = 'Читать дальше'
-        }
+
+    readMore.forEach(el => {
+        let flag = 0;
+        el.addEventListener("click", (e) => {
+            
+            const fullText = e.currentTarget.closest(".read-more-wrapper").querySelector(".full-text");
+            let text = e.currentTarget.dataset.text;
+
+            if(flag == 0) {
+                flag++;
+                fullText.classList.add("active");
+                e.currentTarget.innerHTML = 'Свернуть'
+            } else {
+                flag--;
+                fullText.classList.remove("active");
+                e.currentTarget.innerHTML = text
+            }
+        });
     });
+
+
+
+    
 });

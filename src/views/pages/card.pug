@@ -2,14 +2,16 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Каталог";
-	- const page = "catalog";
+	- const title = "Кольцо с турмалином и бриллиантами";
+	- const page = "card"
 
 block content
 	.site-container
 		include ../../blocks/modules/header/header
 		main.main
-			include ../../blocks/modules/catalog/catalog
+			include ../../blocks/modules/card/card
+			include ../../blocks/modules/we-work/we-work
+			include ../../blocks/modules/perfect-combination/perfect-combination
 			include ../../blocks/modules/banner/banner
 			include ../../blocks/modules/info/info
 		include ../../blocks/modules/footer/footer

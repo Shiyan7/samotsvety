@@ -1,74 +1,54 @@
 section.popular-categories
     .container.popular-categories__container
         h2.g-title.g-title--center.popular-categories__title ПОПУЛЯрНЫЕ КАТЕГОРИИ
-        ul.g-tabs.list-reset.popular-categories__tabs(data-simplebar)
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Новинки
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn На свадьбу
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Женские
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Мужские
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Детям
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Актуальная классика
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn На каждый день
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Для вечернего образа
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn Необычные
-            li.g-tabs__item
-                button.btn-reset.g-tabs__btn.g-tabs__btn--more Ещё
+        +tabs
         .swiper.popular-categories-slider(data-mobile="false")
             ul.swiper-wrapper.popular-categories__list.list-reset
                 li.swiper-slide.popular-category
                     a.popular-category__image(href="#") 
-                        img(src="img/popular-category-1.jpg", alt="Кольца")
+                        img.lozad(src="img/popular-category-1.jpg", srcset="img/popular-category-1@2x.jpg 2x", alt="Кольца")
                     a.popular-category__title.g-title.g-title--center(href="#") КОЛЬЦА
                     a.popular-category__link.g-link(href="#") Посмотреть
                 li.swiper-slide.popular-category
                     a.popular-category__image(href="#") 
-                        img(src="img/popular-category-2.jpg", alt="СЕРЬГИ")
+                        img.lozad(src="img/popular-category-2.jpg", srcset="img/popular-category-2@2x.jpg 2x", alt="СЕРЬГИ")
                     a.popular-category__title.g-title.g-title--center(href="#") СЕРЬГИ
                     a.popular-category__link.g-link(href="#") Посмотреть
                 li.swiper-slide.popular-category
                     a.popular-category__image(href="#") 
-                        img(src="img/popular-category-3.jpg", alt="ПОДВЕСКИ")
+                        img.lozad(src="img/popular-category-3.jpg", srcset="img/popular-category-3@2x.jpg 2x", alt="ПОДВЕСКИ")
                     a.popular-category__title.g-title.g-title--center(href="#") ПОДВЕСКИ
                     a.popular-category__link.g-link(href="#") Посмотреть
                 li.swiper-slide.popular-category
                     a.popular-category__image(href="#") 
-                        img(src="img/popular-category-4.jpg", alt="БРОШИ")
+                        img.lozad(src="img/popular-category-4.jpg", srcset="img/popular-category-4@2x.jpg 2x", alt="БРОШИ")
                     a.popular-category__title.g-title.g-title--center(href="#") БРОШИ
                     a.popular-category__link.g-link(href="#") Посмотреть
                 li.swiper-slide.popular-category.popular-category--big
                     a.popular-category__image(href="#") 
-                        img(src="img/popular-category-5.jpg", alt="Колье")
+                        img.lozad(src="img/popular-category-5.jpg", srcset="img/popular-category-5@2x.jpg 2x", alt="Колье")
                     a.popular-category__title.g-title.g-title--center(href="#") Колье
                     a.popular-category__link.g-link(href="#") Посмотреть
 
 
                 li.swiper-slide.popular-category.popular-category--big.popular-category--hidden
                     a.popular-category__image(href="#") 
-                        img(src="img/popular-category-6.jpg", alt="БРАСЛЕТЫ")
+                        img.lozad(src="img/popular-category-6.jpg", srcset="img/popular-category-6@2x.jpg 2x", alt="БРАСЛЕТЫ")
                     a.popular-category__title.g-title.g-title--center(href="#") БРАСЛЕТЫ
                     a.popular-category__link.g-link(href="#") Посмотреть
                 li.swiper-slide.popular-category.popular-category--hidden
                     a.popular-category__image(href="#") 
-                        img(src="img/popular-category-7.jpg", alt="цепи")
+                        img.lozad(src="img/popular-category-7.jpg", srcset="img/popular-category-7@2x.jpg 2x", alt="цепи")
                     a.popular-category__title.g-title.g-title--center(href="#") цепи
                     a.popular-category__link.g-link(href="#") Посмотреть
                 li.swiper-slide.popular-category.popular-category--hidden
                     a.popular-category__image(href="#") 
-                        img(src="img/popular-category-8.jpg", alt="запонки")
+                        img.lozad(src="img/popular-category-8.jpg", srcset="img/popular-category-8@2x.jpg 2x", alt="запонки")
                     a.popular-category__title.g-title.g-title--center(href="#") запонки
                     a.popular-category__link.g-link(href="#") Посмотреть
                 li.swiper-slide.popular-category.popular-category--big.popular-category--hidden
                     a.popular-category__image(href="#") 
-                        img(src="img/popular-category-9.jpg", alt="зажимы для галстука")
+                        img.lozad(src="img/popular-category-9.jpg", srcset="img/popular-category-9@2x.jpg 2x", alt="зажимы для галстука")
                     a.popular-category__title.g-title.g-title--center(href="#") зажимы для галстука
                     a.popular-category__link.g-link(href="#") Посмотреть
             .swiper-scrollbar.g-scrollbar.popular-categories-slider__scrollbar

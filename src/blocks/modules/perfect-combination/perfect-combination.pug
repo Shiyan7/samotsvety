@@ -1,0 +1,13 @@
+section.perfect-combination
+    .container.perfect-combination__container
+        h2.g-title.g-title--center.perfect-combination__title ИДЕАЛЬНОЕ СОЧЕТАНИЕ
+        .swiper.perfect-combination-slider(data-mobile="false")
+            ul.swiper-wrapper.perfect-combination__list.list-reset
+                - for(var i = 0; i < 3; i++)
+                    li.swiper-slide.perfect-combination__item
+                        +product
+            .swiper-scrollbar.g-scrollbar.perfect-combination-slider__scrollbar
+            button.btn-reset.g-slider-btn.g-slider-btn--prev.perfect-combination-slider__btn.perfect-combination-slider__btn--prev
+                +icon("arrow")
+            button.btn-reset.g-slider-btn.g-slider-btn--next.perfect-combination-slider__btn.perfect-combination-slider__btn--next
+                +icon("arrow")

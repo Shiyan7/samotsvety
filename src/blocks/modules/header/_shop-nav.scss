@@ -2,10 +2,11 @@
     display: flex;
     align-items: center;
     font-family: "HeliosExt", sans-serif;
+    padding-right: 3px;
 
     &__item {
         &:not(:last-child) {
-            margin-right: 18px;
+            margin-right: 20px;
         }
     }
 
@@ -34,7 +35,7 @@
         display: block;
         width: 24px;
         height: 24px;
-        margin-right: 5px;
+        margin-right: 3px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -55,5 +56,6 @@
 
     &__quantity {
         min-width: 18px;
+        margin-top: -2px;
     }
 }

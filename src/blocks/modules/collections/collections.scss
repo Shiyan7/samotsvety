@@ -33,6 +33,10 @@
     &__filters {
         margin-bottom: 42px;
 
+        @media (max-width: 1024px) {
+            margin-bottom: 32px;
+        }
+
         .g-filters__item {
             &:not(:last-child) {
                 margin-right: 34px;

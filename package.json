@@ -74,6 +74,7 @@
     "dependencies": {
         "bootstrap": "^5.0.2",
         "choices.js": "^9.0.1",
+        "fslightbox": "^3.3.1",
         "gsap": "^3.8.0",
         "imagesloaded": "^4.1.4",
         "imask": "^6.0.7",
