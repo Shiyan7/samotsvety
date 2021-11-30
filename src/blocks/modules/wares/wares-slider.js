@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     slidesPerView: 2,
                     loop: true,
-                    spaceBetween: 6,
+                    spaceBetween: 15,
                     modules: [Navigation],
                     breakpoints: {
                         769: {

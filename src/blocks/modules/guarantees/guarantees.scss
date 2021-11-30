@@ -1,0 +1,16 @@
+.guarantees {
+    &__container {
+        padding-bottom: 57px;
+    }
+
+    &__title {
+        margin-bottom: 9px;
+        margin-right: -3px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        line-height: 24px;
+        color: rgba(#000, 0.5);
+    }
+}

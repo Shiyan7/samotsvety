@@ -1,0 +1,14 @@
+section.wares
+    .container.wares__container.wares__container--2
+        h2.g-title.g-title--center.wares__title ПРОСМОТРЕННЫЕ ИЗДЕЛИЯ
+        .swiper.wares-slider(data-mobile="false")
+            .swiper-wrapper.wares-slider__wrapper
+                - for(var i = 0; i < 4; i++)
+                    .swiper-slide.wares-slide
+                        +product
+            button.btn-reset.g-slider-btn.g-slider-btn--prev.wares-slider__btn.wares-slider__btn--prev
+                +icon("arrow")
+            button.btn-reset.g-slider-btn.g-slider-btn--next.wares-slider__btn.wares-slider__btn--next
+                +icon("arrow")
+        a.g-btn.g-btn--stroke.wares__more(href="#") показать ещЁ
+        +pagination("wares__pagination")
