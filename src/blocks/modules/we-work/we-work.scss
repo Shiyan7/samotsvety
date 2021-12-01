@@ -5,7 +5,6 @@
         padding-bottom: 136px;
 
         @media (max-width: 1024px) {
-            display: flex;
             align-items: flex-start;
             flex-direction: column;
             padding-bottom: 72px;
@@ -35,6 +34,9 @@
 
         @media (max-width: 576px) {
             height: auto;
+            width: calc(100% + 20px);
+            max-width: calc(100% + 20px);
+            margin: 0 -10px;
         }
     }
 
@@ -147,10 +149,6 @@
         @media (max-width: 1024px) {
             justify-content: center;
             
-        }
-
-        @media (max-width: 576px) {
-
         }
 
         &:not(:last-child) {
