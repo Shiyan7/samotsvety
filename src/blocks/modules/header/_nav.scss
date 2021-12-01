@@ -6,13 +6,13 @@
     }
 
     @media (max-width: 1024px) {
-        transform: translateX(-100%);
         position: absolute;
-        z-index: 100;
-        width: 80%;
+        z-index: 2000;
         top: 0;
         left: 0;
+        width: 80%;
         height: 100vh;
+        transform: translateX(-100%);
         overflow-y: auto;
         overflow-x: hidden;
         background-color: #fff;
@@ -58,10 +58,24 @@
         font-size: 14px;
         line-height: 20px;
 
+        @media (max-width: 1024px) {
+            display: block;
+            padding: 12.5px 20px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 11px;
+            line-height: 1;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 10px;
+        }
+
         &:hover {
             &:after {
-                width: 100%;
                 left: 0;
+                width: 100%;
             }
         }
 
@@ -80,20 +94,6 @@
             }
         }
 
-        @media (max-width: 1024px) {
-            display: block;
-            padding: 12.5px 20px;
-        }
-
-        @media (max-width: 576px) {
-            font-size: 11px;
-            line-height: 1;
-        }
-
-        @media (max-width: 360px) {
-            font-size: 10px;
-        }
-
         &--gray {
             color: rgba(#000, 0.5);
 
@@ -108,8 +108,8 @@
 
         @media (max-width: 1024px) {
             display: flex;
-            align-items: flex-start;
             flex-direction: column;
+            align-items: flex-start;
             padding-top: 0;
             padding-bottom: 50px;
 
@@ -145,11 +145,11 @@
 
 .overlay {
     position: absolute;
+    z-index: 90;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 90;
     background-color: rgba(#000, 0.5);
     opacity: 0;
     visibility: hidden;
