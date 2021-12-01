@@ -42,4 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') hiddenLocation();
     });
+
+    /* document.addEventListener("click", (e) => {
+        if(e.target.classList.contains("region-selection")) {
+            hiddenLocation();
+        }
+    }) */
 });

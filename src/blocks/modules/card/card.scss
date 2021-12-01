@@ -245,6 +245,7 @@
     .choices {
         min-width: 258px;
         margin-right: 2px;
+        z-index: 10;
 
         @media (max-width: 576px) {
             min-width: 223px;
