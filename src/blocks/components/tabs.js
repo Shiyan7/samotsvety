@@ -1,12 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const moreTabsBtn = document.querySelector(".g-tabs__btn--more");
-    const hiddenTabs = document.querySelectorAll(".g-tabs__item--hidden");
+    const moreTabsBtn = document.querySelectorAll(".g-tabs__btn--more");
 
-    function moreTabs (e) {
-        e.currentTarget.classList.toggle("active");
-        e.currentTarget.closest(".g-tabs").classList.toggle("active");
-        hiddenTabs.forEach(el => el.classList.toggle("g-tabs__item--hidden"))
-    }
+    const moreTabs = (e, hiddenTabs) => {
 
-    moreTabsBtn?.addEventListener("click", moreTabs);
+        e.classList.toggle("active");
+        e.closest(".g-tabs").classList.toggle("active");
+        hiddenTabs.forEach(el => el.classList.toggle("g-tabs__item--hidden"));
+        
+    };
+
+    moreTabsBtn?.forEach(btn => {
+
+        const hiddenTabs = btn.closest(".g-tabs").querySelectorAll(".g-tabs__item--hidden");
+
+        btn.addEventListener("click", (e) => {
+
+            moreTabs(e.currentTarget, hiddenTabs)
+
+        });
+    });
 });
