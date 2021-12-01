@@ -1,6 +1,5 @@
 .product {
     position: relative;
-    max-width: 320px;
 
     &:before {
         @include pseudo();

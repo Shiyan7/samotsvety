@@ -1,6 +1,10 @@
 .guarantees {
     &__container {
-        padding-bottom: 57px;
+        padding-bottom: 136px;
+
+        @media (max-width: 1024px) {
+            padding-bottom: 72px;
+        }
     }
 
     &__title {
