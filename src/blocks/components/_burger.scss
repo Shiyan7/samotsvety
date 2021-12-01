@@ -1,7 +1,7 @@
 .menu-btn {
     display: none;
     position: relative;
-    z-index: 101;
+    z-index: 500;
 
     @media (max-width: 1024px) {
         display: block;
@@ -73,6 +73,7 @@
 }
 
 .menu-btn.is-active {
+    z-index: 2001;
     .menu-btn__line {
         transform: scaleX(0);
     }
