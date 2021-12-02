@@ -496,12 +496,14 @@
                 </div><span class="product__price card__price">77 975 ₽</span>
                 <div class="product__discount card__discount"><span class="product__old-price card__old-price"><span>150 000 </span>₽</span><span class="product__percent card__percent">15%</span></div>
                 <p class="card__desc">Цену можно снизить на 5% при ПОКУПКЕ онлайн.</p>
-                <div class="card__row"><a class="card__link g-link card__promo-code" href="#">Получите промокод</a><span class="g-tooltip">
-                    <button class="btn-reset g-tooltip__btn">
+                <div class="card__row">
+                  <button class="btn-reset card__link g-link card__promo-code modal-btn" data-graph-animation="fadeInUp" data-graph-path="reduce-price" data-graph-speed="500">Получите промокод</button><span class="g-tooltip">
+                    <button class="btn-reset g-tooltip__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="use-promocode" data-graph-speed="500">
                       <svg class="svg-icon tooltip">
                         <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
                       </svg>
-                    </button></span></div>
+                    </button></span>
+                </div>
                 <div class="card__btns">
                   <button class="btn-reset g-btn g-btn--black card__btn">ДОБАВИТЬ В КОРЗИНУ</button>
                   <button class="btn-reset g-btn g-btn--stroke card__btn">БЫСТРЫЙ ЗАКАЗ</button>
@@ -1369,7 +1371,7 @@
               <h3 class="g-title we-work__subtitle">оплачиваете заказ только после проверки и примерки</h3>
               <h4 class="g-title we-work__caption">Оплачивайте заказ наличными в&nbsp;нашем офисе</h4>
               <div class="we-work__desc"><span>деньги можно снять на месте, в банкоматах бизнесс-центра</span><span class="g-tooltip">
-                  <button class="btn-reset g-tooltip__btn" aria-describedby="tooltip1">
+                  <button class="btn-reset g-tooltip__btn">
                     <svg class="svg-icon tooltip">
                       <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
                     </svg>
@@ -1379,7 +1381,7 @@
               <p class="we-work__desc">заказ можно оплатить в офисе</p><img class="we-work__pay" src="img/pay-cards.png" alt="Принимаем оплату по банковскии картам">
               <h4 class="g-title we-work__caption">Беспроцентная рассрочка на&nbsp;4&nbsp;месяца</h4>
               <div class="we-work__desc"><span>храним изделие в сейфе 4 месяца до полной выплаты</span><span class="g-tooltip">
-                  <button class="btn-reset g-tooltip__btn" aria-describedby="tooltip1">
+                  <button class="btn-reset g-tooltip__btn">
                     <svg class="svg-icon tooltip">
                       <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
                     </svg>
@@ -1530,6 +1532,59 @@
           <div class="modal-content">
             <h2 class="g-title g-title--center modal__title">ПОЧЕМУ <br>НЕТОЧНАЯ ЦЕНА?</h2>
             <p class="modal__desc modal__desc--center">Цена изделия может значительно варьироваться в&nbsp;зависимости от&nbsp;веса готового изделия, характеристик вставок (цвета, чистоты и&nbsp;качества огранки), а&nbsp;также от&nbsp;общего каратного веса драгоценных камней.</p>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="order-product">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Заявка на изделие под заказ</h2>
+            <p class="modal__desc modal__desc--center">Оставьте заявку на&nbsp;консультацию с&nbsp;экспертом, мы&nbsp;перезвоним в&nbsp;течение 30&nbsp;минут*</p>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">оставить заявку</button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных *в рабочее время</span>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="modal__container modal__container--2" role="dialog" aria-modal="true" data-graph-target="use-promocode">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Как использовать промокод?</h2>
+            <p class="modal__desc modal__desc--2 modal__desc--center">Укажите полученный промокод <br> при оформлении заказа и&nbsp;<span>получите СКИДКУ 5%. </span>Или сообщите промокод менеджеру.</p>
+            <p class="modal__desc modal__desc--2 modal__desc--center">Скидка закрепляется за вашим номером <br> телефона и действует 14 дней.</p>
+            <p class="modal__desc modal__desc--2 modal__desc--gray modal__desc--center">Скидка действует <span>только при покупке on-line </span>в&nbsp;интернет-галерее «Русские самоцветы».</p>
+          </div>
+        </div>
+        <div class="modal__container modal__container--3" role="dialog" aria-modal="true" data-graph-target="reduce-price">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Снизьте цену на <br> товар за 1 минуту</h2>
+            <h3 class="g-title g-title--center modal__subtitle">Получите промокод на <span>скидку 5%</span></h3>
+            <p class="modal__desc modal__desc--center">Отправим промокод SMS-сообщением в&nbsp;течение 1&nbsp;минуты. Промокод закрепляется за&nbsp;вашим номером телефона и&nbsp;действует 14&nbsp;дней<br><span>только при покупке on-line</span></p>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">ПОЛУЧИТЬ ПОМОКОД</button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
+              </label>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я даю согласие на sms-рассылку</span>
+              </label>
+            </form>
           </div>
         </div>
       </div>
