@@ -37,6 +37,7 @@
 
         @media (max-width: 576px) {
             font-weight: 700;
+            min-width: 165px;
         }
 
         &.active {
@@ -52,8 +53,8 @@
         svg {
             display: none;
             position: absolute;
-            top: 0;
-            right: -43px;
+            top: 2px;
+            right: 0;
             width: 8px;
             height: 14px;
             transform: rotate(-90deg);
@@ -72,10 +73,6 @@
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 19px;
-                
-                svg {
-                    right: -20px;
-                }
             }
         }
     }

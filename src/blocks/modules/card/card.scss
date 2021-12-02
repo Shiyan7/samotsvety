@@ -1,4 +1,16 @@
 .card {
+
+    .choices {
+        z-index: 10;
+        min-width: 258px;
+        margin-right: 2px;
+
+        @media (max-width: 576px) {
+            min-width: 223px;
+        }
+    }
+
+
     &__container {
         padding-top: 36px;
         padding-bottom: 80px;
@@ -94,11 +106,11 @@
         &__btn {
             display: none;
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
             z-index: 1;
+            top: 50%;
             width: 28px;
             height: 28px;
+            transform: translateY(-50%);
 
             svg {
                 width: 8px;
@@ -116,8 +128,6 @@
             &--next {
                 right: 0;
             }
-
-
         }
     }
 
@@ -127,12 +137,12 @@
     }
 
     &__favorite {
+        top: 11px;
+        right: 16px;
         width: 24px;
         height: 24px;
         opacity: 1;
         visibility: visible;
-        top: 11px;
-        right: 16px;
 
         svg {
             stroke: rgba(#111, 0.5);
@@ -153,6 +163,7 @@
             display: block;
             width: 100%;
             height: 100%;
+
             @include hover {
                 &:before {
                     opacity: 1;
@@ -163,13 +174,13 @@
             &:before {
                 @include pseudo();
                 position: absolute;
+                z-index: 1;
                 top: 0;
                 right: 0;
                 bottom: 0;
                 left: 0;
                 opacity: 0;
                 visibility: hidden;
-                z-index: 1;
                 transition: opacity 0.3s, visibility 0.3s;
                 background: rgba(#111, 0.02);
             }
@@ -240,16 +251,6 @@
     &__row {
         display: flex;
         align-items: center;
-    }
-
-    .choices {
-        min-width: 258px;
-        margin-right: 2px;
-        z-index: 10;
-
-        @media (max-width: 576px) {
-            min-width: 223px;
-        }
     }
 
     &__price {
@@ -392,24 +393,24 @@
         }
 
         &__content {
-            position: relative;
             display: -webkit-box;
             -webkit-line-clamp: 5;
             -webkit-box-orient: vertical;
+            position: relative;
+            max-height: 120px;
             overflow: hidden;
             padding-bottom: 10px;
-            max-height: 120px;
             will-change: max-height;
             transition: max-height 0.3s;
 
             &:after {
                 @include pseudo();
                 position: absolute;
+                z-index: 1;
                 top: 0;
                 right: 0;
                 bottom: 0;
                 left: 0;
-                z-index: 1;
                 opacity: 1;
                 visibility: visible;
                 transition: opacity 0.3s, visibility 0.3s;
