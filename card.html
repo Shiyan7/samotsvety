@@ -488,7 +488,7 @@
                     <option value="size-15">17.5</option>
                     <option value="size-16">18</option>
                   </select><span class="g-tooltip">
-                    <button class="btn-reset g-tooltip__btn">
+                    <button class="btn-reset g-tooltip__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="found-out-size" data-graph-speed="500">
                       <svg class="svg-icon tooltip">
                         <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
                       </svg>
@@ -1585,6 +1585,25 @@
                 <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я даю согласие на sms-рассылку</span>
               </label>
             </form>
+          </div>
+        </div>
+        <div class="modal__container modal__container--4" role="dialog" aria-modal="true" data-graph-target="found-out-size">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Как узнать размер?</h2>
+            <p class="modal__desc modal__desc--center">Обмотайте нужный палец ниткой, шнурком или бумажной лентой в самом толстом месте.</p><img class="lozad modal__image" src="img/found-out-size.jpg" srcset="img/found-out-size@2x.jpg" alt="Как узнать размер?">
+            <p class="modal__desc modal__desc--center">Линейкой замерьте полученную длину</p>
+            <form class="modal-form validate-form" action="#">
+              <label class="modal-form__item"><span class="modal-form__caption">Введите результат измерений в миллиметрах</span>
+                <input class="g-input modal-form__input" type="text" name="Значение" placeholder="ВВЕДИТЕ ПОЛУЧЕННОЕ ЗНАЧЕНИЕ">
+              </label>
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">расчитать</button>
+            </form>
+            <h2 class="g-title g-title--center modal__title modal__title--md">НУЖНЫЙ ВАМ РАЗМЕР 19</h2>
           </div>
         </div>
       </div>
