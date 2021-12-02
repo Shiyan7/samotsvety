@@ -71,9 +71,5 @@
         &--disabled {
             pointer-events: none;
         }
-
-        &--up {
-            transform: rotate(180deg);
-        }
     }
 }
