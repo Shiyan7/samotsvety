@@ -3,8 +3,8 @@ import Swiper, {
     Pagination
 } from 'swiper';
 
-document.addEventListener("DOMContentLoaded", () => {
-    new Swiper('.product-slider', {
+export const productSlider = () => {
+    const gregerg = new Swiper('.product-slider', {
         modules: [Navigation, Pagination],
         allowTouchMove: false,
         slidesPerView: 'auto',
@@ -24,4 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
             clickable: true,
         },
     });
-});
+}
+
+productSlider();

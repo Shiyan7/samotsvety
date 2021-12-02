@@ -1,28 +1,10 @@
-/* import Swiper, { Navigation } from "swiper";
-
-const waresSlider = new Swiper(".wares-slider", {
-    slidesPerView: 2,
-    loop: true,
-    spaceBetween: 12,
-    modules: [Navigation],
-    breakpoints: {
-        769: {
-            slidesPerView: 3,
-        },
-        1025: {
-            slidesPerView: 4,
-        },
-    },
-    navigation: {
-        nextEl: '.wares-slider__btn--next',
-        prevEl: '.wares-slider__btn--prev',
-    },
-}); */
-
-
 import Swiper, {
     Navigation
 } from "swiper";
+
+import {
+    productSlider
+} from "../catalog/product-slider";
 
 document.addEventListener("DOMContentLoaded", () => {
     const waresSlider = document.querySelectorAll(".wares-slider");
@@ -55,6 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
                 });
 
+                mySwiper.on('slideChange', function () {
+                    productSlider();
+                });
             };
 
             if (window.innerWidth <= 576) {
@@ -77,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     el.dataset.mobile = "false";
                 }
             };
-            
+
             mobileSlider();
 
             window.addEventListener("resize", () => {
