@@ -144,8 +144,12 @@
               </div>
               <div class="cities-regions g-filters">
                 <ul class="g-filters__list cities__filters list-reset">
-                  <button class="btn-reset g-filters__btn g-filters__btn--active" data-filters-path="city">Регион</button>
-                  <button class="btn-reset g-filters__btn" data-filters-path="region">Город</button>
+                  <li class="g-filters__item">
+                    <button class="btn-reset g-filters__btn g-filters__btn--active" data-filters-path="city">Регион</button>
+                  </li>
+                  <li class="g-filters__item">
+                    <button class="btn-reset g-filters__btn" data-filters-path="region">Город</button>
+                  </li>
                 </ul>
                 <div class="cities-regions__wrapper">
                   <div class="cities-regions__col g-filters__content g-filters__content--active" data-filters-target="city">
@@ -484,23 +488,20 @@
                     <option value="size-15">17.5</option>
                     <option value="size-16">18</option>
                   </select><span class="g-tooltip">
-                    <button class="btn-reset g-tooltip__btn" aria-describedby="tooltip1">
+                    <button class="btn-reset g-tooltip__btn modal-btn" data-graph-animation="custom" data-graph-path="first" data-graph-speed="500">
                       <svg class="svg-icon tooltip">
                         <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
                       </svg>
-                    </button>
-                    <!--.g-tooltip__txt(id="tooltip1" role="tooltip") Какой-то текст--></span>
+                    </button></span>
                 </div><span class="product__price card__price">77 975 ₽</span>
                 <div class="product__discount card__discount"><span class="product__old-price card__old-price"><span>150 000 </span>₽</span><span class="product__percent card__percent">15%</span></div>
                 <p class="card__desc">Цену можно снизить на 5% при ПОКУПКЕ онлайн.</p>
                 <div class="card__row"><a class="card__link g-link card__promo-code" href="#">Получите промокод</a><span class="g-tooltip">
-                    <button class="btn-reset g-tooltip__btn" aria-describedby="tooltip1">
+                    <button class="btn-reset g-tooltip__btn modal-btn" data-graph-animation="custom" data-graph-path="second" data-graph-speed="500">
                       <svg class="svg-icon tooltip">
                         <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
                       </svg>
-                    </button>
-                    <!--.g-tooltip__txt(id="tooltip1" role="tooltip") Какой-то текст--></span>
-                </div>
+                    </button></span></div>
                 <div class="card__btns">
                   <button class="btn-reset g-btn g-btn--black card__btn">ДОБАВИТЬ В КОРЗИНУ</button>
                   <button class="btn-reset g-btn g-btn--stroke card__btn">БЫСТРЫЙ ЗАКАЗ</button>
@@ -886,7 +887,7 @@
                     <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
                     <div class="product-details">
                       <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p>
-                      <button class="btn-reset g-btn g-btn--stroke product__to-cart" href="#">В корзину</button>
+                      <button class="btn-reset g-btn g-btn--stroke product__to-cart">В корзину</button>
                     </div>
                   </div>
                 </div>
@@ -919,7 +920,7 @@
                     <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
                     <div class="product-details">
                       <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p>
-                      <button class="btn-reset g-btn g-btn--stroke product__to-cart" href="#">В корзину</button>
+                      <button class="btn-reset g-btn g-btn--stroke product__to-cart">В корзину</button>
                     </div>
                   </div>
                 </div>
@@ -952,7 +953,7 @@
                     <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
                     <div class="product-details">
                       <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p>
-                      <button class="btn-reset g-btn g-btn--stroke product__to-cart" href="#">В корзину</button>
+                      <button class="btn-reset g-btn g-btn--stroke product__to-cart">В корзину</button>
                     </div>
                   </div>
                 </div>
@@ -985,7 +986,7 @@
                     <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
                     <div class="product-details">
                       <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p>
-                      <button class="btn-reset g-btn g-btn--stroke product__to-cart" href="#">В корзину</button>
+                      <button class="btn-reset g-btn g-btn--stroke product__to-cart">В корзину</button>
                     </div>
                   </div>
                 </div>
@@ -1086,7 +1087,7 @@
                     <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
                     <div class="product-details">
                       <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p>
-                      <button class="btn-reset g-btn g-btn--stroke product__to-cart" href="#">В корзину</button>
+                      <button class="btn-reset g-btn g-btn--stroke product__to-cart">В корзину</button>
                     </div>
                   </div>
                 </div>
@@ -1119,7 +1120,7 @@
                     <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
                     <div class="product-details">
                       <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p>
-                      <button class="btn-reset g-btn g-btn--stroke product__to-cart" href="#">В корзину</button>
+                      <button class="btn-reset g-btn g-btn--stroke product__to-cart">В корзину</button>
                     </div>
                   </div>
                 </div>
@@ -1152,7 +1153,7 @@
                     <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
                     <div class="product-details">
                       <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p>
-                      <button class="btn-reset g-btn g-btn--stroke product__to-cart" href="#">В корзину</button>
+                      <button class="btn-reset g-btn g-btn--stroke product__to-cart">В корзину</button>
                     </div>
                   </div>
                 </div>
@@ -1185,7 +1186,7 @@
                     <div class="product__discount"><span class="product__old-price"><span>150 000 </span>₽</span><span class="product__percent">15%</span></div>
                     <div class="product-details">
                       <p class="product__desc">Желтое золото , 5 бриллиантов, 3 сапфира</p>
-                      <button class="btn-reset g-btn g-btn--stroke product__to-cart" href="#">В корзину</button>
+                      <button class="btn-reset g-btn g-btn--stroke product__to-cart">В корзину</button>
                     </div>
                   </div>
                 </div>
@@ -1373,7 +1374,7 @@
                       <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
                     </svg>
                   </button>
-                  <!--.g-tooltip__txt(id="tooltip1" role="tooltip") Какой-то текст--></span>
+                  <div class="g-tooltip__txt" id="tooltip1" role="tooltip"></div></span>
               </div>
               <h4 class="g-title we-work__caption">Принимаем оплату по&nbsp;банковскии&nbsp;картам</h4>
               <p class="we-work__desc">заказ можно оплатить в офисе</p><img class="we-work__pay" src="img/pay-cards.png" alt="Принимаем оплату по банковскии картам">
@@ -1384,7 +1385,7 @@
                       <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
                     </svg>
                   </button>
-                  <!--.g-tooltip__txt(id="tooltip1" role="tooltip") Какой-то текст--></span>
+                  <div class="g-tooltip__txt" id="tooltip1" role="tooltip"></div></span>
               </div>
             </div>
           </div>
@@ -1503,6 +1504,20 @@
           <p class="footer__desc">Предложение не является публичной офертой. Цены на сайте и в розничной сети могут отличаться. Информация на сайте о товаре носит рекламный характер и расценивается как приглашение делать оферты на основании п.1 ст. 437 Гражданского кодекса РФ.</p>
         </div>
       </footer>
+      <div class="modal">
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="first">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <h2 class="modal__title">Заголовок модального окна</h2>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="second">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="modal-content">
+            <h2 class="modal__title">Заголовок модального окна</h2>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
