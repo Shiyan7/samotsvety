@@ -67,7 +67,9 @@ section.card
                         option(value="size-14") 17
                         option(value="size-15") 17.5
                         option(value="size-16") 18
-                    +tooltip
+                    span.g-tooltip
+                        button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="custom" data-graph-path="first" data-graph-speed="500")
+                            +icon("tooltip")
                 span.product__price.card__price 77 975 ₽
                 .product__discount.card__discount
                     span.product__old-price.card__old-price
@@ -77,7 +79,10 @@ section.card
                 p.card__desc Цену можно снизить на 5% при ПОКУПКЕ онлайн.
                 .card__row
                     a.card__link.g-link.card__promo-code(href="#") Получите промокод
-                    +tooltip
+                    span.g-tooltip
+                        button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="custom" data-graph-path="second" data-graph-speed="500")
+                            +icon("tooltip")
+
                 .card__btns
                     button.btn-reset.g-btn.g-btn--black.card__btn ДОБАВИТЬ В КОРЗИНУ
                     button.btn-reset.g-btn.g-btn--stroke.card__btn БЫСТРЫЙ ЗАКАЗ

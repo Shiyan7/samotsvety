@@ -48,7 +48,7 @@ mixin product
         span.product__percent 15%
     .product-details
       p.product__desc Желтое золото , 5 бриллиантов, 3 сапфира
-      button.btn-reset.g-btn.g-btn--stroke.product__to-cart(href="#") В корзину
+      button.btn-reset.g-btn.g-btn--stroke.product__to-cart В корзину
 
 mixin pagination(cls)
   if(cls)
@@ -169,7 +169,7 @@ mixin tooltip
   span.g-tooltip
     button.btn-reset.g-tooltip__btn(aria-describedby="tooltip1")
       +icon("tooltip")
-    //.g-tooltip__txt(id="tooltip1" role="tooltip") Какой-то текст
+    .g-tooltip__txt(id="tooltip1" role="tooltip")
 
 mixin popularQuery(cls)
   div(class="popular-query " + cls)

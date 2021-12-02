@@ -107,8 +107,10 @@ header.header
                     button.btn-reset.cities-main__btn.js-region-selection__btn нижний-новгород
                 .cities-regions.g-filters
                     ul.g-filters__list.cities__filters.list-reset
-                        button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="city") Регион
-                        button.btn-reset.g-filters__btn(data-filters-path="region") Город
+                        li.g-filters__item
+                            button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="city") Регион
+                        li.g-filters__item
+                            button.btn-reset.g-filters__btn(data-filters-path="region") Город
                     .cities-regions__wrapper
                         .cities-regions__col.g-filters__content.g-filters__content--active(data-filters-target="city")
                             h3.g-title.g-title--center.cities-regions__title Регион

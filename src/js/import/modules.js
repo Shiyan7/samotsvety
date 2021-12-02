@@ -16,3 +16,4 @@ import "%modules%/catalog/product-slider";
 import "%modules%/card/card-slider";
 import "%modules%/perfect-combination/perfect-combination-slider";
 import "%modules%/wares/wares-slider";
+import "%modules%/modal/modal";
