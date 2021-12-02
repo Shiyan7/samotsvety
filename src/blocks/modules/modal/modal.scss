@@ -20,8 +20,24 @@
         line-height: 24px;
         margin-bottom: 24px;
         font-weight: 400;
+        cursor: text;
 
         @media (max-width: 576px) {
+            font-family: "HeliosExt", sans-serif;
+            font-weight: 400;
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        text-transform: initial;
+        font-family: "HeliosExtLight", sans-serif;
+        cursor: text;
+        font-weight: 300;
+
+        span {
             font-family: "HeliosExt", sans-serif;
             font-weight: 400;
         }
@@ -32,16 +48,34 @@
         font-size: 18px;
         line-height: 24px;
         margin-bottom: 23px;
+        cursor: text;
         color: #111;
+
+        span {
+            font-weight: 500;
+            color: #111;
+        }
+
+        &--2 {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
 
         &--center {
             text-align: center;
+        }
+
+        &--gray {
+            color: rgba(#000, 0.5);
         }
     }
 
     &-form {
         display: flex;
         flex-direction: column;
+        max-width: 296px;
+        margin: 0 auto;
 
         &__input {
             margin-bottom: 15px;
@@ -62,6 +96,10 @@
         &__label {
             display: flex;
             position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
         }
 
         &__checkbox {
@@ -138,6 +176,11 @@
         @media (max-width: 576px) {
             padding: 40px 20px 15px;
         }
+    }
+
+    &--3 {
+        width: 376px;
+        padding: 63px 30px 36px 30px;
     }
 
     &.modal-open {

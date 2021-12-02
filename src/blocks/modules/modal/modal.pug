@@ -19,3 +19,53 @@
         .modal-content
             h2.g-title.g-title--center.modal__title ПОЧЕМУ <br>НЕТОЧНАЯ ЦЕНА?
             p.modal__desc.modal__desc--center Цена изделия может значительно варьироваться в&nbsp;зависимости от&nbsp;веса готового изделия, характеристик вставок (цвета, чистоты и&nbsp;качества огранки), а&nbsp;также от&nbsp;общего каратного веса драгоценных камней.
+    .modal__container(role="dialog" aria-modal="true" data-graph-target="order-product")
+        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title Заявка на изделие под заказ
+            p.modal__desc.modal__desc--center Оставьте заявку на&nbsp;консультацию с&nbsp;экспертом, мы&nbsp;перезвоним в&nbsp;течение 30&nbsp;минут*
+
+            form.modal-form.validate-form(action="#")
+                input.g-input.modal-form__input(data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон")
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn оставить заявку
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я согласен на обработку персональных данных *в рабочее время
+
+    .modal__container.modal__container--2(role="dialog" aria-modal="true" data-graph-target="use-promocode")
+        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title Как использовать промокод?
+            p.modal__desc.modal__desc--2.modal__desc--center Укажите полученный промокод <br> при оформлении заказа и&nbsp;
+                span получите СКИДКУ 5%. 
+                | Или сообщите промокод менеджеру.
+
+            p.modal__desc.modal__desc--2.modal__desc--center Скидка закрепляется за вашим номером <br> телефона и действует 14 дней.
+
+            p.modal__desc.modal__desc--2.modal__desc--gray.modal__desc--center Скидка действует 
+                span только при покупке on-line 
+                | в&nbsp;интернет-галерее «Русские самоцветы».
+    .modal__container.modal__container--3(role="dialog" aria-modal="true" data-graph-target="reduce-price")
+        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title Снизьте цену на <br> товар за 1 минуту
+            h3.g-title.g-title--center.modal__subtitle Получите промокод на 
+                span скидку 5%
+            p.modal__desc.modal__desc--center Отправим промокод SMS-сообщением в&nbsp;течение 1&nbsp;минуты. Промокод закрепляется за&nbsp;вашим номером телефона и&nbsp;действует 14&nbsp;дней<br>
+                span только при покупке on-line
+
+            form.modal-form.validate-form(action="#")
+                input.g-input.modal-form__input(data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон")
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn ПОЛУЧИТЬ ПОМОКОД
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я согласен на обработку персональных данных
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я даю согласие на sms-рассылку
