@@ -1,0 +1,29 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Кольцо с турмалином и бриллиантами";
+	- const page = "card3"
+
+block content
+	.site-container
+		include ../../blocks/modules/header/header
+		main.main
+			include ../../blocks/modules/card/card
+			include ../../blocks/modules/benefits/benefits
+			include ../../blocks/modules/perfect-combination/perfect-combination
+			include ../../blocks/modules/collections/collections
+			include ../../blocks/modules/wares/wares
+			include ../../blocks/modules/banner/banner
+			include ../../blocks/modules/viewed-wares/viewed-wares
+			include ../../blocks/modules/guarantees/guarantees
+			include ../../blocks/modules/we-work/we-work
+			include ../../blocks/modules/banner-discount/banner-discount
+			include ../../blocks/modules/delivery-section/delivery-section
+			include ../../blocks/modules/package-gift/package-gift
+			include ../../blocks/modules/info/info
+		include ../../blocks/modules/footer/footer
+		include ../../blocks/modules/modal/modal
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

@@ -169,7 +169,7 @@ mixin tooltip
   span.g-tooltip
     button.btn-reset.g-tooltip__btn(aria-describedby="tooltip1")
       +icon("tooltip")
-    span.g-tooltip__txt(id="tooltip1" role="tooltip")
+    span.g-tooltip__txt(role="tooltip")
 
 mixin popularQuery(cls)
   div(class="popular-query " + cls)
@@ -205,3 +205,15 @@ mixin popularQuery(cls)
             button.btn-reset.g-tabs__btn.g-tabs__btn--more
               |Ещё
               +icon("arrow")
+
+mixin stepper
+  .g-stepper.card__stepper
+    span.g-stepper__caption ВЫБЕРИТЕ КОЛИЧЕСТВО:
+    .g-stepper__wrapper
+      label.g-stepper__field
+        input.g-stepper__input(type="text" value="1" maxlength="3")
+      .g-stepper__btns
+        button.btn-reset.g-stepper__btn.g-stepper__btn--down.g-stepper__btn--disabled(tabindex="-1" aria-label="Уменшить количество")
+          +icon("arrow")
+        button.btn-reset.g-stepper__btn.g-stepper__btn--up(tabindex="-1" aria-label="Увеличить количество")
+          +icon("arrow")

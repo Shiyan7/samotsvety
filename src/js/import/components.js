@@ -4,3 +4,4 @@ import "../../blocks/components/read-more";
 import "../../blocks/components/scroll";
 import "../../blocks/components/tabs";
 import "../../blocks/components/lozad";
+import "../../blocks/components/stepper";

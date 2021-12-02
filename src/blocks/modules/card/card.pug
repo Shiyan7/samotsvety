@@ -1,95 +1,170 @@
 section.card
     .container.card__container
-        ul.g-breadcrumbs__list.card__breadcrumbs.list-reset
-            li.g-breadcrumbs__item
-                a.g-breadcrumbs__link(href="/") Главная
-            li.g-breadcrumbs__item
-                a.g-breadcrumbs__link(href="catalog.html") Каталог
-            li.g-breadcrumbs__item
-                a.g-breadcrumbs__link(href="catalog.html") Украшения
-            li.g-breadcrumbs__item
-                a.g-breadcrumbs__link(href="catalog.html") Кольца
-            li.g-breadcrumbs__item
-                a.g-breadcrumbs__link Кольцо золотое NIGHTSHADE
+        if page === "card4"
+            ul.g-breadcrumbs__list.card__breadcrumbs.list-reset
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="/") Главная
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="catalog.html") Каталог
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="catalog.html") Украшения
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="catalog.html") Кольца
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link Ложка для сахара из набора «Классический»
+        else
+            ul.g-breadcrumbs__list.card__breadcrumbs.list-reset
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="/") Главная
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="catalog.html") Каталог
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="catalog.html") Украшения
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="catalog.html") Кольца
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link Кольцо золотое NIGHTSHADE
         .card-content
             .card-content__left
-                .swiper.card-slider__main
-                    span.product__caption.card__caption New
-                    button.btn-reset.product__favorite.card__favorite
-                        +icon("favorite")
-                    .swiper-wrapper
-                        .swiper-slide.card-slide
-                            a.card-slide__link(data-fslightbox="card" href="img/card-1.jpg")
-                                img.card-slide__image(src="img/card-1.jpg", alt="")
-                        .swiper-slide.card-slide
-                            a.card-slide__link(data-fslightbox="card" href="img/card-1.jpg")
-                                img.card-slide__image(src="img/card-1.jpg", alt="")
-                        .swiper-slide.card-slide
-                            a.card-slide__link(data-fslightbox="card" href="img/card-1.jpg")
-                                img.card-slide__image(src="img/card-1.jpg", alt="")
-                        .swiper-slide.card-slide
-                            a.card-slide__link(data-fslightbox="card" href="img/card-1.jpg")
-                                img.card-slide__image(src="img/card-1.jpg", alt="")
-                    button.btn-reset.g-slider-btn.g-slider-btn--prev.card-slider__btn.card-slider__btn--prev
-                        +icon("arrow")
-                    button.btn-reset.g-slider-btn.g-slider-btn--next.card-slider__btn.card-slider__btn--next
-                        +icon("arrow")
-                .swiper.card-slider__nav
-                    .swiper-wrapper
-                        .swiper-slide.card-slide
-                            img.card-slide__image(src="img/card-1.jpg", alt="Картинка продукта 1")
-                        .swiper-slide.card-slide
-                            img.card-slide__image(src="img/card-1.jpg", alt="Картинка продукта 1")
-                        .swiper-slide.card-slide
-                            img.card-slide__image(src="img/card-1.jpg", alt="Картинка продукта 1")
-                        .swiper-slide.card-slide
-                            img.card-slide__image(src="img/card-1.jpg", alt="Картинка продукта 1")
+                if page === "card4"
+                    .swiper.card-slider__main
+                        span.product__caption.card__caption New
+                        button.btn-reset.product__favorite.card__favorite
+                            +icon("favorite")
+                        .swiper-wrapper
+                            - for(var i = 0; i < 4; i++)
+                                .swiper-slide.card-slide
+                                    a.card-slide__link(data-fslightbox="card" href="img/card-2.jpg")
+                                        img.card-slide__image(src="img/card-2.jpg", alt="")
+                        button.btn-reset.g-slider-btn.g-slider-btn--prev.card-slider__btn.card-slider__btn--prev
+                            +icon("arrow")
+                        button.btn-reset.g-slider-btn.g-slider-btn--next.card-slider__btn.card-slider__btn--next
+                            +icon("arrow")
+                    .swiper.card-slider__nav
+                        .swiper-wrapper
+                            - for(var i = 0; i < 4; i++)
+                                .swiper-slide.card-slide
+                                    img.card-slide__image(src="img/card-2.jpg", alt="Картинка продукта 1")
+                else
+                    .swiper.card-slider__main
+                        span.product__caption.card__caption New
+                        button.btn-reset.product__favorite.card__favorite
+                            +icon("favorite")
+                        .swiper-wrapper
+                            - for(var i = 0; i < 4; i++)
+                                .swiper-slide.card-slide
+                                    a.card-slide__link(data-fslightbox="card" href="img/card-1.jpg")
+                                        img.card-slide__image(src="img/card-1.jpg", alt="")
+                        button.btn-reset.g-slider-btn.g-slider-btn--prev.card-slider__btn.card-slider__btn--prev
+                            +icon("arrow")
+                        button.btn-reset.g-slider-btn.g-slider-btn--next.card-slider__btn.card-slider__btn--next
+                            +icon("arrow")
+                    .swiper.card-slider__nav
+                        .swiper-wrapper
+                            - for(var i = 0; i < 4; i++)
+                                .swiper-slide.card-slide
+                                    img.card-slide__image(src="img/card-1.jpg", alt="Картинка продукта 1")
             .card-content__right.g-filters
-                h2.g-title.card__name-collection NIGHTSHADE
-                h1.g-title.card__title Кольцо с&nbsp;турмалином и&nbsp;бриллиантами
-                span.card__vendor
-                    |Арт.: 
-                    |58001456
-                .card__row
-                    select.g-select.card__select(name="selected size")
-                        option(value="") Выберите размер
-                        option(value="size-1") 15
-                        option(value="size-2") 15.5
-                        option(value="size-3") 16
-                        option(value="size-4") 16.5
-                        option(value="size-5") 17
-                        option(value="size-6") 17.5
-                        option(value="size-9") 18
-                        option(value="size-10") 15
-                        option(value="size-11") 15.5
-                        option(value="size-12") 16
-                        option(value="size-13") 16.5
-                        option(value="size-14") 17
-                        option(value="size-15") 17.5
-                        option(value="size-16") 18
-                    span.g-tooltip
-                        button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="custom" data-graph-path="first" data-graph-speed="500")
-                            +icon("tooltip")
-                span.product__price.card__price 77 975 ₽
-                .product__discount.card__discount
-                    span.product__old-price.card__old-price
-                        span 150 000 
-                        |₽
-                    span.product__percent.card__percent 15%
-                p.card__desc Цену можно снизить на 5% при ПОКУПКЕ онлайн.
-                .card__row
-                    a.card__link.g-link.card__promo-code(href="#") Получите промокод
-                    span.g-tooltip
-                        button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="custom" data-graph-path="second" data-graph-speed="500")
-                            +icon("tooltip")
+                if page === "card4"
+                    h2.g-title.card__name-collection Классический
+                    h1.g-title.card__title Ложка для сахара из набора «Классический»
+                else
+                    h2.g-title.card__name-collection NIGHTSHADE
+                    h1.g-title.card__title Кольцо с&nbsp;турмалином и&nbsp;бриллиантами
+                if page === "card2"
+                    span.card__vendor
+                        |Арт.: 
+                        |58001456
+                    span.product__price.card__price.card__price--2
+                        span ~77 975 ₽
+                        span.g-tooltip
+                            button.btn-reset.g-tooltip__btn
+                                +icon("tooltip")
+                    p.card__desc
+                        span Нет в наличии. 
+                        | Изделие доступно под заказ от 7 до 45 дней.
 
-                .card__btns
-                    button.btn-reset.g-btn.g-btn--black.card__btn ДОБАВИТЬ В КОРЗИНУ
-                    button.btn-reset.g-btn.g-btn--stroke.card__btn БЫСТРЫЙ ЗАКАЗ
-                p.card__desc
-                    |Есть в 
-                    a.card__link.g-link(href="#") 1 магазине
-                    | в г. Санкт-Петербург
+                    .card__btns.card__btns--2
+                        button.btn-reset.g-btn.g-btn--black.card__btn Заказать изделие
+                if page === "card3"
+                    span.card__vendor.card__vendor--2
+                        |Арт.: 
+                        |58001456
+                    p.card__desc
+                        span Нет в наличии. 
+                        | Изделие доступно под заказ от 7 до 45 дней.
+
+                    .card__btns.card__btns--2
+                        button.btn-reset.g-btn.g-btn--black.card__btn узнать цену
+                if page === "card4"
+                    span.card__vendor.card__vendor--3
+                        |Арт.: 
+                        |58001456
+                    span.product__price.card__price 77 975 ₽
+                    .product__discount.card__discount
+                        span.product__old-price.card__old-price
+                            span 150 000 
+                            |₽
+                        span.product__percent.card__percent 15%
+                    p.card__desc Цену можно снизить на 5% при ПОКУПКЕ онлайн.
+                    .card__row
+                        a.card__link.g-link.card__promo-code(href="#") Получите промокод
+                        span.g-tooltip
+                            button.btn-reset.g-tooltip__btn
+                                +icon("tooltip")
+                    +stepper
+
+                    .card__btns
+                        button.btn-reset.g-btn.g-btn--black.card__btn ДОБАВИТЬ В КОРЗИНУ
+                        button.btn-reset.g-btn.g-btn--stroke.card__btn БЫСТРЫЙ ЗАКАЗ
+                    p.card__desc
+                        |Есть в 
+                        a.card__link.g-link(href="#") 1 магазине
+                        | в г. Санкт-Петербург
+                if page === "card"
+                    span.card__vendor
+                        |Арт.: 
+                        |58001456
+                    .card__row
+                        select.g-select.card__select(name="selected size")
+                            option(value="") Выберите размер
+                            option(value="size-1") 15
+                            option(value="size-2") 15.5
+                            option(value="size-3") 16
+                            option(value="size-4") 16.5
+                            option(value="size-5") 17
+                            option(value="size-6") 17.5
+                            option(value="size-9") 18
+                            option(value="size-10") 15
+                            option(value="size-11") 15.5
+                            option(value="size-12") 16
+                            option(value="size-13") 16.5
+                            option(value="size-14") 17
+                            option(value="size-15") 17.5
+                            option(value="size-16") 18
+                        span.g-tooltip
+                            button.btn-reset.g-tooltip__btn
+                                +icon("tooltip")
+                    span.product__price.card__price 77 975 ₽
+                    .product__discount.card__discount
+                        span.product__old-price.card__old-price
+                            span 150 000 
+                            |₽
+                        span.product__percent.card__percent 15%
+                    p.card__desc Цену можно снизить на 5% при ПОКУПКЕ онлайн.
+                    .card__row
+                        a.card__link.g-link.card__promo-code(href="#") Получите промокод
+                        span.g-tooltip
+                            button.btn-reset.g-tooltip__btn
+                                +icon("tooltip")
+
+                    .card__btns
+                        button.btn-reset.g-btn.g-btn--black.card__btn ДОБАВИТЬ В КОРЗИНУ
+                        button.btn-reset.g-btn.g-btn--stroke.card__btn БЫСТРЫЙ ЗАКАЗ
+                    p.card__desc
+                        |Есть в 
+                        a.card__link.g-link(href="#") 1 магазине
+                        | в г. Санкт-Петербург
                 ul.g-filters__list.g-filters--sm.list-reset.card__filters
                     li.g-filters__item
                         button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="specifications") Характеристики
