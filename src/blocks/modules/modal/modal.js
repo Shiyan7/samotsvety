@@ -41,36 +41,13 @@ export class GraphModal {
         this.isOpen ? t.length && t[0].focus() : this.previousActiveElement.focus();
     }
     disableScroll() {
-        let t = window.scrollY;
-        this.lockPadding(), document.body.classList.add("disable-scroll"), document.body.dataset.position = t, document.body.style.top = -t + "px";
+        document.body.classList.add("lock");
     }
     enableScroll() {
-        let t = parseInt(document.body.dataset.position, 10);
-        this.unlockPadding(), document.body.style.top = "auto", document.body.classList.remove("disable-scroll"), window.scroll({
-            top: t,
-            left: 0
-        }), document.body.removeAttribute("data-position");
-    }
-    lockPadding() {
-        let t = window.innerWidth - document.body.offsetWidth + "px";
-        this._fixBlocks.forEach(e => {
-            e.style.paddingRight = t;
-        }), document.body.style.paddingRight = t;
-    }
-    unlockPadding() {
-        this._fixBlocks.forEach(t => {
-            t.style.paddingRight = "0px";
-        }), document.body.style.paddingRight = "0px";
+        document.body.classList.remove("lock");
     }
 }
 
 /* Setup */
 
-new GraphModal({
-    isOpen: () => {
-        console.log("opened");
-    },
-    isClose: () => {
-        console.log("closed");
-    }
-});
+new GraphModal();

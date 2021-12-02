@@ -182,6 +182,10 @@
             width: 26px;
             height: 26px;
             transform: translateY(-50%);
+
+            svg {
+                fill: #111;
+            }
         }
 
         &__reset {

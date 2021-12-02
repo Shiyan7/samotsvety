@@ -1,9 +1,21 @@
 .modal
-    .modal__container(role="dialog" aria-modal="true" data-graph-target="first")
+    .modal__container(role="dialog" aria-modal="true" data-graph-target="price-request")
         button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
         .modal-content
-            h2.modal__title Заголовок модального окна
-    .modal__container(role="dialog" aria-modal="true" data-graph-target="second")
+            h2.g-title.g-title--center.modal__title Запрос цены
+            p.modal__desc.modal__desc--center Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение 30&nbsp;мин и&nbsp;сообщим стоимость и&nbsp;условия заказа&nbsp;товара.
+
+            form.modal-form.validate-form(action="#")
+                input.g-input.modal-form__input(data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон")
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn оставить заявку
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я согласен на обработку персональных данных *в рабочее время
+    .modal__container.modal__container--2(role="dialog" aria-modal="true" data-graph-target="why-price")
         button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
         .modal-content
-            h2.modal__title Заголовок модального окна
+            h2.g-title.g-title--center.modal__title ПОЧЕМУ <br>НЕТОЧНАЯ ЦЕНА?
+            p.modal__desc.modal__desc--center Цена изделия может значительно варьироваться в&nbsp;зависимости от&nbsp;веса готового изделия, характеристик вставок (цвета, чистоты и&nbsp;качества огранки), а&nbsp;также от&nbsp;общего каратного веса драгоценных камней.

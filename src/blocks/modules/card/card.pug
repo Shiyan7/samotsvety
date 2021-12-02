@@ -78,7 +78,7 @@ section.card
                     span.product__price.card__price.card__price--2
                         span ~77 975 ₽
                         span.g-tooltip
-                            button.btn-reset.g-tooltip__btn
+                            button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="why-price" data-graph-speed="500")
                                 +icon("tooltip")
                     p.card__desc
                         span Нет в наличии. 
@@ -95,7 +95,7 @@ section.card
                         | Изделие доступно под заказ от 7 до 45 дней.
 
                     .card__btns.card__btns--2
-                        button.btn-reset.g-btn.g-btn--black.card__btn узнать цену
+                        button.btn-reset.g-btn.g-btn--black.card__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="price-request" data-graph-speed="500") узнать цену
                 if page === "card4"
                     span.card__vendor.card__vendor--3
                         |Арт.: 

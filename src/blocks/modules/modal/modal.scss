@@ -1,28 +1,111 @@
-.disable-scroll {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
 .modal {
     --transition-time: 0.3s;
     position: fixed;
-    z-index: 1000;
+    z-index: 3000;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     transition: opacity var(--transition-time), visibility var(--transition-time);
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(#000, 0.5);
     cursor: pointer;
     overflow-y: auto;
-    overflow-x: hidden;
     text-align: center;
+    overflow-x: hidden;
     opacity: 0;
     visibility: hidden;
+
+    &__title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        font-weight: 400;
+
+        @media (max-width: 576px) {
+            font-family: "HeliosExt", sans-serif;
+            font-weight: 400;
+        }
+    }
+
+    &__desc {
+        margin: 0;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 23px;
+        color: #111;
+
+        &--center {
+            text-align: center;
+        }
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+
+        &__input {
+            margin-bottom: 15px;
+        }
+
+        &__btn {
+            padding: 15.5px 0 13.5px;
+            margin-bottom: 35px;
+        }
+
+        &__desc {
+            color: rgba(#000, 0.5);
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        &__label {
+            display: flex;
+            position: relative;
+        }
+
+        &__checkbox {
+            position: absolute;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            outline: none;
+
+            &:checked~.modal-form__switch:after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &__switch {
+            flex-shrink: 0;
+            position: relative;
+            width: 14px;
+            height: 14px;
+            margin-right: 14px;
+            border: 1px solid #111;
+            transition: background-color 0.3s, border 0.3s;
+            &:after {
+                @include pseudo();
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url(../img/svg/checked.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.2s, visibility 0.2s;
+            }
+        }
+    }
 }
 
 .modal::before {
@@ -33,21 +116,32 @@
 }
 
 .modal__container {
-    display: inline-block;
+    display: none;
     position: relative;
-    width: 1000px;
+    width: 296px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 63px 74px 40px 74px;
     vertical-align: middle;
     background-color: #fff;
-    border-radius: 10px;
     cursor: default;
     text-align: left;
-}
 
-@media (max-width: 1024px) {
-    .modal__container {
-        width: 90%;
+    &--2 {
+        width: 376px;
+        padding: 63px 34px 48px 34px;
+
+        @media (max-width: 576px) {
+            padding: 40px 20px 10px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        width: 75%;
+        padding: 50px 25px 40px 25px;
+    }
+
+    &.modal-open {
+        display: inline-block;
     }
 }
 
@@ -55,23 +149,23 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 20px;
-    height: 20px;
-    border: none;
-    padding: 0;
-    background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512.001 512.001' style='enable-background:new 0 0 512.001 512.001;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+
+    svg {
+        fill: rgba(#000, 0.5);
+    }
+
+    &:hover {
+        transform: rotate(90deg);
+    }
 }
 
 .modal.is-open {
     opacity: 1;
     visibility: visible;
     transition: opacity var(--transition-time), visibility var(--transition-time);
-}
-
-.modal__container.modal-open {
-    display: inline-block;
 }
 
 .fade {
@@ -94,4 +188,8 @@
     opacity: 1;
     transform: translateY(0);
     transition: transform var(--transition-time), opacity var(--transition-time);
+}
+
+.js-validate-error-label {
+    display: none;
 }
