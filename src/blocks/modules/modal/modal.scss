@@ -22,6 +22,12 @@
         font-weight: 400;
         cursor: text;
 
+        &--md {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 0;
+        }
+
         @media (max-width: 576px) {
             font-family: "HeliosExt", sans-serif;
             font-weight: 400;
@@ -143,6 +149,28 @@
                 transition: opacity 0.2s, visibility 0.2s;
             }
         }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__caption {
+            font-size: 14px;
+            line-height: 20px;
+            width: 100%;
+            color: rgba(#000, 0.5);
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 192px;
+        height: 192px;
+        margin: 0 auto 24px;
+        object-fit: cover;
+        border: 1px solid rgba(#000, 0.5);
     }
 }
 
@@ -181,6 +209,11 @@
     &--3 {
         width: 376px;
         padding: 63px 30px 36px 30px;
+    }
+
+    &--4 {
+        width: 334px;
+        padding: 63px 55px 40px 55px;
     }
 
     &.modal-open {

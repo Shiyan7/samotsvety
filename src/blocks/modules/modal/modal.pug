@@ -69,3 +69,17 @@
                     input.modal-form__checkbox(type="checkbox" checked)
                     span.modal-form__switch
                     span.modal-form__desc Я даю согласие на sms-рассылку
+    .modal__container.modal__container--4(role="dialog" aria-modal="true" data-graph-target="found-out-size")
+        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title Как узнать размер?
+            p.modal__desc.modal__desc--center Обмотайте нужный палец ниткой, шнурком или бумажной лентой в самом толстом месте.
+            img.lozad.modal__image(src="img/found-out-size.jpg", srcset="img/found-out-size@2x.jpg" alt="Как узнать размер?")
+            p.modal__desc.modal__desc--center Линейкой замерьте полученную длину
+            form.modal-form.validate-form(action="#")
+                label.modal-form__item
+                    span.modal-form__caption Введите результат измерений в миллиметрах
+                    input.g-input.modal-form__input(type="text" name="Значение" placeholder="ВВЕДИТЕ ПОЛУЧЕННОЕ ЗНАЧЕНИЕ")
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn расчитать
+            h2.g-title.g-title--center.modal__title.modal__title--md НУЖНЫЙ ВАМ РАЗМЕР 19
