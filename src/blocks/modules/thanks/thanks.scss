@@ -1,0 +1,151 @@
+.thanks {
+    &__container {
+        padding-top: 77px;
+        padding-bottom: 77px;
+        max-width: 891px;
+
+        @media (max-width: 768px) {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__title {
+        max-width: 500px;
+        margin-bottom: 25px;
+
+        @media (max-width: 576px) {
+            font-family: "HeliosExt", sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            max-width: 300px;
+            line-height: 22px;
+        }
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 24px;
+        color: rgba(#000, 0.5);
+        text-align: center;
+        max-width: 350px;
+        margin: 0 auto 47px;
+    }
+
+    &__list {
+        display: grid;
+        column-gap: 96px;
+        margin-bottom: 53px;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media (max-width: 768px) {
+            row-gap: 80px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-item {
+        position: relative;
+        text-align: center;
+
+        &:not(:last-child) {
+            &:after {
+                @include pseudo();
+                position: absolute;
+                top: 44px;
+                right: -105px;
+                width: 114px;
+                height: 9px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url("data:image/svg+xml,%3Csvg width='114' height='9' viewBox='0 0 114 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M113.354 4.85355C113.549 4.65829 113.549 4.34171 113.354 4.14645L110.172 0.964466C109.976 0.769204 109.66 0.769204 109.464 0.964466C109.269 1.15973 109.269 1.47631 109.464 1.67157L112.293 4.5L109.464 7.32843C109.269 7.52369 109.269 7.84027 109.464 8.03553C109.66 8.2308 109.976 8.2308 110.172 8.03553L113.354 4.85355ZM0 5H113V4H0V5Z' fill='black'/%3E%3C/svg%3E%0A");
+            
+                @media (max-width: 768px) {
+                    top: auto;
+                    right: 0;
+                    left: 50%;
+                    bottom: -90px;
+                    transform: translateY(-50%);
+                    width: 8px;
+                    height: 53px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='8' height='53' viewBox='0 0 8 53' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.64644 52.3536C3.8417 52.5488 4.15829 52.5488 4.35355 52.3536L7.53553 49.1716C7.73079 48.9763 7.73079 48.6597 7.53553 48.4645C7.34027 48.2692 7.02368 48.2692 6.82842 48.4645L4 51.2929L1.17157 48.4645C0.976306 48.2692 0.659724 48.2692 0.464462 48.4645C0.269199 48.6597 0.269199 48.9763 0.464461 49.1716L3.64644 52.3536ZM3.5 -4.74941e-08L3.5 52L4.5 52L4.5 4.74941e-08L3.5 -4.74941e-08Z' fill='black'/%3E%3C/svg%3E%0A");
+                }
+            }
+        }
+
+        svg {
+            margin-bottom: 19px;
+        }
+
+        &__title {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 14px;
+        }
+
+        &__desc {
+            color: rgba(#000, 0.5);
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0 auto;
+
+            @media (max-width: 768px) {
+                max-width: 400px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+
+        &__link {
+            display: block;
+            font-size: 16px;
+            line-height: 17px;
+            font-weight: 400;
+            max-width: 150px;
+            text-decoration: underline;
+            margin: 0 auto;
+            color: rgba(#000, 0.5);
+            transition: color 0.3s;
+
+            &:hover {
+                text-decoration: underline;
+                color: #111;
+            }
+        }
+    }
+
+    &-tel {
+        text-align: center;
+        margin: 0 auto;
+
+        &__desc {
+            margin: 0;
+            font-size: 18px;
+            line-height: 24px;
+            color: #111;
+            margin-bottom: 7px;
+
+            @media (max-width: 576px) {
+                font-size: 13px;
+                line-height: 17px;
+                max-width: 236px;
+                margin: 0 auto 11px;
+            }
+        }
+
+        &__link {
+            font-family: "HeliosExt", sans-serif;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 44px;
+            color: #111;
+
+            @media (max-width: 576px) {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+}
