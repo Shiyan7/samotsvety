@@ -82,7 +82,7 @@
                     input.g-input.modal-form__input(type="text" name="Значение" placeholder="ВВЕДИТЕ ПОЛУЧЕННОЕ ЗНАЧЕНИЕ")
                 button.btn-reset.g-btn.g-btn--black.modal-form__btn расчитать
             h2.g-title.g-title--center.modal__title.modal__title--md НУЖНЫЙ ВАМ РАЗМЕР 19
-    .modal__container.modal__container--5(role="dialog" aria-modal="true" data-graph-target="make-reserve")
+    .modal__container.modal__container--5(role="dialog" aria-modal="true" data-graph-target="reserve")
         button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content.g-filters
@@ -103,9 +103,362 @@
                 option(value="size-14") 17
                 option(value="size-15") 17.5
                 option(value="size-16") 18
-            p.modal__desc.modal__desc--center Изделие 15 размера есть в 5 магазинах
-            ul.g-filters__list.modal__filters.list-reset
+            p.modal__desc.modal__desc--sm.modal__desc--center Изделие 15 размера есть в 5 магазинах
+            ul.g-filters__list.modal-filters.list-reset
                 li.g-filters__item
                     button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="list") Списком
                 li.g-filters__item
                     button.btn-reset.g-filters__btn(data-filters-path="map") На карте
+            
+            .g-filters__content.list-reserve__items.modal-filters__content.g-filters__content--active(data-filters-target="list" data-simplebar)
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn.modal-btn(data-graph-path="use-promocode" data-graph-speed="0") оформить резерв
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn оформить резерв
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn оформить резерв
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn оформить резерв
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn оформить резерв
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn оформить резерв
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn оформить резерв
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn оформить резерв
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn оформить резерв
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn оформить резерв
+                .list-reserve__item
+                    img.list-reserve__image(src="img/no-image.svg", alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                        .list-reserve__info.read-more-wrapper
+                            span.list-reserve__price Цена изделия: 
+                                span 77,975 ₽
+                            .insert-product.full-text
+                                .insert-product__item
+                                    span.insert-product__title Размер:
+                                    .insert-product__right
+                                        span.insert-product__caption 15 мм
+                                .insert-product__item
+                                    span.insert-product__title Вставка:
+                                    .insert-product__right
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--green
+                                            span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                        .insert-product__content
+                                            .insert-product__color.insert-product__color--black
+                                            span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                            button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn оформить резерв
+            .g-filters__content.class.modal-filters__content.map-reserve(data-filters-target="map")
+                img.map-reserve__image(src="img/map-image.svg", alt="")
+                
+                .list-reserve__item.map-reserve__item
+                    img.list-reserve__image.lozad(src="img/location.jpg", srcset="img/location@2x.jpg 2x" alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                | ст. м Ленинский проспект
+                    .list-reserve__info.read-more-wrapper
+                        span.list-reserve__price Цена изделия: 
+                            span 77,975 ₽
+                        .insert-product.full-text
+                            .insert-product__item
+                                span.insert-product__title Размер:
+                                .insert-product__right
+                                    span.insert-product__caption 15 мм
+                            .insert-product__item
+                                span.insert-product__title Вставка:
+                                .insert-product__right
+                                    .insert-product__content
+                                        .insert-product__color.insert-product__color--green
+                                        span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                    .insert-product__content
+                                        .insert-product__color.insert-product__color--black
+                                        span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                        button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--black.list-reserve__btn оформить резерв
