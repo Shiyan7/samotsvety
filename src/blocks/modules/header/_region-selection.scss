@@ -30,7 +30,7 @@
 
         @media (max-width: 576px) {
             padding-top: 85px;
-            padding-bottom: 81px;
+            padding-bottom: 70px;
         }
     }
 
@@ -282,6 +282,10 @@
 
         &__block {
             height: 500px;
+
+            @media (max-width: 576px) {
+                height: 420px;
+            }
 
             .simplebar-track {
                 width: 3px;

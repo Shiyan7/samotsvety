@@ -108,9 +108,9 @@ section.card
                         span.product__percent.card__percent 15%
                     p.card__desc Цену можно снизить на 5% при ПОКУПКЕ онлайн.
                     .card__row
-                        a.card__link.g-link.card__promo-code(href="#") Получите промокод
+                        button.btn-reset.card__link.g-link.card__promo-code.modal-btn(data-graph-animation="fadeInUp" data-graph-path="reduce-price" data-graph-speed="500") Получите промокод
                         span.g-tooltip
-                            button.btn-reset.g-tooltip__btn
+                            button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="use-promocode" data-graph-speed="500")
                                 +icon("tooltip")
                     +stepper
 

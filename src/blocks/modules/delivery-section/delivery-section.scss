@@ -118,6 +118,9 @@
         color: rgba(#000, 0.5);
 
         @media (max-width: 576px) {
+            max-width: 250px;
+            text-align: center;
+            margin: 0 auto;
             font-size: 14px;
             line-height: 18px;
         }

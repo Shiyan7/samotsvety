@@ -113,6 +113,7 @@
         width: 100%;
         max-width: 421px;
         @include hoverOnCard();
+
         &__image {
             display: block;
             position: relative;
@@ -148,6 +149,11 @@
                 font-size: 14px;
                 line-height: 18px;
                 margin-bottom: 0;
+            }
+
+            @media (max-width: 576px) {
+                font-family: "HeliosExt", sans-serif;
+                font-weight: 400;
             }
         }
     

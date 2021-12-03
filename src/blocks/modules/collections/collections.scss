@@ -141,7 +141,12 @@
             pointer-events: none;
 
             @media (max-width: 768px) {
-                display: none;
+                top: auto;
+                right: 55px;
+                bottom: 0;
+                font-size: 150px;
+                transform: rotate(-90deg);
+                transform-origin: right;
             }
         }
 
@@ -150,6 +155,11 @@
             line-height: 24px;
             color: rgba(#000, 0.5);
             margin-bottom: 3px;
+
+            @media (max-width: 576px) {
+                font-size: 18px;
+                line-height: 22px;
+            }
         }
 
         &__title {
@@ -158,9 +168,9 @@
             margin-bottom: 180px;
 
             @media (max-width: 576px) {
-                font-size: 36px;
-                line-height: 40px;
-                margin-bottom: 30px;
+                font-size: 40px;
+                line-height: 44px;
+                margin-bottom: 24px;
             }
 
             &--2 {
@@ -225,6 +235,7 @@
 
             @media (max-width: 576px) {
                 position: relative;
+                margin-bottom: 24px;
             }
         }
 

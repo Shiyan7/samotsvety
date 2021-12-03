@@ -3,6 +3,7 @@ import "%modules%/header/toggle-location";
 import "%modules%/header/burger";
 import "%modules%/hero/hero-slider";
 import "%modules%/logos/logos-slider";
+import "%modules%/benefits/benefits-more";
 import "%modules%/collections-section/collections-section-slider";
 import "%modules%/popular-categories/popular-categories-slider";
 import "%modules%/popular-categories/popular-categories-more";

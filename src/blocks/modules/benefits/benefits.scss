@@ -27,6 +27,13 @@
     &__item {
         display: flex;
         flex-direction: column;
+
+        &--hidden {
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+
         &:nth-child(5) {
             @media (max-width: 1024px) {
                 display: none;
@@ -49,6 +56,16 @@
             font-size: 13px;
             line-height: 19px;
             margin-bottom: 9px;
+        }
+    }
+
+    &__more {
+        display: none;
+        margin: 21px auto 0;
+        color: #111;
+
+        @media (max-width: 1024px) {
+            display: block;
         }
     }
 

@@ -8,7 +8,15 @@ if page === "new"
                 li.g-breadcrumbs__item
                     a.g-breadcrumbs__link New
             h1.g-title.g-title--center.catalog__title New
-            +filters("catalog__filters")
+            ul.g-filters__list.list-reset.catalog__filters(data-simplebar)
+                li.g-filters__item
+                    button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="decorations") украшения
+                li.g-filters__item
+                    button.btn-reset.g-filters__btn(data-filters-path="engagement") помолвка
+                li.g-filters__item
+                    button.btn-reset.g-filters__btn(data-filters-path="house") дом
+                li.g-filters__item
+                    button.btn-reset.g-filters__btn(data-filters-path="high-magnification-art") высокое ювелирное искусство
             .catalog__top
                 button.btn-reset.g-btn.g-btn--stroke.filters-toggle.filters-toggle--active
                     svg.filters-toggle__icon(width="24" height="24")
@@ -500,7 +508,7 @@ if page === "new"
                                 +product
                     .catalog-grid__bottom
                         button.btn-reset.g-btn.g-btn--stroke.g-btn--center.catalog__more-products Показать ещё
-                        a.g-link.catalog-grid__link(href="#") СМОТРЕТЬ ВСЕ СЕРЬГИ
+                        a.g-link.catalog-grid__link(href="#") Смотреть все приборы для рыбы и&nbsp;морепродуктов
                     h2.g-title.g-title--center.catalog-list__title КОЛЬЕ
                     ul.catalog-list.list-reset
                         - for(var i = 0; i < 8; i++)
@@ -508,7 +516,7 @@ if page === "new"
                                 +product
                     .catalog-grid__bottom
                         button.btn-reset.g-btn.g-btn--stroke.g-btn--center.catalog__more-products Показать ещё
-                        a.g-link.catalog-grid__link(href="#") СМОТРЕТЬ ВСЕ КОЛЬЕ
+                        a.g-link.catalog-grid__link(href="#") Смотреть все приборы для рыбы и&nbsp;морепродуктов
 else
 
     section.catalog

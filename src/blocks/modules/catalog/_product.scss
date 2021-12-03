@@ -165,6 +165,10 @@
         font-weight: 300;
         color: rgba(#000, 0.5);
         margin-bottom: 8px;
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
     }
 
     &__price {
