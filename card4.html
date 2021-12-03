@@ -503,7 +503,9 @@
                   <button class="btn-reset g-btn g-btn--black card__btn">ДОБАВИТЬ В КОРЗИНУ</button>
                   <button class="btn-reset g-btn g-btn--stroke card__btn">БЫСТРЫЙ ЗАКАЗ</button>
                 </div>
-                <p class="card__desc">Есть в <a class="card__link g-link" href="#">1 магазине</a>в г. Санкт-Петербург</p>
+                <p class="card__desc">Есть в 
+                  <button class="btn-reset card__link g-link modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">1 магазине</button>в г. Санкт-Петербург
+                </p>
                 <ul class="g-filters__list g-filters--sm list-reset card__filters">
                   <li class="g-filters__item">
                     <button class="btn-reset g-filters__btn g-filters__btn--active" data-filters-path="specifications">Характеристики</button>
@@ -1601,6 +1603,42 @@
               <button class="btn-reset g-btn g-btn--black modal-form__btn">расчитать</button>
             </form>
             <h2 class="g-title g-title--center modal__title modal__title--md">НУЖНЫЙ ВАМ РАЗМЕР 19</h2>
+          </div>
+        </div>
+        <div class="modal__container modal__container--5" role="dialog" aria-modal="true" data-graph-target="make-reserve">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content g-filters">
+            <h2 class="g-title g-title--center modal__title">ВЫБЕРИТЕ РАЗМЕР</h2>
+            <select class="g-select" name="selected size">
+              <option value="">Выберите размер</option>
+              <option value="size-1">15</option>
+              <option value="size-2">15.5</option>
+              <option value="size-3">16</option>
+              <option value="size-4">16.5</option>
+              <option value="size-5">17</option>
+              <option value="size-6">17.5</option>
+              <option value="size-9">18</option>
+              <option value="size-10">15</option>
+              <option value="size-11">15.5</option>
+              <option value="size-12">16</option>
+              <option value="size-13">16.5</option>
+              <option value="size-14">17</option>
+              <option value="size-15">17.5</option>
+              <option value="size-16">18</option>
+            </select>
+            <p class="modal__desc modal__desc--center">Изделие 15 размера есть в 5 магазинах</p>
+            <ul class="g-filters__list modal__filters list-reset">
+              <li class="g-filters__item">
+                <button class="btn-reset g-filters__btn g-filters__btn--active" data-filters-path="list">Списком</button>
+              </li>
+              <li class="g-filters__item">
+                <button class="btn-reset g-filters__btn" data-filters-path="map">На карте</button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
