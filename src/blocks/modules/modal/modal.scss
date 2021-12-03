@@ -172,6 +172,30 @@
         object-fit: cover;
         border: 1px solid rgba(#000, 0.5);
     }
+
+    .choices {
+        max-width: 258px;
+        margin: 8px auto 13px;
+    }
+
+    &__filters {
+        justify-content: flex-start;
+        margin-bottom: 12px;
+
+        .g-filters__item {
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+
+        .g-filters__btn {
+            font-family: "TTCommons", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 17px;
+            text-transform: initial;
+        }
+    }
 }
 
 .modal::before {
@@ -214,6 +238,12 @@
     &--4 {
         width: 334px;
         padding: 63px 55px 40px 55px;
+    }
+
+    &--5 {
+        
+        width: 872px;
+        padding: 63px 38px 40px 38px;
     }
 
     &.modal-open {

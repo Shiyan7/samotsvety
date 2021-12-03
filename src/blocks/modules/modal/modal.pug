@@ -33,7 +33,6 @@
                     input.modal-form__checkbox(type="checkbox" checked)
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных *в рабочее время
-
     .modal__container.modal__container--2(role="dialog" aria-modal="true" data-graph-target="use-promocode")
         button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
             +icon("cross2")
@@ -83,3 +82,30 @@
                     input.g-input.modal-form__input(type="text" name="Значение" placeholder="ВВЕДИТЕ ПОЛУЧЕННОЕ ЗНАЧЕНИЕ")
                 button.btn-reset.g-btn.g-btn--black.modal-form__btn расчитать
             h2.g-title.g-title--center.modal__title.modal__title--md НУЖНЫЙ ВАМ РАЗМЕР 19
+    .modal__container.modal__container--5(role="dialog" aria-modal="true" data-graph-target="make-reserve")
+        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content.g-filters
+            h2.g-title.g-title--center.modal__title ВЫБЕРИТЕ РАЗМЕР
+            select.g-select(name="selected size")
+                option(value="") Выберите размер
+                option(value="size-1") 15
+                option(value="size-2") 15.5
+                option(value="size-3") 16
+                option(value="size-4") 16.5
+                option(value="size-5") 17
+                option(value="size-6") 17.5
+                option(value="size-9") 18
+                option(value="size-10") 15
+                option(value="size-11") 15.5
+                option(value="size-12") 16
+                option(value="size-13") 16.5
+                option(value="size-14") 17
+                option(value="size-15") 17.5
+                option(value="size-16") 18
+            p.modal__desc.modal__desc--center Изделие 15 размера есть в 5 магазинах
+            ul.g-filters__list.modal__filters.list-reset
+                li.g-filters__item
+                    button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="list") Списком
+                li.g-filters__item
+                    button.btn-reset.g-filters__btn(data-filters-path="map") На карте

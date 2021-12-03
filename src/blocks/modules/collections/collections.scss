@@ -10,10 +10,6 @@
         &--2 {
             padding-top: 0;
         }
-
-        @media (max-width: 576px) {
-            padding-top: 28px;
-        }
     }
 
     &__breadcrumbs {
@@ -111,11 +107,11 @@
             @include hoverOnCard();
 
             @media (max-width: 768px) {
-                padding: 50px 37px 50px 37px;
+                padding: 66px 37px 50px 37px;
             }
 
             @media (max-width: 576px) {
-                padding: 30px 37px 30px 37px;
+                padding: 66px 37px 30px 37px;
             }
 
             &--no-hover {
@@ -142,8 +138,8 @@
 
             @media (max-width: 768px) {
                 top: auto;
-                right: 55px;
-                bottom: 0;
+                right: 45px;
+                bottom: 275px;
                 font-size: 150px;
                 transform: rotate(-90deg);
                 transform-origin: right;

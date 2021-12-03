@@ -2,10 +2,6 @@
     &__container {
         padding-top: 71px;
 
-        @media (max-width: 576px) {
-            padding-bottom: 80px;
-        }
-
         &--2 {
             padding-top: 126px;
         }
@@ -20,7 +16,7 @@
         }
 
         @media (max-width: 576px) {
-            padding-bottom: 50px;
+            padding-bottom: 80px;
         }
     }
 
