@@ -24,6 +24,7 @@ module.exports = {
     },
 
     optimization: {
+        minimize: false,
         splitChunks: {
             cacheGroups: {
                 vendor: {
