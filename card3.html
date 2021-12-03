@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
     <div class="site-container">
@@ -1573,7 +1573,7 @@
             <h2 class="g-title g-title--center modal__title modal__title--md">НУЖНЫЙ ВАМ РАЗМЕР 19</h2>
           </div>
         </div>
-        <div class="modal__container modal__container--5" role="dialog" aria-modal="true" data-graph-target="make-reserve">
+        <div class="modal__container modal__container--5" role="dialog" aria-modal="true" data-graph-target="reserve">
           <button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
             <svg class="svg-icon cross2">
               <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
@@ -1598,8 +1598,8 @@
               <option value="size-15">17.5</option>
               <option value="size-16">18</option>
             </select>
-            <p class="modal__desc modal__desc--center">Изделие 15 размера есть в 5 магазинах</p>
-            <ul class="g-filters__list modal__filters list-reset">
+            <p class="modal__desc modal__desc--sm modal__desc--center">Изделие 15 размера есть в 5 магазинах</p>
+            <ul class="g-filters__list modal-filters list-reset">
               <li class="g-filters__item">
                 <button class="btn-reset g-filters__btn g-filters__btn--active" data-filters-path="list">Списком</button>
               </li>
@@ -1607,11 +1607,363 @@
                 <button class="btn-reset g-filters__btn" data-filters-path="map">На карте</button>
               </li>
             </ul>
+            <div class="g-filters__content list-reserve__items modal-filters__content g-filters__content--active" data-filters-target="list" data-simplebar>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-path="use-promocode" data-graph-speed="0">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/no-image.svg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+            </div>
+            <div class="g-filters__content class modal-filters__content map-reserve" data-filters-target="map"><img class="map-reserve__image" src="img/map-image.svg" alt="">
+              <div class="list-reserve__item map-reserve__item"><img class="list-reserve__image lozad" src="img/location.jpg" srcset="img/location@2x.jpg 2x" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg>ст. м Ленинский проспект</span>
+                  </div>
+                </div>
+                <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                  <div class="insert-product full-text">
+                    <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                      <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                    </div>
+                    <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                      <div class="insert-product__right">
+                        <div class="insert-product__content">
+                          <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                        </div>
+                        <div class="insert-product__content">
+                          <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  <button class="btn-reset g-btn g-btn--black list-reserve__btn">оформить резерв</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

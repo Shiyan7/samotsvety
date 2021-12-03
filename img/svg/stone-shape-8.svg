@@ -1,1 +1,12 @@
-<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M33 33H3V3h30v30z" stroke="#A39D94" stroke-width=".938" stroke-miterlimit="10"/><path d="M33 3l-3.75 1.875L18 3 6.75 4.875 3 3m30 30l-1.875-3.75L33 18 31.125 6.75 33 3M3 33l3.75-1.875L18 33l11.25-1.875L33 33M3 3l1.875 3.75L3 18l1.875 11.25L3 33m3.75-1.875l.925-2.825-2.8-21.55 2.812.938L29.25 4.875l-.937 2.813 2.812 21.562-2.812-.95L6.75 31.125zm22.5 0H6.75M31.125 6.75v22.5M29.25 4.875H6.75" stroke="#A39D94" stroke-width=".938" stroke-miterlimit="10"/><path d="M4.875 6.75v22.5l2.8-.95 21.575 2.825-.937-2.825 2.812-21.55-2.812.938L6.75 4.875 7.583 7.7 4.875 29.25" stroke="#A39D94" stroke-width=".938" stroke-miterlimit="10"/></svg>
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M33 33H3V3H18H33V33Z" stroke="#A39D94" stroke-width="0.9375" stroke-miterlimit="10"/>
+<path d="M33 3L29.25 4.875L18 3L6.75 4.875L3 3" stroke="#A39D94" stroke-width="0.9375" stroke-miterlimit="10"/>
+<path d="M33 33L31.125 29.25L33 18L31.125 6.75L33 3" stroke="#A39D94" stroke-width="0.9375" stroke-miterlimit="10"/>
+<path d="M3 33L6.75 31.125L18 33L29.25 31.125L33 33" stroke="#A39D94" stroke-width="0.9375" stroke-miterlimit="10"/>
+<path d="M3 3L4.875 6.75L3 18L4.875 29.25L3 33" stroke="#A39D94" stroke-width="0.9375" stroke-miterlimit="10"/>
+<path d="M6.75 31.125L7.675 28.3L4.875 6.75L7.687 7.688L29.25 4.875L28.313 7.688L31.125 29.25L28.313 28.3L6.75 31.125Z" stroke="#A39D94" stroke-width="0.9375" stroke-miterlimit="10"/>
+<path d="M29.25 31.125H6.75" stroke="#A39D94" stroke-width="0.9375" stroke-miterlimit="10"/>
+<path d="M31.125 6.75V29.25" stroke="#A39D94" stroke-width="0.9375" stroke-miterlimit="10"/>
+<path d="M29.25 4.875H6.75" stroke="#A39D94" stroke-width="0.9375" stroke-miterlimit="10"/>
+<path d="M4.875 6.75V29.25L7.675 28.3L29.25 31.125L28.313 28.3L31.125 6.75L28.313 7.688L6.75 4.875L7.583 7.7L4.875 29.25" stroke="#A39D94" stroke-width="0.9375" stroke-miterlimit="10"/>
+</svg>
