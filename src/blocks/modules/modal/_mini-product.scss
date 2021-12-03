@@ -1,0 +1,61 @@
+.mini-product {
+    display: flex;
+
+    &__image {
+        display: block;
+        width: 112px;
+        height: 112px;
+        object-fit: cover;
+        margin-right: 16px;
+    }
+
+    &__name-collection {
+        font-family: "HeliosExt", sans-serif;
+        font-weight: 400;
+        display: block;
+        font-size: 10px;
+        line-height: 16px;
+        color: rgba(#000, 0.5);
+
+        @media (max-width: 576px) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__title {
+        font-size: 10px;
+        line-height: 16px;
+        margin-bottom: 5px;
+
+        @media (max-width: 576px) {
+            font-family: "HeliosExt", sans-serif;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 17px;
+        color: #111;
+
+        @media (max-width: 576px) {
+            flex-wrap: wrap;
+        }
+
+        span {
+            font-size: 25px;
+            line-height: 33px;
+            font-weight: 500;
+            margin-left: 9px;
+
+            @media (max-width: 576px) {
+                margin-left: 0;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
