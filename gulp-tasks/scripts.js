@@ -1,31 +1,36 @@
 "use strict";
 
-import { paths } from "../gulpfile.babel";
-import webpack from "webpack";
-import webpackStream from "webpack-stream";
-import gulp from "gulp";
+import {
+    paths
+} from "../gulpfile.babel";
+import gulp, {src, dest} from "gulp";
 import gulpif from "gulp-if";
 import rename from "gulp-rename";
 import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
+import concat from "gulp-concat";
+const uglify = require('gulp-uglify-es').default;
+const notify = require('gulp-notify');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
 
-const webpackConfig = require("../webpack.config.js"),
-    argv = yargs.argv,
-    production = !!argv.production;
-
-webpackConfig.mode = production ? "production" : "development";
-webpackConfig.devtool = production ? false : "source-map";
+let isProd = false;
 
 gulp.task("scripts", () => {
-    return gulp.src(paths.scripts.src)
-        .pipe(webpackStream(webpackConfig), webpack)
-        .pipe(gulpif(production, rename({
-            suffix: ".min"
-        })))
-        .pipe(gulp.dest(paths.scripts.dist))
-        .pipe(debug({
-            "title": "JS files"
+    src('src/js/vendor/**.js')
+        .pipe(concat('vendor.js'))
+        .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
+        .pipe(dest('dist/js/'))
+    return src(
+            ['src/js/components/**.js', 'src/js/main.js'])
+        .pipe(gulpif(!isProd, sourcemaps.init()))
+        .pipe(babel({
+            presets: ['@babel/env']
         }))
+        .pipe(concat('main.js'))
+        .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
+        .pipe(gulpif(!isProd, sourcemaps.write('.')))
+        .pipe(dest('dist/js'))
         .pipe(browsersync.stream());
 });
