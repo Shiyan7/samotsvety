@@ -71,7 +71,7 @@
 
     &__desc {
         max-width: 236px;
-        margin: 0;
+        margin: 0 auto;
         font-size: 16px;
         font-weight: 400;
         line-height: 20px;
@@ -86,30 +86,5 @@
             font-size: 13px;
             line-height: 16px;
         }
-    }
-
-    &-1 {
-        width: 87px;
-        height: 76px;
-    }
-
-    &-2 {
-        width: 102px;
-        height: 70px;
-    }
-
-    &-3 {
-        width: 97px;
-        height: 72px;
-    }
-
-    &-4 {
-        width: 80px;
-        height: 82px;
-    }
-
-    &-5 {
-        width: 94px;
-        height: 65px;
     }
 }
