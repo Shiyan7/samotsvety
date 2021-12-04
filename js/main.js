@@ -116,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: '.collections-section-slider__btn--prev'
     }
   });
-  filters();
 });
 "use strict";
 
@@ -148,31 +147,29 @@ checboxes.forEach(function (el) {
 });
 "use strict";
 
-var filters = function filters() {
-  var filtersBtn = document.querySelectorAll(".g-filters__btn");
-  filtersBtn.forEach(function (el) {
-    el.addEventListener("click", function () {
-      var filtersPath = el.dataset.filtersPath;
-      el.closest(".g-filters").querySelector('.g-filters__btn--active').classList.remove('g-filters__btn--active');
-      el.closest(".g-filters").querySelector("[data-filters-path=\"".concat(filtersPath, "\"]")).classList.add('g-filters__btn--active');
-      var filtersContent = el.closest(".g-filters").querySelectorAll(".g-filters__content");
+var filtersBtn = document.querySelectorAll(".g-filters__btn");
+filtersBtn.forEach(function (el) {
+  el.addEventListener("click", function () {
+    var filtersPath = el.dataset.filtersPath;
+    el.closest(".g-filters").querySelector('.g-filters__btn--active').classList.remove('g-filters__btn--active');
+    el.closest(".g-filters").querySelector("[data-filters-path=\"".concat(filtersPath, "\"]")).classList.add('g-filters__btn--active');
+    var filtersContent = el.closest(".g-filters").querySelectorAll(".g-filters__content");
 
-      var switchContent = function switchContent(path, element) {
-        var _element$closest, _element$closest$quer;
+    var switchContent = function switchContent(path, element) {
+      var _element$closest, _element$closest$quer;
 
-        for (var i = 0; i < filtersContent.length; i++) {
-          var _el = filtersContent[i];
+      for (var i = 0; i < filtersContent.length; i++) {
+        var _el = filtersContent[i];
 
-          _el.classList.remove('g-filters__content--active');
-        }
+        _el.classList.remove('g-filters__content--active');
+      }
 
-        (_element$closest = element.closest(".g-filters")) === null || _element$closest === void 0 ? void 0 : (_element$closest$quer = _element$closest.querySelector("[data-filters-target=\"".concat(path, "\"]"))) === null || _element$closest$quer === void 0 ? void 0 : _element$closest$quer.classList.add('g-filters__content--active');
-      };
+      (_element$closest = element.closest(".g-filters")) === null || _element$closest === void 0 ? void 0 : (_element$closest$quer = _element$closest.querySelector("[data-filters-target=\"".concat(path, "\"]"))) === null || _element$closest$quer === void 0 ? void 0 : _element$closest$quer.classList.add('g-filters__content--active');
+    };
 
-      switchContent(filtersPath, el);
-    });
+    switchContent(filtersPath, el);
   });
-};
+});
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
