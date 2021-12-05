@@ -13,11 +13,9 @@
         margin-bottom: 17px;
 
         @media (max-width: 576px) {
-            font-family: "HeliosExt", sans-serif;
-            font-weight: 400;
             font-size: 20px;
             line-height: 27px;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             text-align: center;
         }
     }
@@ -67,6 +65,7 @@
             }
         }
     }
+
     &__more {
         font-size: 16px;
         padding: 6px 0;
@@ -75,5 +74,11 @@
             width: 100%;
             margin: 0 auto;
         }
+    }
+}
+
+.read-more {
+    @include hover {
+        text-decoration: none;
     }
 }

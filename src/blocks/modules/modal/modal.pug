@@ -7,7 +7,7 @@
             p.modal__desc.modal__desc--center Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение 30&nbsp;мин и&nbsp;сообщим стоимость и&nbsp;условия заказа&nbsp;товара.
 
             form.modal-form.validate-form(action="#")
-                input.g-input.modal-form__input(data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон")
+                input.g-input.modal-form__input(type="tel" name="phoneNumber" placeholder="Введите телефон")
                 button.btn-reset.g-btn.g-btn--black.modal-form__btn оставить заявку
                 label.modal-form__label
                     input.modal-form__checkbox(type="checkbox" checked)
@@ -27,7 +27,7 @@
             p.modal__desc.modal__desc--center Оставьте заявку на&nbsp;консультацию с&nbsp;экспертом, мы&nbsp;перезвоним в&nbsp;течение 30&nbsp;минут*
 
             form.modal-form.validate-form(action="#")
-                input.g-input.modal-form__input(data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон")
+                input.g-input.modal-form__input(type="tel" name="phoneNumber" placeholder="Введите телефон")
                 button.btn-reset.g-btn.g-btn--black.modal-form__btn оставить заявку
                 label.modal-form__label
                     input.modal-form__checkbox(type="checkbox" checked)
@@ -58,7 +58,7 @@
                 span только при покупке on-line
 
             form.modal-form.validate-form(action="#")
-                input.g-input.modal-form__input(data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон")
+                input.g-input.modal-form__input(type="tel" name="phoneNumber" placeholder="Введите телефон")
                 button.btn-reset.g-btn.g-btn--black.modal-form__btn ПОЛУЧИТЬ ПОМОКОД
                 label.modal-form__label
                     input.modal-form__checkbox(type="checkbox" checked)
@@ -110,7 +110,7 @@
                 li.g-filters__item
                     button.btn-reset.g-filters__btn(data-filters-path="map") На карте
             
-            .g-filters__content.list-reserve__items.modal-filters__content.g-filters__content--active(data-filters-target="list" data-simplebar)
+            .g-filters__content.list-reserve__items.modal-filters__content(data-filters-target="list" data-simplebar)
                 .list-reserve__item
                     img.list-reserve__image(src="img/list-reserve-1.jpg", alt="")
                     .list-reserve__content
@@ -120,7 +120,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -149,7 +149,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -178,7 +178,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -207,7 +207,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -236,7 +236,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -265,7 +265,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -294,7 +294,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -323,7 +323,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -352,7 +352,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -381,7 +381,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -410,7 +410,7 @@
                             a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                             span.list-reserve__metro
                                 +icon("metro")
-                                | Ленинский пр.
+                                span Ленинский пр.
                         .list-reserve__info.read-more-wrapper
                             span.list-reserve__price Цена изделия: 
                                 span 77,975 ₽
@@ -430,38 +430,38 @@
                                             span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
                             button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
                         button.btn-reset.g-btn.g-btn--stroke.list-reserve__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500") оформить резерв
-            //- .g-filters__content.class.modal-filters__content.map-reserve(data-filters-target="map")
-            //-     img.map-reserve__image(src="img/map-image.svg", alt="")
+            .g-filters__content.class.modal-filters__content.map-reserve.g-filters__content--active(data-filters-target="map")
+                img.map-reserve__image(src="img/map-image.svg", alt="")
                 
-            //-     .list-reserve__item.map-reserve__item
-            //-         img.list-reserve__image.lozad(src="img/location.jpg", srcset="img/location@2x.jpg 2x" alt="")
-            //-         .list-reserve__content
-            //-             .list-reserve__text
-            //-                 p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
-            //-                 span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
-            //-                 a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
-            //-                 span.list-reserve__metro
-            //-                     +icon("metro")
-            //-                     | Ленинский пр.
-            //-         .list-reserve__info.read-more-wrapper
-            //-             span.list-reserve__price Цена изделия: 
-            //-                 span 77,975 ₽
-            //-             .insert-product.full-text
-            //-                 .insert-product__item
-            //-                     span.insert-product__title Размер:
-            //-                     .insert-product__right
-            //-                         span.insert-product__caption 15 мм
-            //-                 .insert-product__item
-            //-                     span.insert-product__title Вставка:
-            //-                     .insert-product__right
-            //-                         .insert-product__content
-            //-                             .insert-product__color.insert-product__color--green
-            //-                             span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
-            //-                         .insert-product__content
-            //-                             .insert-product__color.insert-product__color--black
-            //-                             span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
-            //-             button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
-            //-             button.btn-reset.g-btn.g-btn--black.list-reserve__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500") оформить резерв
+                .list-reserve__item.map-reserve__item
+                    img.list-reserve__image.lozad(src="img/location.jpg", srcset="img/location@2x.jpg 2x" alt="")
+                    .list-reserve__content
+                        .list-reserve__text
+                            p.modal__desc.list-reserve__street ул. Дзержинского, 35/3
+                            span.list-reserve__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                            a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
+                            span.list-reserve__metro
+                                +icon("metro")
+                                span Ленинский пр.
+                    .list-reserve__info.read-more-wrapper
+                        span.list-reserve__price Цена изделия: 
+                            span 77,975 ₽
+                        .insert-product.full-text
+                            .insert-product__item
+                                span.insert-product__title Размер:
+                                .insert-product__right
+                                    span.insert-product__caption 15 мм
+                            .insert-product__item
+                                span.insert-product__title Вставка:
+                                .insert-product__right
+                                    .insert-product__content
+                                        .insert-product__color.insert-product__color--green
+                                        span.insert-product__caption Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                    .insert-product__content
+                                        .insert-product__color.insert-product__color--black
+                                        span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                        button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
+                        button.btn-reset.g-btn.g-btn--black.list-reserve__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500") оформить резерв
     .modal__container.modal__container--6(role="dialog" aria-modal="true" data-graph-target="make-reserve")
         button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
             +icon("cross2")
@@ -484,7 +484,7 @@
                                 a.modal__desc.modal__desc--sm.list-reserve__tel(href="#") +7 (812) 777-78-61 
                                 span.list-reserve__metro
                                     +icon("metro")
-                                    | Ленинский пр.
+                                    span Ленинский пр.
                 .reserve__item
                     span.reserve__caption Информация о товаре:
                     .mini-product
@@ -512,7 +512,7 @@
                                 button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
 
             form.modal-form.validate-form.reserve__form(action="#")
-                input.g-input.modal-form__input(data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон")
+                input.g-input.modal-form__input(type="tel" name="phoneNumber" placeholder="Введите телефон")
                 button.btn-reset.g-btn.g-btn--black.modal-form__btn оставить заявку
                 label.modal-form__label
                     input.modal-form__checkbox(type="checkbox" checked)

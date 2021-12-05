@@ -104,6 +104,16 @@
             transform: translateY(-50%);
             transition: opacity 0.3s, visibility 0.3s;
 
+            &:hover {
+                svg {
+                    fill: #000;
+                }
+            }
+
+            svg {
+                fill: rgba(#000, 0.5);
+            }
+
             &--prev {
                 left: -9px;
             }

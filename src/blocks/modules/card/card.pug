@@ -126,7 +126,7 @@ section.card
                         |Арт.: 
                         |58001456
                     .card__row
-                        select.g-select.card__select(name="selected size")
+                        select.g-select(name="selected size")
                             option(value="") Выберите размер
                             option(value="size-1") 15
                             option(value="size-2") 15.5
@@ -142,6 +142,7 @@ section.card
                             option(value="size-14") 17
                             option(value="size-15") 17.5
                             option(value="size-16") 18
+                            option(value="no-size") Нет нужного размера
                         span.g-tooltip
                             button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="found-out-size" data-graph-speed="500")
                                 +icon("tooltip")

@@ -1,0 +1,30 @@
+.fslightbox {
+    &-slide-btn {
+        padding: 0 !important;
+        &-container {
+            width: 40px;
+            height: 40px;
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #fff !important;
+            padding: 0 !important;
+
+            &-previous {
+                left: 20px !important;
+                background-image: url(../img/svg/arrow.svg);
+            }
+
+            &-next {
+                position: relative;
+                right: 20px !important;
+                transform: rotate(180deg) translateY(-50%) !important;
+                background-image: url(../img/svg/arrow.svg);
+            }
+        }
+        
+        svg {
+            display: none;
+        }
+    }
+}

@@ -1,17 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
     const benefitsMoreBtns = document.querySelectorAll(".benefits__more");
-    
 
-    function loadBenefits (e) {
-        const benefits = e.currentTarget.closest(".benefits");
-        const hiddenBenefits = benefits.querySelectorAll(".benefits__item--hidden");
+    let flag = 0;
 
-        hiddenBenefits.forEach(el => el.classList.remove("benefits__item--hidden"));
+    function toggleBenefits(e, hiddenBenefits) {
 
-        e.currentTarget.remove();
+        hiddenBenefits.forEach(el => el.classList.toggle("benefits__item--hidden"));
+        
+        if (flag == 0) {
+            flag++;
+            e.currentTarget.innerHTML = 'Скрыть'
+        } else {
+            flag--;
+            e.currentTarget.innerHTML = 'Все преимущества'
+        }
     }
 
     benefitsMoreBtns?.forEach(btn => {
-        btn.addEventListener("click", loadBenefits);
+
+        const benefits = btn.closest(".benefits");
+        const hiddenBenefits = benefits.querySelectorAll(".benefits__item--hidden");
+
+        btn.addEventListener("click", (e) => {
+
+            
+            toggleBenefits(e, hiddenBenefits);
+        });
     })
 });

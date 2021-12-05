@@ -12,30 +12,26 @@
     transition: border 0.3s, color 0.3s, background-color 0.3s;
 
     &--black {
-        @media (min-width: 1025px) {
-            &:hover {
-                border: 1px solid #111;
-                color: #111;
-                background-color: #fff;
-            }
+        &:hover {
+            border: 1px solid #111;
+            color: #111;
+            background-color: transparent;
         }
     }
 
     &--white {
-        background-color: #fff;
+        background-color: transparent;
         color: #a39d94;
     }
 
     &--stroke {
         border: 1px solid #111;
         color: #111;
-        background-color: #fff;
+        background-color: transparent;
 
-        @media (min-width: 1025px) {
-            &:hover {
-                background-color: #111;
-                color: #fff;
-            }
+        &:hover {
+            background-color: #111;
+            color: #fff;
         }
     }
 
@@ -48,11 +44,9 @@
         color: #fff;
         background-color: #a39d94;
 
-        @media (min-width: 1025px) {
-            &:hover {
-                color: #a39d94;
-                background-color: #fff;
-            }
+        &:hover {
+            color: #a39d94;
+            background-color: transparent;
         }
     }
 }

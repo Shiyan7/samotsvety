@@ -23,21 +23,30 @@
     &__title {
         font-size: 20px;
         line-height: 24px;
-        margin-bottom: 29px;
         font-weight: 400;
         cursor: text;
+
+        &:not(:last-child) {
+            margin-bottom: 29px;
+
+            @media (max-width: 576px) {
+                margin-bottom: 16px;
+            }
+        }
 
         @media (max-width: 576px) {
             font-size: 16px;
             line-height: 19px;
-            margin-bottom: 16px;
         }
 
         &--2 {
-            margin-bottom: 16px;
 
-            @media (max-width: 576px) {
-                margin-bottom: 11px;
+            &:not(:last-child) {
+                margin-bottom: 16px;
+
+                @media (max-width: 576px) {
+                    margin-bottom: 11px;
+                }
             }
         }
 
@@ -116,6 +125,19 @@
 
         &__input {
             margin-bottom: 15px;
+            background-repeat: no-repeat;
+            background-size: 28px 28px;
+            background-position: top 50% right;
+
+            &.error {
+                border-bottom: 1px solid #cc0000;
+                background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z' stroke='%23CC0000'/%3E%3Cpath d='M13 18H14.5V19.5H13V18Z' fill='%23CC0000'/%3E%3Cpath d='M13 9H14.5V17H13V9Z' fill='%23CC0000'/%3E%3C/svg%3E%0A");
+            }
+
+            &.valid {
+                border-bottom: 1px solid #008315;
+                background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 15L12 18L19 11L18 10L12 16L10 14L9 15Z' fill='%23008315'/%3E%3Cpath d='M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z' stroke='%23008315'/%3E%3C/svg%3E%0A");
+            }
         }
 
         &__btn {
@@ -205,6 +227,10 @@
             width: 100%;
             color: rgba(#000, 0.5);
         }
+
+        #phoneNumber-error {
+            display: none !important;
+        }
     }
 
     &__image {
@@ -247,11 +273,6 @@
             @media (max-width: 576px) {
                 font-size: 14px;
                 line-height: 14px;
-            }
-
-            &:after {
-                opacity: 1;
-                visibility: visible;
             }
         }
     }
@@ -340,7 +361,7 @@
 
         @media (max-width: 1024px) {
             width: 87%;
-            padding: 50px 25px 3px 25px;
+            padding: 50px 25px 33px 25px;
         }
 
         @media (max-width: 576px) {
@@ -435,7 +456,7 @@
 
         .simplebar-track {
             width: 3px;
-            height: calc(320px) !important;
+            height: 320px !important;
             margin-top: 15px;
 
             @media (max-width: 576px) {
@@ -456,20 +477,19 @@
     &__item {
         display: flex;
         padding: 32px 16px;
-        background-color: #f2f2f2;
         margin-right: 21px;
+        transition: background-color 0.3s;
+
+        @include hover {
+            background-color: #f2f2f2;
+        }
 
         @media (max-width: 576px) {
             padding: 15px 15px;
-            background-color: transparent;
         }
 
         &:not(:first-child) {
             border-top: 1px solid rgba(#000, 0.2);
-        }
-
-        &:nth-child(2n) {
-            background-color: transparent;
         }
     }
 
@@ -562,20 +582,24 @@
     &__metro {
         display: flex;
         align-items: center;
-        font-size: 12px;
-        line-height: 17px;
         color: #111;
-
-        @media (max-width: 576px) {
-            font-size: 14px;
-            line-height: 18px;
-        }
 
         svg {
             display: block;
             width: 18px;
             height: 18px;
             margin-right: 5px;
+        }
+
+        span {
+            display: block;
+            font-size: 12px;
+            line-height: 1;
+            height: 9px;
+
+            @media (max-width: 576px) {
+                font-size: 14px;
+            }
         }
     }
 
@@ -636,8 +660,6 @@
 
     @media (max-width: 768px) {
         flex-direction: column;
-        max-width: 500px;
-        margin: 0 auto;
     }
 
     &.g-filters__content--active {
@@ -656,7 +678,7 @@
             margin-right: 0;
             width: 100%;
             height: 350px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         @media (max-width: 576px) {
@@ -675,8 +697,11 @@
         column-gap: 21px;
         margin-right: 0;
         width: 100%;
-        background-color: transparent;
         padding: 0;
+
+        &:hover {
+            background-color: transparent;
+        }
 
         @media (max-width: 768px) {
             display: flex;
@@ -702,6 +727,10 @@
             @media (max-width: 1024px) {
                 grid-column: 2 span;
             }
+
+            @media (max-width: 768px) {
+                align-items: center;
+            }
         }
 
         .list-reserve__content {
@@ -710,23 +739,13 @@
             }
 
             @media (max-width: 768px) {
-                order: -1;
-                margin-bottom: 20px;
+                display: none;
             }
         }
 
         .list-reserve__image {
             @media (max-width: 768px) {
-                width: 100%;
-                margin-bottom: 0;
-            }
-
-            @media (max-width: 576px) {
-                height: 277px;
-            }
-
-            @media (max-width: 400px) {
-                height: 200px;
+                display: none;
             }
         }
 
@@ -735,6 +754,10 @@
                 margin-top: 20px;
                 padding: 16px 49px 13px;
             }
+        }
+
+        .list-reserve__price {
+            padding-top: 0;
         }
 
     }
@@ -857,21 +880,20 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-top: 94px;
-        min-height: 290px;
+        margin-bottom: 50px;
+
+        @media (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+            min-height: auto;
+        }
 
         @media (max-width: 576px) {
             margin-top: 28px;
             margin-bottom: 35px;
-        }
-
-        @media (max-width: 1024px) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 60px;
-            min-height: auto;
-            margin-bottom: 40px;
         }
 
         .list-reserve {
@@ -891,8 +913,11 @@
 
             &__item {
                 padding: 0;
-                background-color: transparent;
                 margin-right: 0;
+
+                &:hover {
+                    background-color: transparent;
+                }
 
                 @media (max-width: 1024px) {
                     margin-bottom: 30px;
