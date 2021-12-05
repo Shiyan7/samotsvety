@@ -843,6 +843,11 @@
 .reserve {
 
     &__item {
+
+        @media (max-width: 1024px) {
+            width: 400px;
+        }
+
         @media (max-width: 576px) {
             width: 100%;
         }
@@ -904,6 +909,10 @@
 
             &__content {
 
+                @media (max-width: 1024px) {
+                    display: flex;
+                }
+
                 @media (max-width: 576px) {
                     justify-content: center;
                     text-align: center;
@@ -953,6 +962,10 @@
     }
 
     &__form {
+
+        @media (max-width: 1024px) {
+            max-width: 400px;
+        }
 
         @media (max-width: 576px) {
             max-width: 260px;
