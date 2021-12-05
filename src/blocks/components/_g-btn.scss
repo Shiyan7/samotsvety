@@ -15,19 +15,19 @@
         &:hover {
             border: 1px solid #111;
             color: #111;
-            background-color: transparent;
+            background-color: #fff;
         }
     }
 
     &--white {
-        background-color: transparent;
+        background-color: #fff;
         color: #a39d94;
     }
 
     &--stroke {
         border: 1px solid #111;
         color: #111;
-        background-color: transparent;
+        background-color: #fff;
 
         &:hover {
             background-color: #111;
@@ -46,7 +46,7 @@
 
         &:hover {
             color: #a39d94;
-            background-color: transparent;
+            background-color: #fff;
         }
     }
 }

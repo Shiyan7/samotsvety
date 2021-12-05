@@ -876,3 +876,40 @@
         }
     }
 }
+
+.favorites {
+
+    &__clear {
+        font-size: 12px;
+        line-height: 17px;
+        font-weight: 300;
+        margin-left: auto;
+        margin-right: 18px;
+
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    &-list {
+        &__title {
+            margin-top: 87px;
+        }
+    }
+
+    &__sort-by.sort-by {
+        margin-left: 0;
+    }
+
+    &__filters-toggle {
+        @media (min-width: 769px) {
+            display: none;
+        }
+    }
+
+    &__catalog-filters {
+        @media (min-width: 769px) {
+            display: block;
+        }
+    }
+}

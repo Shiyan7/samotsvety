@@ -181,6 +181,8 @@
         &__link {
             margin-bottom: 65px;
             padding: 14px 39px 13px 40px;
+            background-color: transparent;
+
             @media (max-width: 576px) {
                 padding: 14px 0 13px;
                 width: 100%;

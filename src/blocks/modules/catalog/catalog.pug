@@ -517,6 +517,179 @@ if page === "new"
                     .catalog-grid__bottom
                         button.btn-reset.g-btn.g-btn--stroke.g-btn--center.catalog__more-products Показать ещё
                         a.g-link.catalog-grid__link(href="#") Смотреть все приборы для рыбы и&nbsp;морепродуктов
+if page === "favorites"
+    section.catalog.g-filters
+        img.catalog__image(src="img/catalog-image.jpg", alt="Главная картинка")
+        .container.catalog__container
+            ul.g-breadcrumbs__list.catalog__breadcrumbs.list-reset
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="/") Главная
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link Избранное
+            h1.g-title.g-title--center.catalog__title Избранное
+            
+            .catalog__top
+                button.btn-reset.g-btn.g-btn--stroke.filters-toggle.filters-toggle--active.favorites__filters-toggle
+                    svg.filters-toggle__icon(width="24" height="24")
+                        use.filters-toggle__icon-opened(xlink:href="./img/sprites/sprite.svg#open-filters")
+                        use.filters-toggle__icon-closed(xlink:href="./img/sprites/sprite.svg#close-filters")
+                    |Фильтры
+                    span.filters-toggle__quantity 8
+                button.btn-reset.favorites__clear.g-link Очистить избранное
+
+                .sort-by.catalog__sort-by.favorites__sort-by
+                    button.btn-reset.sort-by__open.open-sort-by сортировка
+                    span.sort-by__caption Сортировать по:
+                    .sort-by__select.open-sort-by
+                        span.sort-by__current По популярности
+                        .sort-by__top
+                            h2.sort-by__title.g-title Сортировка
+                            button.btn-reset.sort-by__close
+                                +icon("cross2")
+                        ul.sort-by__list.list-reset
+                            li.sort-by__item.active По популярности
+                            li.sort-by__item новизне
+                            li.sort-by__item Возрастанию цены
+                            li.sort-by__item Убыванию цены
+                            li.sort-by__item Размеру скидки
+            .catalog__content
+                .catalog-filters.favorites__catalog-filters
+                    .catalog-filters__top
+                        h2.catalog-filters__title.g-title Фильтры
+                        button.btn-reset.catalog-filters__close
+                            +icon("cross2")
+                    .catalog-choice
+                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                            span УКРАШЕНИЯ
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="8" r="8" fill="inherit"/>
+                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                            </svg>
+                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                            span Кольца
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="8" r="8" fill="inherit"/>
+                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                            </svg>
+                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                            span ЗОЛОТЫЕ
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="8" r="8" fill="inherit"/>
+                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                            </svg>
+                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                            span 585
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="8" r="8" fill="inherit"/>
+                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                            </svg>
+                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                            span БРИЛЛИАНТЫ
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="8" r="8" fill="inherit"/>
+                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                            </svg>
+                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
+                            span 5 000 - 100 000
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="8" r="8" fill="inherit"/>
+                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                            </svg>
+                        
+                        button.btn-reset.catalog-choice__item.catalog-choice__reset
+                            +icon("reset")
+                            span СБРОСИТЬ ВСЁ
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="8" r="8" fill="inherit"/>
+                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
+                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
+                            </svg>
+                    .catalog-filter.catalog-filter
+                        .catalog-filter__top
+                            h2.catalog-filter__title ИЗДЕЛИЯ
+                            span.catalog-filter__toggle
+                        .catalog-filter__bottom
+                            .catalog-filter__content
+                                .catalog-filter__item(data-text="КОЛЬЦА")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt Кольца
+                                .catalog-filter__item(data-text="СЕРЬГИ")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt СЕРЬГИ
+                                .catalog-filter__item.catalog-filter__item--hidden(data-text="ОБРУЧАЛЬНЫЕ КОЛЬЦА")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt ОБРУЧАЛЬНЫЕ КОЛЬЦА
+                                .catalog-filter__item.catalog-filter__item--hidden(data-text="ПОДВЕСКИ")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt ПОДВЕСКИ
+                                .catalog-filter__item.catalog-filter__item--hidden(data-text="КОЛЬЕ")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt КОЛЬЕ
+                                .catalog-filter__item.catalog-filter__item--hidden(data-text="БРОШИ")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt БРОШИ
+                                .catalog-filter__item.catalog-filter__item--hidden(data-text="БРАСЛЕТЫ")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt БРАСЛЕТЫ
+                                .catalog-filter__item.catalog-filter__item--hidden(data-text="ЦЕПИ")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt ЦЕПИ
+                                .catalog-filter__item.catalog-filter__item--hidden(data-text="ЗАПОНКИ")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt ЗАПОНКИ
+                                .catalog-filter__item.catalog-filter__item--hidden(data-text="ЗАЖИМЫ ДЛЯ ГАЛСТУКА")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt ЗАЖИМЫ ДЛЯ ГАЛСТУКА
+                                
+                                .catalog-filter__item.catalog-filter__item--hidden(data-text="ЗАПОНКИ")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt ЗАПОНКИ
+                                .catalog-filter__item.catalog-filter__item--hidden(data-text="ЗАЖИМЫ ДЛЯ ГАЛСТУКА")
+                                    label.catalog-filter__label
+                                        input.catalog-filter__checkbox(type="checkbox")
+                                        span.catalog-filter__txt ЗАЖИМЫ ДЛЯ ГАЛСТУКА
+                                button.btn-reset.catalog-filter__more.catalog-filter__txt Ещё
+                    
+                    .catalog-filter.catalog-filter
+                        .catalog-filter__top--2
+                            h2.catalog-filter__title ТОЛЬКО В НАЛИЧИИ
+                            +checkbox
+                    .catalog-filter.catalog-filter
+                        .catalog-filter__top--2
+                            h2.catalog-filter__title ТОВАРЫ СО СКИДКОЙ
+                            +checkbox
+                .catalog-grid
+                    ul.catalog-list.list-reset
+                        - for(var i = 0; i < 8; i++)
+                            li.catalog-list__item
+                                +product
+                    h2.g-title.g-title--center.catalog-list__title.favorites-list__title ПОХОЖИЕ ИЗДЕЛИЯ
+                    ul.catalog-list.list-reset
+                        - for(var i = 0; i < 8; i++)
+                            li.catalog-list__item
+                                +product
+                    h2.g-title.g-title--center.catalog-list__title.favorites-list__title Просмотренные изделия
+                    ul.catalog-list.list-reset
+                        - for(var i = 0; i < 8; i++)
+                            li.catalog-list__item
+                                +product
 else
 
     section.catalog
