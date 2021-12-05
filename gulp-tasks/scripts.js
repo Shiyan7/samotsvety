@@ -12,7 +12,6 @@ import yargs from "yargs";
 import concat from "gulp-concat";
 const uglify = require('gulp-uglify-es').default;
 const notify = require('gulp-notify');
-const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 
 let isProd = false;
@@ -24,13 +23,11 @@ gulp.task("scripts", () => {
         .pipe(dest('dist/js/'))
     return src(
             ['src/js/components/**.js', 'src/js/main.js'])
-        .pipe(gulpif(!isProd, sourcemaps.init()))
         .pipe(babel({
             presets: ['@babel/env']
         }))
         .pipe(concat('main.js'))
         .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
-        .pipe(gulpif(!isProd, sourcemaps.write('.')))
         .pipe(dest('dist/js'))
         .pipe(browsersync.stream());
 });

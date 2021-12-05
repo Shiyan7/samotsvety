@@ -42,7 +42,7 @@
         color: #111;
 
         @media (max-width: 576px) {
-            flex-wrap: wrap;
+            margin-bottom: 4px;
         }
 
         span {
@@ -50,11 +50,21 @@
             line-height: 33px;
             font-weight: 500;
             margin-left: 9px;
-
+            
             @media (max-width: 576px) {
-                margin-left: 0;
-                display: block;
-                width: 100%;
+                font-size: 16px;
+                line-height: 17px;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .insert-product__item {
+        @media (max-width: 576px) {
+            justify-content: flex-start;
+
+            &:not(:last-child) {
+                margin-bottom: 4px;
             }
         }
     }
