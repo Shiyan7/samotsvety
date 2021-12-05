@@ -526,7 +526,7 @@ if page === "favorites"
                     a.g-breadcrumbs__link(href="/") Главная
                 li.g-breadcrumbs__item
                     a.g-breadcrumbs__link Избранное
-            h1.g-title.g-title--center.catalog__title Избранное
+            h1.g-title.g-title--center.catalog__title.favorites__title Избранное
             
             .catalog__top
                 button.btn-reset.g-btn.g-btn--stroke.filters-toggle.filters-toggle--active.favorites__filters-toggle
@@ -558,59 +558,7 @@ if page === "favorites"
                         h2.catalog-filters__title.g-title Фильтры
                         button.btn-reset.catalog-filters__close
                             +icon("cross2")
-                    .catalog-choice
-                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
-                            span УКРАШЕНИЯ
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="8" r="8" fill="inherit"/>
-                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
-                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
-                            </svg>
-                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
-                            span Кольца
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="8" r="8" fill="inherit"/>
-                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
-                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
-                            </svg>
-                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
-                            span ЗОЛОТЫЕ
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="8" r="8" fill="inherit"/>
-                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
-                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
-                            </svg>
-                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
-                            span 585
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="8" r="8" fill="inherit"/>
-                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
-                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
-                            </svg>
-                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
-                            span БРИЛЛИАНТЫ
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="8" r="8" fill="inherit"/>
-                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
-                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
-                            </svg>
-                        button.btn-reset.catalog-choice__item.catalog-choice__btn(data-choice-text="Кольца")
-                            span 5 000 - 100 000
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="8" r="8" fill="inherit"/>
-                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
-                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
-                            </svg>
-                        
-                        button.btn-reset.catalog-choice__item.catalog-choice__reset
-                            +icon("reset")
-                            span СБРОСИТЬ ВСЁ
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="inherit" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="8" r="8" fill="inherit"/>
-                            <line x1="5.45406" y1="11.5254" x2="12.5251" y2="4.45428" stroke="inherit"/>
-                            <line x1="12.5254" y1="11.6885" x2="5.45429" y2="4.61745" stroke="inherit"/>
-                            </svg>
-                    .catalog-filter.catalog-filter
+                    .catalog-filter.catalog-filter.isOpen
                         .catalog-filter__top
                             h2.catalog-filter__title ИЗДЕЛИЯ
                             span.catalog-filter__toggle

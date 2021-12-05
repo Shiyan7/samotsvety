@@ -879,6 +879,10 @@
 
 .favorites {
 
+    &__title {
+        margin-bottom: 46px;
+    }
+
     &__clear {
         font-size: 12px;
         line-height: 17px;
