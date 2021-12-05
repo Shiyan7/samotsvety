@@ -2,18 +2,28 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   var benefitsMoreBtns = document.querySelectorAll(".benefits__more");
+  var flag = 0;
 
-  function loadBenefits(e) {
-    var benefits = e.currentTarget.closest(".benefits");
-    var hiddenBenefits = benefits.querySelectorAll(".benefits__item--hidden");
+  function toggleBenefits(e, hiddenBenefits) {
     hiddenBenefits.forEach(function (el) {
-      return el.classList.remove("benefits__item--hidden");
+      return el.classList.toggle("benefits__item--hidden");
     });
-    e.currentTarget.remove();
+
+    if (flag == 0) {
+      flag++;
+      e.currentTarget.innerHTML = 'Скрыть';
+    } else {
+      flag--;
+      e.currentTarget.innerHTML = 'Все преимущества';
+    }
   }
 
   benefitsMoreBtns === null || benefitsMoreBtns === void 0 ? void 0 : benefitsMoreBtns.forEach(function (btn) {
-    btn.addEventListener("click", loadBenefits);
+    var benefits = btn.closest(".benefits");
+    var hiddenBenefits = benefits.querySelectorAll(".benefits__item--hidden");
+    btn.addEventListener("click", function (e) {
+      toggleBenefits(e, hiddenBenefits);
+    });
   });
 });
 "use strict";
@@ -194,6 +204,17 @@ document.addEventListener("DOMContentLoaded", function () {
       type: 'bullets',
       clickable: true
     }
+  });
+});
+"use strict";
+
+/* const tels = document.querySelectorAll("input[type=\"tel\"]");
+const im = new Inputmask("+7 (999) 999-99-99");
+im.mask(tels); */
+var tels = document.querySelectorAll("input[type=\"tel\"]");
+tels.forEach(function (el) {
+  var phoneMask = IMask(el, {
+    mask: '+{7} (000) 000 0000'
   });
 });
 "use strict";
@@ -385,28 +406,24 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 "use strict";
 
-var productSlider = function productSlider() {
-  var productSlider = new Swiper('.product-slider', {
-    allowTouchMove: false,
-    slidesPerView: 'auto',
-    breakpoints: {
-      1025: {
-        allowTouchMove: true
-      }
-    },
-    navigation: {
-      nextEl: '.product-slider__btn--next',
-      prevEl: '.product-slider__btn--prev'
-    },
-    pagination: {
-      el: '.product-slider__pag',
-      type: 'bullets',
-      clickable: true
+var productSlider = new Swiper('.product-slider', {
+  allowTouchMove: false,
+  slidesPerView: 'auto',
+  breakpoints: {
+    1025: {
+      allowTouchMove: true
     }
-  });
-};
-
-productSlider();
+  },
+  navigation: {
+    nextEl: '.product-slider__btn--next',
+    prevEl: '.product-slider__btn--prev'
+  },
+  pagination: {
+    el: '.product-slider__pag',
+    type: 'bullets',
+    clickable: true
+  }
+});
 "use strict";
 
 var rangeSlider = document.getElementById('range-slider');
@@ -714,6 +731,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 "use strict";
 
+$(document).ready(function () {
+  $('.validate-form').each(function (index, numero_form) {
+    $(this).validate({
+      rules: {
+        phoneNumber: {
+          required: true,
+          minlength: 17,
+          maxlength: 17
+        }
+      }
+    });
+  });
+});
+"use strict";
+
 /* productSlider(); */
 document.addEventListener("DOMContentLoaded", function () {
   var waresSlider = document.querySelectorAll(".wares-slider");
@@ -723,6 +755,24 @@ document.addEventListener("DOMContentLoaded", function () {
       var mySwiper;
 
       var initializeSlider = function initializeSlider() {
+        new Swiper('.product-slider', {
+          allowTouchMove: false,
+          slidesPerView: 'auto',
+          breakpoints: {
+            1025: {
+              allowTouchMove: true
+            }
+          },
+          navigation: {
+            nextEl: '.product-slider__btn--next',
+            prevEl: '.product-slider__btn--prev'
+          },
+          pagination: {
+            el: '.product-slider__pag',
+            type: 'bullets',
+            clickable: true
+          }
+        });
         mySwiper = new Swiper(el, {
           slidesPerView: 2,
           loop: true,
@@ -739,9 +789,6 @@ document.addEventListener("DOMContentLoaded", function () {
             nextEl: '.wares-slider__btn--next',
             prevEl: '.wares-slider__btn--prev'
           }
-        });
-        mySwiper.on('slideChange', function () {
-          productSlider();
         });
       };
 

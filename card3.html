@@ -1482,7 +1482,7 @@
             <h2 class="g-title g-title--center modal__title">Запрос цены</h2>
             <p class="modal__desc modal__desc--center">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение 30&nbsp;мин и&nbsp;сообщим стоимость и&nbsp;условия заказа&nbsp;товара.</p>
             <form class="modal-form validate-form" action="#">
-              <input class="g-input modal-form__input" data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
               <button class="btn-reset g-btn g-btn--black modal-form__btn">оставить заявку</button>
               <label class="modal-form__label">
                 <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных *в рабочее время</span>
@@ -1511,7 +1511,7 @@
             <h2 class="g-title g-title--center modal__title">Заявка на изделие под заказ</h2>
             <p class="modal__desc modal__desc--center">Оставьте заявку на&nbsp;консультацию с&nbsp;экспертом, мы&nbsp;перезвоним в&nbsp;течение 30&nbsp;минут*</p>
             <form class="modal-form validate-form" action="#">
-              <input class="g-input modal-form__input" data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
               <button class="btn-reset g-btn g-btn--black modal-form__btn">оставить заявку</button>
               <label class="modal-form__label">
                 <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных *в рабочее время</span>
@@ -1543,7 +1543,7 @@
             <h3 class="g-title g-title--center modal__subtitle">Получите промокод на <span>скидку 5%</span></h3>
             <p class="modal__desc modal__desc--center">Отправим промокод SMS-сообщением в&nbsp;течение 1&nbsp;минуты. Промокод закрепляется за&nbsp;вашим номером телефона и&nbsp;действует 14&nbsp;дней<br><span>только при покупке on-line</span></p>
             <form class="modal-form validate-form" action="#">
-              <input class="g-input modal-form__input" data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
               <button class="btn-reset g-btn g-btn--black modal-form__btn">ПОЛУЧИТЬ ПОМОКОД</button>
               <label class="modal-form__label">
                 <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
@@ -1607,14 +1607,14 @@
                 <button class="btn-reset g-filters__btn" data-filters-path="map">На карте</button>
               </li>
             </ul>
-            <div class="g-filters__content list-reserve__items modal-filters__content g-filters__content--active" data-filters-target="list" data-simplebar>
+            <div class="g-filters__content list-reserve__items modal-filters__content" data-filters-target="list" data-simplebar>
               <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
                 <div class="list-reserve__content">
                   <div class="list-reserve__text">
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1643,7 +1643,7 @@
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1672,7 +1672,7 @@
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1701,7 +1701,7 @@
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1730,7 +1730,7 @@
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1759,7 +1759,7 @@
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1788,7 +1788,7 @@
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1817,7 +1817,7 @@
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1846,7 +1846,7 @@
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1875,7 +1875,7 @@
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1904,7 +1904,7 @@
                     <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                       <svg class="svg-icon metro">
                         <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                      </svg>Ленинский пр.</span>
+                      </svg><span>Ленинский пр.</span></span>
                   </div>
                   <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
                     <div class="insert-product full-text">
@@ -1925,6 +1925,37 @@
                     <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
                   </div>
                   <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+            </div>
+            <div class="g-filters__content class modal-filters__content map-reserve g-filters__content--active" data-filters-target="map"><img class="map-reserve__image" src="img/map-image.svg" alt="">
+              <div class="list-reserve__item map-reserve__item"><img class="list-reserve__image lozad" src="img/location.jpg" srcset="img/location@2x.jpg 2x" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                </div>
+                <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                  <div class="insert-product full-text">
+                    <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                      <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                    </div>
+                    <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                      <div class="insert-product__right">
+                        <div class="insert-product__content">
+                          <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                        </div>
+                        <div class="insert-product__content">
+                          <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  <button class="btn-reset g-btn g-btn--black list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
                 </div>
               </div>
             </div>
@@ -1952,7 +1983,7 @@
                       <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
                         <svg class="svg-icon metro">
                           <use xlink:href="./img/sprites/sprite.svg#metro"></use>
-                        </svg>Ленинский пр.</span>
+                        </svg><span>Ленинский пр.</span></span>
                     </div>
                   </div>
                 </div>
@@ -1984,7 +2015,7 @@
               </div>
             </div>
             <form class="modal-form validate-form reserve__form" action="#">
-              <input class="g-input modal-form__input" data-validate-field="tel" type="tel" name="Телефон" placeholder="Введите телефон">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
               <button class="btn-reset g-btn g-btn--black modal-form__btn">оставить заявку</button>
               <label class="modal-form__label">
                 <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
