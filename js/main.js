@@ -265,6 +265,21 @@ observer.observe();
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  var modalPromocode = document.querySelector(".modal__promocode");
+  var flag = 0;
+
+  function returnPromocode() {
+    return "<input class=\"g-input modal-form__input\" type=\"text\" name=\"promocode\" placeholder=\"\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434\">";
+  }
+
+  modalPromocode === null || modalPromocode === void 0 ? void 0 : modalPromocode.addEventListener("click", function (e) {
+    flag == 0 ? e.currentTarget.insertAdjacentHTML("afterend", returnPromocode()) : false;
+    flag++;
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
   var searchForm = document.querySelectorAll(".search-form__form");
   document.addEventListener("click", function (e) {
     if (e.target.classList.contains("open-form")) {
@@ -405,25 +420,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 "use strict";
+"use strict";
 
-var productSlider = new Swiper('.product-slider', {
-  allowTouchMove: false,
-  slidesPerView: 'auto',
-  breakpoints: {
-    1025: {
-      allowTouchMove: true
+var products = document.querySelectorAll('.product');
+
+if (products) {
+  products.forEach(function (el) {
+    var currentProduct = el;
+    var imageSwitchItems = currentProduct.querySelectorAll('.image-switch__item');
+    var imagePagination = currentProduct.querySelector('.image-pagination');
+
+    if (imageSwitchItems.length > 1) {
+      imageSwitchItems.forEach(function (el, index) {
+        el.setAttribute('data-index', index);
+        imagePagination.innerHTML += "<li class=\"image-pagination__item ".concat(index == 0 ? 'image-pagination__item--active' : '', "\" data-index=\"").concat(index, "\"></li>");
+        el.addEventListener('mouseenter', function (e) {
+          currentProduct.querySelectorAll('.image-pagination__item').forEach(function (el) {
+            el.classList.remove('image-pagination__item--active');
+          });
+          currentProduct.querySelector(".image-pagination__item[data-index=\"".concat(e.currentTarget.dataset.index, "\"]")).classList.add('image-pagination__item--active');
+        });
+        el.addEventListener('mouseleave', function (e) {
+          currentProduct.querySelectorAll('.image-pagination__item').forEach(function (el) {
+            el.classList.remove('image-pagination__item--active');
+          });
+          currentProduct.querySelector(".image-pagination__item[data-index=\"0\"]").classList.add('image-pagination__item--active');
+        });
+      });
     }
-  },
-  navigation: {
-    nextEl: '.product-slider__btn--next',
-    prevEl: '.product-slider__btn--prev'
-  },
-  pagination: {
-    el: '.product-slider__pag',
-    type: 'bullets',
-    clickable: true
-  }
-});
+  });
+}
 "use strict";
 
 var rangeSlider = document.getElementById('range-slider');
@@ -739,6 +765,9 @@ $(document).ready(function () {
           required: true,
           minlength: 17,
           maxlength: 17
+        },
+        promocode: {
+          required: true
         }
       }
     });
@@ -755,24 +784,6 @@ document.addEventListener("DOMContentLoaded", function () {
       var mySwiper;
 
       var initializeSlider = function initializeSlider() {
-        new Swiper('.product-slider', {
-          allowTouchMove: false,
-          slidesPerView: 'auto',
-          breakpoints: {
-            1025: {
-              allowTouchMove: true
-            }
-          },
-          navigation: {
-            nextEl: '.product-slider__btn--next',
-            prevEl: '.product-slider__btn--prev'
-          },
-          pagination: {
-            el: '.product-slider__pag',
-            type: 'bullets',
-            clickable: true
-          }
-        });
         mySwiper = new Swiper(el, {
           slidesPerView: 2,
           loop: true,
