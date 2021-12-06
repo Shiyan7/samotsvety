@@ -520,7 +520,7 @@ if page === "new"
 if page === "favorites"
     section.catalog.g-filters
         img.catalog__image(src="img/catalog-image.jpg", alt="Главная картинка")
-        .container.catalog__container
+        .container.catalog__container.favorites__catalog-container
             ul.g-breadcrumbs__list.catalog__breadcrumbs.list-reset
                 li.g-breadcrumbs__item
                     a.g-breadcrumbs__link(href="/") Главная
@@ -636,16 +636,6 @@ if page === "favorites"
                             h2.catalog-filter__title ТОВАРЫ СО СКИДКОЙ
                             +checkbox
                 .catalog-grid
-                    ul.catalog-list.list-reset
-                        - for(var i = 0; i < 8; i++)
-                            li.catalog-list__item
-                                +product
-                    h2.g-title.g-title--center.catalog-list__title.favorites-list__title ПОХОЖИЕ ИЗДЕЛИЯ
-                    ul.catalog-list.list-reset
-                        - for(var i = 0; i < 8; i++)
-                            li.catalog-list__item
-                                +product
-                    h2.g-title.g-title--center.catalog-list__title.favorites-list__title Просмотренные изделия
                     ul.catalog-list.list-reset
                         - for(var i = 0; i < 8; i++)
                             li.catalog-list__item
@@ -960,6 +950,14 @@ else
                             span.catalog-filter__toggle
                         .catalog-filter__bottom
                             .catalog-filter__content
+                                
+
+                                .catalog-filter__top--2
+                                    h2.catalog-filter__title.catalog-filter__title--2 ТОЛЬКО В НАЛИЧИИ
+                                    +checkbox
+                                .catalog-filter__content
+                                    p.catalog-filter__desc Позволяет найти изделие, только с выбранными камнями
+
                                 .catalog-filter__item.catalog-filter__item--2(data-text="КОЛЬЦА")
                                     label.catalog-filter__label
                                         input.catalog-filter__checkbox(type="checkbox")

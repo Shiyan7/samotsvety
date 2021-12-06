@@ -75,6 +75,15 @@
                 }
             }
 
+            @media (max-width: 1024px) {
+                &:hover {
+                    opacity: 0.7;
+                    svg {
+                        fill: rgba(#fff, 0.5);
+                    }
+                }
+            }
+
             svg {
                 transition: fill 0.3s;
                 fill: rgba(#fff, 0.5);

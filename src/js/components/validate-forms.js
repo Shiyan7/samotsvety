@@ -7,6 +7,9 @@ $(document).ready(function () {
                     required: true,
                     minlength: 17,
                     maxlength: 17
+                },
+                promocode: {
+                    required: true,
                 }
             },
         });

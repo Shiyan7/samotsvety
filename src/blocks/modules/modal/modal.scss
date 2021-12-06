@@ -23,7 +23,6 @@
     &__title {
         font-size: 20px;
         line-height: 24px;
-        font-weight: 400;
         cursor: text;
 
         &:not(:last-child) {
@@ -228,7 +227,7 @@
             color: rgba(#000, 0.5);
         }
 
-        #phoneNumber-error {
+        label.error {
             display: none !important;
         }
     }
@@ -311,6 +310,46 @@
             }
         }
     }
+
+    &__link {
+        display: inline-flex;
+        align-self: flex-start;
+        position: relative;
+        font-size: 16px;
+        line-height: 16px;
+        color: #111;
+        margin-bottom: 18px;
+        margin-top: 6px;
+        font-weight: 300;
+
+        &:hover {
+            &:after {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        &:after {
+            @include pseudo();
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px dashed #000;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+
+    &-order {
+        &__title {
+            font-family: "HeliosExtLight", sans-serif;
+            font-weight: 300;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 
 .modal::before {
@@ -341,7 +380,7 @@
         padding: 63px 34px 48px 34px;
 
         @media (max-width: 576px) {
-            padding: 40px 20px 15px;
+            padding: 40px 20px 35px;
         }
     }
 
@@ -433,10 +472,6 @@
     opacity: 1;
     transform: translateY(0);
     transition: transform var(--transition-time), opacity var(--transition-time);
-}
-
-.js-validate-error-label {
-    display: none;
 }
 
 .list-reserve {
@@ -699,7 +734,7 @@
         width: 100%;
         padding: 0;
 
-        &:hover {
+        @include hover {
             background-color: transparent;
         }
 

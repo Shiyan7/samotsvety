@@ -48,14 +48,6 @@
         color: rgba(#000, 0.5);
         transition: color 0.3s;
 
-        &:hover {
-            color: #111;
-            &:after {
-                left: 0;
-                width: 100%;
-            }
-        }
-
         @media (max-width: 1024px) {
             font-size: 18px;
             white-space: nowrap;
@@ -63,6 +55,14 @@
         @media (max-width: 576px) {
             font-weight: 300;
             font-size: 16px;
+        }
+
+        &:hover {
+            color: #111;
+            &:after {
+                left: 0;
+                width: 100%;
+            }
         }
 
         &:after {

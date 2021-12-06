@@ -12,6 +12,17 @@
             transform: translateY(-50%);
             z-index: 1;
 
+            &:hover {
+                svg {
+                    fill: rgba(#000, 0.5);
+                }
+            }
+            
+            svg {
+                fill: #111;
+                transition: fill 0.3s;
+            }
+
             @media (max-width: 767px) {
                 top: auto;
                 bottom: 130px;
@@ -245,6 +256,11 @@
             border: 1px solid #111;
             color: #111;
             background-color: #fff;
+
+            &:hover {
+                background-color: #111;
+                color: #fff;
+            }
         }
     }
 

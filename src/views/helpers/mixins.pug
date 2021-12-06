@@ -24,21 +24,21 @@ mixin product
     span.product__caption NEW
     button.btn-reset.product__favorite
       +icon("favorite")
-    .swiper.product-slider
-      .swiper-wrapper
-        .swiper-slide.product__image
-          img(src="img/product-1.jpg", alt="Продукт 1")
-        .swiper-slide.product__image
-          img(src="img/product-1.jpg", alt="Продукт 1")
-        .swiper-slide.product__image
-          img(src="img/product-1.jpg", alt="Продукт 1")
-        .swiper-slide.product__image
-          img(src="img/product-1.jpg", alt="Продукт 1")
-      .g-slider-pagination.product-slider__pag
-      button.btn-reset.g-slider-btn.g-slider-btn--prev.product-slider__btn.product-slider__btn--prev
-        +icon("arrow")
-      button.btn-reset.g-slider-btn.g-slider-btn--next.product-slider__btn.product-slider__btn--next
-        +icon("arrow")
+    a.product__image(href="card.html")
+      .image-switch
+        .image-switch__item
+          .image-switch__img
+            img(src="img/product-1.jpg", alt="Продукт 1")
+        .image-switch__item
+          .image-switch__img
+            img(src="img/product-2.jpg", alt="Продукт 1")
+        .image-switch__item
+          .image-switch__img
+            img(src="img/product-3.jpg", alt="Продукт 1")
+        .image-switch__item
+          .image-switch__img
+            img(src="img/product-4.jpg", alt="Продукт 1")
+        ul.product__image-pagination.image-pagination.list-reset.product__pag(aria-hidden="true")
     a.product__title(href="card.html") Кольцо из белого золота с изумрудом и турмалинами
     span.product__price от 77 975 ₽
     .product__discount

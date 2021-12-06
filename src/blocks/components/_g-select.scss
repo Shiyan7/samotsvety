@@ -2,6 +2,15 @@
     margin-bottom: 0;
     min-width: 240px;
 
+
+    &:not(.is-open) {
+        @include hover {
+            .choices__inner:after {
+                transform: translateY(-50%) rotate(90deg);
+            }
+        }
+    }
+
     &.is-open {
         .choices__inner:after {
             z-index: 2;

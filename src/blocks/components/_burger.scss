@@ -12,13 +12,12 @@
     display: block;
     width: 22px;
     height: 1px;
-    margin-bottom: 3px;
+    margin-bottom: 1.9px;
     background-color: #111;
     transition: transform 0.1s ease-in-out;
     transform-origin: left;
 
     &:nth-child(4) {
-        width: 13px;
         margin: 0;
     }
 }

@@ -518,3 +518,18 @@
                     input.modal-form__checkbox(type="checkbox" checked)
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных
+    .modal__container(role="dialog" aria-modal="true" data-graph-target="modal-order")
+        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title.modal-order__title ОФОРМЛЕНИЕ ЗАКАЗА
+            p.modal__desc.modal__desc--center Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;вами для&nbsp;уточнения деталей заказа
+
+            form.modal-form.validate-form(action="#")
+                input.g-input.modal-form__input(type="tel" name="phoneNumber" placeholder="Введите телефон")
+                a.btn-reset.modal__link.modal__promocode Ввести промокод
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn Оформить заказ
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я согласен на обработку персональных данных

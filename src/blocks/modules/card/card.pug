@@ -121,6 +121,49 @@ section.card
                         |Есть в 
                         button.btn-reset.card__link.g-link.modal-btn(data-graph-animation="fadeInUp" data-graph-path="reserve" data-graph-speed="500") 1 магазине
                         | в г. Санкт-Петербург
+                if page === "only-order"
+                    span.card__vendor
+                        |Арт.: 
+                        |58001456
+                    .card__row
+                        select.g-select(name="selected size")
+                            option(value="") Выберите размер
+                            option(value="size-1") 15
+                            option(value="size-2") 15.5
+                            option(value="size-3") 16
+                            option(value="size-4") 16.5
+                            option(value="size-5") 17
+                            option(value="size-6") 17.5
+                            option(value="size-9") 18
+                            option(value="size-10") 15
+                            option(value="size-11") 15.5
+                            option(value="size-12") 16
+                            option(value="size-13") 16.5
+                            option(value="size-14") 17
+                            option(value="size-15") 17.5
+                            option(value="size-16") 18
+                            option(value="no-size") Нет нужного размера
+                        span.g-tooltip
+                            button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="found-out-size" data-graph-speed="500")
+                                +icon("tooltip")
+                    span.product__price.card__price 77 975 ₽
+                    .product__discount.card__discount
+                        span.product__old-price.card__old-price
+                            span 150 000 
+                            |₽
+                        span.product__percent.card__percent 15%
+                    p.card__desc Цену можно снизить на 5% при ПОКУПКЕ онлайн.
+                    .card__row
+                        button.btn-reset.card__link.g-link.card__promo-code.modal-btn(data-graph-animation="fadeInUp" data-graph-path="reduce-price" data-graph-speed="500") Получите промокод
+                        span.g-tooltip
+                            button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="use-promocode" data-graph-speed="500")
+                                +icon("tooltip")
+                    .card__btns.card__btns--3
+                        button.btn-reset.g-btn.g-btn--black.card__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="modal-order" data-graph-speed="500") Купить
+                    p.card__desc
+                        |Есть в 
+                        button.btn-reset.card__link.g-link.modal-btn(data-graph-animation="fadeInUp" data-graph-path="reserve" data-graph-speed="500") 1 магазине
+                        | в г. Санкт-Петербург
                 if page === "card"
                     span.card__vendor
                         |Арт.: 

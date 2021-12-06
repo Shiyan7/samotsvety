@@ -127,6 +127,30 @@
         }
     }
 
+    &-slide {
+        max-width: 320px;
+        
+        @media (max-width: 576px) {
+            margin-right: 0 !important;
+        }
+
+        .product__image {
+            height: 272px;
+
+            @media (max-width: 768px) {
+                height: 250px;
+            }
+        
+            @media (max-width: 576px) {
+                height: 200px;
+            }
+        
+            @media (max-width: 360px) {
+                height: 170px;
+            }
+        }
+    }
+
     &__pagination {
         display: none;
         @media (max-width: 576px) {
