@@ -425,15 +425,13 @@ document.addEventListener("DOMContentLoaded", function () {
 var products = document.querySelectorAll('.product');
 
 if (products) {
-  products.forEach(function (el) {
-    var currentProduct = el;
+  products.forEach(function (prdct) {
+    var currentProduct = prdct;
     var imageSwitchItems = currentProduct.querySelectorAll('.image-switch__item');
     var imagePagination = currentProduct.querySelector('.image-pagination');
 
     if (imageSwitchItems.length > 1) {
       imageSwitchItems.forEach(function (el, index) {
-        el.setAttribute('data-index', index);
-        imagePagination.innerHTML += "<li class=\"image-pagination__item ".concat(index == 0 ? 'image-pagination__item--active' : '', "\" data-index=\"").concat(index, "\"></li>");
         el.addEventListener('mouseenter', function (e) {
           currentProduct.querySelectorAll('.image-pagination__item').forEach(function (el) {
             el.classList.remove('image-pagination__item--active');
@@ -775,7 +773,6 @@ $(document).ready(function () {
 });
 "use strict";
 
-/* productSlider(); */
 document.addEventListener("DOMContentLoaded", function () {
   var waresSlider = document.querySelectorAll(".wares-slider");
 
@@ -784,6 +781,24 @@ document.addEventListener("DOMContentLoaded", function () {
       var mySwiper;
 
       var initializeSlider = function initializeSlider() {
+        new Swiper('.product-slider', {
+          allowTouchMove: false,
+          slidesPerView: 'auto',
+          breakpoints: {
+            1025: {
+              allowTouchMove: true
+            }
+          },
+          navigation: {
+            nextEl: '.product-slider__btn--next',
+            prevEl: '.product-slider__btn--prev'
+          },
+          pagination: {
+            el: '.product-slider__pag',
+            type: 'bullets',
+            clickable: true
+          }
+        });
         mySwiper = new Swiper(el, {
           slidesPerView: 2,
           loop: true,
@@ -799,6 +814,34 @@ document.addEventListener("DOMContentLoaded", function () {
           navigation: {
             nextEl: '.wares-slider__btn--next',
             prevEl: '.wares-slider__btn--prev'
+          }
+        });
+        mySwiper.on('slideChange', function () {
+          var products = document.querySelectorAll('.product');
+
+          if (products) {
+            products.forEach(function (prdct) {
+              var currentProduct = prdct;
+              var imageSwitchItems = currentProduct.querySelectorAll('.image-switch__item');
+              var imagePagination = currentProduct.querySelector('.image-pagination');
+
+              if (imageSwitchItems.length > 1) {
+                imageSwitchItems.forEach(function (el, index) {
+                  el.addEventListener('mouseenter', function (e) {
+                    currentProduct.querySelectorAll('.image-pagination__item').forEach(function (el) {
+                      el.classList.remove('image-pagination__item--active');
+                    });
+                    currentProduct.querySelector(".image-pagination__item[data-index=\"".concat(e.currentTarget.dataset.index, "\"]")).classList.add('image-pagination__item--active');
+                  });
+                  el.addEventListener('mouseleave', function (e) {
+                    currentProduct.querySelectorAll('.image-pagination__item').forEach(function (el) {
+                      el.classList.remove('image-pagination__item--active');
+                    });
+                    currentProduct.querySelector(".image-pagination__item[data-index=\"0\"]").classList.add('image-pagination__item--active');
+                  });
+                });
+              }
+            });
           }
         });
       };
