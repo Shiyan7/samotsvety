@@ -907,7 +907,7 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 
 $(document).ready(function () {
-  $('.validate-form').each(function (index, numero_form) {
+  $('.validate-form').each(function () {
     $(this).validate({
       rules: {
         phoneNumber: {
@@ -916,6 +916,9 @@ $(document).ready(function () {
           maxlength: 17
         },
         promocode: {
+          required: true
+        },
+        value: {
           required: true
         }
       }
