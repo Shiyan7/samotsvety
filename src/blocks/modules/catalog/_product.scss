@@ -175,7 +175,7 @@
         .product__image {
             z-index: 3;
         }
-        
+
         .product__pag {
             opacity: 1;
             visibility: visible;
@@ -275,6 +275,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    pointer-events: none;
 }
 
 .image-pagination__item {
