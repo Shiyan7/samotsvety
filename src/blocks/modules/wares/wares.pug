@@ -13,7 +13,7 @@ if page === "favorites"
                     +icon("arrow")
             a.g-btn.g-btn--stroke.wares__more(href="#") показать ещЁ
             +pagination("wares__pagination")
-else
+if page === "card" || page === "card2" || page === "card3" || page === "card4" || page === "only-order"
     section.wares
         .container.wares__container
             h2.g-title.g-title--center.wares__title ПОХОЖИЕ ИЗДЕЛИЯ

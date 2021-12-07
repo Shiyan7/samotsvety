@@ -1,0 +1,19 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Скидки до 20% на гладкое столовое серебро";
+	- const page = "discount"
+
+block content
+	.site-container
+		include ../../blocks/modules/header/header
+		main.main
+			include ../../blocks/modules/discount/discount
+			include ../../blocks/modules/discounted-products/discounted-products
+			include ../../blocks/modules/discounts/discounts
+			include ../../blocks/modules/info/info
+		include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

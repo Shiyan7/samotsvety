@@ -1,0 +1,10 @@
+section.discounted-products
+    .container.discounted-products__container
+        h2.g-title.g-title--center.discounted-products__title Изделия участвующие в&nbsp;акции
+        ul.discounted-products__list.list-reset
+            - for(var i = 0; i < 8; i++)
+                li.swiper-slide.discounted-products__item
+                    +product
+        button.g-btn.g-btn--stroke.g-btn--center.discounted-products__more Смотреть все товары по акции
+        +pagination("discounted-products__pagination")
+        p.discounted-products__desc Акция действует с 3 по 31 октября 2020 г. в интернет-галерее "Русские самоцветы" www.market.russam.ru Скидка 10% распространяется на гладкое столовое серебро. <br> Акция суммируется со скидкой по дисконтной карте. Акция не суммируется с другими скидками и спецпредложениями, включая скидки в День рождения. <br> Акция не действует на товары с фиксированной ценой. Акция не действует на эмалево-филигранную посуду. Акция не действует на эксклюзивные изделия.

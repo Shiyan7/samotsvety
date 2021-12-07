@@ -210,6 +210,34 @@ mixin popularQuery(cls)
               |Ещё
               +icon("arrow")
 
+mixin countdown(cls)
+  .countdown(class=cls data-count="December 31, 2021 04:59:59 GMT+8")
+    .countdown__timer
+        .countdown__item(id="timer-day")
+            .countdown__digits.g-title
+                .countdown__digit.countdown__digit-hundred 0
+                .countdown__digit.countdown__digit-first 0
+                .countdown__digit.countdown__digit-second 0
+            .countdown__label дней
+
+        .countdown__item(id="timer-hour")
+            .countdown__digits.g-title
+                .countdown__digit.countdown__digit-first 0
+                .countdown__digit.countdown__digit-second 0
+            .countdown__label часов
+            .countdown__sep.g-title :
+        .countdown__item(id="timer-minute")
+            .countdown__digits.g-title
+                .countdown__digit.countdown__digit-first 0
+                .countdown__digit.countdown__digit-second 0
+            .countdown__label минут
+            .countdown__sep.g-title :
+        .countdown__item(id="timer-second")
+            .countdown__digits.g-title
+                .countdown__digit.countdown__digit-first 0
+                .countdown__digit.countdown__digit-second 0
+            .countdown__label секунд
+
 mixin stepper
   .g-stepper.card__stepper
     span.g-stepper__caption ВЫБЕРИТЕ КОЛИЧЕСТВО:

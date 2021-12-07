@@ -58,8 +58,16 @@
             z-index: 1;
             top: 200px;
 
+            @media (max-width: 768px) {
+                top: 150px;
+            }
+
             @media (max-width: 576px) {
                 top: 130px;
+            }
+
+            @media (max-width: 360px) {
+                top: 100px;
             }
 
             &--prev {
@@ -100,6 +108,18 @@
             }
         }
         &__image {
+            @media (max-width: 768px) {
+                margin-bottom: 12px;
+                height: 300px;
+            }
+        
+            @media (max-width: 576px) {
+                height: 260px;
+            }
+        
+            @media (max-width: 360px) {
+                height: 200px;
+            }
             &:before {
                 @media (min-width: 577px) {
                     display: none;

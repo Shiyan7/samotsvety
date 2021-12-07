@@ -177,12 +177,20 @@
         &__top {
             position: relative;
             margin: 0 -16px;
-            padding: 27px 0 22px;
-            margin-bottom: 16px;
+            padding: 31.5px 0;
+            margin-bottom: 20px;
             border-bottom: 1px solid #d9d9d9;
 
             @media (min-width: 769px) {
                 display: none;
+            }
+    
+            @media (max-width: 576px) {
+                padding: 17px 0 15px;
+            }
+    
+            @media (max-width: 360px) {
+                padding: 11.5px 0 11.5px;
             }
         }
 
@@ -520,6 +528,10 @@
                 margin-right: 10px;
             }
 
+            @media (max-width: 576px) {
+                font-weight: 300;
+            }
+
             @include hover {
                 svg {
                     fill: #000;
@@ -794,11 +806,20 @@
         }
     }
 
-    @media (min-width: 1025px) {
+    @media (max-width: 1024px) {
         &:hover {
+            background-color: transparent;
+            color: #111;
+
             .filters-toggle__icon {
-                fill: #fff;
+                fill: #111;
             }
+        }
+    }
+
+    &:hover {
+        .filters-toggle__icon {
+            fill: #fff;
         }
     }
 
