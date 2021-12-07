@@ -6,11 +6,11 @@ block variables
 	- const page = "not-found"
 
 block content
+	body.not-found__wrapper
 	.site-container
 		include ../../blocks/modules/header/header
 		main.main
 			include ../../blocks/modules/not-found/not-found
-		include ../../blocks/modules/footer/footer
 block scripts
 	script(src="js/vendor.js")
 	script(src="js/main.js")

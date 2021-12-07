@@ -1,0 +1,118 @@
+.not-found {
+
+    &__wrapper {
+        padding-bottom: 0;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 137px;
+        padding-bottom: 133px;
+
+        @media (max-width: 1024px) {
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-width: 320px;
+            height: 100vh;
+            min-height: 600px;
+            padding: 0;
+        }
+    }
+
+    &__title {
+        font-size: 80px;
+        line-height: 96px;
+        margin-bottom: 3px;
+
+        @media (max-width: 768px) {
+            font-size: 66px;
+            line-height: 72px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 42px;
+            line-height: 50px;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__subtitle {
+        font-family: "HeliosExtLight", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(#000, 0.5);
+        margin-bottom: 49px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 12px;
+            line-height: 18px;
+            max-width: 239px;
+            margin-bottom: 27px;
+        }
+    }
+
+    &__link {
+        padding: 14.5px 40.5px 12.5px;
+        margin-bottom: 88px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 60px;
+            padding: 14.5px 37.5px 12.5px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 14.5px 32px 12.5px;
+        }
+    }
+
+    &__desc {
+        margin: 0;
+        font-size: 18px;
+        line-height: 24px;
+        color: #111;
+        margin-bottom: 7px;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            max-width: 320px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+            line-height: 18px;
+            max-width: 220px;
+        }
+    }
+
+    &__tel {
+        font-size: 32px;
+        line-height: 44px;
+        text-transform: uppercase;
+        font-family: "HeliosExtLight", sans-serif;
+        font-weight: 300;
+        color: #111;
+
+        @media (max-width: 576px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
