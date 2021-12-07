@@ -129,6 +129,157 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 "use strict";
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var countdowns = document.querySelectorAll(".countdown");
+  countdowns.forEach(function (el) {
+    var dateEndString = el.dataset.count;
+    var digitElement = el.querySelectorAll(".countdown__digit"); // Adding of span element to the each digit
+
+    digitElement.forEach(function (el) {
+      var digitWrapper = document.createElement("span");
+      digitWrapper.classList.add("countdown__digit-num");
+
+      for (var x = 0; x <= 9; x++) {
+        var digitItem = document.createElement("span");
+        digitItem.innerText = x + "";
+        digitWrapper.appendChild(digitItem);
+      }
+
+      el.innerHTML = "";
+      el.appendChild(digitWrapper);
+    }); // main function to run the countdown
+    // endTime - Date with time
+
+    function makeCountdown(endTime) {
+      var hideDaysIfEmpty = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      var endTimeParse = Date.parse(endTime) / 1000;
+      var now = new Date();
+      var nowParse = Date.parse(now) / 1000;
+      var timeLeft = endTimeParse - nowParse;
+      var days = Math.floor(timeLeft / 86400);
+      var hours = Math.floor((timeLeft - days * 86400) / 3600);
+      var minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
+      var seconds = Math.floor(timeLeft - days * 86400 - hours * 3600 - minutes * 60);
+
+      if (timeLeft < 0) {
+        days = 0;
+        hours = 0;
+        seconds = 0;
+        minutes = 0;
+      }
+
+      if (hours < "10") {
+        hours = "0" + hours;
+      }
+
+      if (minutes < "10") {
+        minutes = "0" + minutes;
+      }
+
+      if (seconds < "10") {
+        seconds = "0" + seconds;
+      }
+
+      if (days <= 0 && hideDaysIfEmpty) {
+        var dayElement = el.querySelector(".countdown #timer-day");
+
+        if (dayElement) {
+          dayElement.style.display = "none";
+        }
+      } else {
+        updateCountdown(days, "timer-day");
+      }
+
+      updateCountdown(hours, "timer-hour");
+      updateCountdown(minutes, "timer-minute");
+      updateCountdown(seconds, "timer-second");
+    } // updating the display
+
+
+    function updateCountdown(value, elementId) {
+      var element = el.querySelector(".countdown #".concat(elementId));
+      var firstDigitElement = element.querySelector(".countdown__digit-first > span");
+      var secondDigitElement = element.querySelector(".countdown__digit-second > span");
+
+      if (elementId === "timer-day") {
+        var elementSecond = element.querySelector(".countdown__digit-first");
+        var elementHundred = element.querySelector(".countdown__digit-hundred");
+
+        if (value < 10) {
+          value = "0" + value;
+        }
+
+        if (value >= 10) {
+          if (elementSecond) {
+            elementSecond.style.display = "inline-block";
+          }
+        }
+
+        if (value >= 100) {
+          if (elementHundred) {
+            elementHundred.style.display = "inline-block";
+          }
+        }
+      }
+
+      var digitHeight = secondDigitElement.offsetHeight / 10;
+      var _ref = [0, 0],
+          firstDigit = _ref[0],
+          secondDigit = _ref[1],
+          hundredDigit = _ref[2];
+
+      if (elementId === "timer-day") {
+        if (parseInt(value) >= 100) {
+          var _value$toString$split = value.toString().split("").map(Number);
+
+          var _value$toString$split2 = _slicedToArray(_value$toString$split, 3);
+
+          hundredDigit = _value$toString$split2[0];
+          firstDigit = _value$toString$split2[1];
+          secondDigit = _value$toString$split2[2];
+          var hundredDigitElement = element.querySelector(".countdown__digit-hundred > span");
+          hundredDigitElement.style.transform = "translateY(-" + hundredDigit * digitHeight + "px)";
+        } else {
+          var _value$toString$split3 = value.toString().split("").map(Number);
+
+          var _value$toString$split4 = _slicedToArray(_value$toString$split3, 2);
+
+          firstDigit = _value$toString$split4[0];
+          secondDigit = _value$toString$split4[1];
+        }
+      } else {
+        var _value$toString$split5 = value.toString().split("").map(Number);
+
+        var _value$toString$split6 = _slicedToArray(_value$toString$split5, 2);
+
+        firstDigit = _value$toString$split6[0];
+        secondDigit = _value$toString$split6[1];
+      }
+
+      firstDigitElement.style.transform = "translateY(-" + firstDigit * digitHeight + "px)";
+      secondDigitElement.style.transform = "translateY(-" + secondDigit * digitHeight + "px)";
+    }
+
+    var countdownInterval = setInterval(function () {
+      // Pass the date here
+      makeCountdown(new Date(dateEndString), false);
+    }, 100);
+  });
+});
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function () {
   var catalogToggle = document.querySelector(".filters-toggle");
   var catalogFilters = document.querySelector(".catalog-filters");
@@ -781,24 +932,6 @@ document.addEventListener("DOMContentLoaded", function () {
       var mySwiper;
 
       var initializeSlider = function initializeSlider() {
-        new Swiper('.product-slider', {
-          allowTouchMove: false,
-          slidesPerView: 'auto',
-          breakpoints: {
-            1025: {
-              allowTouchMove: true
-            }
-          },
-          navigation: {
-            nextEl: '.product-slider__btn--next',
-            prevEl: '.product-slider__btn--prev'
-          },
-          pagination: {
-            el: '.product-slider__pag',
-            type: 'bullets',
-            clickable: true
-          }
-        });
         mySwiper = new Swiper(el, {
           slidesPerView: 2,
           loop: true,
