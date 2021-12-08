@@ -416,6 +416,19 @@ observer.observe();
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  var menuSlider = document.querySelector(".menu-slider");
+  var cardSliderThumbs = new Swiper(menuSlider, {
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    navigation: {
+      nextEl: '.menu-slider__btn--next',
+      prevEl: '.menu-slider__btn--prev'
+    }
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
   var modalPromocode = document.querySelector(".modal__promocode");
   var flag = 0;
 
