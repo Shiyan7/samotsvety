@@ -43,6 +43,47 @@ header.header
                 ul.nav__list.list-reset
                     li.nav__item
                         a.nav__link(href="decorations.html") УКРАШЕНИЯ
+                        .menu
+                            .menu__container
+                                .menu-left
+                                    ul.menu-left__list.list-reset
+                                        li.menu-left__item
+                                            a.menu-left__link(href="#") Кольца
+                                        li.menu-left__item
+                                            a.menu-left__link(href="#") Серьги
+                                        li.menu-left__item
+                                            a.menu-left__link(href="#") Подвески и кресты
+                                        li.menu-left__item
+                                            a.menu-left__link(href="#") Броши
+                                        li.menu-left__item
+                                            a.menu-left__link(href="#") Колье
+                                        li.menu-left__item
+                                            a.menu-left__link(href="#") Цепи
+                                        li.menu-left__item
+                                            a.menu-left__link(href="#") Браслеты и шармы
+                                    ul.menu-left__list.menu-left__list--2.list-reset
+                                        li.menu-left__item
+                                            a.menu-left__link.menu-left__link--gray(href="#") Мужчинам
+                                        li.menu-left__item
+                                            a.menu-left__link.menu-left__link--gray(href="#") Детям
+                                        li.menu-left__item
+                                            a.menu-left__link.menu-left__link--gray(href="#") Подарки
+                                .menu-content
+                                    .menu-content__inner
+                                        button.btn-reset.g-slider-btn.g-slider-btn--prev.menu-slider__btn.menu-slider__btn--prev
+                                            +icon("arrow")
+                                        button.btn-reset.g-slider-btn.g-slider-btn--next.menu-slider__btn.menu-slider__btn--next
+                                            +icon("arrow")
+                                        h2.g-title.menu-slider__title коллекции
+                                        .swiper.menu-slider
+                                            .swiper-wrapper
+                                                - for(let i = 0; i < 20; i++)
+                                                    .swiper-slide.menu-slide
+                                                        img.menu-slide__image.lozad(src="img/menu-slide-1.jpg", srcset="img/menu-slide-1@2x.jpg" alt="shine")
+                                                        h3.g-title.menu-slide__caption shine
+                                        a.menu-content__link.g-link(href="catalog.html") СМОТРЕТЬ ВСЕ КОЛЬЦА (1350)
+                                        img.lozad.menu-content__banner(src="img/menu-banner-1.jpg", srcset="img/menu-banner-1.jpg 2x" alt="New")
+
                     li.nav__item
                         a.nav__link(href="new.html") ДОМ&АКСЕССУАРЫ
                     li.nav__item
