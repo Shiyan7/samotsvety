@@ -5,6 +5,10 @@
         min-width: 258px;
         margin-right: 2px;
 
+        &.is-open {
+            z-index: 11;
+        }
+
         @media (max-width: 576px) {
             min-width: 223px;
         }
@@ -260,6 +264,10 @@
     &__row {
         display: flex;
         align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
     }
 
     &__price {
