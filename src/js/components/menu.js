@@ -5,6 +5,25 @@ const nav = document.querySelector('.nav'),
 
 const desktopMenu = () => {
     if(window.innerWidth > 1024) {
+
+
+        $('.nav__item').each(function(){
+            var t = null;
+            var li = $(this);
+            li.hover(function(){
+                t = setTimeout(function(){
+                    li.find(".menu").slideDown(300);
+                    t = null;
+                }, 300);
+            }, function(){
+                if (t){
+                    clearTimeout(t);
+                    t = null;
+                }
+                else li.find(".menu").slideUp(300);
+            });
+        });
+
         menuNavLinks.forEach(el => {
             el.addEventListener("mouseenter", (e) => {
                 const menuContent = e.currentTarget.closest(".menu-nav").querySelectorAll(".menu-content");

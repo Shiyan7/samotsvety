@@ -1,4 +1,5 @@
 .menu {
+    display: none;
     position: absolute;
     top: 100%;
     left: 50%;
@@ -8,10 +9,7 @@
     transform: translateX(-50%);
     border-top: 1px solid #111;
     background-color: #fff;
-    opacity: 0;
-    visibility: hidden;
     padding-bottom: 245px;
-    transition: opacity 0.3s, visibility 0.3s;
 
     @media (max-width: 1230px) {
         padding-bottom: 380px;
@@ -28,8 +26,7 @@
         transform: translateX(-100%);
         padding-bottom: 0;
         transition: transform 0.3s;
-        opacity: 1;
-        visibility: visible;
+        display: block;
         &.animation {
             transform: translateX(0%);
         }
