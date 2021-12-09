@@ -26,7 +26,7 @@
         transform: translateX(-100%);
         padding-bottom: 0;
         transition: transform 0.3s;
-        display: block;
+        display: block !important;
         &.animation {
             transform: translateX(0%);
         }

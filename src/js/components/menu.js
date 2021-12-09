@@ -8,9 +8,10 @@ const desktopMenu = () => {
 
 
         $('.nav__item').each(function(){
-            let t = null;
-            let li = $(this);
-            let link = $(this).find(".nav__link")
+            var t = null;
+            var li = $(this);
+            var link = $(this).find(".nav__link");
+
             link.hover(function(){
                 t = setTimeout(function(){
                     li.find(".menu").slideDown(300);
@@ -63,6 +64,7 @@ burger.addEventListener("click", navToggle);
 
 nav.addEventListener("click", (e) => {
     if (e.target.classList.contains("js-open-menu")) {
+        nav.classList.add("nav-lock")
         e.target.closest(".js-nav-list").classList.add("animation");
         e.target.querySelector(".dropdown-menu").classList.add("animation");
         scrollTop();
@@ -76,6 +78,10 @@ nav.addEventListener("click", (e) => {
 
     if (e.target.classList.contains("nav__link") && !e.target.classList.contains("nav__link--drop")) {
         nav.classList.remove("show");
+    }
+
+    if(!document.querySelector(".dropdown-menu").classList.contains("animation")) {
+        nav.classList.remove("nav-lock")
     }
 });
 

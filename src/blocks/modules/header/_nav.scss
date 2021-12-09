@@ -18,6 +18,10 @@
         align-items: flex-start;
         flex-direction: column;
 
+        &.nav-lock {
+            overflow-y: hidden;
+        }
+
         &.show {
             transform: translateX(0%);
         }

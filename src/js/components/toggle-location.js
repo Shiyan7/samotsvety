@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const regionSelection = document.querySelector(".region-selection");
     const regionSelectionBtns = document.querySelectorAll(".js-region-selection__btn");
     const regionSelectionChoice = document.querySelectorAll(".region-selection__choice");
-    const regionSelectionClose = document.querySelector(".region-selection__close");
+    const regionSelectionCloseBtns = document.querySelectorAll(".region-selection__close");
     const body = document.body;
 
     /* Functions */
@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("click", changeLocation);
     });
 
-    regionSelectionClose.addEventListener("click", hiddenLocation);
+    regionSelectionCloseBtns.forEach(btn => {
+        btn.addEventListener("click", hiddenLocation);
+    })
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') hiddenLocation();
