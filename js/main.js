@@ -476,6 +476,7 @@ var navToggle = function navToggle(e) {
 burger.addEventListener("click", navToggle);
 nav.addEventListener("click", function (e) {
   if (e.target.classList.contains("js-open-menu")) {
+    nav.classList.add("nav-lock");
     e.target.closest(".js-nav-list").classList.add("animation");
     e.target.querySelector(".dropdown-menu").classList.add("animation");
     scrollTop();
@@ -489,6 +490,10 @@ nav.addEventListener("click", function (e) {
 
   if (e.target.classList.contains("nav__link") && !e.target.classList.contains("nav__link--drop")) {
     nav.classList.remove("show");
+  }
+
+  if (!document.querySelector(".dropdown-menu").classList.contains("animation")) {
+    nav.classList.remove("nav-lock");
   }
 });
 
@@ -961,7 +966,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var regionSelection = document.querySelector(".region-selection");
   var regionSelectionBtns = document.querySelectorAll(".js-region-selection__btn");
   var regionSelectionChoice = document.querySelectorAll(".region-selection__choice");
-  var regionSelectionClose = document.querySelector(".region-selection__close");
+  var regionSelectionCloseBtns = document.querySelectorAll(".region-selection__close");
   var body = document.body;
   /* Functions */
 
@@ -990,7 +995,9 @@ document.addEventListener("DOMContentLoaded", function () {
   regionSelectionBtns.forEach(function (btn) {
     btn.addEventListener("click", changeLocation);
   });
-  regionSelectionClose.addEventListener("click", hiddenLocation);
+  regionSelectionCloseBtns.forEach(function (btn) {
+    btn.addEventListener("click", hiddenLocation);
+  });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') hiddenLocation();
   });
