@@ -401,6 +401,7 @@
             height: 100%;
             cursor: pointer;
             outline: none;
+            border: none;
 
             &:checked~.catalog-filter__switch:after {
                 opacity: 1;

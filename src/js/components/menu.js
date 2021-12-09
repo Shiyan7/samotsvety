@@ -1,6 +1,7 @@
 const nav = document.querySelector('.nav'),
     menu = document.querySelector('.menu'),
     burger = document.querySelector(".burger"),
+    burgerClose = document.querySelector(".burger-close"),
     menuNavLinks = document.querySelectorAll(".menu-nav__link");
 
 const desktopMenu = () => {
@@ -41,8 +42,8 @@ const desktopMenu = () => {
 desktopMenu();
 
 const initialMenu = () => {
-    document.querySelector(".js-nav-list").classList.remove("animation");
-    document.querySelector(".nav").querySelector(".dropdown-menu").classList.remove("animation");
+    document.querySelectorAll(".js-nav-list").forEach(el => el.classList.remove("animation"));
+    document.querySelector(".nav").querySelectorAll(".dropdown-menu").forEach(el => el.classList.remove("animation"));
     scrollTop();
 };
 
@@ -53,14 +54,23 @@ const scrollTop = () => {
     });
 };
 
-const navToggle = (e) => {
-    document.body.classList.toggle("lock")
-    e.currentTarget.classList.toggle("is-active")
-    nav.classList.toggle("show");
+const openNav = (e) => {
+    document.body.classList.add("lock")
+    e.currentTarget.classList.add("is-active")
+    nav.classList.add("show");
     initialMenu();
 }
 
-burger.addEventListener("click", navToggle);
+const navClose = (e) => {
+    document.body.classList.remove("lock")
+    e.currentTarget.classList.remove("is-active")
+    nav.classList.remove("show");
+    initialMenu();
+}
+
+burgerClose.addEventListener("click", navClose)
+
+burger.addEventListener("click", openNav);
 
 nav.addEventListener("click", (e) => {
     if (e.target.classList.contains("js-open-menu")) {
