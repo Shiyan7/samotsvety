@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 "use strict";
-"use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
   var cardSliderThumbs = new Swiper(".card-slider__nav", {
@@ -415,6 +414,7 @@ document.addEventListener("DOMContentLoaded", function () {
 var nav = document.querySelector('.nav'),
     menu = document.querySelector('.menu'),
     burger = document.querySelector(".burger"),
+    burgerClose = document.querySelector(".burger-close"),
     menuNavLinks = document.querySelectorAll(".menu-nav__link");
 
 var desktopMenu = function desktopMenu() {
@@ -454,8 +454,12 @@ var desktopMenu = function desktopMenu() {
 desktopMenu();
 
 var initialMenu = function initialMenu() {
-  document.querySelector(".js-nav-list").classList.remove("animation");
-  document.querySelector(".nav").querySelector(".dropdown-menu").classList.remove("animation");
+  document.querySelectorAll(".js-nav-list").forEach(function (el) {
+    return el.classList.remove("animation");
+  });
+  document.querySelector(".nav").querySelectorAll(".dropdown-menu").forEach(function (el) {
+    return el.classList.remove("animation");
+  });
   scrollTop();
 };
 
@@ -466,14 +470,22 @@ var scrollTop = function scrollTop() {
   });
 };
 
-var navToggle = function navToggle(e) {
-  document.body.classList.toggle("lock");
-  e.currentTarget.classList.toggle("is-active");
-  nav.classList.toggle("show");
+var openNav = function openNav(e) {
+  document.body.classList.add("lock");
+  e.currentTarget.classList.add("is-active");
+  nav.classList.add("show");
   initialMenu();
 };
 
-burger.addEventListener("click", navToggle);
+var navClose = function navClose(e) {
+  document.body.classList.remove("lock");
+  e.currentTarget.classList.remove("is-active");
+  nav.classList.remove("show");
+  initialMenu();
+};
+
+burgerClose.addEventListener("click", navClose);
+burger.addEventListener("click", openNav);
 nav.addEventListener("click", function (e) {
   if (e.target.classList.contains("js-open-menu")) {
     nav.classList.add("nav-lock");
@@ -607,13 +619,18 @@ document.addEventListener("DOMContentLoaded", function () {
   var moreCategories = document.querySelector(".more-categories");
   var popularCategories = document.querySelector(".popular-categories");
   var hiddenCategories = document.querySelectorAll(".popular-category--hidden");
+  var popularCategoriesItems = document.querySelectorAll(".popular-category__item");
   moreCategories === null || moreCategories === void 0 ? void 0 : moreCategories.addEventListener("click", function (e) {
     popularCategories.classList.add("active");
     hiddenCategories.forEach(function (el) {
       return el.classList.remove("popular-category--hidden");
     });
-    hiddenCategories.forEach(function (el) {
-      return el.classList.add("popular-category--active");
+    popularCategoriesItems.forEach(function (el) {
+      TweenMax.staggerTo(el, .5, {
+        scale: 1,
+        opacity: 1,
+        ease: Back.easeIn.config(1)
+      }, .3);
     });
   });
 });

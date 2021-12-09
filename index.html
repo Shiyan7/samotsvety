@@ -59,7 +59,7 @@
               </li>
             </ul>
             <div class="tel header__tel"><a class="tel__value" href="tel:88005553298">8 (800) 555-32-98</a><span class="tel__desc">Пн-Пт 10:00-20:00, Сб, Вс до 17:00</span></div><a class="logo header__logo" href="/"><img src="img/logo-icon.svg" alt="Russkiye samotsvety"></a>
-            <button class="btn-reset burger" aria-label="Кпопка бургер"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span><span class="burger__close"></span></button>
+            <button class="btn-reset burger" aria-label="Кпопка бургер"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button>
             <ul class="header__shop-nav shop-nav list-reset">
               <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--favorite" href="favorites.html"><span class="shop-nav__icon shop-nav__icon--favorite"></span><span class="shop-nav__quantity">2</span></a></li>
               <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cart" href="#"><span class="shop-nav__icon shop-nav__icon--cart"></span><span class="shop-nav__quantity">13</span></a></li>
@@ -69,6 +69,11 @@
           <div class="header__bottom">
             <div class="nav">
               <div class="nav__top">
+                <button class="btn-reset burger-close">
+                  <svg class="svg-icon cross2">
+                    <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+                  </svg>
+                </button>
                 <h2 class="g-title nav__title">Меню</h2>
               </div>
               <ul class="nav__list nav__list--dropdown list-reset js-nav-list">
@@ -2996,15 +3001,33 @@
             </ul>
             <div class="swiper popular-categories-slider" data-mobile="false">
               <ul class="swiper-wrapper popular-categories__list list-reset">
-                <li class="swiper-slide popular-category"><a class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-1.jpg" srcset="img/popular-category-1@2x.jpg 2x" alt="Кольца"></a><a class="popular-category__title g-title g-title--center" href="catalog.html">КОЛЬЦА</a><a class="popular-category__link g-link" href="catalog.html">Посмотреть</a></li>
-                <li class="swiper-slide popular-category"><a class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-2.jpg" srcset="img/popular-category-2@2x.jpg 2x" alt="СЕРЬГИ"></a><a class="popular-category__title g-title g-title--center" href="catalog.html">СЕРЬГИ</a><a class="popular-category__link g-link" href="catalog.html">Посмотреть</a></li>
-                <li class="swiper-slide popular-category"><a class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-3.jpg" srcset="img/popular-category-3@2x.jpg 2x" alt="ПОДВЕСКИ"></a><a class="popular-category__title g-title g-title--center" href="catalog.html">ПОДВЕСКИ</a><a class="popular-category__link g-link" href="catalog.html">Посмотреть</a></li>
-                <li class="swiper-slide popular-category"><a class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-4.jpg" srcset="img/popular-category-4@2x.jpg 2x" alt="БРОШИ"></a><a class="popular-category__title g-title g-title--center" href="catalog.html">БРОШИ</a><a class="popular-category__link g-link" href="catalog.html">Посмотреть</a></li>
-                <li class="swiper-slide popular-category popular-category--big"><a class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-5.jpg" srcset="img/popular-category-5@2x.jpg 2x" alt="Колье"></a><a class="popular-category__title g-title g-title--center" href="catalog.html">Колье</a><a class="popular-category__link g-link" href="catalog.html">Посмотреть</a></li>
-                <li class="swiper-slide popular-category popular-category--big popular-category--hidden"><a class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-6.jpg" srcset="img/popular-category-6@2x.jpg 2x" alt="БРАСЛЕТЫ"></a><a class="popular-category__title g-title g-title--center" href="catalog.html">БРАСЛЕТЫ</a><a class="popular-category__link g-link" href="catalog.html">Посмотреть</a></li>
-                <li class="swiper-slide popular-category popular-category--hidden"><a class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-7.jpg" srcset="img/popular-category-7@2x.jpg 2x" alt="цепи"></a><a class="popular-category__title g-title g-title--center" href="catalog.html">цепи</a><a class="popular-category__link g-link" href="catalog.html">Посмотреть</a></li>
-                <li class="swiper-slide popular-category popular-category--hidden"><a class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-8.jpg" srcset="img/popular-category-8@2x.jpg 2x" alt="запонки"></a><a class="popular-category__title g-title g-title--center" href="catalog.html">запонки</a><a class="popular-category__link g-link" href="catalog.html">Посмотреть</a></li>
-                <li class="swiper-slide popular-category popular-category--big popular-category--hidden"><a class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-9.jpg" srcset="img/popular-category-9@2x.jpg 2x" alt="зажимы для галстука"></a><a class="popular-category__title g-title g-title--center" href="catalog.html">зажимы для галстука</a><a class="popular-category__link g-link" href="catalog.html">Посмотреть</a></li>
+                <li class="swiper-slide popular-category"><a class="popular-category__item" href="catalog.html">
+                    <div class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-1.jpg" srcset="img/popular-category-1@2x.jpg 2x" alt="Кольца"></div>
+                    <h2 class="popular-category__title g-title g-title--center" href="catalog.html">КОЛЬЦА</h2><span class="popular-category__link g-link">Посмотреть</span></a></li>
+                <li class="swiper-slide popular-category"><a class="popular-category__item" href="catalog.html">
+                    <div class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-2.jpg" srcset="img/popular-category-2@2x.jpg 2x" alt="СЕРЬГИ"></div>
+                    <h2 class="popular-category__title g-title g-title--center" href="catalog.html">СЕРЬГИ</h2><span class="popular-category__link g-link">Посмотреть</span></a></li>
+                <li class="swiper-slide popular-category"><a class="popular-category__item" href="catalog.html">
+                    <div class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-3.jpg" srcset="img/popular-category-3@2x.jpg 2x" alt="ПОДВЕСКИ"></div>
+                    <h2 class="popular-category__title g-title g-title--center" href="catalog.html">ПОДВЕСКИ</h2><span class="popular-category__link g-link">Посмотреть</span></a></li>
+                <li class="swiper-slide popular-category"><a class="popular-category__item" href="catalog.html">
+                    <div class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-4.jpg" srcset="img/popular-category-4@2x.jpg 2x" alt="БРОШИ"></div>
+                    <h2 class="popular-category__title g-title g-title--center" href="catalog.html">БРОШИ</h2><span class="popular-category__link g-link">Посмотреть</span></a></li>
+                <li class="swiper-slide popular-category popular-category--big"><a class="popular-category__item" href="catalog.html">
+                    <div class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-5.jpg" srcset="img/popular-category-5@2x.jpg 2x" alt="Колье"></div>
+                    <h2 class="popular-category__title g-title g-title--center" href="catalog.html">Колье</h2><span class="popular-category__link g-link">Посмотреть</span></a></li>
+                <li class="swiper-slide popular-category popular-category--big popular-category--hidden"><a class="popular-category__item" href="#" style="opacity: 0; transform: matrix(0.3, 0, 0, 0.3, 0, 0);">
+                    <div class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-6.jpg" srcset="img/popular-category-6@2x.jpg 2x" alt="БРАСЛЕТЫ"></div>
+                    <h2 class="popular-category__title g-title g-title--center" href="catalog.html">БРАСЛЕТЫ</h2><span class="popular-category__link g-link">Посмотреть</span></a></li>
+                <li class="swiper-slide popular-category popular-category--hidden"><a class="popular-category__item" href="#" style="opacity: 0; transform: matrix(0.3, 0, 0, 0.3, 0, 0);">
+                    <div class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-7.jpg" srcset="img/popular-category-7@2x.jpg 2x" alt="цепи"></div>
+                    <h2 class="popular-category__title g-title g-title--center" href="catalog.html">цепи</h2><span class="popular-category__link g-link">Посмотреть</span></a></li>
+                <li class="swiper-slide popular-category popular-category--hidden"><a class="popular-category__item" href="#" style="opacity: 0; transform: matrix(0.3, 0, 0, 0.3, 0, 0);">
+                    <div class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-8.jpg" srcset="img/popular-category-8@2x.jpg 2x" alt="запонки"></div>
+                    <h2 class="popular-category__title g-title g-title--center" href="catalog.html">запонки</h2><span class="popular-category__link g-link">Посмотреть</span></a></li>
+                <li class="swiper-slide popular-category popular-category--big popular-category--hidden"><a class="popular-category__item" href="#" style="opacity: 0; transform: matrix(0.3, 0, 0, 0.3, 0, 0);">
+                    <div class="popular-category__image" href="catalog.html"> <img class="lozad" src="img/popular-category-9.jpg" srcset="img/popular-category-9@2x.jpg 2x" alt="зажимы для галстука"></div>
+                    <h2 class="popular-category__title g-title g-title--center" href="catalog.html">зажимы для галстука</h2><span class="popular-category__link g-link">Посмотреть</span></a></li>
               </ul>
               <div class="swiper-scrollbar g-scrollbar popular-categories-slider__scrollbar"></div>
               <button class="btn-reset g-slider-btn g-slider-btn--prev popular-categories-slider__btn popular-categories-slider__btn--prev">
