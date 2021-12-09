@@ -419,6 +419,21 @@ var nav = document.querySelector('.nav'),
 
 var desktopMenu = function desktopMenu() {
   if (window.innerWidth > 1024) {
+    $('.nav__item').each(function () {
+      var t = null;
+      var li = $(this);
+      li.hover(function () {
+        t = setTimeout(function () {
+          li.find(".menu").slideDown(300);
+          t = null;
+        }, 300);
+      }, function () {
+        if (t) {
+          clearTimeout(t);
+          t = null;
+        } else li.find(".menu").slideUp(300);
+      });
+    });
     menuNavLinks.forEach(function (el) {
       el.addEventListener("mouseenter", function (e) {
         var menuContent = e.currentTarget.closest(".menu-nav").querySelectorAll(".menu-content");
