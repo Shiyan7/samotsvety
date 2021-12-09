@@ -1,6 +1,9 @@
 .news {
 
     &__container {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
         padding-top: 41px;
         padding-bottom: 86px;
     }
@@ -13,6 +16,12 @@
         font-family: "HeliosExtLight", sans-serif;
         font-weight: 300;
         margin-bottom: 54px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 30px;
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
 
     &-content {
@@ -21,6 +30,20 @@
         justify-content: flex-start;
         margin-bottom: 56px;
 
+        @media (max-width: 576px) {
+            flex-direction: column;
+            align-items: center;
+            margin: 0 -10px 40px;
+        }
+
+        &__right {
+            padding: 0 10px;
+
+            @media (max-width: 576px) {
+                align-items: center;
+            }
+        }
+
         &__time {
             font-size: 20px;
             font-family: "HeliosExtLight", sans-serif;
@@ -28,9 +51,19 @@
         }
 
         &__image {
-            width: 50%;
+            width: 49.3%;
             height: 464px;
             margin-right: 20px;
+
+            @media (max-width: 768px) {
+                height: 400px;
+            }
+
+            @media (max-width: 576px) {
+                width: 100%;
+                height: 300px;
+                margin: 0 -10px 12px;
+            }
         }
 
         &__title {
@@ -42,7 +75,15 @@
         &__desc {
             position: relative;
             padding-top: 25px;
-            margin-bottom: 28px;
+            margin-bottom: 25px;
+
+            @media (max-width: 576px) {
+                &::before {
+                    padding-top: 0;
+                    margin-bottom: 20px;
+                    display: none;
+                }
+            }
 
             &:before {
                 @include pseudo();
@@ -61,6 +102,53 @@
             color: #111;
             font-family: "HeliosExtLight", sans-serif;
             font-weight: 300;
+
+            @media (max-width: 576px) {
+                text-align: center;
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 15px;
+            }
+
+            @include hover {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
+    }
+
+    &-grid {
+        display: grid;
+        column-gap: 18px;
+        row-gap: 51px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 50px;
+
+        @media (max-width: 1024px) {
+            column-gap: 0;
+            row-gap: 40px;
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width: 576px) {
+            row-gap: 32px;
+        }
+
+        &__item {
+            @media (max-width: 1024px) {
+                &:not(:nth-child(4n)) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__more {
+        margin: 0 auto 50px;
+    }
+
+    &__pagination {
+        margin: 0 auto;
     }
 }

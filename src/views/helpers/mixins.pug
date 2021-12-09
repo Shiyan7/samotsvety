@@ -56,7 +56,7 @@ mixin product
 
 mixin pagination(cls)
   if(cls)
-    ul(class="g-pagination catalog__pagination list-reset " + cls)
+    ul(class="g-pagination list-reset " + cls)
       li.g-pagination__item
         a.g-pagination__link.g-pagination__link--prev(href="#")
           +icon("arrow")
@@ -82,7 +82,7 @@ mixin pagination(cls)
         a.g-pagination__link.g-pagination__link--next(href="#")
           +icon("arrow")
   else
-    ul.g-pagination.catalog__pagination.list-reset
+    ul.g-pagination.list-reset
       li.g-pagination__item
         a.g-pagination__link.g-pagination__link--prev(href="#")
           +icon("arrow")

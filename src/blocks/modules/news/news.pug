@@ -8,36 +8,40 @@ section.news
         h1.g-title.g-title--center.news__title Новости
         article.news-content.post
             img.news-content__image.post__image(src="img/no-image.svg", alt="Картинка поста")
-            .post__right
+            .post__right.news-content__right
                 time.news-content__time.post__time(datatime="2021-07-20") 20.07.2021
                 h2.news-content__title.g-title.post__title «Русские самоцветы»
                 p.news-content__desc.post__desc Ключевым элементом украшений стали барочный жемчуг, цепочки бриллиантов и крупные Лондон-топазы огранки багет – камни закреплены таким образом, что солнечный
                 a.news-content__link.g-link(href="#") Подробнее
-        ul.posts-grid.list-reset
+        ul.news-grid.list-reset
             - for(let i = 0; i < 4; i++)
-                li.posts-grid__item
+                li.news-grid__item
                     a.post(href="#")
                         img.post__image(src="img/no-image.svg", alt="Картинка поста")
                         .post__right
                             time.post__time(datatime="2021-07-20") 20.07.2021
                             h2.g-title.post__title «Русские самоцветы» представили сервиз для водки&nbsp;FIREWATER
                             p.post__desc Ключевым элементом украшений стали барочный жемчуг, цепочки бриллиантов и крупные Лондон-топазы огранки
-                li.posts-grid__item
-                    a.post(href="#")
+                li.news-grid__item
+                    a.post.post--2(href="#")
+                        img.post__image(src="img/no-image.svg", alt="Картинка поста")
                         .post__right
                             time.post__time(datatime="2021-07-20") 20.07.2021
                             h2.g-title.post__title «Русские самоцветы» представили сервиз для водки&nbsp;FIREWATER
                             p.post__desc Ключевым элементом украшений стали барочный жемчуг, цепочки бриллиантов и крупные Лондон-топазы огранки
-                li.posts-grid__item
-                    a.post(href="#")
+                li.news-grid__item
+                    a.post.post--2(href="#")
+                        img.post__image(src="img/no-image.svg", alt="Картинка поста")
                         .post__right
                             time.post__time(datatime="2021-07-20") 20.07.2021
                             h2.g-title.post__title «Русские самоцветы» представили сервиз для водки&nbsp;FIREWATER
                             p.post__desc Ключевым элементом украшений стали барочный жемчуг, цепочки бриллиантов и крупные Лондон-топазы огранки
-                li.posts-grid__item
+                li.news-grid__item
                     a.post(href="#")
                         img.post__image(src="img/no-image.svg", alt="Картинка поста")
                         .post__right
                             time.post__time(datatime="2021-07-20") 20.07.2021
                             h2.g-title.post__title «Русские самоцветы» представили сервиз для водки&nbsp;FIREWATER
                             p.post__desc Ключевым элементом украшений стали барочный жемчуг, цепочки бриллиантов и крупные Лондон-топазы огранки
+        a.g-btn.g-btn--stroke.news__more(href="#") Показать ещё
+        +pagination("news__pagination")
