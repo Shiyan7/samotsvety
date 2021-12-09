@@ -3,14 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let flag = 0;
 
     function returnPromocode () {
-        return `<input class="g-input modal-form__input" type="text" name="promocode" placeholder="Введите промокод">`
+        return `<input class="g-input modal-form__input modal__promocode-input" type="text" name="promocode" placeholder="Введите промокод">`
     }
 
     modalPromocode?.addEventListener("click", (e) => {
 
-        flag == 0 ? e.currentTarget.insertAdjacentHTML("afterend", returnPromocode()) : false;
-
-        flag++
+        if(flag == 0) {
+            e.currentTarget.insertAdjacentHTML("afterend", returnPromocode())
+            flag++
+        } else {
+            document.querySelector(".modal__promocode-input")?.remove();
+            flag--
+        }
 
     });
 });

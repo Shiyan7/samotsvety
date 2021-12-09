@@ -1,0 +1,348 @@
+section.contacts
+    .container.contacts__container
+        if page === "contacts"
+            ul.g-breadcrumbs__list.contacts__breadcrumbs.list-reset
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="/") Главная
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link Контакты
+        if page === "shops"
+            ul.g-breadcrumbs__list.contacts__breadcrumbs.list-reset
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link(href="/") Главная
+                li.g-breadcrumbs__item
+                    a.g-breadcrumbs__link Магазины
+        if page === "contacts"
+            h1.g-title.g-title--center.contacts__title Контакты
+        if page === "shops"
+            h1.g-title.g-title--center.contacts__title Магазины
+        if page === "contacts"
+            h2.g-title.contacts__subtitle Офисы Интернет-галереи
+            .g-filters
+                ul.g-filters__list.contacts-filters.list-reset
+                    li.g-filters__item
+                        button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="petersburg") Санкт-Петербург
+                    li.g-filters__item
+                        button.btn-reset.g-filters__btn(data-filters-path="moscow") Москва
+                
+                .g-filters__content.g-filters__content--active.contacts__content(data-filters-target="petersburg")
+                    .offices-item.contacts__offices-item
+                        img.offices-item__image(src="img/no-image.svg", alt="Офис 1")
+                        a.offices-item__desc.offices-item__single-tel(href="#") Единый номер: Тел.: 8 (800) 555-32-98
+                        p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                        span.offices-item__metro.offices-item__metro--yellow
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                            <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                            </svg>
+                            span.offices-item__desc ст. м. Ладожская
+                        p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                        a.offices-item__link(href="mailto:jewel@russammarket.ru") jewel@russammarket.ru
+                    .contacts__map
+                        img(src="img/map.svg", alt="Карта офисов")
+                .g-filters__content.contacts__content(data-filters-target="moscow")
+                    .offices-item.contacts__offices-item
+                        img.offices-item__image(src="img/no-image.svg", alt="Офис 1")
+                        a.offices-item__desc.offices-item__single-tel(href="#") Единый номер: Тел.: 8 (800) 555-32-98
+                        p.offices-item__desc.offices-item__location г. Москва, ул. Селезнёвская, д. 32
+                        span.offices-item__metro.offices-item__metro--light-green
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                            <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                            </svg>
+                            span.offices-item__desc ст. м. Достоевская
+                        p.offices-item__desc.offices-item__hours Пн—Пт 10:00—21:00
+                        a.offices-item__desc.offices-item__tel(href="#") Тел.: +7 (495) 649 61 78
+                        a.offices-item__link(href="mailto:jewel@russammarket.ru") jewel@russammarket.ru
+                    .contacts__map
+                        img(src="img/map.svg", alt="Карта офисов")
+            h2.g-title.contacts__subtitle Сеть фирменных магазинов
+            .g-filters
+                ul.g-filters__list.contacts-filters.list-reset
+                    li.g-filters__item
+                        button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="list") Списком
+                    li.g-filters__item
+                        button.btn-reset.g-filters__btn(data-filters-path="map") На карте     
+                .g-filters__content.g-filters__content--active.contacts__content.store-list(data-filters-target="list")
+                    .store-list__wrapper(data-simplebar)
+                        - for(let i = 0; i < 2; i++)
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--blue
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--green
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--red
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--blue
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--yellow
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--blue
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--blue
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--blue
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                .g-filters__content.contacts__content.store-list(data-filters-target="map")
+                    img.contacts__full-map(src="img/full-map.svg", alt="")
+        if page === "shops"
+            h2.g-title.contacts__subtitle Сеть фирменных магазинов
+            .g-filters
+                ul.g-filters__list.contacts-filters.list-reset
+                    li.g-filters__item
+                        button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="list") Списком
+                    li.g-filters__item
+                        button.btn-reset.g-filters__btn(data-filters-path="map") На карте     
+                .g-filters__content.g-filters__content--active.contacts__content.store-list(data-filters-target="list")
+                    .store-list__wrapper(data-simplebar)
+                        - for(let i = 0; i < 2; i++)
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--blue
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--green
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--red
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--blue
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--yellow
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--blue
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--blue
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                            .offices-item.store-item.contacts__store-item
+                                img.offices-item__image.store-item__image(src="img/no-image.svg", alt="Офис 1")
+                                .store-item__right
+                                    a.offices-item__desc.offices-item__single-tel(href="#") Тел.: 8 (800) 555-32-98
+                                    p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                                    span.offices-item__metro.offices-item__metro--blue
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                                        </svg>
+                                        span.offices-item__desc ст. м. Технологический институт - 2
+                                    p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                .g-filters__content.contacts__content.store-list(data-filters-target="map")
+                    img.contacts__full-map(src="img/full-map.svg", alt="")
+            h2.g-title.contacts__subtitle Офисы Интернет-галереи
+            .g-filters
+                ul.g-filters__list.contacts-filters.list-reset
+                    li.g-filters__item
+                        button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="petersburg") Санкт-Петербург
+                    li.g-filters__item
+                        button.btn-reset.g-filters__btn(data-filters-path="moscow") Москва
+                
+                .g-filters__content.g-filters__content--active.contacts__content(data-filters-target="petersburg")
+                    .offices-item.contacts__offices-item
+                        img.offices-item__image(src="img/no-image.svg", alt="Офис 1")
+                        a.offices-item__desc.offices-item__single-tel(href="#") Единый номер: Тел.: 8 (800) 555-32-98
+                        p.offices-item__desc.offices-item__location г. Санкт-Петербург, пл. Фаберже, 8
+                        span.offices-item__metro.offices-item__metro--yellow
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                            <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                            </svg>
+                            span.offices-item__desc ст. м. Ладожская
+                        p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
+                        a.offices-item__link(href="mailto:jewel@russammarket.ru") jewel@russammarket.ru
+                    .contacts__map
+                        img(src="img/map.svg", alt="Карта офисов")
+                .g-filters__content.contacts__content(data-filters-target="moscow")
+                    .offices-item.contacts__offices-item
+                        img.offices-item__image(src="img/no-image.svg", alt="Офис 1")
+                        a.offices-item__desc.offices-item__single-tel(href="#") Единый номер: Тел.: 8 (800) 555-32-98
+                        p.offices-item__desc.offices-item__location г. Москва, ул. Селезнёвская, д. 32
+                        span.offices-item__metro.offices-item__metro--light-green
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="var(--color)"/>
+                            <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="var(--color)"/>
+                            </svg>
+                            span.offices-item__desc ст. м. Достоевская
+                        p.offices-item__desc.offices-item__hours Пн—Пт 10:00—21:00
+                        a.offices-item__desc.offices-item__tel(href="#") Тел.: +7 (495) 649 61 78
+                        a.offices-item__link(href="mailto:jewel@russammarket.ru") jewel@russammarket.ru
+                    .contacts__map
+                        img(src="img/map.svg", alt="Карта офисов")
+        h2.g-title.contacts__subtitle реквизиты ООО «ДАН»
+        .contacts-info.read-more-wrapper
+            .contacts-info__col
+                .contacts-info__row
+                    span.contacts-info__caption Юридический адрес:
+                    span.contacts-info__value 195112, Санкт-Петербург, пл. Карла Фаберже, 8
+                .contacts-info__row
+                    span.contacts-info__caption Ген. директор:
+                    span.contacts-info__value Докучаева Т. В.   
+                .contacts-info__row
+                    span.contacts-info__caption ОГРН:
+                    span.contacts-info__value 1077847012803
+                .contacts-info__row
+                    span.contacts-info__caption ИНН:
+                    span.contacts-info__value 7806354336
+                .contacts-info__row
+                    span.contacts-info__caption КПП:
+                    span.contacts-info__value 780601001
+            .contacts-info__col.full-text
+                .contacts-info__row
+                    span.contacts-info__value Реквизиты для платежей в рублях:
+                .contacts-info__row
+                    span.contacts-info__caption.contacts-info__caption--2 Банк:
+                    span.contacts-info__value СПб Филиал АКБ «ЛАНТА-БАНК» (АО)
+                .contacts-info__row
+                    span.contacts-info__caption.contacts-info__caption--2 К/С:
+                    span.contacts-info__value 30101810900000000761
+                .contacts-info__row
+                    span.contacts-info__caption.contacts-info__caption--2 Р/С:
+                    span.contacts-info__value 40702810500040000227
+                .contacts-info__row
+                    span.contacts-info__caption.contacts-info__caption--2 БИК:
+                    span.contacts-info__value 044030761
+            button.btn-reset.g-link.read-more.contacts-info__more(data-text="Развернуть") Развернуть

@@ -1,6 +1,6 @@
 .thanks {
     &__container {
-        padding-top: 77px;
+        padding-top: 84px;
         padding-bottom: 77px;
         max-width: 891px;
 
@@ -47,6 +47,14 @@
     &-item {
         position: relative;
         text-align: center;
+        padding-top: 2px;
+        &:nth-child(1) {
+            padding-top: 5px;
+        }
+
+        &:nth-child(2) {
+            padding-top: 13px;
+        }
 
         &:not(:last-child) {
             &:after {

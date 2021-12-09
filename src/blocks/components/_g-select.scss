@@ -6,7 +6,7 @@
     &:not(.is-open) {
         @include hover {
             .choices__inner:after {
-                transform: translateY(-50%) rotate(90deg);
+                transform: translateY(-42%);
             }
         }
     }

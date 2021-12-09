@@ -10,7 +10,7 @@ header.header
                 li.header-menu__item
                     a.header-menu__link(href="#") ДОСТАВКА И ОПЛАТА
                 li.header-menu__item
-                    a.header-menu__link(href="#") МАГАЗИНЫ
+                    a.header-menu__link(href="shops.html") МАГАЗИНЫ
         .header__middle
             ul.header-actions.list-reset
                 li.header-actions__item
@@ -39,68 +39,274 @@ header.header
                         span.shop-nav__icon.shop-nav__icon--cabinet
                         span.shop-nav__quantity Войти
         .header__bottom
-            nav.nav
-                ul.nav__list.list-reset
-                    li.nav__item
-                        a.nav__link(href="decorations.html") УКРАШЕНИЯ
-                        .menu
+            .nav
+                .nav__top
+                    h2.g-title.nav__title Меню
+                ul.nav__list.nav__list--dropdown.list-reset.js-nav-list
+                    li.nav__item.js-open-menu
+                        a.nav__link.nav__link--drop(href="decorations.html") УКРАШЕНИЯ
+                        +icon("arrow")
+                        .menu.dropdown-menu
                             .menu__container
-                                .menu-left
-                                    ul.menu-left__list.list-reset
-                                        li.menu-left__item
-                                            a.menu-left__link(href="#") Кольца
-                                        li.menu-left__item
-                                            a.menu-left__link(href="#") Серьги
-                                        li.menu-left__item
-                                            a.menu-left__link(href="#") Подвески и кресты
-                                        li.menu-left__item
-                                            a.menu-left__link(href="#") Броши
-                                        li.menu-left__item
-                                            a.menu-left__link(href="#") Колье
-                                        li.menu-left__item
-                                            a.menu-left__link(href="#") Цепи
-                                        li.menu-left__item
-                                            a.menu-left__link(href="#") Браслеты и шармы
-                                    ul.menu-left__list.menu-left__list--2.list-reset
-                                        li.menu-left__item
-                                            a.menu-left__link.menu-left__link--gray(href="#") Мужчинам
-                                        li.menu-left__item
-                                            a.menu-left__link.menu-left__link--gray(href="#") Детям
-                                        li.menu-left__item
-                                            a.menu-left__link.menu-left__link--gray(href="#") Подарки
-                                .menu-content
-                                    .menu-content__inner
-                                        button.btn-reset.g-slider-btn.g-slider-btn--prev.menu-slider__btn.menu-slider__btn--prev
-                                            +icon("arrow")
-                                        button.btn-reset.g-slider-btn.g-slider-btn--next.menu-slider__btn.menu-slider__btn--next
-                                            +icon("arrow")
-                                        h2.g-title.menu-slider__title коллекции
-                                        .swiper.menu-slider
-                                            .swiper-wrapper
-                                                - for(let i = 0; i < 20; i++)
-                                                    .swiper-slide.menu-slide
-                                                        img.menu-slide__image.lozad(src="img/menu-slide-1.jpg", srcset="img/menu-slide-1@2x.jpg" alt="shine")
-                                                        h3.g-title.menu-slide__caption shine
-                                        a.menu-content__link.g-link(href="catalog.html") СМОТРЕТЬ ВСЕ КОЛЬЦА (1350)
-                                        img.lozad.menu-content__banner(src="img/menu-banner-1.jpg", srcset="img/menu-banner-1.jpg 2x" alt="New")
+                                .menu-nav.js-nav-list
+                                    button.btn-reset.nav__mobile-back
+                                        +icon("arrow")
+                                        |Украшения
+                                    .menu-nav__list
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.active(href="#") Кольца
 
-                    li.nav__item
-                        a.nav__link(href="new.html") ДОМ&АКСЕССУАРЫ
-                    li.nav__item
-                        a.nav__link(href="catalog-inner.html") ПОМОЛВКА
-                    li.nav__item
-                        a.nav__link(href="#") ВЫСОКОЕ ЮВЕЛИРНОЕ ИСКУССТВО
+                                            +icon("arrow")
+                                            +menuContent("show")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Серьги
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Подвески и кресты
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Броши
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Колье
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Цепи
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Браслеты и шармы
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                    .menu-nav__list.menu-nav__list--2
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Мужчинам
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Детям
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Подарки
+
+                                            +icon("arrow")
+                                            +menuContent("")             
+                    li.nav__item.js-open-menu
+                        a.nav__link.nav__link--drop(href="new.html") ДОМ&АКСЕССУАРЫ
+                        +icon("arrow")
+                        .menu.dropdown-menu
+                            .menu__container
+                                .menu-nav
+                                    button.btn-reset.nav__mobile-back
+                                        +icon("arrow")
+                                        |Украшения
+                                    .menu-nav__list
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.active(href="#") Кольца
+
+                                            +icon("arrow")
+                                            +menuContent("show")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Серьги
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Подвески и кресты
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Броши
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Колье
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Цепи
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Браслеты и шармы
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                    .menu-nav__list.menu-nav__list--2
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Мужчинам
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Детям
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Подарки
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                    li.nav__item.js-open-menu
+                        a.nav__link.nav__link--drop(href="catalog-inner.html") ПОМОЛВКА
+                        +icon("arrow")
+                        .menu.dropdown-menu
+                            .menu__container
+                                .menu-nav
+                                    button.btn-reset.nav__mobile-back
+                                        +icon("arrow")
+                                        |Украшения
+                                    .menu-nav__list
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.active(href="#") Кольца
+
+                                            +icon("arrow")
+                                            +menuContent("show")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Серьги
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Подвески и кресты
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Броши
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Колье
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Цепи
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Браслеты и шармы
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                    .menu-nav__list.menu-nav__list--2
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Мужчинам
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Детям
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Подарки
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                    li.nav__item.js-open-menu
+                        a.nav__link.nav__link--drop(href="#") ВЫСОКОЕ ЮВЕЛИРНОЕ ИСКУССТВО
+                        +icon("arrow")
+                        .menu.dropdown-menu
+                            .menu__container
+                                .menu-nav
+                                    button.btn-reset.nav__mobile-back
+                                        +icon("arrow")
+                                        |Украшения
+                                    .menu-nav__list
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.active(href="#") Кольца
+
+                                            +icon("arrow")
+                                            +menuContent("show")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Серьги
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Подвески и кресты
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Броши
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Колье
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Цепи
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link(href="#") Браслеты и шармы
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                    .menu-nav__list.menu-nav__list--2
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Мужчинам
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Детям
+
+                                            +icon("arrow")
+                                            +menuContent("")
+                                        .menu-nav__item.js-open-menu
+                                            a.menu-nav__link.menu-nav__link--gray(href="#") Подарки
+
+                                            +icon("arrow")
+                                            +menuContent("")
                     li.nav__item
                         a.nav__link.nav__link--gray(href="#") КОЛЛЕКЦИЯ
                     li.nav__item
                         a.nav__link.nav__link--gray(href="discounts.html") АКЦИИ
                 ul.header-menu.nav__header-menu.list-reset
                     li.header-menu__item
-                        a.header-menu__link(href="#") Императорский ювелирный дом
+                        a.header-menu__link(href="#") Вселенная бренда
                     li.header-menu__item
-                        a.header-menu__link(href="#") ДОСТАВКА И ОПЛАТА
+                        a.header-menu__link(href="#") Доставка и оплата
                     li.header-menu__item
-                        a.header-menu__link(href="#") МАГАЗИНЫ
+                        a.header-menu__link(href="#") Фирменные салоны
+                a.nav__cabinet(href="#")
+                    +icon("cabinet")
+                    |ВОЙТИ В КАБИНЕТ
+                button.btn-reset.nav-location.toggle-location
+                    span.nav-location__caption Ваш город:
+                    span.nav-location__value.region-selection__choice САНКТ-ПЕТЕРБУРГ
+                .tel.nav-tel
+                    a.tel__value.nav-tel__value(href="tel:88005553298") 8 (800) 555-32-98
+                    span.tel__desc.nav-tel__desc Пн-Пт 10:00-20:00, Сб, Вс до 17:00
             .search-form.header__search-form
                 button.btn-reset.search-form__btn.open-form
                     +icon("search-icon")
@@ -127,8 +333,9 @@ header.header
             a.down-bar__link(href="#")
                 span.shop-nav__icon.shop-nav__icon--cabinet
                 |Вход
-    .overlay
     .region-selection
+        button.btn-reset.region-selection__close
+            +icon("cross2")
         .region-selection__top
             h2.g-title.g-title--center.region-selection__title.region-selection__choice САНКТ-ПЕТЕРБУРГ
             button.btn-reset.region-selection__close
@@ -444,4 +651,3 @@ header.header
                                         button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
                                         button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
                                         button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
-    //button.btn-reset.modal-btn(data-graph-animation="custom" data-graph-path="first" data-graph-speed="500") Открыть окно

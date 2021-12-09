@@ -67,6 +67,10 @@
         will-change: max-height;
         transition: max-height 0.3s;
 
+        @media (max-width: 576px) {
+            max-height: 200px;
+        }
+
         p {
             margin: 0 auto 24px;
             font-size: 16px;
@@ -79,7 +83,7 @@
             @media (max-width: 576px) {
                 font-size: 12px;
                 line-height: 18px;
-                max-width: 340px;
+                max-width: 500px;
                 margin-bottom: 20px;
             }
         }
@@ -96,6 +100,10 @@
             visibility: visible;
             transition: opacity 0.3s, visibility 0.3s;
             background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 91.15%);
+
+            @media (max-width: 576px) {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 95%);
+            }
         }
 
         &.active {

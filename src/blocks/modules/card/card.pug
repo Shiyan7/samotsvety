@@ -116,7 +116,7 @@ section.card
 
                     .card__btns
                         button.btn-reset.g-btn.g-btn--black.card__btn ДОБАВИТЬ В КОРЗИНУ
-                        button.btn-reset.g-btn.g-btn--stroke.card__btn БЫСТРЫЙ ЗАКАЗ
+                        button.btn-reset.g-btn.g-btn--stroke.card__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="tel-order" data-graph-speed="500") БЫСТРЫЙ ЗАКАЗ
                     p.card__desc
                         |Есть в 
                         button.btn-reset.card__link.g-link.modal-btn(data-graph-animation="fadeInUp" data-graph-path="reserve" data-graph-speed="500") 1 магазине
@@ -142,10 +142,10 @@ section.card
                             option(value="size-14") 17
                             option(value="size-15") 17.5
                             option(value="size-16") 18
-                            option(value="no-size") Нет нужного размера
                         span.g-tooltip
                             button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="found-out-size" data-graph-speed="500")
                                 +icon("tooltip")
+                    button.btn-reset.card__no-size.modal-btn(data-graph-animation="fadeInUp" data-graph-path="order-my-size" data-graph-speed="500") Нет нужного размера?
                     span.product__price.card__price 77 975 ₽
                     .product__discount.card__discount
                         span.product__old-price.card__old-price
@@ -185,10 +185,10 @@ section.card
                             option(value="size-14") 17
                             option(value="size-15") 17.5
                             option(value="size-16") 18
-                            option(value="no-size") Нет нужного размера
                         span.g-tooltip
                             button.btn-reset.g-tooltip__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="found-out-size" data-graph-speed="500")
                                 +icon("tooltip")
+                    button.btn-reset.card__no-size.modal-btn(data-graph-animation="fadeInUp" data-graph-path="order-my-size" data-graph-speed="500") Нет нужного размера?
                     span.product__price.card__price 77 975 ₽
                     .product__discount.card__discount
                         span.product__old-price.card__old-price
@@ -203,9 +203,9 @@ section.card
                                 +icon("tooltip")
                     .card__btns
                         button.btn-reset.g-btn.g-btn--black.card__btn ДОБАВИТЬ В КОРЗИНУ
-                        button.btn-reset.g-btn.g-btn--stroke.card__btn БЫСТРЫЙ ЗАКАЗ
+                        button.btn-reset.g-btn.g-btn--stroke.card__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="tel-order" data-graph-speed="500") БЫСТРЫЙ ЗАКАЗ
                     p.card__desc
-                        |Есть в 
+                        |Есть в
                         button.btn-reset.card__link.g-link.modal-btn(data-graph-animation="fadeInUp" data-graph-path="reserve" data-graph-speed="500") 1 магазине
                         | в г. Санкт-Петербург
                 ul.g-filters__list.g-filters--sm.list-reset.card__filters

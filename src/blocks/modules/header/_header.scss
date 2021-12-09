@@ -7,7 +7,6 @@
     }
     &__container {
         padding-top: 5px;
-        padding-bottom: 17px;
         @media (max-width: 1024px) {
             padding: 10px 20px;
         }
@@ -101,11 +100,13 @@
 
     &__bottom {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
     }
 
     &__search-form {
+        padding-left: 20px;
+        border-left: 1px solid #000;
         @media (max-width: 1024px) {
             display: none;
         }

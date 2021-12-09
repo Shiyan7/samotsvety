@@ -2,7 +2,7 @@
 
     &__container {
         padding-top: 34px;
-        padding-bottom: 85px;
+        padding-bottom: 10px;
 
         &--2 {
             padding-bottom: 0;
@@ -14,7 +14,6 @@
 
         @media (max-width: 576px) {
             padding-top: 22px;
-            padding-bottom: 50px;
         }
     }
 
@@ -37,7 +36,7 @@
     &__list {
         display: grid;
         column-gap: 12px;
-        row-gap: 58px;
+        row-gap: 48px;
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 84px;
 
@@ -57,6 +56,27 @@
     }
 
     &-item {
+        position: relative;
+        padding-bottom: 10px;
+
+        &:after {
+            @include pseudo();
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            pointer-events: none;
+            transition: height 0.3s;
+            background-color: rgba(#111, 0.05);
+        }
+
+        @include hover {
+            &:after {
+                height: 100%;
+            }
+        }
 
         @media (max-width: 576px) {
             text-align: center;
@@ -128,6 +148,13 @@
                 font-size: 13px;
                 line-height: 19px;
             }
+        }
+    }
+
+    &__wares {
+        .wares__title {
+            font-size: 20px;
+            line-height: 24px;
         }
     }
 }

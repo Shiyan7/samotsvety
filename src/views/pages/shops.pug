@@ -2,15 +2,14 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Акции";
-	- const page = "discounts"
+	- const title = "Магазины";
+	- const page = "shops"
 
 block content
 	.site-container
 		include ../../blocks/modules/header/header
 		main.main
-			include ../../blocks/modules/discounts/discounts
-			include ../../blocks/modules/viewed-wares/viewed-wares
+			include ../../blocks/modules/contacts/contacts
 			include ../../blocks/modules/info/info
 		include ../../blocks/modules/footer/footer
 block scripts

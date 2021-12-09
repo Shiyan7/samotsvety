@@ -33,6 +33,22 @@
                     input.modal-form__checkbox(type="checkbox" checked)
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных *в рабочее время
+    .modal__container.modal__container--2(role="dialog" aria-modal="true" data-graph-target="order-my-size")
+        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title Заказать изделие по&nbsp;моему&nbsp;размеру
+            h3.g-title.g-title--center.modal__subtitle Изготовим изделие <br> по вашему размеру 
+                span за&nbsp;7-45&nbsp;дней
+            p.modal__desc.modal__desc--center Оставьте заявку на консультацию <br> с экспертом, мы перезвоним <br> в течение 30 минут*
+
+            form.modal-form.validate-form(action="#")
+                input.g-input.modal-form__input(type="tel" name="phoneNumber" placeholder="Введите телефон")
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn оставить заявку
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я согласен на обработку персональных данных *в рабочее время
     .modal__container.modal__container--2(role="dialog" aria-modal="true" data-graph-target="use-promocode")
         button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
             +icon("cross2")
@@ -533,3 +549,20 @@
                     input.modal-form__checkbox(type="checkbox" checked)
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных
+    .modal__container.modal__container--3(role="dialog" aria-modal="true" data-graph-target="tel-order")
+        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title Оформим заказ <br> по телефону
+            p.modal__desc.modal__desc--center Заполните форму, и мы свяжемся с вами для уточнения деталей заказа
+
+            form.modal-form.validate-form(action="#")
+                input.g-input.modal-form__input(type="tel" name="phoneNumber" placeholder="Введите телефон")
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn оформить быстрый заказ
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я согласен на обработку персональных данных
+            .modal-tel
+                p.modal-tel__desc Вы можете связаться с нами по телефону
+                a.modal-tel__value(href="tel:88005553298") 8 (800) 555-32-98
