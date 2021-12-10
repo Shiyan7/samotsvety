@@ -11,9 +11,8 @@ const desktopMenu = () => {
         $('.nav__item').each(function(){
             var t = null;
             var li = $(this);
-            var link = $(this).find(".nav__link");
 
-            link.hover(function(){
+            li.hover(function(){
                 t = setTimeout(function(){
                     li.find(".menu").slideDown(300);
                     t = null;
