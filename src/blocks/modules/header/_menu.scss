@@ -78,6 +78,16 @@
 
         &__item {
             display: flex;
+            width: 100%;
+            cursor: pointer;
+
+            @media (max-width: 1024px) {
+                cursor: default;
+
+                span {
+                    pointer-events: none;
+                }
+            }
 
             @media (max-width: 1024px) {
                 justify-content: space-between;
@@ -110,12 +120,11 @@
                         width: 100%;
                     }
                 }
-            }
-
-            &:hover {
-                &:after {
-                    left: 0;
-                    width: 100%;
+                &:hover {
+                    &:after {
+                        left: 0;
+                        width: 100%;
+                    }
                 }
             }
 

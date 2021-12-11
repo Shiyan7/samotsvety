@@ -7,7 +7,6 @@ const nav = document.querySelector('.nav'),
 const desktopMenu = () => {
     if(window.innerWidth > 1024) {
 
-
         $('.nav__item').each(function(){
             var t = null;
             var li = $(this);
@@ -16,7 +15,7 @@ const desktopMenu = () => {
                 t = setTimeout(function(){
                     li.find(".menu").slideDown(300);
                     t = null;
-                }, 300);
+                }, 500);
             }, function(){
                 if (t){
                     clearTimeout(t);

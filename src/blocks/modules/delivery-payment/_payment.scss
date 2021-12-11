@@ -1,0 +1,87 @@
+.payment {
+    &-list {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &-item {
+
+        @media (max-width: 1024px) {
+            margin: 14px 20px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 37px;
+
+            @media (max-width: 1024px) {
+                margin-right: 20px;
+            }
+        }
+
+        &__image {
+            display: block;
+            flex-shrink: 0;
+            object-fit: contain;
+            
+            &--1 {
+                width: 56.94px;
+                height: 15.53px;
+            }
+
+            &--2 {
+                width: 51.22px;
+                height: 16.64px;
+            }
+
+            &--3 {
+                width: 34.9px;
+                height: 27.2px;
+            }
+
+            &--4 {
+                width: 34.84px;
+                height: 27.2px;
+            }
+
+            &--5 {
+                width: 56.04px;
+                height: 23.06px;
+            }
+
+            &--6 {
+                width: 22.48px;
+                height: 29.68px;
+            }
+
+            &--7 {
+                width: 24.78px;
+                height: 24.85px;
+            }
+
+            &--8 {
+                width: 28.78px;
+                height: 30.03px;
+            }
+
+            &--9 {
+                width: 68.85px;
+                height: 25.34px;
+            }
+
+            &--10 {
+                width: 64.37px;
+                height: 11.39px;
+            }
+
+            &--11 {
+                width: 77.8px;
+                height: 10.56px;
+            }
+        }
+    }
+}

@@ -302,6 +302,60 @@ mixin menuContent(cls)
             a.menu-content__banner(href="new.html") 
               img.lozad(src="img/menu-banner-1.jpg", srcset="img/menu-banner-1.jpg 2x" alt="New")
 
+mixin searchForm(cls)
+  if page === "search-results"
+    .search-form.active(class=cls)
+      button.btn-reset.search-toggle.toggle-form.active
+        svg.search-toggle__icon(width="24" height="24")
+          use.search-toggle__icon-opened(xlink:href="./img/sprites/sprite.svg#search-icon")
+          use.search-toggle__icon-closed(xlink:href="./img/sprites/sprite.svg#cross2")
+      form.search-form__form(action="#")
+        input.search-form__input(type="search", name="s" placeholder="Поиск")
+        button.btn-reset.search-form__btn
+            +icon("search-icon")
+        button.btn-reset.search-form__close(type="button")
+            +icon("cross2")
+      ul.search-result.list-reset(data-simplebar)
+        -for(let i = 0; i < 10; i++)
+          li.search-result__item
+            a.search-result__link(href="search-results.html")
+              span 14083 
+              | Серьги из желтого золота с бриллиантами и&nbsp;изумрудами
+          li.search-result__item
+            a.search-result__link(href="search-results.html")
+              span 14085 
+              | Кольцо из розового золота с&nbsp;турмалинами
+          li.search-result__item
+            a.search-result__link(href="search-results.html")
+              span 14089 
+              | Брошь из серебра
+  else
+    .search-form(class=cls)
+      button.btn-reset.search-toggle.toggle-form
+        svg.search-toggle__icon(width="24" height="24")
+          use.search-toggle__icon-opened(xlink:href="./img/sprites/sprite.svg#search-icon")
+          use.search-toggle__icon-closed(xlink:href="./img/sprites/sprite.svg#cross2")
+      form.search-form__form(action="#")
+        input.search-form__input(type="search", name="s" placeholder="Поиск")
+        button.btn-reset.search-form__btn
+            +icon("search-icon")
+        button.btn-reset.search-form__close(type="button")
+            +icon("cross2")
+      ul.search-result.list-reset(data-simplebar)
+        -for(let i = 0; i < 10; i++)
+          li.search-result__item
+            a.search-result__link(href="search-results.html")
+              span 14083 
+              | Серьги из желтого золота с бриллиантами и&nbsp;изумрудами
+          li.search-result__item
+            a.search-result__link(href="search-results.html")
+              span 14085 
+              | Кольцо из розового золота с&nbsp;турмалинами
+          li.search-result__item
+            a.search-result__link(href="search-results.html")
+              span 14089 
+              | Брошь из серебра
+
 mixin stepper
   .g-stepper.card__stepper
     span.g-stepper__caption ВЫБЕРИТЕ КОЛИЧЕСТВО:

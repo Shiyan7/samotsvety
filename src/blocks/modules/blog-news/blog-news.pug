@@ -1,0 +1,21 @@
+section.blog-news
+    h2.visually-hidden Новостной блог
+    .container.blog-news__container
+        ul.blog-news__list.list-reset
+            -for (let i = 0; i < 4; i++)
+                li.blog-news__item
+                    span.blog-news__caption БЛОГ
+                    h3.blog-news__title
+                        span Кольцо с изумрудами 
+                        |и аметистами, из желтого золота
+                    h3.blog-news__title
+                        |Лучшие подборки 2021 ювилирных изделий 
+                        span с изумрудами 
+                        |и кораллами. Обзор самых топовых украшений.
+                li.blog-news__item
+                    span.blog-news__caption НОВОСТИ
+                    h3.blog-news__title
+                        |Ювелирные изделия от кутюрье, 
+                        span с изумрудами
+        button.btn-reset.g-btn.g-btn--stroke.blog-news__more показать ещё
+        +pagination("blog-news__pagination")

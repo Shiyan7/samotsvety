@@ -1,59 +1,228 @@
-.search-form {
-    position: relative;
-    &__form {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: calc(100% + 20px);
-        right: 0;
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 14px 18px;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s, visibility 0.3s;
+.search {
+    &-form {
+
+        @media (max-width: 1024px) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 100%;
+            padding-left: 0;
+            border: none;
+            background: #fff;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
         &.active {
-            opacity: 1;
-            visibility: visible;
-        }
-    }
 
-    &__input {
-        outline: none;
-        width: 360px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 19px;
-        border: none;
-        border-bottom: 1px solid rgba(#000, 0.5);
-        font-family: "TTCommons", sans-serif;
-        padding: 0;
-        border-radius: 0;
+            @media (max-width: 1024px) {
+                opacity: 1;
+                visibility: visible;
+            }
 
-        &:not(:last-child) {
-            margin-right: 7px;
-        }
-        
-        &::placeholder {
-            color: #a39d94;
-        }
-    }
+            @media (min-width: 1025px) {
+                .search-form__form {
+                    display: flex;
+                }
 
-    &__btn {
-        @media (min-width: 1025px) {
-            &:hover {
-                svg {
-                    fill: #111;
+                .search-result {
+                    display: block;
                 }
             }
+
+            .search-result {
+                opacity: 1;
+                visibility: visible;
+            }
         }
-        svg {
+
+        &__form {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 4px;
+            right: 16px;
+            bottom: 0;
+            left: -23px;
+            max-width: 648px;
+            margin: 0 auto;
+            background-color: #fff;
+
+            @media (max-width: 1024px) {
+                display: flex;
+                position: relative;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                left: 0;
+                max-width: 100%;
+                height: 100%;
+                padding: 0 18px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        &__input {
+            outline: none;
+            width: 100%;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 24px;
+            border: none;
+            border-bottom: 1px solid #000;
+            font-family: "TTCommons", sans-serif;
+            padding: 0;
+            border-radius: 0;
+            padding-right: 30px;
+            opacity: 1;
+            box-shadow: none;
+
+            @media (max-width: 1024px) {
+                padding-right: 0;
+            }
+
+            &:not(:last-child) {
+                margin-right: 7px;
+            }
+
+            &::placeholder {
+                color: #a39d94;
+            }
+        }
+
+        &__btn {
+            position: absolute;
+            right: 4px;
+            bottom: auto;
+            width: 24px;
+            height: 24px;
+            transform: translateY(-3px);
+            fill: transparent;
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+
+        &__close {
+            display: none;
+            width: 26px;
+            height: 26px;
+
+            @media (max-width: 1024px) {
+                display: block;
+            }
+        }
+    }
+
+    &-toggle {
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+
+        &.active {
+            .search-toggle__icon-opened {
+                display: none;
+            }
+
+            .search-toggle__icon-closed {
+                display: block;
+            }
+        }
+
+        &__icon {
             display: block;
             width: 24px;
             height: 24px;
             transition: fill 0.3s;
-            fill: transparent;
             pointer-events: none;
+
+            &-opened {
+                fill: transparent;
+            }
+
+            &-closed {
+                display: none;
+            }
+        }
+    }
+
+    &-result {
+        display: none;
+        position: absolute;
+        top: calc(100% - 12px);
+        right: 16px;
+        left: -30px;
+        width: 100%;
+        max-width: 611px;
+        max-height: 86px;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #a39d94;
+        border-top: none;
+        padding: 11px 14px;
+        transition: opacity 0.3s, visibility 0.3s;
+
+        @media (max-width: 1024px) {
+            display: block;
+            top: 100%;
+            right: 0;
+            left: 0;
+            width: calc(100% - 28px);
+            max-height: 223px;
+            border: none;
+            padding: 14px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .simplebar-placeholder {
+            margin-bottom: 0;
+        }
+
+        .simplebar-track {
+            display: block;
+            background-color: transparent;
+            top: 10px;
+            right: 14px;
+            width: 3px;
+            height: calc(100% - 20px) !important;
+
+            &:before {
+                height: 100%;
+                background: transparent;
+            }
+        }
+
+        &__item {
+
+            @media (max-width: 1024px) {
+                padding-right: 20px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 4px;
+
+                @media (max-width: 1024px) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        &__link {
+            display: block;
+            font-family: "TTCommons", sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #111;
+
+            span {
+                font-weight: 500;
+            }
         }
     }
 }

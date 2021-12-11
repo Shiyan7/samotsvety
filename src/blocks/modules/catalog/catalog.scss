@@ -27,10 +27,6 @@
         @media (max-width: 1024px) {
             padding-bottom: 28px;
         }
-
-        @media (max-width: 576px) {
-            padding-top: 28px;
-        }
     }
 
     &__breadcrumbs {
@@ -706,7 +702,7 @@
     &-list {
         display: grid;
         column-gap: 12px;
-        row-gap: 28px;
+        row-gap: 34px;
         grid-template-columns: repeat(4, 1fr);
         margin-bottom: 40px;
 
@@ -978,6 +974,31 @@
             @media (max-width: 576px) {
                 padding-bottom: 50px;
             }
+        }
+    }
+}
+
+.search-results {
+
+    &__container {
+        padding-top: 43px;
+        padding-bottom: 44px;
+        @media (max-width: 1024px) {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: "HeliosExtLight", sans-serif;
+        font-weight: 300;
+        margin-bottom: 42px;
+
+        @media (max-width: 576px) {
+            font-family: "HeliosExtLight", sans-serif;
+            font-weight: 300;
         }
     }
 }

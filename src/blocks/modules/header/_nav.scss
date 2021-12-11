@@ -68,6 +68,7 @@
     &__list {
         display: flex;
         align-items: center;
+        padding-top: 17px;
         margin-right: 20px;
 
         @media (max-width: 1024px) {
@@ -83,11 +84,13 @@
 
     &__item {
         padding-bottom: 17px;
+        cursor: pointer;
 
         @media (max-width: 1024px) {
             display: flex;
             justify-content: space-between;
             width: 100%;
+            cursor: default;
             padding: 9px 0;
         }
 

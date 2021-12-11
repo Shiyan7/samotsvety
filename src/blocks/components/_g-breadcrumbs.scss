@@ -29,6 +29,12 @@
         line-height: 19px;
         color: rgba(#000, 0.5);
         transition: color 0.3s;
+
+        @media (max-width: 576px) {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
         &:hover {
             color: #111;
         }
