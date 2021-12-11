@@ -426,7 +426,7 @@ var desktopMenu = function desktopMenu() {
         t = setTimeout(function () {
           li.find(".menu").slideDown(300);
           t = null;
-        }, 300);
+        }, 500);
       }, function () {
         if (t) {
           clearTimeout(t);
@@ -543,18 +543,31 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  var searchForm = document.querySelectorAll(".search-form__form");
-  document.addEventListener("click", function (e) {
-    if (e.target.classList.contains("open-form")) {
-      searchForm.forEach(function (el) {
-        return el.classList.toggle("active");
-      });
-    } else if (!e.target.closest(".search-form")) {
-      searchForm.forEach(function (el) {
-        return el.classList.remove("active");
-      });
-    }
+  /* Variables */
+  var openFormBtns = document.querySelectorAll(".toggle-form");
+  var searchForms = document.querySelectorAll(".search-form");
+  var closeForm = document.querySelector(".search-form__close");
+  /* Functions */
+
+  function closeSearchForm(e) {
+    searchForms.forEach(function (el) {
+      return el.classList.remove("active");
+    });
+  }
+
+  function toggleSearchForm(e) {
+    e.currentTarget.classList.toggle("active");
+    searchForms.forEach(function (el) {
+      return el.classList.toggle("active");
+    });
+  }
+  /* Events */
+
+
+  openFormBtns.forEach(function (btn) {
+    return btn.addEventListener("click", toggleSearchForm);
   });
+  closeForm.addEventListener("click", closeSearchForm);
 });
 "use strict";
 
