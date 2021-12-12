@@ -435,7 +435,7 @@ var desktopMenu = function desktopMenu() {
       });
     });
     menuNavLinks.forEach(function (el) {
-      el.addEventListener("mouseenter", function (e) {
+      el.addEventListener("click", function (e) {
         var menuContent = e.currentTarget.closest(".menu-nav").querySelectorAll(".menu-content");
         menuContent.forEach(function (el) {
           return el.classList.remove("show");
