@@ -25,12 +25,17 @@
         }
 
         @media (max-width: 1024px) {
+            padding-top: 24px;
             padding-bottom: 28px;
         }
     }
 
     &__breadcrumbs {
         padding-bottom: 22px;
+
+        @media (max-width: 576px) {
+            padding-bottom: 15px;
+        }
     }
 
     &__content {

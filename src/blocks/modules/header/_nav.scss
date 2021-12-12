@@ -68,7 +68,6 @@
     &__list {
         display: flex;
         align-items: center;
-        padding-top: 17px;
         margin-right: 20px;
 
         @media (max-width: 1024px) {
@@ -83,14 +82,11 @@
     }
 
     &__item {
-        padding-bottom: 17px;
-        cursor: pointer;
 
         @media (max-width: 1024px) {
             display: flex;
             justify-content: space-between;
             width: 100%;
-            cursor: default;
             padding: 9px 0;
         }
 
@@ -106,17 +102,20 @@
     }
 
     &__link {
+        display: block;
         position: relative;
         text-transform: uppercase;
         color: #111;
         font-size: 14px;
         line-height: 20px;
+        padding: 17px 0;
 
         @media (max-width: 1024px) {
             display: block;
             font-size: 16px;
             line-height: 19px;
             max-width: 268px;
+            padding: 0;
         }
 
         &:hover {
@@ -130,7 +129,7 @@
             @include pseudo();
             position: absolute;
             right: 0;
-            bottom: -2px;
+            bottom: 0;
             left: auto;
             width: 0;
             height: 1px;

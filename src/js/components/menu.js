@@ -26,7 +26,7 @@ const desktopMenu = () => {
         });
 
         menuNavLinks.forEach(el => {
-            el.addEventListener("mouseenter", (e) => {
+            el.addEventListener("click", (e) => {
                 const menuContent = e.currentTarget.closest(".menu-nav").querySelectorAll(".menu-content");
                 menuContent.forEach(el => el.classList.remove("show"));
                 menuNavLinks.forEach(el => el.classList.remove("active"));
