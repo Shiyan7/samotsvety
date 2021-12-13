@@ -7,6 +7,10 @@
     &__container {
         padding-top: 44px;
 
+        @media (max-width: 576px) {
+            padding-top: 24px;
+        }
+
         &--2 {
             padding-top: 0;
         }
