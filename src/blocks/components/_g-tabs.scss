@@ -5,6 +5,7 @@
     align-items: center;
     position: relative;
     width: 100%;
+    border: 1px solid transparent;
 
     @media (max-width: 1240px) {
         margin-bottom: 24px;
@@ -12,9 +13,11 @@
 
     &.active {
         margin-bottom: 10px;
+
         .simplebar-content {
             flex-wrap: wrap;
         }
+
         .simplebar-placeholder {
             margin-bottom: 0;
         }
@@ -38,6 +41,8 @@
     }
 
     &__btn {
+        position: relative;
+        z-index: 11;
         white-space: nowrap;
         display: block;
         color: rgba(#000, 0.5);
@@ -82,6 +87,7 @@
             justify-content: center;
             min-width: 58px;
             color: #111;
+            width: 60px;
             border: 1px solid #111;
 
             &.active {
@@ -91,6 +97,26 @@
                     display: block;
                 }
             }
+        }     
+    }
+
+    &-dropdown {
+        display: none;
+        position: absolute;
+        left: -20px;
+        top: calc(100% - 8px);
+        width: calc(100% - 0px);
+        padding: 20px;
+        padding-top: 8px;
+        padding-right: 8px;
+        flex-wrap: wrap;
+        border: 1px solid rgba(163, 157, 148, 0.3);
+        border-top: none;
+        z-index: 10;
+        background-color: #fff;
+
+        .g-tabs__item {
+            margin-top: 10px;
         }
     }
 }
