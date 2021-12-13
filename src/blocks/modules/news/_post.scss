@@ -1,9 +1,9 @@
-.post {
+.post-item {
     display: flex;
 
     @media (min-width: 1025px) {
         &--2 {
-            .post__image {
+            .post-item__image {
                 display: none;
             }
         }

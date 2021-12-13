@@ -163,6 +163,14 @@ mixin catalogTabs
             li.g-tabs__item
                 button.btn-reset.g-tabs__btn ДЕТЯМ
 
+mixin postItem(cls)
+  a.post-item(href="post.html" class=cls)
+    img.post-item__image(src="img/no-image.svg", alt="Картинка поста")
+    .post-item__right
+      time.post-item__time(datatime="2021-07-20") 20.07.2021
+      h2.g-title.post-item__title «Русские самоцветы» представили сервиз для водки&nbsp;FIREWATER
+      p.post-item__desc Ключевым элементом украшений стали барочный жемчуг, цепочки бриллиантов и крупные Лондон-топазы огранки
+
 mixin tabs
   ul.g-tabs.list-reset(data-simplebar)
     li.g-tabs__item

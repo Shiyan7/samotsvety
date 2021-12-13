@@ -1,0 +1,8 @@
+section.other-news
+    .container.other-news__container
+        h2.g-title.g-title--center.other-news__title ДРУГИЕ НОВОСТИ
+
+        ul.other-news__list.list-reset
+            -for(let i = 0; i < 2; i++)
+                li.other-news__item
+                    +postItem("other-news__post")

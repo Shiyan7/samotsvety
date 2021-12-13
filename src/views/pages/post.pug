@@ -1,0 +1,20 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "«Русские самоцветы» представили сервиз для водки FIREWATER";
+	- const page = "post"
+
+block content
+	.site-container
+		include ../../blocks/modules/header/header
+		main.main
+			include ../../blocks/modules/post/post
+			include ../../blocks/modules/other-news/other-news
+			include ../../blocks/modules/subscribe-form/subscribe-form
+			include ../../blocks/modules/questions/questions
+			include ../../blocks/modules/info/info
+		include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

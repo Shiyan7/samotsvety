@@ -13,6 +13,9 @@ $(document).ready(function () {
                 },
                 value: {
                     required: true,
+                },
+                email: {
+                    required: true,
                 }
             },
         });

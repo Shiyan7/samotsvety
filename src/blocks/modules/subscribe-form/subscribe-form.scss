@@ -1,0 +1,69 @@
+.subscribe-form {
+
+    &__container {
+        padding-bottom: 92px;
+        max-width: 495px;
+
+        @media (max-width: 576px) {
+            padding: 0 37px 60px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 35px;
+        font-family: "HeliosExtLight", sans-serif;
+        font-weight: 300;
+
+        @media (max-width: 576px) {
+            margin-bottom: 13px;
+        }
+    }
+
+    &__desc {
+        margin: 0;
+        font-size: 18px;
+        line-height: 24px;
+        color: rgba(#000, 0.5);
+        margin-bottom: 16px;
+        text-align: center;
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    &__form {
+
+    }
+
+    &__row {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 27px;
+
+        @media (max-width: 576px) {
+            column-gap: 0;
+            row-gap: 11px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__input {
+    }
+
+    &__btn {
+        padding: 13px 0;
+
+        @media (max-width: 576px) {
+            padding: 13.5px 0;
+        }
+    }
+
+    &__label {
+        justify-content: center;
+    }
+}

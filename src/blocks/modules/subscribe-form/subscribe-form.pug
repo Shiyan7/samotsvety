@@ -1,0 +1,12 @@
+section.subscribe-form
+    .container.subscribe-form__container
+        h2.g-title.g-title--center.subscribe-form__title Подписка на новости
+        p.subscribe-form__desc Подпишитесь на рассылку и получайте свежие материалы на почту.
+        form.subscribe-form__form.validate-form(action="#")
+            .subscribe-form__row
+                input.g-input.subscribe-form__input(type="email", name="email" placeholder="Email")
+                button.btn-reset.g-btn.g-btn--black.subscribe-form__btn подписаться
+            label.modal-form__label.subscribe-form__label
+                input.modal-form__checkbox(type="checkbox" checked)
+                span.modal-form__switch
+                span.modal-form__desc Я согласен на обработку персональных данных
