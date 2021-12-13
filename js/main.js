@@ -701,6 +701,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 "use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
+  var postSlider = new Swiper(".post-slider", {
+    slidesPerView: 'auto',
+    spaceBetween: 25,
+    navigation: {
+      nextEl: '.post-slider__btn--next',
+      prevEl: '.post-slider__btn--prev'
+    }
+  });
+});
 "use strict";
 
 var products = document.querySelectorAll('.product');
@@ -1051,6 +1062,9 @@ $(document).ready(function () {
           required: true
         },
         value: {
+          required: true
+        },
+        email: {
           required: true
         }
       }
