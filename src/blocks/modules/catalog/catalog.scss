@@ -82,6 +82,12 @@
             margin-bottom: 0;
         }
 
+        .g-tabs__btn {
+            @media (max-width: 1330px) {
+                padding: 7.5px 8px 3.5px;
+            }
+        }
+
         &.active {
             margin-bottom: 0;
             .g-tabs-dropdown {

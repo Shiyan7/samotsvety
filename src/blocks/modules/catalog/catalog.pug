@@ -28,7 +28,7 @@ if page === "new"
 
                 .sort-by.catalog__sort-by
                     button.btn-reset.sort-by__open.open-sort-by сортировка
-                    span.sort-by__caption Сортировать по:
+                    span.sort-by__caption Сортировка
                     .sort-by__select.open-sort-by
                         span.sort-by__current По популярности
                         .sort-by__top
@@ -538,7 +538,7 @@ if page === "favorites"
 
                 .sort-by.catalog__sort-by.favorites__sort-by
                     button.btn-reset.sort-by__open.open-sort-by сортировка
-                    span.sort-by__caption Сортировать по:
+                    span.sort-by__caption Сортировка
                     .sort-by__select.open-sort-by
                         span.sort-by__current По популярности
                         .sort-by__top
@@ -719,54 +719,11 @@ if page === "catalog"
                     span.filters-toggle__quantity 8
                 span.catalog__quantity 356 товаров
 
-                ul.g-tabs.list-reset.catalog__tabs
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Новинки
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn На свадьбу
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Женские
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Мужские
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Для вечернего образа
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn.g-tabs__btn--more
-                            |Ещё
-                            +icon("arrow")
-                        ul.g-tabs-dropdown.list-reset
-                            
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Необычные
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Новинки
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn На свадьбу
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Женские
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn НА КАЖДЫЙ ДЕНЬ
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Для вечернего образа
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Необычные
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Новинки
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn На свадьбу
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn АКТУАЛЬНАЯ КЛАССИКА
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn НА КАЖДЫЙ ДЕНЬ
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn НЕОБЫЧНЫЕ
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn ДЕТЯМ
-                    
+                +catalogTabs
 
                 .sort-by.catalog__sort-by
                     button.btn-reset.sort-by__open.open-sort-by сортировка
-                    span.sort-by__caption Сортировать по:
+                    span.sort-by__caption Сортировка
                     .sort-by__select.open-sort-by
                         span.sort-by__current По популярности
                         .sort-by__top
@@ -1439,53 +1396,11 @@ if page === "collection"
                     span.filters-toggle__quantity 8
                 span.catalog__quantity 356 товаров
 
-                ul.g-tabs.list-reset.catalog__tabs
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Новинки
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn На свадьбу
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Женские
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Мужские
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Для вечернего образа
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn.g-tabs__btn--more
-                            |Ещё
-                            +icon("arrow")
-                        ul.g-tabs-dropdown.list-reset
-                            
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Необычные
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Новинки
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn На свадьбу
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Женские
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn НА КАЖДЫЙ ДЕНЬ
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Для вечернего образа
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Необычные
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Новинки
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn На свадьбу
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn АКТУАЛЬНАЯ КЛАССИКА
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn НА КАЖДЫЙ ДЕНЬ
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn НЕОБЫЧНЫЕ
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn ДЕТЯМ
+                +catalogTabs
 
                 .sort-by.catalog__sort-by
                     button.btn-reset.sort-by__open.open-sort-by сортировка
-                    span.sort-by__caption Сортировать по:
+                    span.sort-by__caption Сортировка
                     .sort-by__select.open-sort-by
                         span.sort-by__current По популярности
                         .sort-by__top
@@ -2158,53 +2073,11 @@ if page === "search-results"
                     span.filters-toggle__quantity 8
                 span.catalog__quantity 356 товаров
 
-                ul.g-tabs.list-reset.catalog__tabs
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Новинки
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn На свадьбу
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Женские
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Мужские
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn Для вечернего образа
-                    li.g-tabs__item
-                        button.btn-reset.g-tabs__btn.g-tabs__btn--more
-                            |Ещё
-                            +icon("arrow")
-                        ul.g-tabs-dropdown.list-reset
-                            
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Необычные
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Новинки
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn На свадьбу
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Женские
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn НА КАЖДЫЙ ДЕНЬ
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Для вечернего образа
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Необычные
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn Новинки
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn На свадьбу
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn АКТУАЛЬНАЯ КЛАССИКА
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn НА КАЖДЫЙ ДЕНЬ
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn НЕОБЫЧНЫЕ
-                            li.g-tabs__item
-                                button.btn-reset.g-tabs__btn ДЕТЯМ
+                +catalogTabs
 
                 .sort-by.catalog__sort-by
                     button.btn-reset.sort-by__open.open-sort-by сортировка
-                    span.sort-by__caption Сортировать по:
+                    span.sort-by__caption Сортировка
                     .sort-by__select.open-sort-by
                         span.sort-by__current По популярности
                         .sort-by__top

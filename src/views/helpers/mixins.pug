@@ -119,6 +119,50 @@ mixin filters(cls)
       li.g-filters__item
           button.btn-reset.g-filters__btn(data-filters-path="high-magnification-art") высокое ювелирное искусство
 
+mixin catalogTabs
+  ul.g-tabs.list-reset.catalog__tabs
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Новинки
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn На свадьбу
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Женские
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Мужские
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Для вечернего образа
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn Необычные
+    li.g-tabs__item
+        button.btn-reset.g-tabs__btn.g-tabs__btn--more
+            |Ещё
+            +icon("arrow")
+        ul.g-tabs-dropdown.list-reset
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Новинки
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn На свадьбу
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Женские
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn НА КАЖДЫЙ ДЕНЬ
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Для вечернего образа
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Необычные
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn Новинки
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn На свадьбу
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn АКТУАЛЬНАЯ КЛАССИКА
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn НА КАЖДЫЙ ДЕНЬ
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn НЕОБЫЧНЫЕ
+            li.g-tabs__item
+                button.btn-reset.g-tabs__btn ДЕТЯМ
+
 mixin tabs
   ul.g-tabs.list-reset(data-simplebar)
     li.g-tabs__item
