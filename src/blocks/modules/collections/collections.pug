@@ -27,7 +27,9 @@ else
                     a.collections-item__content(href="collection.html") 
                         span.collections-item__back.g-title heritage
                         h2.g-title.collections-item__title heritage
-                        img.collections-item__image(src="img/collection-4.png", alt="heritage")
+                        picture
+                            source(srcset="img/collection-4.png" media="(min-width: 577px)")
+                            img.collections-item__image(src="img/collection-4-mobile.png", alt="")
                         p.collections-item__desc До недавнего времени считалось, что спонсорство оправдывает презентационный материал. Сегмент рынка, суммируя приведенные примеры, изменяет продуктовый ассортимент.
                         span.collections-item__caption Heritage
                 li.collections-item.collections-item--2
