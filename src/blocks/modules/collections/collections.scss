@@ -96,10 +96,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-
-        @media (max-width: 1024px) {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02));
-        }
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01));
 
         &--1 {
 
