@@ -1,7 +1,28 @@
 .map {
 	width: 100%;
 	height: 100%;
-	background-color: #333;
+	background-color: #c4c4c4;
+
+	&-item {
+		font-family: "TTCommons", sans-serif;
+		display: flex;
+		max-width: 100%;
+		height: 100%;
+
+		&__image {
+			width: 50%;
+			height: 100%;
+			margin-bottom: 0;
+			margin-right: 20px;
+		}
+
+		&__right {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 15px 0;
+		}
+	}
 }
 
 [class*="copyrights-pane"] {

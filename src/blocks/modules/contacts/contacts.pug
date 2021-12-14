@@ -19,7 +19,7 @@ section.contacts
         if page === "contacts"
             h2.g-title.contacts__subtitle Офисы Интернет-галереи
             .g-filters
-                ul.g-filters__list.contacts-filters.list-reset
+                ul.g-filters__list.contacts-filters.contacts-filters--3.list-reset
                     li.g-filters__item
                         button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="petersburg") Санкт-Петербург
                     li.g-filters__item
@@ -39,7 +39,7 @@ section.contacts
                         p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
                         a.offices-item__link(href="mailto:jewel@russammarket.ru") jewel@russammarket.ru
                     .contacts__map
-                        .map(id="map")
+                        +map
                 .g-filters__content.contacts__content(data-filters-target="moscow")
                     .offices-item.contacts__offices-item
                         img.offices-item__image(src="img/no-image.svg", alt="Офис 1")
@@ -55,7 +55,7 @@ section.contacts
                         a.offices-item__desc.offices-item__tel(href="#") Тел.: +7 (495) 649 61 78
                         a.offices-item__link(href="mailto:jewel@russammarket.ru") jewel@russammarket.ru
                     .contacts__map
-                        img(src="img/map.svg", alt="Карта офисов")
+                        +map
             h2.g-title.contacts__subtitle Сеть фирменных магазинов
             .g-filters
                 ul.g-filters__list.contacts-filters.contacts-filters--2.list-reset
@@ -171,7 +171,7 @@ section.contacts
                                     p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
                                     a.offices-item__link(href="mailto:jewel@russammarket.ru") jewel@russammarket.ru
                 .g-filters__content.contacts__content.store-list.store-list--2(data-filters-target="map")
-                    img.contacts__full-map(src="img/full-map.svg", alt="")
+                    +map
         if page === "shops"
             h2.g-title.contacts__subtitle Сеть фирменных магазинов
             .g-filters
@@ -280,10 +280,10 @@ section.contacts
                                         span.offices-item__desc ст. м. Технологический институт - 2
                                     p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
                 .g-filters__content.contacts__content.store-list.store-list--2(data-filters-target="map")
-                    img.contacts__full-map(src="img/full-map.svg", alt="")
+                    +map
             h2.g-title.contacts__subtitle Офисы Интернет-галереи
             .g-filters
-                ul.g-filters__list.contacts-filters.list-reset
+                ul.g-filters__list.contacts-filters.contacts-filters--3.list-reset
                     li.g-filters__item
                         button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="petersburg") Санкт-Петербург
                     li.g-filters__item
@@ -303,7 +303,7 @@ section.contacts
                         p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
                         a.offices-item__link(href="mailto:jewel@russammarket.ru") jewel@russammarket.ru
                     .contacts__map
-                        img(src="img/map.svg", alt="Карта офисов")
+                        +map
                 .g-filters__content.contacts__content(data-filters-target="moscow")
                     .offices-item.contacts__offices-item
                         img.offices-item__image(src="img/no-image.svg", alt="Офис 1")
@@ -319,7 +319,7 @@ section.contacts
                         a.offices-item__desc.offices-item__tel(href="#") Тел.: +7 (495) 649 61 78
                         a.offices-item__link(href="mailto:jewel@russammarket.ru") jewel@russammarket.ru
                     .contacts__map
-                        img(src="img/map.svg", alt="Карта офисов")
+                        +map
         h2.g-title.contacts__subtitle реквизиты ООО «ДАН»
         .contacts-info.read-more-wrapper
             .contacts-info__col

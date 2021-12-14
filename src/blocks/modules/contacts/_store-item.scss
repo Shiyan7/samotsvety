@@ -8,6 +8,15 @@
         &--2 {
             padding-bottom: 0;
             border-bottom: none;
+            height: 744px;
+
+            @media (max-width: 1230px) {
+                height: 550px;
+            }
+
+            @media (max-width: 1024px) {
+                height: 400px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -20,6 +29,10 @@
         }
 
         &__wrapper {
+            display: grid;
+            row-gap: 40px;
+            overflow: auto;
+            grid-template-columns: repeat(2, 1fr);
             max-height: 664px;
 
             @media (max-width: 1024px) {

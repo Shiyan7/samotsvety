@@ -187,8 +187,10 @@
     display: block;
     position: relative;
     height: 336px;
+    background-color: #fafafa;
     overflow: hidden;
     margin-bottom: 21px;
+    padding: 0 60px;
 
     @media (max-width: 768px) {
         margin-bottom: 12px;
@@ -208,9 +210,9 @@
     display: flex;
     position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: auto;
+    left: auto;
+    width: calc(100% - 120px);
     height: 100%;
 }
 
@@ -254,7 +256,7 @@
     display: block;
     max-width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .image-switch__item:first-child .image-switch__img {
