@@ -62,8 +62,6 @@ class GraphModal {
             t.target.closest(".modal__close") && this.close();
         }.bind(this)), window.addEventListener("keydown", function (t) {
             27 == t.keyCode && this.isOpen && this.close(), 9 == t.which && this.isOpen && this.focusCatch(t);
-        }.bind(this)), this.modal.addEventListener("click", function (t) {
-            t.target.classList.contains("modal__container") || t.target.closest(".modal__container") || !this.isOpen || this.close();
         }.bind(this)));
     }
     open(t) {
