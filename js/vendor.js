@@ -51,19 +51,46 @@ class GraphModal {
         }, t), this.modal = document.querySelector(".modal"), this.speed = 300, this.animation = "fade", this._reOpen = !1, this._nextContainer = !1, this.modalContainer = !1, this.isOpen = !1, this.previousActiveElement = !1, this._focusElements = ["a[href]", "input", "select", "textarea", "button", "iframe", "[contenteditable]", "[tabindex]:not([tabindex^=\"-\"])"], this._fixBlocks = document.querySelectorAll(".fix-block"), this.events();
     }
     events() {
-        this.modal && (document.addEventListener("click", function (t) {
-            const e = t.target.closest("[data-graph-path]");
-            if (e) {
-                let t = e.dataset.graphPath,
-                    s = e.dataset.graphAnimation,
-                    i = e.dataset.graphSpeed;
-                return this.animation = s || "fade", this.speed = i ? parseInt(i) : 300, this._nextContainer = document.querySelector(`[data-graph-target="${t}"]`), void this.open();
-            }
-            t.target.closest(".modal__close") && this.close();
-        }.bind(this)), window.addEventListener("keydown", function (t) {
-            27 == t.keyCode && this.isOpen && this.close(), 9 == t.which && this.isOpen && this.focusCatch(t);
-        }.bind(this)));
-    }
+		if (this.modal) {
+			document.addEventListener('click', function(e) {
+				const clickedElement = e.target.closest(`[data-graph-path]`);
+				if (clickedElement) {
+					let target = clickedElement.dataset.graphPath;
+					let animation = clickedElement.dataset.graphAnimation;
+					let speed =  clickedElement.dataset.graphSpeed;
+					this.animation = animation ? animation : 'fade';
+					this.speed = speed ? parseInt(speed) : 300;
+					this._nextContainer = document.querySelector(`[data-graph-target="${target}"]`); 
+					this.open();
+					return;
+				}
+
+				if (e.target.closest('.modal__close')) {
+					this.close();
+					return;
+				}
+			}.bind(this));
+
+			window.addEventListener('keydown', function(e) {
+				if (e.keyCode == 27 && this.isOpen) {
+					this.close();
+				}
+
+				if (e.which == 9 && this.isOpen) {
+					this.focusCatch(e);
+					return;
+				}
+			}.bind(this));
+
+			document.addEventListener('click', function(e) {
+				if (e.target.classList.contains('modal') && e.target.classList.contains("is-open")) {
+					this.close();
+				}
+			}.bind(this));
+		}
+		
+	}
+    
     open(t) {
         if (this.previousActiveElement = document.activeElement, this.isOpen) return this.reOpen = !0, void this.close();
         this.modalContainer = this._nextContainer, t && (this.modalContainer = document.querySelector(`[data-graph-target="${t}"]`)), this.modal.style.setProperty("--transition-time", `${this.speed/1e3}s`), this.modal.classList.add("is-open"), this.disableScroll(), this.modalContainer.classList.add("modal-open"), this.modalContainer.classList.add(this.animation), setTimeout(() => {
