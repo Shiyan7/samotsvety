@@ -106,7 +106,7 @@
 
             @media (max-width: 576px) {
                 .collections-item__title {
-                    margin-bottom: 397px;
+                    margin-bottom: 420px;
                 }
             }
 
@@ -407,7 +407,7 @@
         }
 
         &__caption {
-            display: block;
+            display: none;
             position: relative;
             z-index: 1;
             font-size: 11px;
@@ -415,13 +415,14 @@
             color: #000;
             text-transform: uppercase;
             text-align: center;
-            font-family: "HeliosExtLight", sans-serif;
-            font-weight: 300;
-            padding: 13px 0 19px;
+            padding: 20px 0 19px;
             margin: 25px -35px 0;
             background-color: #fff;
-            @media (min-width: 577px) {
-                display: none;
+
+            @media (max-width: 576px) {
+                display: block;
+                font-family: "HeliosExt", sans-serif;
+                font-weight: 400;
             }
         }
 

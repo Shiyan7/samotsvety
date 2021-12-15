@@ -9,11 +9,20 @@
 		max-width: 100%;
 		height: 100%;
 
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+
 		&__image {
 			width: 305px;
 			height: 100%;
 			margin-bottom: 0;
 			margin-right: 20px;
+
+			@media (max-width: 768px) {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
 		}
 
 		&__right {
@@ -21,6 +30,10 @@
 			align-items: flex-start;
 			flex-direction: column;
 			padding: 15px 0;
+
+			@media (max-width: 768px) {
+				padding: 0;
+			}
 		}
 	}
 }
@@ -35,4 +48,14 @@
 
 .ymaps-2-1-79-balloon__content {
 	padding: 20px !important;
+
+	& > ymaps {
+		width: 631px !important;
+		height: 136px !important;
+
+		@media (max-width: 768px) {
+			width: 254px !important;
+			height: auto !important;
+		}
+	}
 }
