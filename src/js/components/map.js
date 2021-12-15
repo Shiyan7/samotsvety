@@ -129,7 +129,5 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
-	if (ymaps) {
-		window.ymaps.ready(init);
-	}
+	window.ymaps?.ready(init);
 });
