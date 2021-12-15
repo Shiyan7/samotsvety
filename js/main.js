@@ -391,6 +391,8 @@ observer.observe();
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  var _window$ymaps;
+
   var maps = document.querySelectorAll(".map");
   maps.forEach(function (el) {
     function init() {
@@ -476,9 +478,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  if (ymaps) {
-    window.ymaps.ready(init);
-  }
+  (_window$ymaps = window.ymaps) === null || _window$ymaps === void 0 ? void 0 : _window$ymaps.ready(init);
 });
 "use strict";
 
