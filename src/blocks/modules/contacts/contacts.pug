@@ -180,7 +180,7 @@ section.contacts
                         button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="list") Списком
                     li.g-filters__item
                         button.btn-reset.g-filters__btn(data-filters-path="map") На карте     
-                .g-filters__content.contacts__content.store-list(data-filters-target="list")
+                .g-filters__content.contacts__content.store-list.g-filters__content--active(data-filters-target="list")
                     .store-list__wrapper(data-simplebar)
                         - for(let i = 0; i < 2; i++)
                             .offices-item.store-item.contacts__store-item
@@ -279,7 +279,7 @@ section.contacts
                                         </svg>
                                         span.offices-item__desc ст. м. Технологический институт - 2
                                     p.offices-item__desc.offices-item__hours Пн—Пт с 10:00 до 21:00  Сб—Вс с 10:00 до 17:00
-                .g-filters__content.contacts__content.store-list.store-list--2.g-filters__content--active(data-filters-target="map")
+                .g-filters__content.contacts__content.store-list.store-list--2(data-filters-target="map")
                     +map
             h2.g-title.contacts__subtitle Офисы Интернет-галереи
             .g-filters
