@@ -1,15 +1,14 @@
 .menu {
     display: none;
     position: absolute;
-    top: calc(100% - 0px);
-    left: 50%;
+    top: 100%;
+    left: 0;
     width: 100%;
-    max-width: 1366px;
     overflow: hidden;
-    transform: translateX(-50%);
     border-top: 1px solid #111;
     background-color: #fff;
     padding-bottom: 245px;
+    cursor: initial;
 
     @media (max-width: 1230px) {
         padding-bottom: 380px;
@@ -36,6 +35,8 @@
     &__container {
         position: relative;
         padding-top: 40px;
+        max-width: 1366px;
+        margin: 0 auto;
 
         @media (max-width: 1024px) {
             padding: 118px 26px 0;

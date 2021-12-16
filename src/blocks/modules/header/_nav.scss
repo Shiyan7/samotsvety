@@ -1,3 +1,15 @@
+@media (min-width: 1025px) {
+    .header.m-open {
+        .nav__list {
+            margin-left: -100px;
+        }
+    
+        .nav__item:first-child {
+            padding-left: 100px;
+        }
+    }
+}
+
 .nav {
     font-family: "HeliosExt", sans-serif;
 
@@ -83,12 +95,23 @@
 
     &__item {
         padding: 17px 0;
+        cursor: pointer;
+
+        @include hover {
+            .nav__link {
+                &:after {
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
 
         @media (max-width: 1024px) {
             display: flex;
             justify-content: space-between;
             width: 100%;
             padding: 9px 0;
+            cursor: default;
         }
 
         &:not(:last-child) {
@@ -115,13 +138,6 @@
             font-size: 16px;
             line-height: 19px;
             max-width: 268px;
-        }
-
-        &:hover {
-            &:after {
-                left: 0;
-                width: 100%;
-            }
         }
 
         &:after {

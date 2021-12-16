@@ -1,23 +1,30 @@
 const nav = document.querySelector('.nav'),
     menu = document.querySelector('.menu'),
     burger = document.querySelector(".burger"),
+    header = document.querySelector(".header"),
     burgerClose = document.querySelector(".burger-close"),
+    overlay = document.querySelector(".header__overlay"),
     menuNavLinks = document.querySelectorAll(".menu-nav__link");
 
 const desktopMenu = () => {
     if(window.innerWidth > 1024) {
 
-        $('.nav__item').each(function(){
+        $('.nav__item.js-open-menu').each(function(){
             var t = null;
             var li = $(this);
 
             li.hover(function(){
+                overlay.classList.add("active")
+                header.classList.add("m-open")
                 t = setTimeout(function(){
                     li.find(".menu").slideDown(300);
                     t = null;
                 }, 500);
             }, function(){
+                overlay.classList.remove("active")
+                header.classList.remove("m-open")
                 if (t){
+                    overlay.classList.remove("active")
                     clearTimeout(t);
                     t = null;
                 }
