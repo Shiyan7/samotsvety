@@ -392,10 +392,12 @@ observer.observe();
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  var _window$ymaps;
+  var _window$ymaps2;
 
   var maps = document.querySelectorAll(".map");
   maps.forEach(function (el) {
+    var _window$ymaps;
+
     function init() {
       var center = [48.8866527839977, 2.34310679732974];
       var map = new ymaps.Map(el, {
@@ -437,9 +439,7 @@ document.addEventListener("DOMContentLoaded", function () {
       map.geoObjects.add(placemark1).add(placemark2);
     }
 
-    if (ymaps) {
-      window.ymaps.ready(init);
-    }
+    (_window$ymaps = window.ymaps) === null || _window$ymaps === void 0 ? void 0 : _window$ymaps.ready(init);
   });
 
   function init() {
@@ -479,7 +479,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  (_window$ymaps = window.ymaps) === null || _window$ymaps === void 0 ? void 0 : _window$ymaps.ready(init);
+  (_window$ymaps2 = window.ymaps) === null || _window$ymaps2 === void 0 ? void 0 : _window$ymaps2.ready(init);
 });
 "use strict";
 
