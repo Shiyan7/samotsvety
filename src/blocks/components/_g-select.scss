@@ -11,7 +11,7 @@
     &:not(.is-open) {
         @include hover {
             .choices__inner:after {
-                transform: translateY(-42%);
+                opacity: 1;
             }
         }
     }
@@ -19,6 +19,7 @@
     &.is-open {
         .choices__inner:after {
             z-index: 2;
+            opacity: 1;
             transform: translateY(-50%) rotate(180deg);
         }
     }
@@ -53,10 +54,11 @@
             width: 28px;
             height: 28px;
             transform: translateY(-50%);
-            background-image: url(../img/down.svg);
+            opacity: 0.5;
+            background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10.8887L14 18L21 10.8887L20.1252 10L14 16.2225L7.87484 10L7 10.8887Z' fill='%23111111'/%3E%3C/svg%3E%0A");
             background-position: center;
             background-repeat: no-repeat;
-            transition: transform 0.2s;
+            transition: transform 0.2s, opacity 0.3s;
         }
     }
 

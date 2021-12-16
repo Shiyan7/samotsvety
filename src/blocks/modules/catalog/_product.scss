@@ -258,6 +258,7 @@
     pointer-events: none;
     background-color: #fff;
     opacity: 0;
+    transition: opacity 0.2s;
 
     &:before {
         @include pseudo();
@@ -304,6 +305,7 @@
     height: 2px;
     margin: 0 4px;
     background-color: #d9d9d9;
+    transition: background-color 0.2s;
 }
 
 .image-pagination__item--active {
@@ -313,5 +315,11 @@
 .filters-open {
     @media (max-width: 768px) {
         overflow: hidden;
+    }
+}
+
+@media (min-width: 769px) {
+    .filters-open .product__image {
+        height: 300px;
     }
 }
