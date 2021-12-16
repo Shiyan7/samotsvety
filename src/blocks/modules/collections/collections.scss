@@ -104,6 +104,13 @@
 
         &--1 {
 
+            .collections-item__image {
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+
             @media (max-width: 576px) {
                 .collections-item__title {
                     margin-bottom: 420px;
@@ -138,18 +145,6 @@
                         transform: rotate(-90deg);
                         transform-origin: left;
                     }
-                }
-            }
-
-            .collections-item__image {
-                width: 653px;
-                height: 536px;
-                right: 0;
-                top: 0;
-
-                @media (max-width: 1024px) {
-                    width: 100%;
-                    height: 100%;
                 }
             }
         }

@@ -76,9 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				.add(placemark2);
 		}
 
-		if (ymaps) {
-			window.ymaps.ready(init);
-		}
+		window.ymaps?.ready(init);
 	});
 
 	function init() {
