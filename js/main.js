@@ -321,6 +321,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper('.hero-slider', {
+    loop: true,
     navigation: {
       nextEl: '.hero-slider__btn--next',
       prevEl: '.hero-slider__btn--prev'
