@@ -97,6 +97,16 @@
         padding: 17px 0;
         cursor: pointer;
 
+        @media (min-width: 1025px) {
+            &.active {
+                pointer-events: none;
+                .nav__link:after {
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+
         @include hover {
             .nav__link {
                 &:after {
@@ -132,6 +142,7 @@
         color: #111;
         font-size: 14px;
         line-height: 20px;
+        pointer-events: none;
 
         @media (max-width: 1024px) {
             display: block;

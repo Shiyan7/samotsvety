@@ -545,6 +545,7 @@
         }
 
         &__item {
+            position: relative;
             display: flex;
             align-items: center;
             color: #111;
@@ -552,7 +553,7 @@
             line-height: 19px;
             background-color: rgba(163, 157, 148, 0.3);
             border-radius: 100px;
-            padding: 7px 7px 7px 11px;
+            padding: 8px 27px 6px 11px;
             text-transform: uppercase;
 
             @media (max-width: 768px) {
@@ -574,7 +575,7 @@
             }
 
             span {
-                height: 14px;
+                line-height: 14px;
             }
 
             &:not(:last-child) {
@@ -586,11 +587,14 @@
             }
 
             svg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 7px;
                 display: block;
                 width: 16px;
                 height: 16px;
                 object-fit: cover;
-                margin-left: 4px;
                 fill: #fff;
                 transition: fill 0.3s;
 

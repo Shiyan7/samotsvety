@@ -11,6 +11,9 @@
         }
 
         @media (max-width: 576px) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
             padding-top: 36px;
             padding-bottom: 36px;
         }
@@ -51,10 +54,10 @@
         }
     }
 
-    &__link {
+    &__btn {
         @media (max-width: 576px) {
-            display: block;
-            margin: 0 19px;
+            width: calc(100% - 38px);
+            margin: 0 auto;
             padding: 16px 0 13px;
         }
     }

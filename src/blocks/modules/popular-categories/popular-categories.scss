@@ -19,7 +19,7 @@
         visibility: visible;
         z-index: 1;
         transition: opacity 0.3s, visibility 0.3s;
-        background: linear-gradient(0, #fff 33.85%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(0, #fff 33.85%, rgba(255, 255, 255, 0) 90%);
 
         @media (max-width: 768px) {
             display: none;

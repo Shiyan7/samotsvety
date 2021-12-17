@@ -2,7 +2,10 @@
     &__container {
         padding-top: 16px;
         padding-bottom: 79px;
-        max-width: 1366px;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
         @media (max-width: 768px) {
             padding: 0;
             padding-bottom: 50px;
