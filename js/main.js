@@ -508,7 +508,7 @@ var nav = document.querySelector('.nav'),
     menu = document.querySelector('.menu'),
     burger = document.querySelector(".burger"),
     header = document.querySelector(".header"),
-    navItems = document.querySelectorAll(".nav__item"),
+    navItems = document.querySelectorAll(".nav__item--drop"),
     menus = document.querySelectorAll(".menu"),
     burgerClose = document.querySelector(".burger-close"),
     overlay = document.querySelector(".overlay"),
@@ -769,11 +769,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   var moreCategories = document.querySelector(".more-categories");
-  var popularCategories = document.querySelector(".popular-categories");
   var hiddenCategories = document.querySelectorAll(".popular-category--hidden");
   var popularCategoriesItems = document.querySelectorAll(".popular-category__item");
   moreCategories === null || moreCategories === void 0 ? void 0 : moreCategories.addEventListener("click", function (e) {
-    popularCategories.classList.add("active");
     hiddenCategories.forEach(function (el) {
       return el.classList.remove("popular-category--hidden");
     });
