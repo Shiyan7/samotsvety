@@ -7,18 +7,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const regionSelectionBtns = document.querySelectorAll(".js-region-selection__btn");
     const regionSelectionChoice = document.querySelectorAll(".region-selection__choice");
     const regionSelectionCloseBtns = document.querySelectorAll(".region-selection__close");
+    const nav = document.querySelector(".nav");
     const body = document.body;
 
     /* Functions */
 
     function toggleLocation() {
         regionSelection.classList.toggle("isOpen");
-        body.classList.toggle("lock")
+        if (!nav.classList.contains("show")) {
+            body.classList.toggle("lock")
+        }
     }
 
     function hiddenLocation() {
         regionSelection.classList.remove("isOpen");
-        body.classList.remove("lock")
+        if (!nav.classList.contains("show")) {
+            body.classList.remove("lock")
+        }
     }
 
     function changeLocation(e) {

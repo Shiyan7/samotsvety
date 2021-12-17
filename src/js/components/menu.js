@@ -3,7 +3,7 @@ const nav = document.querySelector('.nav'),
     burger = document.querySelector(".burger"),
     header = document.querySelector(".header"),
     burgerClose = document.querySelector(".burger-close"),
-    overlay = document.querySelector(".header__overlay"),
+    overlay = document.querySelector(".overlay"),
     menuNavLinks = document.querySelectorAll(".menu-nav__link");
 
 const desktopMenu = () => {

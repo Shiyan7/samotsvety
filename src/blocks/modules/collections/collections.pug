@@ -7,7 +7,9 @@ if page === "card" || page === "card2" || page === "card3" || page === "card4" |
                         span.collections-item__back.g-title nightshade
                         h3.g-title.collections-item__subtitle КОЛЛЕКЦИЯ
                         h2.g-title.collections-item__title.collections-item__title--2 nightshade
-                        img.collections-item__image(src="img/collection-7.png", alt="nightshade")
+                        picture
+                            source(srcset="img/collection-image-1-rectangle.png" media="(min-width: 1025px)")
+                            img.collections-item__image(src="img/collection-image-2-vertical.png", alt="nightshade")
                         a.g-btn.g-btn--stroke.collections-item__link(href="collection.html")  Смотреть КОЛЛЕКЦИЮ
                         p.collections-item__desc До недавнего времени считалось, что спонсорство оправдывает презентационный материал. Сегмент рынка, суммируя приведенные примеры, изменяет продуктовый ассортимент.
                 
@@ -56,7 +58,7 @@ else
                         h2.g-title.collections-item__title nightshade
                         picture
                             source(srcset="img/collection-image-1-rectangle.png" media="(min-width: 1025px)")
-                            img.collections-item__image(src="img/collection-image-2-vertical.png", alt="heritage")
+                            img.collections-item__image(src="img/collection-image-2-vertical.png", alt="nightshade")
                         p.collections-item__desc До недавнего времени считалось, что спонсорство оправдывает презентационный материал. Сегмент рынка, суммируя приведенные примеры, изменяет продуктовый ассортимент.
                         span.collections-item__caption nightshade
             button.btn-reset.g-btn.g-btn--stroke.g-btn--center.collections__more показать ещё
