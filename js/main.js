@@ -508,31 +508,68 @@ var nav = document.querySelector('.nav'),
     menu = document.querySelector('.menu'),
     burger = document.querySelector(".burger"),
     header = document.querySelector(".header"),
+    navItems = document.querySelectorAll(".nav__item"),
+    menus = document.querySelectorAll(".menu"),
     burgerClose = document.querySelector(".burger-close"),
     overlay = document.querySelector(".overlay"),
     menuNavLinks = document.querySelectorAll(".menu-nav__link");
 
 var desktopMenu = function desktopMenu() {
   if (window.innerWidth > 1024) {
-    $('.nav__item.js-open-menu').each(function () {
-      var t = null;
-      var li = $(this);
-      li.hover(function () {
-        t = setTimeout(function () {
-          overlay.classList.add("active");
-          header.classList.add("m-open");
-          li.find(".menu").slideDown(300);
-          t = null;
-        }, 500);
-      }, function () {
+    var isClicked = false;
+    document.addEventListener("click", function (e) {
+      if (e.target.classList.contains("nav__item--drop")) {
+        var navItem = e.target;
+        isClicked = true;
+        var currentMenu = navItem.querySelector(".menu");
+        overlay.classList.add("active");
+        header.classList.add("m-open");
+        navItems.forEach(function (el) {
+          return el.classList.remove("active");
+        });
+        navItem.classList.add("active");
+        menus.forEach(function (mn) {
+          $(mn).slideUp(300);
+        });
+        $(currentMenu).slideDown(300);
+      } else if (!e.target.closest(".nav")) {
+        isClicked = false;
+        navItems.forEach(function (el) {
+          return el.classList.remove("active");
+        });
         overlay.classList.remove("active");
         header.classList.remove("m-open");
-
-        if (t) {
+        menus.forEach(function (el) {
+          $(el).slideUp(300);
+        });
+      }
+    });
+    navItems.forEach(function (el) {
+      var t = null;
+      el.addEventListener("mouseenter", function (e) {
+        if (!isClicked) {
+          t = setTimeout(function () {
+            overlay.classList.add("active");
+            header.classList.add("m-open");
+            $(el).find(".menu").slideDown(300);
+            $(el).find(".menu").addClass("animation");
+            t = null;
+          }, 500);
+        }
+      });
+      el.addEventListener("mouseleave", function (e) {
+        if (!isClicked) {
+          header.classList.remove("m-open");
           overlay.classList.remove("active");
-          clearTimeout(t);
-          t = null;
-        } else li.find(".menu").slideUp(300);
+
+          if (t) {
+            clearTimeout(t);
+            t = null;
+          } else {
+            $(el).find(".menu").slideUp(300);
+            $(el).find(".menu").removeClass("animation");
+          }
+        }
       });
     });
     menuNavLinks.forEach(function (el) {
