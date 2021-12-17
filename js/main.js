@@ -554,7 +554,7 @@ var desktopMenu = function desktopMenu() {
             $(el).find(".menu").slideDown(300);
             $(el).find(".menu").addClass("animation");
             t = null;
-          }, 500);
+          }, 700);
         }
       });
       el.addEventListener("mouseleave", function (e) {
