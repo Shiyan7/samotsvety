@@ -14,9 +14,9 @@ const desktopMenu = () => {
             var li = $(this);
 
             li.hover(function(){
-                overlay.classList.add("active")
-                header.classList.add("m-open")
                 t = setTimeout(function(){
+                    overlay.classList.add("active")
+                    header.classList.add("m-open")
                     li.find(".menu").slideDown(300);
                     t = null;
                 }, 500);

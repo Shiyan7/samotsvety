@@ -1,19 +1,40 @@
-section.questions
-    .container.questions__container
-        h2.g-title.g-title--center.g-title--white.questions__title ЗАДАЙТЕ ВОПРОС ПРЯМО СЕЙЧАС
-        h3.questions__subtitle Выберите удобный способ связи - откроется чат с менеджером
-        ul.questions-social.list-reset
-            li.questions-social__item
-                a.questions-social__link(href="#")
-                    +icon("telegram")
-            li.questions-social__item
-                a.questions-social__link(href="#")
-                    +icon("instagram")
-            li.questions-social__item
-                a.questions-social__link(href="#")
-                    +icon("vk")
-            li.questions-social__item
-                a.questions-social__link(href="#")
-                    +icon("facebook")
-        p.questions__desc в рабочее время отвечаем в течение 
-            span 15 минут
+if page === "collection"
+    section.questions.collection__questions
+        .container.questions__container
+            h2.g-title.g-title--center.g-title--white.questions__title ЗАДАЙТЕ ВОПРОС ПРЯМО СЕЙЧАС
+            h3.questions__subtitle Выберите удобный способ связи - откроется чат с менеджером
+            ul.questions-social.list-reset
+                li.questions-social__item
+                    a.questions-social__link(href="#")
+                        +icon("telegram")
+                li.questions-social__item
+                    a.questions-social__link(href="#")
+                        +icon("instagram")
+                li.questions-social__item
+                    a.questions-social__link(href="#")
+                        +icon("vk")
+                li.questions-social__item
+                    a.questions-social__link(href="#")
+                        +icon("facebook")
+            p.questions__desc в рабочее время отвечаем в течение 
+                span 15 минут
+else
+    section.questions
+        .container.questions__container
+            h2.g-title.g-title--center.g-title--white.questions__title ЗАДАЙТЕ ВОПРОС ПРЯМО СЕЙЧАС
+            h3.questions__subtitle Выберите удобный способ связи - откроется чат с менеджером
+            ul.questions-social.list-reset
+                li.questions-social__item
+                    a.questions-social__link(href="#")
+                        +icon("telegram")
+                li.questions-social__item
+                    a.questions-social__link(href="#")
+                        +icon("instagram")
+                li.questions-social__item
+                    a.questions-social__link(href="#")
+                        +icon("vk")
+                li.questions-social__item
+                    a.questions-social__link(href="#")
+                        +icon("facebook")
+            p.questions__desc в рабочее время отвечаем в течение 
+                span 15 минут

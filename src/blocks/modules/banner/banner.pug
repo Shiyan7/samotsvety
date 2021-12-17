@@ -1,28 +1,58 @@
-section.banner
-    .container.banner__container
-        .banner-left
-            h3.g-title.g-title--white.banner__subtitle Пройдите короткий тест <br> и получите подборку украшений на телефон
-            h2.g-title.g-title--white.banner__title Подберем украшения по&nbsp;вашим пожеланиям и&nbsp;бюджету
-            p.banner__desc Снимем видео, сделаем фотографии изделий, замерим размеры на линейке и пришлём вам в WhatsApp.
-            a.banner__link.g-btn.g-btn--light(href="#") подобрать украшение
-            span.banner__caption Тест бесплатный. Ваши данные защищены
-        .banner__image
-            img.lozad(src="img/banner-image.png", srcset="img/banner-image@2x.png 2x", alt="Фотография телефона")
-        .banner-right
-            h4.g-title.g-title--white.banner-right__title Ответив на вопросы, вы получите:
-            ul.banner-list.list-reset
-                li.banner-list__item
-                    +icon("promocode")
-                    span.g-title.g-title--white.banner-list__caption 
-                        span Промокод на скидку 5%<br>
-                        |SMS СООБЩЕНИЕМ
-                li.banner-list__item
-                    +icon("instruction")
-                    span.g-title.g-title--white.banner-list__caption 
-                        span ИНСТРУКЦИЮ 
-                        |КАК ПРОВЕРИТЬ КАЧЕСТВО ЮВЕЛИРНЫХ ИЗДЕЛИЙ
-                li.banner-list__item
-                    +icon("consultation")
-                    span.g-title.g-title--white.banner-list__caption 
-                        span КОНСУЛЬТАЦИЮ 
-                        | ЭКСПЕРТА СО&nbsp;СТАЖЕМ БОЛЕЕ 10 ЛЕТ
+if page === "collection"
+    section.banner.collection__banner
+        .container.banner__container
+            .banner-left
+                h3.g-title.g-title--white.banner__subtitle Пройдите короткий тест <br> и получите подборку украшений на телефон
+                h2.g-title.g-title--white.banner__title Подберем украшения по&nbsp;вашим пожеланиям и&nbsp;бюджету
+                p.banner__desc Снимем видео, сделаем фотографии изделий, замерим размеры на линейке и пришлём вам в WhatsApp.
+                a.banner__link.g-btn.g-btn--light(href="#") подобрать украшение
+                span.banner__caption Тест бесплатный. Ваши данные защищены
+            .banner__image
+                img.lozad(src="img/banner-image.png", srcset="img/banner-image@2x.png 2x", alt="Фотография телефона")
+            .banner-right
+                h4.g-title.g-title--white.banner-right__title Ответив на вопросы, вы получите:
+                ul.banner-list.list-reset
+                    li.banner-list__item
+                        +icon("promocode")
+                        span.g-title.g-title--white.banner-list__caption 
+                            span Промокод на скидку 5%<br>
+                            |SMS СООБЩЕНИЕМ
+                    li.banner-list__item
+                        +icon("instruction")
+                        span.g-title.g-title--white.banner-list__caption 
+                            span ИНСТРУКЦИЮ 
+                            |КАК ПРОВЕРИТЬ КАЧЕСТВО ЮВЕЛИРНЫХ ИЗДЕЛИЙ
+                    li.banner-list__item
+                        +icon("consultation")
+                        span.g-title.g-title--white.banner-list__caption 
+                            span КОНСУЛЬТАЦИЮ 
+                            | ЭКСПЕРТА СО&nbsp;СТАЖЕМ БОЛЕЕ 10 ЛЕТ
+else
+    section.banner
+        .container.banner__container
+            .banner-left
+                h3.g-title.g-title--white.banner__subtitle Пройдите короткий тест <br> и получите подборку украшений на телефон
+                h2.g-title.g-title--white.banner__title Подберем украшения по&nbsp;вашим пожеланиям и&nbsp;бюджету
+                p.banner__desc Снимем видео, сделаем фотографии изделий, замерим размеры на линейке и пришлём вам в WhatsApp.
+                a.banner__link.g-btn.g-btn--light(href="#") подобрать украшение
+                span.banner__caption Тест бесплатный. Ваши данные защищены
+            .banner__image
+                img.lozad(src="img/banner-image.png", srcset="img/banner-image@2x.png 2x", alt="Фотография телефона")
+            .banner-right
+                h4.g-title.g-title--white.banner-right__title Ответив на вопросы, вы получите:
+                ul.banner-list.list-reset
+                    li.banner-list__item
+                        +icon("promocode")
+                        span.g-title.g-title--white.banner-list__caption 
+                            span Промокод на скидку 5%<br>
+                            |SMS СООБЩЕНИЕМ
+                    li.banner-list__item
+                        +icon("instruction")
+                        span.g-title.g-title--white.banner-list__caption 
+                            span ИНСТРУКЦИЮ 
+                            |КАК ПРОВЕРИТЬ КАЧЕСТВО ЮВЕЛИРНЫХ ИЗДЕЛИЙ
+                    li.banner-list__item
+                        +icon("consultation")
+                        span.g-title.g-title--white.banner-list__caption 
+                            span КОНСУЛЬТАЦИЮ 
+                            | ЭКСПЕРТА СО&nbsp;СТАЖЕМ БОЛЕЕ 10 ЛЕТ
