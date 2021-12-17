@@ -509,7 +509,7 @@ var nav = document.querySelector('.nav'),
     burger = document.querySelector(".burger"),
     header = document.querySelector(".header"),
     burgerClose = document.querySelector(".burger-close"),
-    overlay = document.querySelector(".header__overlay"),
+    overlay = document.querySelector(".overlay"),
     menuNavLinks = document.querySelectorAll(".menu-nav__link");
 
 var desktopMenu = function desktopMenu() {
@@ -1108,17 +1108,24 @@ document.addEventListener("DOMContentLoaded", function () {
   var regionSelectionBtns = document.querySelectorAll(".js-region-selection__btn");
   var regionSelectionChoice = document.querySelectorAll(".region-selection__choice");
   var regionSelectionCloseBtns = document.querySelectorAll(".region-selection__close");
+  var nav = document.querySelector(".nav");
   var body = document.body;
   /* Functions */
 
   function toggleLocation() {
     regionSelection.classList.toggle("isOpen");
-    body.classList.toggle("lock");
+
+    if (!nav.classList.contains("show")) {
+      body.classList.toggle("lock");
+    }
   }
 
   function hiddenLocation() {
     regionSelection.classList.remove("isOpen");
-    body.classList.remove("lock");
+
+    if (!nav.classList.contains("show")) {
+      body.classList.remove("lock");
+    }
   }
 
   function changeLocation(e) {
