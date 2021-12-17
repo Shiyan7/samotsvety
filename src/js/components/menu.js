@@ -27,7 +27,7 @@ const desktopMenu = () => {
 
                 navItem.classList.add("active");
 
-                menus.forEach(mn => {
+                document.querySelectorAll("menu--hidden").forEach(mn => {
                     $(mn).slideUp(300);
                 });
 
@@ -58,9 +58,10 @@ const desktopMenu = () => {
                         overlay.classList.add("active");
                         header.classList.add("m-open");
                         $(el).find(".menu").slideDown(300);
-                        $(el).find(".menu").addClass("animation")
+                        $(el).find(".menu").removeClass("menu--hidden")
+                        $(el).find(".menu").addClass("menu--visible")
                         t = null;
-                    }, 700);
+                    }, 500);
                 }
             });
 
@@ -74,7 +75,8 @@ const desktopMenu = () => {
                         t = null;
                     } else {
                         $(el).find(".menu").slideUp(300);
-                        $(el).find(".menu").removeClass("animation")
+                        $(el).find(".menu").addClass("menu--hidden")
+                        $(el).find(".menu").removeClass("menu--visible")
                     }
                 }
             });
