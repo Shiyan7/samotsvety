@@ -1,4 +1,15 @@
 .collections {
+
+    &--2 {
+        .collections-item {
+            background: transparent;
+        }
+        .collections-item__content {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
     &__container {
         padding-top: 44px;
 
