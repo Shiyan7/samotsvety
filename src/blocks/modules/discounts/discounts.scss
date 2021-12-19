@@ -66,6 +66,7 @@
 
         &:before {
             background-color: rgba(#111, 0.05);
+            pointer-events: none;
         }
 
         &__image {
