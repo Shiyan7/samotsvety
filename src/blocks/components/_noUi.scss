@@ -7,9 +7,9 @@
             align-items: center;
             justify-content: center;
             top: 50%;
+            right: 0;
             width: 20px;
             height: 20px;
-            right: 7px;
             transform: translateY(-50%);
             background-color: transparent;
 
@@ -66,8 +66,7 @@
         background-color: #000;
     }
 
-    &-connect,
-    &-origin {
-        width: calc(100% - 20px);
+    &-connect, &-origin {
+        width: calc(100% - 13px);
     }
 }
