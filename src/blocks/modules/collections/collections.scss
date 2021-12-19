@@ -7,6 +7,10 @@
         .collections-item__content {
             padding-left: 54px;
             padding-right: 54px;
+
+            @media (max-width: 576px) {
+                padding-bottom: 30px;
+            }
         }
 
         .collections-item__back {
@@ -365,7 +369,7 @@
             text-transform: uppercase;
             text-align: center;
             padding: 20px 0 19px;
-            margin: 25px -100px 0;
+            margin: 25px -35px 0;
             background-color: #fff;
 
             @media (max-width: 576px) {
