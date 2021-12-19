@@ -164,8 +164,6 @@
             @media (max-width: 768px) {
                 display: flex;
                 flex-wrap: wrap;
-                max-width: 450px;
-                margin: 0 auto;
                 padding-bottom: 44px;
             }
         }
@@ -252,11 +250,6 @@
     }
 
     &-filter {
-
-        @media (max-width: 768px) {
-            max-width: 450px;
-            margin: 0 auto;
-        }
 
         &:not(:last-child) {
             margin-bottom: 16px;
@@ -554,8 +547,7 @@
         @media (max-width: 768px) {
             display: flex;
             flex-wrap: wrap;
-            max-width: 450px;
-            margin: 0 auto 25px;
+            margin-bottom: 25px;
         }
 
         &__item {
