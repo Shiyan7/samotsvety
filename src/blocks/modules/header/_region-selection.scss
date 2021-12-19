@@ -127,6 +127,8 @@
         text-transform: uppercase;
         border-radius: 0;
         opacity: 1;
+        -webkit-appearance: none;
+        appearance: none;
 
         @media (max-width: 576px) {
             font-family: "TTCommons", sans-serif;

@@ -3,14 +3,22 @@
         height: 1px;
 
         .noUi-handle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             top: 50%;
-            right: -7px;
+            right: -13px;
             transform: translateY(-50%);
-            width: 7px;
-            height: 7px;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+
+            &:focus {
+                background-color: transparent;
+            }
 
             &-upper {
-                right: 0;
+                right: -6.5px;
             }
         }
 
@@ -48,6 +56,13 @@
 
     &-handle:focus {
         outline: none;
+        background-color: #000;
+    }
+
+    &-touch-area {
+        width: 7px;
+        height: 7px;
+        border-radius: 100px;
         background-color: #000;
     }
 }

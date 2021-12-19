@@ -204,7 +204,7 @@
 
     @media (max-width: 576px) {
         height: 200px;
-        padding: 0 25px;
+        padding: 0;
     }
 
     @media (max-width: 360px) {
@@ -230,7 +230,7 @@
     }
 
     @media (max-width: 576px) {
-        width: calc(100% - 50px); 
+        width: 100%; 
     }
 }
 
