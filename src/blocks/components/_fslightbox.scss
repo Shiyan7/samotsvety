@@ -18,7 +18,7 @@
             &-next {
                 position: relative;
                 right: 20px !important;
-                transform: rotate(180deg) translateY(-50%) !important;
+                transform: translateY(-50%) rotate(180deg) !important;
                 background-image: url(../img/svg/arrow.svg);
             }
         }
