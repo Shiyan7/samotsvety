@@ -532,6 +532,20 @@
             margin: 0;
             margin-bottom: 13px;
         }
+
+        &__price {
+
+            .catalog-filter__top,
+            .catalog-filter__bottom {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            &:not(:last-child) {
+
+                margin: 0 -20px 16px;
+            }
+        }
     }
 
     &-choice {
@@ -664,6 +678,10 @@
         &__txt {
             text-transform: initial;
             margin-right: 10px;
+
+            &:hover {
+                font-weight: 300;
+            }
         }
 
         &__input {
