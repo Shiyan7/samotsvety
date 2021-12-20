@@ -327,7 +327,7 @@
             position: relative;
             z-index: 1;
             font-size: 12px;
-            line-height: initial;
+            line-height: 10px;
             height: 10px;
             color: #111;
             text-transform: uppercase;
@@ -412,6 +412,10 @@
             display: flex;
             align-items: center;
             position: relative;
+
+            .catalog-filter__txt {
+                padding-top: 4px;
+            }
         }
 
         &__checkbox {

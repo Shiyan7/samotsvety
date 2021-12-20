@@ -12,6 +12,7 @@ const desktopMenu = () => {
     if (window.innerWidth > 1024) {
 
         let isClicked = false;
+        let flag = 0;
 
         document.addEventListener("click", (e) => {
             if(e.target.classList.contains("nav__item--drop")) {
@@ -27,15 +28,35 @@ const desktopMenu = () => {
 
                 navItem.classList.add("active");
 
-                document.querySelectorAll("menu--hidden").forEach(mn => {
-                    $(mn).slideUp(300);
-                });
+                if(flag == 0) {
 
-                $(currentMenu).slideDown(300);
+                    flag++
+
+                    if(!currentMenu.classList.contains("menu--visible")) {
+
+                        document.querySelectorAll(".menu").forEach(mn => {
+                            $(mn).slideUp(300);
+                        });
+                        
+                        setTimeout(function () {
+                            $(currentMenu).slideDown(300);
+                        }, 300);
+                    }
+                } else {
+                    document.querySelectorAll(".menu").forEach(mn => {
+                        $(mn).slideUp(300);
+                    });
+                    
+                    setTimeout(function () {
+                        $(currentMenu).slideDown(300);
+                    }, 300);
+                }
             }
             else if (!e.target.closest(".nav")) {
 
                 isClicked = false;
+
+                flag--
 
                 navItems.forEach(el => el.classList.remove("active"));
                 

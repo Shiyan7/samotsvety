@@ -74,6 +74,7 @@
         font-size: 50px;
         line-height: 60px;
         padding-left: 22px;
+        max-width: 600px;
 
         @media (max-width: 1024px) {
             font-size: 40px;
@@ -82,8 +83,8 @@
         }
 
         @media (max-width: 576px) {
-            font-size: 30px;
-            line-height: 44px;
+            font-size: 23px;
+            line-height: 32px;
             max-width: 300px;
         }
     }
