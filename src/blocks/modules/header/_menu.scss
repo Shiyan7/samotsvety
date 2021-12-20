@@ -323,6 +323,10 @@
             overflow: hidden;
             margin-bottom: 8px;
 
+            @media (max-width: 576px) {
+                height: 128px;
+            }
+
             img {
                 display: block;
                 width: 100%;
