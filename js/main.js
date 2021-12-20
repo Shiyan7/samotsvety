@@ -517,6 +517,7 @@ var nav = document.querySelector('.nav'),
 var desktopMenu = function desktopMenu() {
   if (window.innerWidth > 1024) {
     var isClicked = false;
+    var flag = 0;
     document.addEventListener("click", function (e) {
       if (e.target.classList.contains("nav__item--drop")) {
         var navItem = e.target;
@@ -528,12 +529,29 @@ var desktopMenu = function desktopMenu() {
           return el.classList.remove("active");
         });
         navItem.classList.add("active");
-        document.querySelectorAll("menu--hidden").forEach(function (mn) {
-          $(mn).slideUp(300);
-        });
-        $(currentMenu).slideDown(300);
+
+        if (flag == 0) {
+          flag++;
+
+          if (!currentMenu.classList.contains("menu--visible")) {
+            document.querySelectorAll(".menu").forEach(function (mn) {
+              $(mn).slideUp(300);
+            });
+            setTimeout(function () {
+              $(currentMenu).slideDown(300);
+            }, 300);
+          }
+        } else {
+          document.querySelectorAll(".menu").forEach(function (mn) {
+            $(mn).slideUp(300);
+          });
+          setTimeout(function () {
+            $(currentMenu).slideDown(300);
+          }, 300);
+        }
       } else if (!e.target.closest(".nav")) {
         isClicked = false;
+        flag--;
         navItems.forEach(function (el) {
           return el.classList.remove("active");
         });
