@@ -35,7 +35,7 @@ section.card
                             - for(var i = 0; i < 4; i++)
                                 .swiper-slide.card-slide
                                     a.card-slide__link(data-fslightbox="card" href="img/card-2.jpg")
-                                        img.card-slide__image(src="img/card-2.jpg", alt="")
+                                        img.card-slide__image.lozad(src="img/card-2.jpg", srcset="img/card-2@2x.jpg 2x" alt="")
                         button.btn-reset.g-slider-btn.g-slider-btn--prev.card-slider__btn.card-slider__btn--prev
                             +icon("arrow")
                         button.btn-reset.g-slider-btn.g-slider-btn--next.card-slider__btn.card-slider__btn--next
@@ -44,7 +44,7 @@ section.card
                         .swiper-wrapper
                             - for(var i = 0; i < 4; i++)
                                 .swiper-slide.card-slide
-                                    img.card-slide__image(src="img/card-2.jpg", alt="Картинка продукта 1")
+                                    img.card-slide__image.lozad(src="img/card-2.jpg", srcset="img/card-2@2x.jpg 2x" alt="")
                 else
                     .swiper.card-slider__main
                         span.product__caption.card__caption New
@@ -54,7 +54,7 @@ section.card
                             - for(var i = 0; i < 4; i++)
                                 .swiper-slide.card-slide
                                     a.card-slide__link(data-fslightbox="card" href="img/card-1.jpg")
-                                        img.card-slide__image(src="img/card-1.jpg", alt="")
+                                        img.card-slide__image.lozad(src="img/card-1.jpg", srcset="img/card-1@2x.jpg 2x" alt="")
                         button.btn-reset.g-slider-btn.g-slider-btn--prev.card-slider__btn.card-slider__btn--prev
                             +icon("arrow")
                         button.btn-reset.g-slider-btn.g-slider-btn--next.card-slider__btn.card-slider__btn--next
@@ -63,7 +63,7 @@ section.card
                         .swiper-wrapper
                             - for(var i = 0; i < 4; i++)
                                 .swiper-slide.card-slide
-                                    img.card-slide__image(src="img/card-1.jpg", alt="Картинка продукта 1")
+                                    img.card-slide__image.lozad(src="img/card-1.jpg", srcset="img/card-1@2x.jpg 2x" alt="")
             .card-content__right.g-filters
                 if page === "card4"
                     h2.g-title.card__name-collection Классический

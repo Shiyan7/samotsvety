@@ -27,16 +27,16 @@ mixin product
       .image-switch
         .image-switch__item(data-index="0")
           .image-switch__img
-            img(src="img/product-1.jpg", alt="Продукт 1")
+            img.lozad(src="img/product-1.jpg", srcset="img/product-1@2x.jpg 2x" alt="Продукт 1")
         .image-switch__item(data-index="1")
           .image-switch__img
-            img(src="img/product-2.jpg", alt="Продукт 1")
+            img.lozad(src="img/product-2.jpg", srcset="img/product-1@2x.jpg 2x" alt="Продукт 1")
         .image-switch__item(data-index="2")
           .image-switch__img
-            img(src="img/product-3.jpg", alt="Продукт 1")
+            img.lozad(src="img/product-3.jpg", srcset="img/product-1@2x.jpg 2x" alt="Продукт 1")
         .image-switch__item(data-index="3")
           .image-switch__img
-            img(src="img/product-4.jpg", alt="Продукт 1")
+            img.lozad(src="img/product-4.jpg", srcset="img/product-1@2x.jpg 2x" alt="Продукт 1")
         ul.product__image-pagination.image-pagination.list-reset.product__pag(aria-hidden="true")
           li.image-pagination__item.image-pagination__item--active(data-index="0")
           li.image-pagination__item(data-index="1")
