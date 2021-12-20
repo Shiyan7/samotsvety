@@ -97,22 +97,6 @@
         padding: 17px 0;
         cursor: pointer;
 
-        &--drop {
-            .nav__link {
-                pointer-events: none;
-            }
-        }
-
-        @media (min-width: 1025px) {
-            &.active {
-                pointer-events: none;
-                .nav__link:after {
-                    left: 0;
-                    width: 100%;
-                }
-            }
-        }
-
         @include hover {
             .nav__link {
                 &:after {
@@ -154,6 +138,7 @@
             font-size: 16px;
             line-height: 19px;
             max-width: 268px;
+            pointer-events: none;
         }
 
         &:after {
