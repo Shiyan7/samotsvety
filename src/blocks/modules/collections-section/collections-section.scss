@@ -52,6 +52,13 @@
             z-index: 1;
             top: 39.1%;
 
+            &.swiper-button-disabled {
+                cursor: default;
+                svg {
+                    fill: rgba(#000, 0.5);
+                }
+            }
+
             &:hover {
                 svg {
                     fill: rgba(#000, 0.5);

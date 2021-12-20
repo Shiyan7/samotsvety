@@ -15,10 +15,10 @@
             &:after {
                 @include pseudo();
                 position: absolute;
-                top: 50%;
+                top: calc(50% - 1px);
                 right: 0;
                 width: 0.4px;
-                height: 10px;
+                height: 50%;
                 transform: translateY(-50%);
                 background-color: rgba(#000, 0.5);
             }
