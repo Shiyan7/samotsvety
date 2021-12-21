@@ -810,8 +810,12 @@
     }
 
     &__more-products {
-        margin-bottom: 40px;
+        margin-bottom: 88px;
         padding: 14px 62.5px 13px 66.5px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 52px;
+        }
     }
 
     &__filters {
