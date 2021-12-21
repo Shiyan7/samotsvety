@@ -29,6 +29,7 @@
         align-items: flex-end;
         justify-content: flex-start;
         margin-bottom: 56px;
+        width: 100%;
 
         @media (max-width: 576px) {
             flex-direction: column;
