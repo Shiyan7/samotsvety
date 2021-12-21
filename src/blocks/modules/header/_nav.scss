@@ -115,10 +115,10 @@
         }
 
         &:not(:last-child) {
-            margin-right: 21px;
+            padding-right: 21px;
 
             @media (max-width: 1024px) {
-                margin-right: 0;
+                padding-right: 0;
             }
         }
 

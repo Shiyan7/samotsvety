@@ -305,7 +305,7 @@
 
             &--2 {
                 &:not(:last-child) {
-                    margin-bottom: 8px;
+                    margin-bottom: 12px;
 
                     @media (max-width: 768px) {
                         margin-bottom: 15px;
@@ -439,6 +439,7 @@
             position: relative;
             width: 14px;
             height: 14px;
+            flex-shrink: 0;
             margin-right: 5px;
             border: 1px solid rgba(#000, 0.2);
 
