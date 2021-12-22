@@ -32,15 +32,12 @@
 
     &__location {
         display: flex;
+        align-items: center;
         font-size: 10px;
         line-height: 10px;
         color: rgba(#000, 0.5);
         text-transform: uppercase;
         transition: color 0.3s;
-
-        .region-selection__choice {
-            padding-top: 3px;
-        }
 
         &:hover {
             color: #111;
@@ -58,7 +55,6 @@
     &-menu {
         display: flex;
         align-items: center;
-        padding-top: 3px;
         &__item {
             &:not(:last-child) {
                 margin-right: 16px;
