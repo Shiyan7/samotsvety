@@ -32,12 +32,17 @@
 
     &__location {
         display: flex;
-        align-items: center;
         font-size: 10px;
         line-height: 10px;
         color: rgba(#000, 0.5);
         text-transform: uppercase;
         transition: color 0.3s;
+
+        .region-selection__choice {
+            display: flex;
+            align-items: center;
+            height: 18px;
+        }
 
         &:hover {
             color: #111;
