@@ -28,6 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 "use strict";
 
+if (navigator.userAgent.indexOf('Mac') > 0) {
+  document.body.classList.add("mac-os");
+}
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function () {
   var cardSliderThumbs = new Swiper(".card-slider__nav", {
     slidesPerView: "auto",
