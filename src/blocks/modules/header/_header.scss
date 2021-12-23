@@ -243,3 +243,9 @@
     height: 70px;
     object-fit: cover;
 }
+
+.mac-os {
+    .header__location .region-selection__choice {
+        padding-top: 4px;
+    }
+}
