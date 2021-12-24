@@ -16,7 +16,7 @@
         padding-top: 36px;
         padding-bottom: 88px;
 
-        .g-tabs {
+        &>.g-tabs {
             @media (min-width: 1241px) {
                 display: none;
             }

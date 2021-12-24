@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const moreTabsBtn = document.querySelectorAll(".g-tabs__btn--more");
+    const catalogTabs = document.querySelector(".catalog__tabs");
 
     const moreTabs = (e, hiddenTabs) => {
 
@@ -17,6 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             moreTabs(e.currentTarget, hiddenTabs)
 
+        });
+
+        document.addEventListener("click", (e) => {
+            if(!e.target.closest(".catalog__tabs") && catalogTabs.classList.contains("active")) {
+                document.querySelector(".catalog__tabs")?.classList.remove("active");
+                document.querySelector(".catalog__tabs-more")?.classList.remove("active")
+            }
         });
     });
 });
