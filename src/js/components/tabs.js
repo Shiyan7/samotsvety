@@ -20,11 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-        document.addEventListener("click", (e) => {
-            if(!e.target.closest(".catalog__tabs") && catalogTabs.classList.contains("active")) {
-                document.querySelector(".catalog__tabs")?.classList.remove("active");
-                document.querySelector(".catalog__tabs-more")?.classList.remove("active")
-            }
-        });
+        if(catalogTabs) {
+            document.addEventListener("click", (e) => {
+                if(!e.target.closest(".catalog__tabs") && catalogTabs.classList.contains("active")) {
+                    document.querySelector(".catalog__tabs")?.classList.remove("active");
+                    document.querySelector(".catalog__tabs-more")?.classList.remove("active")
+                }
+            });
+        }
     });
 });
