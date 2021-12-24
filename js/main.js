@@ -1086,6 +1086,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   var moreTabsBtn = document.querySelectorAll(".g-tabs__btn--more");
+  var catalogTabs = document.querySelector(".catalog__tabs");
 
   var moreTabs = function moreTabs(e, hiddenTabs) {
     e.classList.toggle("active");
@@ -1099,6 +1100,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var hiddenTabs = btn.closest(".g-tabs").querySelectorAll(".g-tabs__item--hidden");
     btn.addEventListener("click", function (e) {
       moreTabs(e.currentTarget, hiddenTabs);
+    });
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".catalog__tabs") && catalogTabs.classList.contains("active")) {
+        var _document$querySelect, _document$querySelect2;
+
+        (_document$querySelect = document.querySelector(".catalog__tabs")) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.classList.remove("active");
+        (_document$querySelect2 = document.querySelector(".catalog__tabs-more")) === null || _document$querySelect2 === void 0 ? void 0 : _document$querySelect2.classList.remove("active");
+      }
     });
   });
 });
