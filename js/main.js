@@ -340,9 +340,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 "use strict";
 
-/* const tels = document.querySelectorAll("input[type=\"tel\"]");
-const im = new Inputmask("+7 (999) 999-99-99");
-im.mask(tels); */
 var tels = document.querySelectorAll("input[type=\"tel\"]");
 tels.forEach(function (el) {
   var phoneMask = IMask(el, {
@@ -921,6 +918,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (selects) {
     selects.forEach(function (el) {
       var choices = new Choices(el, {
+        searchPlaceholderValue: el.dataset.placeholder,
         itemSelectText: '',
         shouldSort: false,
         noResultsText: 'Не найдено'
