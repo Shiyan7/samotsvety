@@ -130,6 +130,18 @@
             white-space: nowrap;
         }
     }
+    
+    &__input {
+        font-size: 14px;
+        color: #a39d94;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 12px 36px 8px 14px !important;
+
+        &::placeholder {
+            color: #a39d94;
+        }
+    }
 }
 
 .choices__list--dropdown .choices__item--selectable {
@@ -173,6 +185,9 @@
 .choices[data-type*="select-one"] .choices__input {
     border-bottom: 1px solid #a39d94;
     width: calc(100% - 40px);
-    padding: 11px 40px 9px 14px !important;
     line-height: 19px;
+
+    &:not(input) {
+        padding: 11px 40px 9px 14px !important;
+    }
 }
