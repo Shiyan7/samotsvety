@@ -510,32 +510,59 @@ var nav = document.querySelector('.nav'),
     menu = document.querySelector('.menu'),
     burger = document.querySelector(".burger"),
     header = document.querySelector(".header"),
+    navItems = document.querySelectorAll(".nav__item--drop"),
+    menus = document.querySelectorAll(".menu"),
     burgerClose = document.querySelector(".burger-close"),
     overlay = document.querySelector(".overlay"),
     menuNavLinks = document.querySelectorAll(".menu-nav__link");
 
 var desktopMenu = function desktopMenu() {
   if (window.innerWidth > 1024) {
-    $('.nav__item.js-open-menu').each(function () {
-      var t = null;
-      var li = $(this);
-      li.hover(function () {
-        t = setTimeout(function () {
-          overlay.classList.add("active");
-          header.classList.add("m-open");
-          li.find(".menu").slideDown(300);
-          t = null;
-        }, 500);
-      }, function () {
+    var isClicked = false;
+    var flag = 0;
+    document.addEventListener("click", function (e) {
+      if (e.target.classList.contains("nav__item--drop")) {
+        var navItem = e.target;
+        isClicked = true;
+        var currentMenu = navItem.querySelector(".menu");
+        overlay.classList.add("active");
+        header.classList.add("m-open");
+        navItems.forEach(function (el) {
+          return el.classList.remove("active");
+        });
+        navItem.classList.add("active");
+
+        if (flag == 0) {
+          flag++;
+
+          if (!currentMenu.classList.contains("menu--visible")) {
+            document.querySelectorAll(".menu").forEach(function (mn) {
+              $(mn).slideUp(300);
+            });
+            setTimeout(function () {
+              $(currentMenu).slideDown(300);
+            }, 0);
+          }
+        } else {
+          document.querySelectorAll(".menu").forEach(function (mn) {
+            $(mn).slideUp(300);
+          });
+          setTimeout(function () {
+            $(currentMenu).slideDown(300);
+          }, 300);
+        }
+      } else if (!e.target.closest(".nav")) {
+        isClicked = false;
+        flag--;
+        navItems.forEach(function (el) {
+          return el.classList.remove("active");
+        });
         overlay.classList.remove("active");
         header.classList.remove("m-open");
-
-        if (t) {
-          overlay.classList.remove("active");
-          clearTimeout(t);
-          t = null;
-        } else li.find(".menu").slideUp(300);
-      });
+        menus.forEach(function (el) {
+          $(el).slideUp(300);
+        });
+      }
     });
     menuNavLinks.forEach(function (el) {
       el.addEventListener("click", function (e) {
