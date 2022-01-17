@@ -31,17 +31,13 @@
     }
 
     &__location {
+        display: flex;
+        align-items: center;
         font-size: 10px;
+        line-height: 10px;
         color: rgba(#000, 0.5);
         text-transform: uppercase;
         transition: color 0.3s;
-
-        .region-selection__choice {
-            float: left;
-            line-height: 13px;
-            padding-top: 3px;
-        }
-
         &:hover {
             color: #111;
         }
@@ -52,13 +48,13 @@
             margin-right: 5px;
             object-fit: cover;
             fill: currentColor;
-            float: left;
         }
     }
 
     &-menu {
         display: flex;
         align-items: center;
+        padding-top: 3px;
         &__item {
             &:not(:last-child) {
                 margin-right: 16px;
@@ -185,7 +181,6 @@
 .overlay {
     position: fixed;
     z-index: 69;
-    pointer-events: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -242,10 +237,4 @@
     width: 216px;
     height: 70px;
     object-fit: cover;
-}
-
-.mac-os {
-    .header__location .region-selection__choice {
-        padding-top: 4px;
-    }
 }

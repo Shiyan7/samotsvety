@@ -62,7 +62,9 @@
     &-text {
         text-align: center;
         position: relative;
+        margin: 0 auto;
         max-height: 159px;
+        max-width: 750px;
         overflow: hidden;
         will-change: max-height;
         transition: max-height 0.3s;
