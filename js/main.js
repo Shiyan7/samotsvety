@@ -703,11 +703,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   var perfectCombinationSlider = document.querySelector(".perfect-combination-slider");
+  var perfectCombinationSliderItems = document.querySelectorAll(".perfect-combination__item");
 
   if (perfectCombinationSlider) {
     var mySwiper;
 
     var initializeSlider = function initializeSlider() {
+      if (perfectCombinationSliderItems.length == 1) mySwiper.destroy();
       mySwiper = new Swiper(perfectCombinationSlider, {
         slidesPerView: 'auto',
         spaceBetween: 6,
@@ -1189,11 +1191,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') hiddenLocation();
   });
-  /* document.addEventListener("click", (e) => {
-      if(e.target.classList.contains("region-selection")) {
-          hiddenLocation();
-      }
-  }) */
 });
 "use strict";
 
