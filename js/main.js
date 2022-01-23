@@ -1,6 +1,14 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  var accordions = document.querySelectorAll(".g-accordion");
+  accordions === null || accordions === void 0 ? void 0 : accordions.forEach(function (el) {
+    new GraphAccordion(el);
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
   var benefitsMoreBtns = document.querySelectorAll(".benefits__more");
   var flag = 0;
 
@@ -348,6 +356,21 @@ tels.forEach(function (el) {
 });
 "use strict";
 
+document.addEventListener("DOMContentLoaded", function () {
+  var anchorLinks = document.querySelectorAll(".anchor-link");
+  anchorLinks.forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      var blockID = el.getAttribute("href").substr(1);
+      document.getElementById(blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  });
+});
+"use strict";
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -613,9 +636,9 @@ var navClose = function navClose(e) {
   initialMenu();
 };
 
-burgerClose.addEventListener("click", navClose);
-burger.addEventListener("click", openNav);
-nav.addEventListener("click", function (e) {
+burgerClose === null || burgerClose === void 0 ? void 0 : burgerClose.addEventListener("click", navClose);
+burger === null || burger === void 0 ? void 0 : burger.addEventListener("click", openNav);
+nav === null || nav === void 0 ? void 0 : nav.addEventListener("click", function (e) {
   if (e.target.classList.contains("js-open-menu")) {
     nav.classList.add("nav-lock");
     e.target.closest(".js-nav-list").classList.add("animation");
@@ -1157,7 +1180,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleLocation() {
     regionSelection.classList.toggle("isOpen");
 
-    if (!nav.classList.contains("show")) {
+    if (!(nav !== null && nav !== void 0 && nav.classList.contains("show"))) {
       body.classList.toggle("lock");
     }
   }
@@ -1165,7 +1188,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function hiddenLocation() {
     regionSelection.classList.remove("isOpen");
 
-    if (!nav.classList.contains("show")) {
+    if (!(nav !== null && nav !== void 0 && nav.classList.contains("show"))) {
       body.classList.remove("lock");
     }
   }
@@ -1207,6 +1230,9 @@ $(document).ready(function () {
           required: true
         },
         value: {
+          required: true
+        },
+        name: {
           required: true
         },
         email: {
