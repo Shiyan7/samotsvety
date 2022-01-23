@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const perfectCombinationSlider = document.querySelector(".perfect-combination-slider");
+    const perfectCombinationSliderItems = document.querySelectorAll(".perfect-combination__item");
 
     if (perfectCombinationSlider) {
         let mySwiper;
 
         const initializeSlider = () => {
+
+            if(perfectCombinationSliderItems.length == 1) mySwiper.destroy();
 
             mySwiper = new Swiper(perfectCombinationSlider, {
                 slidesPerView: 'auto',

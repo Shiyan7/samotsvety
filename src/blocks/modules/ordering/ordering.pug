@@ -1,0 +1,125 @@
+section.ordering
+    .container.ordering__container
+        ul.g-breadcrumbs__list.ordering__breadcrumbs.list-reset
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="/") Главная
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="#") Корзина
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link Оформление заказа
+        h1.g-title.g-title--center.ordering__title ОФОРМЛЕНИЕ ЗАКАЗА
+        form.ordering__body.validate-form(action="#")
+            .ordering-content
+                .ordering-content__item.g-accordion.isOpen
+                    button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
+                        span Контактные данные
+                        i.g-accordion__icon
+                            +icon("arrow")
+                    .g-accordion__content.ordering-content__inner(aria-hidden="false")
+                        label.ordering__label
+                            span Имя
+                            input.g-input.ordering__input(type="text" name="name" placeholder="Введите ваше имя")
+                        label.ordering__label
+                            span Номер телефона
+                            input.g-input.ordering__input(type="tel" name="phoneNumber" placeholder="Введите ваш телефон")
+                .ordering-content__item.g-accordion.isOpen
+                    button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
+                        span Споспоб получения
+                        i.g-accordion__icon
+                            +icon("arrow")
+                    .g-accordion__content.g-filters.ordering-filters(aria-hidden="false")
+                        ul.g-filters__list.list-reset.ordering-filters__list
+                            li.g-filters__item.ordering-switch
+                                button.btn-reset.g-filters__btn.g-filters__btn--active.ordering-switch__btn(type="button" data-filters-path="way1")
+                                    span.ordering-switch__title самовывоз в СПБ
+                                    span.ordering-switch__desc Из офиса в 5 минутах от ст. м. Ладожская
+                            li.g-filters__item.ordering-switch
+                                button.btn-reset.g-filters__btn.ordering-switch__btn(type="button" data-filters-path="way2")
+                                    span.ordering-switch__title Доставка курьером сдэк
+                                    span.ordering-switch__desc Доставляем по РФ и СНГ за 3–14 дней
+                            li.g-filters__item.ordering-switch
+                                button.btn-reset.g-filters__btn.ordering-switch__btn(type="button" data-filters-path="way3")
+                                    span.ordering-switch__title Пункты выдачи СДЭК по РФ
+                                    span.ordering-switch__desc Выберите любой из 6000+ пунктов выдачи СДЭК
+                        .g-filters__content.ordering-content__inner.g-filters__content--active(data-filters-target="way1")
+                            .office
+                                img.office__image(src="img/no-image.svg", alt="Санкт-Петербург, пл. Карла Фаберже,  ДОМ 8, БЦ «Золотая Долина»")
+                                .office__text
+                                    span.office__metro
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.74363 8.24606C8.49925 7.42446 9.40929 6.75974 10.4218 6.28984C11.4343 5.81995 12.5295 5.55408 13.6447 5.50743C14.76 5.46077 15.8735 5.63424 16.9217 6.01793C17.97 6.40162 18.9323 6.98801 19.7539 7.74363C20.5755 8.49925 21.2403 9.40929 21.7102 10.4218C22.1801 11.4343 22.4459 12.5295 22.4926 13.6447C22.5392 14.76 22.3658 15.8735 21.9821 16.9217C21.5984 17.97 21.012 18.9323 20.2564 19.7539C19.5008 20.5755 18.5907 21.2403 17.5782 21.7102C16.5657 22.1801 15.4705 22.4459 14.3553 22.4926C13.24 22.5392 12.1265 22.3658 11.0783 21.9821C10.03 21.5984 9.06766 21.012 8.24606 20.2564C7.42446 19.5008 6.75974 18.5907 6.28984 17.5782C5.81995 16.5657 5.55408 15.4705 5.50743 14.3553C5.46077 13.24 5.63424 12.1265 6.01793 11.0783C6.40162 10.03 6.98801 9.06766 7.74363 8.24606L7.74363 8.24606Z" stroke="#f5a201"/>
+                                        <path d="M18 10V18H16.751V13.045L14.3939 18H13.6061L11.2426 13.045V18H10V10H11.044L13.9968 16.1581L16.9496 10H18Z" fill="#f5a201"/>
+                                        </svg>
+                                        span ст. м. Ладожская
+                                    h2.office__title.g-title Санкт-Петербург, пл. Карла Фаберже,  ДОМ 8, БЦ «Золотая Долина»
+                                    span.office__hours-desc Время работы нашего офиса
+                                    span.office__hours
+                                        |Пн-Пт с 10:00 до 21:00 по Москве
+                                        |Сб, Вс с 10:00 до 17:00
+                                    ul.office-benefits.list-reset
+                                        li.office-benefits__item Закрытая парковка для клиентов на 3 часа*
+                                        li.office-benefits__item Оплата заказа наличными или картой при получении
+                                    span.office__tel Если у вас срочный вопрос, звоните нам по телефону
+                                        a(href="tel:+78124486588")  +7 (812) 448-65-88
+                                    p.office__desc * для въезда на парковку заранее сообщите менеджеру номер и марку вашего автомобиля.
+                        .g-filters__content.ordering-content__inner(data-filters-target="way2") 2
+                        .g-filters__content.ordering-content__inner(data-filters-target="way3") 3
+                .ordering-content__item.g-accordion.isOpen
+                    button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
+                        span Выберите способ оплаты
+                        i.g-accordion__icon
+                            +icon("arrow")
+                    .g-accordion__content.payment-method(aria-hidden="false")
+                        .ordering-switch__item
+                            input.ordering-switch__input(type="radio", name="Selected radio" value="way1" checked)
+                            label.ordering-switch__btn.ordering-switch__label
+                                span.ordering-switch__title оплата при получении
+                                span.ordering-switch__desc Наличными или банковской картой
+                        .ordering-switch__item
+                            input.ordering-switch__input(type="radio", name="Selected radio" value="way2")
+                            label.ordering-switch__btn.ordering-switch__label
+                                span.ordering-switch__title оплата при получении
+                                span.ordering-switch__desc Наличными или банковской картой
+                .ordering-content__item.g-accordion.isOpen
+                    button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
+                        span Коментарии к заказу
+                        i.g-accordion__icon
+                            +icon("arrow")
+                    .g-accordion__content.ordering-content__inner(aria-hidden="false")
+                        label.ordering__label
+                            span Комментарий
+                            input.g-input.ordering__input--lg(type="text" name="comment" placeholder="Оставьте свои комментарии, мы обязательно примем их во внимание")
+                .ordering-content__item.g-accordion.isOpen(id="order-list")
+                    button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
+                        span Состав заказа
+                        i.g-accordion__icon
+                            +icon("arrow")
+                    .g-accordion__content.ordering-content__inner(aria-hidden="false")
+                        .ordering-table__top
+                            span.ordering-table__caption НАИМЕНОВАНИЕ
+                            span.ordering-table__caption РАЗМЕР
+                            span.ordering-table__caption КОЛИЧЕСТВО
+                            span.ordering-table__caption ЦЕНА
+                            span.ordering-table__caption СУММА
+            .ordering-info
+                .ordering-info__top
+                    h2.ordering-info__title.g-title ВАШ ЗАКАЗ
+                    span.ordering-info__quantity.g-title ТОВАРОВ 450
+                .ordering-info__cost
+                    span.ordering-info__cost-desc ОБЩАЯ СТОИМОСТЬ
+                    span.ordering-info__cost-value 424 200 ₽
+                label.ordering__label
+                    span Промокод
+                    input.g-input.ordering__input--lg(type="text" name="промокод" placeholder="ВВЕДИТЕ ПРОМОКОД")
+                .ordering-info__total
+                    span ИТОГО
+                    span 417 000 ₽
+                .ordering-info__btns
+                    a.g-btn.g-btn--stroke.ordering-info__btn.anchor-link(href="#order-list") Состав заказа
+                    button.btn-reset.g-btn.g-btn--black.ordering-info__btn ОФОРМИТЬ ЗАКАЗ
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я согласен на обработку персональных данных
+                p.ordering-info__desc Оформляя заказ, вы подтверждаете, что соглашаетесь с 
+                    a(href="policy.html") правилами продажи

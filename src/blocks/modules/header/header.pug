@@ -1,589 +1,945 @@
-header.header 
-    .container.header__container
-        .header__top
-            button.btn-reset.header__location.toggle-location
-                +icon("location")
-                span.region-selection__choice САНКТ-ПЕТЕРБУРГ
-            ul.header-menu.list-reset
-                li.header-menu__item
-                    a.header-menu__link(href="#") Императорский ювелирный дом
-                li.header-menu__item
-                    a.header-menu__link(href="delivery-payment.html") ДОСТАВКА И ОПЛАТА
-                li.header-menu__item
-                    a.header-menu__link(href="shops.html") МАГАЗИНЫ
-        .header__middle
-            ul.header-actions.list-reset
-                li.header-actions__item
-                    button.btn-reset.header-actions__btn
-                        +icon("tel")
-                li.header-actions__item
-                    button.btn-reset.header-actions__btn.toggle-location
-                        +icon("location")
-            .tel.header__tel
-                a.tel__value(href="tel:88005553298") 8 (800) 555-32-98
-                span.tel__desc Пн-Пт 10:00-20:00, Сб, Вс до 17:00
-            a.logo.header__logo(href="/")
-                img(src="img/logo-icon.svg", alt="Russkiye samotsvety")
-            +burger
-            ul.header__shop-nav.shop-nav.list-reset
-                li.shop-nav__item
-                    a.shop-nav__link.shop-nav__link--favorite(href="favorites.html")
-                        .shop-nav__icon.shop-nav__icon--favorite
-                        .shop-nav__quantity 2
-                li.shop-nav__item
-                    a.shop-nav__link.shop-nav__link--cart(href="#")
-                        .shop-nav__icon.shop-nav__icon--cart
-                        .shop-nav__quantity 13
-                li.shop-nav__item
-                    a.shop-nav__link.shop-nav__link--cabinet(href="#")
-                        .shop-nav__icon.shop-nav__icon--cabinet
-                        .shop-nav__quantity Войти
-        .header__bottom
-            .nav
-                .nav__top
-                    button.btn-reset.burger-close
-                        +icon("cross2")
-                    h2.g-title.nav__title Меню
-                ul.nav__list.nav__list--dropdown.list-reset.js-nav-list
-                    li.nav__item.nav__item--drop.js-open-menu
-                        span.nav__link.nav__link--drop УКРАШЕНИЯ
-                        +icon("arrow")
-                        .menu--hidden.menu.dropdown-menu
-                            .menu__container
-                                .menu-nav.js-nav-list
-                                    button.btn-reset.nav__mobile-back
-                                        +icon("arrow")
-                                        |Украшения
-                                    .menu-nav__list
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.active Кольца
-
-                                            +icon("arrow")
-                                            +menuContent("show")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Серьги
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Подвески и кресты
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Броши
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Колье
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Цепи
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Браслеты и шармы
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                    .menu-nav__list.menu-nav__list--2
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.menu-nav__link--gray Мужчинам
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.menu-nav__link--gray Детям
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.menu-nav__link--gray Подарки
-
-                                            +icon("arrow")
-                                            +menuContent("")             
-                    li.nav__item.nav__item--drop.js-open-menu
-                        span.nav__link.nav__link--drop ДОМ АКСЕССУАРЫ
-                        +icon("arrow")
-                        .menu--hidden.menu.dropdown-menu
-                            .menu__container
-                                .menu-nav
-                                    button.btn-reset.nav__mobile-back
-                                        +icon("arrow")
-                                        |Украшения
-                                    .menu-nav__list
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.active Кольца
-
-                                            +icon("arrow")
-                                            +menuContent("show")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Серьги
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Подвески и кресты
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Броши
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Колье
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Цепи
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Браслеты и шармы
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                    .menu-nav__list.menu-nav__list--2
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.menu-nav__link--gray Мужчинам
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.menu-nav__link--gray Детям
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.menu-nav__link--gray Подарки
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                    li.nav__item.nav__item--drop.js-open-menu
-                        span.nav__link.nav__link--drop HIGH JEWELRY
-                        +icon("arrow")
-                        .menu--hidden.menu.dropdown-menu
-                            .menu__container
-                                .menu-nav
-                                    button.btn-reset.nav__mobile-back
-                                        +icon("arrow")
-                                        |Украшения
-                                    .menu-nav__list
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.active Кольца
-
-                                            +icon("arrow")
-                                            +menuContent("show")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Серьги
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Подвески и кресты
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Броши
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Колье
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Цепи
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link Браслеты и шармы
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                    .menu-nav__list.menu-nav__list--2
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.menu-nav__link--gray Мужчинам
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.menu-nav__link--gray Детям
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                                        .menu-nav__item.js-open-menu
-                                            span.menu-nav__link.menu-nav__link--gray Подарки
-
-                                            +icon("arrow")
-                                            +menuContent("")
-                    li.nav__item
-                        a.nav__link.nav__link--gray(href="new.html") New
-                    li.nav__item
-                        a.nav__link.nav__link--gray(href="collection.html") КОЛЛЕКЦИЯ
-                    li.nav__item
-                        a.nav__link.nav__link--gray(href="discounts.html") АКЦИИ
-                ul.header-menu.nav__header-menu.list-reset
-                    li.header-menu__item
-                        a.header-menu__link(href="#") Вселенная бренда
-                    li.header-menu__item
-                        a.header-menu__link(href="delivery-payment.html") Доставка и оплата
-                    li.header-menu__item
-                        a.header-menu__link(href="shops.html") Фирменные салоны
-                a.nav__cabinet(href="#")
-                    +icon("cabinet")
-                    |ВОЙТИ В КАБИНЕТ
-                button.btn-reset.nav-location.toggle-location
-                    span.nav-location__caption Ваш город:
-                    span.nav-location__value.region-selection__choice САНКТ-ПЕТЕРБУРГ
-                .tel.nav-tel
-                    a.tel__value.nav-tel__value(href="tel:88005553298") 8 (800) 555-32-98
-                    span.tel__desc.nav-tel__desc Пн-Пт 10:00-20:00, Сб, Вс до 17:00
-            +searchForm("header__search-form")
-    .down-bar
-        .down-bar__item
-            button.btn-reset.down-bar__link.toggle-form
-                span.shop-nav__icon.shop-nav__icon--search
-                |Поиск
-        .down-bar__item
-            a.down-bar__link(href="favorites.html")
-                span.shop-nav__icon.shop-nav__icon--favorite
-                |Избранное
-        .down-bar__item
-            a.down-bar__link(href="#")
-                span.shop-nav__icon.shop-nav__icon--cart
-                |Корзина
-        .down-bar__item
-            a.down-bar__link(href="#")
-                span.shop-nav__icon.shop-nav__icon--cabinet
-                |Вход
-    .region-selection
-        button.btn-reset.region-selection__close
-            +icon("cross2")
-        .region-selection__top
-            h2.g-title.g-title--center.region-selection__title.region-selection__choice САНКТ-ПЕТЕРБУРГ
+if secondHeader === true
+    header.header 
+        .container.header__container.header__container--2
+            .header__middle
+                ul.header-actions.list-reset
+                    li.header-actions__item
+                        button.btn-reset.header-actions__btn.toggle-location
+                            +icon("location")
+                .tel.header__tel
+                    a.tel__value(href="tel:88005553298") 8 (800) 555-32-98
+                    span.tel__desc Пн-Пт 10:00-20:00, Сб, Вс до 17:00
+                a.logo.header__logo(href="/")
+                    img(src="img/logo-icon.svg", alt="Russkiye samotsvety")
+                button.btn-reset.header__location.toggle-location.header__location--2
+                    +icon("location")
+                    span.region-selection__choice САНКТ-ПЕТЕРБУРГ
+                button.btn-reset.header-actions__btn.header-actions__btn--2
+                    +icon("tel")
+        .down-bar
+            .down-bar__item
+                button.btn-reset.down-bar__link.toggle-form
+                    span.shop-nav__icon.shop-nav__icon--search
+                    |Поиск
+            .down-bar__item
+                a.down-bar__link(href="favorites.html")
+                    span.shop-nav__icon.shop-nav__icon--favorite
+                    |Избранное
+            .down-bar__item
+                a.down-bar__link(href="ordering.html")
+                    span.shop-nav__icon.shop-nav__icon--cart
+                    |Корзина
+            .down-bar__item
+                a.down-bar__link(href="#")
+                    span.shop-nav__icon.shop-nav__icon--cabinet
+                    |Вход
+        .region-selection
             button.btn-reset.region-selection__close
                 +icon("cross2")
-        .region-selection__container
-            h2.g-title.g-title--center.region-selection__title Выберите регион
-            form.change-city(action="#")
-                input.change-city__input(type="search", name="s" placeholder="Введите город")
-                button.btn-reset.change-city__btn
-                    +icon("search-icon")
-            .cities
-                .cities-main
-                    button.btn-reset.cities-main__btn.js-region-selection__btn МОСКВА
-                    button.btn-reset.cities-main__btn.js-region-selection__btn Санкт-ПЕТеРБУрГ
-                    button.btn-reset.cities-main__btn.js-region-selection__btn УФА
-                    button.btn-reset.cities-main__btn.js-region-selection__btn самара
-                    button.btn-reset.cities-main__btn.js-region-selection__btn нижний-новгород
-                .cities-regions.g-filters
-                    ul.g-filters__list.cities__filters.list-reset
-                        li.g-filters__item
-                            button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="city") Регион
-                        li.g-filters__item
-                            button.btn-reset.g-filters__btn(data-filters-path="region") Город
-                    .cities-regions__wrapper
-                        .cities-regions__col.g-filters__content.g-filters__content--active(data-filters-target="city")
-                            h3.g-title.g-title--center.cities-regions__title Регион
-                            .cities-regions__letters
-                                a.cities-regions__letter(href="#letter") А
-                                a.cities-regions__letter(href="#letter") Б
-                                a.cities-regions__letter(href="#letter") В
-                                a.cities-regions__letter(href="#letter") Д
-                                a.cities-regions__letter(href="#letter") Е
-                                a.cities-regions__letter(href="#letter") З
-                                a.cities-regions__letter(href="#letter") И
-                                a.cities-regions__letter(href="#letter") К
-                                a.cities-regions__letter(href="#letter") Л
-                                a.cities-regions__letter(href="#letter") М
-                                a.cities-regions__letter(href="#letter") Н
-                                a.cities-regions__letter(href="#letter") О
-                                a.cities-regions__letter(href="#letter") П
-                                a.cities-regions__letter(href="#letter") Р
-                                a.cities-regions__letter(href="#letter") С
-                                a.cities-regions__letter(href="#letter") Т
-                                a.cities-regions__letter(href="#letter") У
-                                a.cities-regions__letter(href="#letter") Х
-                                a.cities-regions__letter(href="#letter") Ч
-                                a.cities-regions__letter(href="#letter") Я
-                            .cities-regions__block(data-simplebar)
-                                .cities-regions__item
-                                    span.cities-regions__letter А
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
-                                .cities-regions__item
-                                    span.cities-regions__letter Б
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
-                                .cities-regions__item
-                                    span.cities-regions__letter В
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
-                                .cities-regions__item
-                                    span.cities-regions__letter Г
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
-                                .cities-regions__item
-                                    span.cities-regions__letter Д
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
-                                .cities-regions__item
-                                    span.cities-regions__letter Б
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
-                                .cities-regions__item
-                                    span.cities-regions__letter А
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
-                                .cities-regions__item
-                                    span.cities-regions__letter Б
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
-                                .cities-regions__item
-                                    span.cities-regions__letter А
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
-                                .cities-regions__item
-                                    span.cities-regions__letter Б
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
-                                .cities-regions__item
-                                    span.cities-regions__letter О
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
-                                .cities-regions__item
-                                    span.cities-regions__letter Б
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
-                        .cities-regions__col.g-filters__content(data-filters-target="region")
-                            h3.g-title.g-title--center.cities-regions__title Город
-                            .cities-regions__letters
-                                a.cities-regions__letter(href="#letter") А
-                                a.cities-regions__letter(href="#letter") Б
-                                a.cities-regions__letter(href="#letter") В
-                                a.cities-regions__letter(href="#letter") Г
-                                a.cities-regions__letter(href="#letter") Д
-                                a.cities-regions__letter(href="#letter") У
-                                a.cities-regions__letter(href="#letter") Ж
-                                a.cities-regions__letter(href="#letter") З
-                                a.cities-regions__letter(href="#letter") И
-                                a.cities-regions__letter(href="#letter") Й
-                                a.cities-regions__letter(href="#letter") К
-                                a.cities-regions__letter(href="#letter") Л
-                                a.cities-regions__letter(href="#letter") М
-                                a.cities-regions__letter(href="#letter") Н
-                                a.cities-regions__letter(href="#letter") О
-                                a.cities-regions__letter(href="#letter") П
-                                a.cities-regions__letter(href="#letter") Р
-                                a.cities-regions__letter(href="#letter") С
-                                a.cities-regions__letter(href="#letter") Т
-                                a.cities-regions__letter(href="#letter") У
-                                a.cities-regions__letter(href="#letter") Ф
-                                a.cities-regions__letter(href="#letter") Х
-                                a.cities-regions__letter(href="#letter") Ц
-                                a.cities-regions__letter(href="#letter") Ч
-                                a.cities-regions__letter(href="#letter") Ш
-                                a.cities-regions__letter(href="#letter") Щ
-                                a.cities-regions__letter(href="#letter") Э
-                                a.cities-regions__letter(href="#letter") Ю
-                                a.cities-regions__letter(href="#letter") Я
-                            .cities-regions__block(data-simplebar)
-                                .cities-regions__item
-                                    span.cities-regions__letter А
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Абакан
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Абинск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Агрыз
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгейск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Азнакаево
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Азов
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Аксай
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Актаныш
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алапаевск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алдан
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алейск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Александров
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Александровск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алексеевка
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алексин
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайское
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алушта
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Альметьевск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Анапа
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Анапская
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Ангарск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Анжеро-Судженск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Апатиты
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Апрелевка
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Апшеронск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Арамиль
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Аргун
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Арзамас
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Армавир
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Армянск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Арсеньев
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Арск Артем
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Артемовский
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Арти
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архипо-Осиповка
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Асбест
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Асино
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астрахань
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Афипский
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Ахтубинск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Ахтырский
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Ачинск
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Аша
-                                .cities-regions__item
-                                    span.cities-regions__letter Б
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
-                                .cities-regions__item
-                                    span.cities-regions__letter А
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
-                                .cities-regions__item
-                                    span.cities-regions__letter Б
-                                    .cities-regions__items
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
-                                        button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ.
-.overlay
+            .region-selection__top
+                h2.g-title.g-title--center.region-selection__title.region-selection__choice САНКТ-ПЕТЕРБУРГ
+                button.btn-reset.region-selection__close
+                    +icon("cross2")
+            .region-selection__container
+                h2.g-title.g-title--center.region-selection__title Выберите регион
+                form.change-city(action="#")
+                    input.change-city__input(type="search", name="s" placeholder="Введите город")
+                    button.btn-reset.change-city__btn
+                        +icon("search-icon")
+                .cities
+                    .cities-main
+                        button.btn-reset.cities-main__btn.js-region-selection__btn МОСКВА
+                        button.btn-reset.cities-main__btn.js-region-selection__btn Санкт-ПЕТеРБУрГ
+                        button.btn-reset.cities-main__btn.js-region-selection__btn УФА
+                        button.btn-reset.cities-main__btn.js-region-selection__btn самара
+                        button.btn-reset.cities-main__btn.js-region-selection__btn нижний-новгород
+                    .cities-regions.g-filters
+                        ul.g-filters__list.cities__filters.list-reset
+                            li.g-filters__item
+                                button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="city") Регион
+                            li.g-filters__item
+                                button.btn-reset.g-filters__btn(data-filters-path="region") Город
+                        .cities-regions__wrapper
+                            .cities-regions__col.g-filters__content.g-filters__content--active(data-filters-target="city")
+                                h3.g-title.g-title--center.cities-regions__title Регион
+                                .cities-regions__letters
+                                    a.cities-regions__letter(href="#letter") А
+                                    a.cities-regions__letter(href="#letter") Б
+                                    a.cities-regions__letter(href="#letter") В
+                                    a.cities-regions__letter(href="#letter") Д
+                                    a.cities-regions__letter(href="#letter") Е
+                                    a.cities-regions__letter(href="#letter") З
+                                    a.cities-regions__letter(href="#letter") И
+                                    a.cities-regions__letter(href="#letter") К
+                                    a.cities-regions__letter(href="#letter") Л
+                                    a.cities-regions__letter(href="#letter") М
+                                    a.cities-regions__letter(href="#letter") Н
+                                    a.cities-regions__letter(href="#letter") О
+                                    a.cities-regions__letter(href="#letter") П
+                                    a.cities-regions__letter(href="#letter") Р
+                                    a.cities-regions__letter(href="#letter") С
+                                    a.cities-regions__letter(href="#letter") Т
+                                    a.cities-regions__letter(href="#letter") У
+                                    a.cities-regions__letter(href="#letter") Х
+                                    a.cities-regions__letter(href="#letter") Ч
+                                    a.cities-regions__letter(href="#letter") Я
+                                .cities-regions__block(data-simplebar)
+                                    .cities-regions__item
+                                        span.cities-regions__letter А
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter В
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Г
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter Д
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter А
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter А
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter О
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                            .cities-regions__col.g-filters__content(data-filters-target="region")
+                                h3.g-title.g-title--center.cities-regions__title Город
+                                .cities-regions__letters
+                                    a.cities-regions__letter(href="#letter") А
+                                    a.cities-regions__letter(href="#letter") Б
+                                    a.cities-regions__letter(href="#letter") В
+                                    a.cities-regions__letter(href="#letter") Г
+                                    a.cities-regions__letter(href="#letter") Д
+                                    a.cities-regions__letter(href="#letter") У
+                                    a.cities-regions__letter(href="#letter") Ж
+                                    a.cities-regions__letter(href="#letter") З
+                                    a.cities-regions__letter(href="#letter") И
+                                    a.cities-regions__letter(href="#letter") Й
+                                    a.cities-regions__letter(href="#letter") К
+                                    a.cities-regions__letter(href="#letter") Л
+                                    a.cities-regions__letter(href="#letter") М
+                                    a.cities-regions__letter(href="#letter") Н
+                                    a.cities-regions__letter(href="#letter") О
+                                    a.cities-regions__letter(href="#letter") П
+                                    a.cities-regions__letter(href="#letter") Р
+                                    a.cities-regions__letter(href="#letter") С
+                                    a.cities-regions__letter(href="#letter") Т
+                                    a.cities-regions__letter(href="#letter") У
+                                    a.cities-regions__letter(href="#letter") Ф
+                                    a.cities-regions__letter(href="#letter") Х
+                                    a.cities-regions__letter(href="#letter") Ц
+                                    a.cities-regions__letter(href="#letter") Ч
+                                    a.cities-regions__letter(href="#letter") Ш
+                                    a.cities-regions__letter(href="#letter") Щ
+                                    a.cities-regions__letter(href="#letter") Э
+                                    a.cities-regions__letter(href="#letter") Ю
+                                    a.cities-regions__letter(href="#letter") Я
+                                .cities-regions__block(data-simplebar)
+                                    .cities-regions__item
+                                        span.cities-regions__letter А
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Абакан
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Абинск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Агрыз
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгейск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Азнакаево
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Азов
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Аксай
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Актаныш
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алапаевск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алдан
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алейск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Александров
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Александровск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алексеевка
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алексин
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайское
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алушта
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Альметьевск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Анапа
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Анапская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Ангарск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Анжеро-Судженск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Апатиты
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Апрелевка
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Апшеронск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Арамиль
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Аргун
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Арзамас
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Армавир
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Армянск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Арсеньев
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Арск Артем
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Артемовский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Арти
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архипо-Осиповка
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Асбест
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Асино
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астрахань
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Афипский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Ахтубинск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Ахтырский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Ачинск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Аша
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter А
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ.
+        +searchForm("search-form--hidden")
+    .overlay
+else
+    header.header 
+        .container.header__container
+            .header__top
+                button.btn-reset.header__location.toggle-location
+                    +icon("location")
+                    span.region-selection__choice САНКТ-ПЕТЕРБУРГ
+                ul.header-menu.list-reset
+                    li.header-menu__item
+                        a.header-menu__link(href="#") Императорский ювелирный дом
+                    li.header-menu__item
+                        a.header-menu__link(href="delivery-payment.html") ДОСТАВКА И ОПЛАТА
+                    li.header-menu__item
+                        a.header-menu__link(href="shops.html") МАГАЗИНЫ
+            .header__middle
+                ul.header-actions.list-reset
+                    li.header-actions__item
+                        button.btn-reset.header-actions__btn
+                            +icon("tel")
+                    li.header-actions__item
+                        button.btn-reset.header-actions__btn.toggle-location
+                            +icon("location")
+                .tel.header__tel
+                    a.tel__value(href="tel:88005553298") 8 (800) 555-32-98
+                    span.tel__desc Пн-Пт 10:00-20:00, Сб, Вс до 17:00
+                a.logo.header__logo(href="/")
+                    img(src="img/logo-icon.svg", alt="Russkiye samotsvety")
+                +burger
+                ul.header__shop-nav.shop-nav.list-reset
+                    li.shop-nav__item
+                        a.shop-nav__link.shop-nav__link--favorite(href="favorites.html")
+                            .shop-nav__icon.shop-nav__icon--favorite
+                            .shop-nav__quantity 2
+                    li.shop-nav__item
+                        a.shop-nav__link.shop-nav__link--cart(href="ordering.html")
+                            .shop-nav__icon.shop-nav__icon--cart
+                            .shop-nav__quantity 13
+                    li.shop-nav__item
+                        a.shop-nav__link.shop-nav__link--cabinet(href="#")
+                            .shop-nav__icon.shop-nav__icon--cabinet
+                            .shop-nav__quantity Войти
+            .header__bottom
+                .nav
+                    .nav__top
+                        button.btn-reset.burger-close
+                            +icon("cross2")
+                        h2.g-title.nav__title Меню
+                    ul.nav__list.nav__list--dropdown.list-reset.js-nav-list
+                        li.nav__item.nav__item--drop.js-open-menu
+                            span.nav__link.nav__link--drop УКРАШЕНИЯ
+                            +icon("arrow")
+                            .menu--hidden.menu.dropdown-menu
+                                .menu__container
+                                    .menu-nav.js-nav-list
+                                        button.btn-reset.nav__mobile-back
+                                            +icon("arrow")
+                                            |Украшения
+                                        .menu-nav__list
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.active Кольца
+
+                                                +icon("arrow")
+                                                +menuContent("show")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Серьги
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Подвески и кресты
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Броши
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Колье
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Цепи
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Браслеты и шармы
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                        .menu-nav__list.menu-nav__list--2
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.menu-nav__link--gray Мужчинам
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.menu-nav__link--gray Детям
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.menu-nav__link--gray Подарки
+
+                                                +icon("arrow")
+                                                +menuContent("")             
+                        li.nav__item.nav__item--drop.js-open-menu
+                            span.nav__link.nav__link--drop ДОМ АКСЕССУАРЫ
+                            +icon("arrow")
+                            .menu--hidden.menu.dropdown-menu
+                                .menu__container
+                                    .menu-nav
+                                        button.btn-reset.nav__mobile-back
+                                            +icon("arrow")
+                                            |Украшения
+                                        .menu-nav__list
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.active Кольца
+
+                                                +icon("arrow")
+                                                +menuContent("show")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Серьги
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Подвески и кресты
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Броши
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Колье
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Цепи
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Браслеты и шармы
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                        .menu-nav__list.menu-nav__list--2
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.menu-nav__link--gray Мужчинам
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.menu-nav__link--gray Детям
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.menu-nav__link--gray Подарки
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                        li.nav__item.nav__item--drop.js-open-menu
+                            span.nav__link.nav__link--drop HIGH JEWELRY
+                            +icon("arrow")
+                            .menu--hidden.menu.dropdown-menu
+                                .menu__container
+                                    .menu-nav
+                                        button.btn-reset.nav__mobile-back
+                                            +icon("arrow")
+                                            |Украшения
+                                        .menu-nav__list
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.active Кольца
+
+                                                +icon("arrow")
+                                                +menuContent("show")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Серьги
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Подвески и кресты
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Броши
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Колье
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Цепи
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link Браслеты и шармы
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                        .menu-nav__list.menu-nav__list--2
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.menu-nav__link--gray Мужчинам
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.menu-nav__link--gray Детям
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                                            .menu-nav__item.js-open-menu
+                                                span.menu-nav__link.menu-nav__link--gray Подарки
+
+                                                +icon("arrow")
+                                                +menuContent("")
+                        li.nav__item
+                            a.nav__link.nav__link--gray(href="new.html") New
+                        li.nav__item
+                            a.nav__link.nav__link--gray(href="collections.html") КОЛЛЕКЦИИ
+                        li.nav__item
+                            a.nav__link.nav__link--gray(href="discounts.html") АКЦИИ
+                    ul.header-menu.nav__header-menu.list-reset
+                        li.header-menu__item
+                            a.header-menu__link(href="#") Вселенная бренда
+                        li.header-menu__item
+                            a.header-menu__link(href="delivery-payment.html") Доставка и оплата
+                        li.header-menu__item
+                            a.header-menu__link(href="shops.html") Фирменные салоны
+                    a.nav__cabinet(href="#")
+                        +icon("cabinet")
+                        |ВОЙТИ В КАБИНЕТ
+                    button.btn-reset.nav-location.toggle-location
+                        span.nav-location__caption Ваш город:
+                        span.nav-location__value.region-selection__choice САНКТ-ПЕТЕРБУРГ
+                    .tel.nav-tel
+                        a.tel__value.nav-tel__value(href="tel:88005553298") 8 (800) 555-32-98
+                        span.tel__desc.nav-tel__desc Пн-Пт 10:00-20:00, Сб, Вс до 17:00
+                +searchForm("header__search-form")
+        .down-bar
+            .down-bar__item
+                button.btn-reset.down-bar__link.toggle-form
+                    span.shop-nav__icon.shop-nav__icon--search
+                    |Поиск
+            .down-bar__item
+                a.down-bar__link(href="favorites.html")
+                    span.shop-nav__icon.shop-nav__icon--favorite
+                    |Избранное
+            .down-bar__item
+                a.down-bar__link(href="ordering.html")
+                    span.shop-nav__icon.shop-nav__icon--cart
+                    |Корзина
+            .down-bar__item
+                a.down-bar__link(href="#")
+                    span.shop-nav__icon.shop-nav__icon--cabinet
+                    |Вход
+        .region-selection
+            button.btn-reset.region-selection__close
+                +icon("cross2")
+            .region-selection__top
+                h2.g-title.g-title--center.region-selection__title.region-selection__choice САНКТ-ПЕТЕРБУРГ
+                button.btn-reset.region-selection__close
+                    +icon("cross2")
+            .region-selection__container
+                h2.g-title.g-title--center.region-selection__title Выберите регион
+                form.change-city(action="#")
+                    input.change-city__input(type="search", name="s" placeholder="Введите город")
+                    button.btn-reset.change-city__btn
+                        +icon("search-icon")
+                .cities
+                    .cities-main
+                        button.btn-reset.cities-main__btn.js-region-selection__btn МОСКВА
+                        button.btn-reset.cities-main__btn.js-region-selection__btn Санкт-ПЕТеРБУрГ
+                        button.btn-reset.cities-main__btn.js-region-selection__btn УФА
+                        button.btn-reset.cities-main__btn.js-region-selection__btn самара
+                        button.btn-reset.cities-main__btn.js-region-selection__btn нижний-новгород
+                    .cities-regions.g-filters
+                        ul.g-filters__list.cities__filters.list-reset
+                            li.g-filters__item
+                                button.btn-reset.g-filters__btn.g-filters__btn--active(data-filters-path="city") Регион
+                            li.g-filters__item
+                                button.btn-reset.g-filters__btn(data-filters-path="region") Город
+                        .cities-regions__wrapper
+                            .cities-regions__col.g-filters__content.g-filters__content--active(data-filters-target="city")
+                                h3.g-title.g-title--center.cities-regions__title Регион
+                                .cities-regions__letters
+                                    a.cities-regions__letter(href="#letter") А
+                                    a.cities-regions__letter(href="#letter") Б
+                                    a.cities-regions__letter(href="#letter") В
+                                    a.cities-regions__letter(href="#letter") Д
+                                    a.cities-regions__letter(href="#letter") Е
+                                    a.cities-regions__letter(href="#letter") З
+                                    a.cities-regions__letter(href="#letter") И
+                                    a.cities-regions__letter(href="#letter") К
+                                    a.cities-regions__letter(href="#letter") Л
+                                    a.cities-regions__letter(href="#letter") М
+                                    a.cities-regions__letter(href="#letter") Н
+                                    a.cities-regions__letter(href="#letter") О
+                                    a.cities-regions__letter(href="#letter") П
+                                    a.cities-regions__letter(href="#letter") Р
+                                    a.cities-regions__letter(href="#letter") С
+                                    a.cities-regions__letter(href="#letter") Т
+                                    a.cities-regions__letter(href="#letter") У
+                                    a.cities-regions__letter(href="#letter") Х
+                                    a.cities-regions__letter(href="#letter") Ч
+                                    a.cities-regions__letter(href="#letter") Я
+                                .cities-regions__block(data-simplebar)
+                                    .cities-regions__item
+                                        span.cities-regions__letter А
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter В
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Г
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter Д
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter А
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter А
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter О
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                            .cities-regions__col.g-filters__content(data-filters-target="region")
+                                h3.g-title.g-title--center.cities-regions__title Город
+                                .cities-regions__letters
+                                    a.cities-regions__letter(href="#letter") А
+                                    a.cities-regions__letter(href="#letter") Б
+                                    a.cities-regions__letter(href="#letter") В
+                                    a.cities-regions__letter(href="#letter") Г
+                                    a.cities-regions__letter(href="#letter") Д
+                                    a.cities-regions__letter(href="#letter") У
+                                    a.cities-regions__letter(href="#letter") Ж
+                                    a.cities-regions__letter(href="#letter") З
+                                    a.cities-regions__letter(href="#letter") И
+                                    a.cities-regions__letter(href="#letter") Й
+                                    a.cities-regions__letter(href="#letter") К
+                                    a.cities-regions__letter(href="#letter") Л
+                                    a.cities-regions__letter(href="#letter") М
+                                    a.cities-regions__letter(href="#letter") Н
+                                    a.cities-regions__letter(href="#letter") О
+                                    a.cities-regions__letter(href="#letter") П
+                                    a.cities-regions__letter(href="#letter") Р
+                                    a.cities-regions__letter(href="#letter") С
+                                    a.cities-regions__letter(href="#letter") Т
+                                    a.cities-regions__letter(href="#letter") У
+                                    a.cities-regions__letter(href="#letter") Ф
+                                    a.cities-regions__letter(href="#letter") Х
+                                    a.cities-regions__letter(href="#letter") Ц
+                                    a.cities-regions__letter(href="#letter") Ч
+                                    a.cities-regions__letter(href="#letter") Ш
+                                    a.cities-regions__letter(href="#letter") Щ
+                                    a.cities-regions__letter(href="#letter") Э
+                                    a.cities-regions__letter(href="#letter") Ю
+                                    a.cities-regions__letter(href="#letter") Я
+                                .cities-regions__block(data-simplebar)
+                                    .cities-regions__item
+                                        span.cities-regions__letter А
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Абакан
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Абинск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Агрыз
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгейск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Азнакаево
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Азов
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Аксай
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Актаныш
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алапаевск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алдан
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алейск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Александров
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Александровск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алексеевка
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алексин
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайское
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алушта
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Альметьевск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Анапа
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Анапская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Ангарск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Анжеро-Судженск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Апатиты
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Апрелевка
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Апшеронск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Арамиль
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Аргун
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Арзамас
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Армавир
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Армянск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Арсеньев
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Арск Артем
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Артемовский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Арти
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архипо-Осиповка
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Асбест
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Асино
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астрахань
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Афипский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Ахтубинск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Ахтырский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Ачинск
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Аша
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ. 
+                                    .cities-regions__item
+                                        span.cities-regions__letter А
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Адыгея респ. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтай Алтай респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Алтайский край 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Амурская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Архангельская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Астраханская обл.
+                                    .cities-regions__item
+                                        span.cities-regions__letter Б
+                                        .cities-regions__items
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Башкортостан респ.
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Белгородская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Брянская обл. 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия 
+                                            button.btn-reset.cities-regions__btn.js-region-selection__btn Бурятия респ.
+    .overlay

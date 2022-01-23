@@ -14,6 +14,9 @@ $(document).ready(function () {
                 value: {
                     required: true,
                 },
+                name: {
+                    required: true,
+                },
                 email: {
                     required: true,
                 }

@@ -110,11 +110,11 @@ const navClose = (e) => {
     initialMenu();
 }
 
-burgerClose.addEventListener("click", navClose)
+burgerClose?.addEventListener("click", navClose)
 
-burger.addEventListener("click", openNav);
+burger?.addEventListener("click", openNav);
 
-nav.addEventListener("click", (e) => {
+nav?.addEventListener("click", (e) => {
     if (e.target.classList.contains("js-open-menu")) {
         nav.classList.add("nav-lock")
         e.target.closest(".js-nav-list").classList.add("animation");

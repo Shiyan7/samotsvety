@@ -14,14 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function toggleLocation() {
         regionSelection.classList.toggle("isOpen");
-        if (!nav.classList.contains("show")) {
+        if (!nav?.classList.contains("show")) {
             body.classList.toggle("lock")
         }
     }
 
     function hiddenLocation() {
         regionSelection.classList.remove("isOpen");
-        if (!nav.classList.contains("show")) {
+        if (!nav?.classList.contains("show")) {
             body.classList.remove("lock")
         }
     }
@@ -49,10 +49,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') hiddenLocation();
     });
-
-    /* document.addEventListener("click", (e) => {
-        if(e.target.classList.contains("region-selection")) {
-            hiddenLocation();
-        }
-    }) */
 });

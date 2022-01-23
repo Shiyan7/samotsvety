@@ -1,0 +1,33 @@
+.g-accordion {
+    
+    &__content {
+        display: none;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+
+        svg {
+            display: block;
+            width: 14px;
+            height: 14px;
+            fill: rgba(0, 0, 0, 0.5);
+            transform: rotate(-90deg);
+            transition: transform 0.3s;
+        }
+    }
+    
+    &.isOpen {
+        .g-accordion__control svg {
+            transform: rotate(90deg);
+        }
+
+        .g-accordion__content {
+            display: block;
+        }
+    }
+}

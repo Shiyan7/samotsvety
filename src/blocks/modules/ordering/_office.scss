@@ -1,0 +1,98 @@
+.office {
+    display: flex;
+    align-items: center;
+
+    &__image {
+        display: block;
+        width: 431px;
+        height: 416px;
+        object-fit: cover;
+        margin-right: 47px;
+    }
+
+    &__metro {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-left: -4px;
+
+        span {
+            display: block;
+            font-size: 18px;
+            line-height: 24px;
+            color: rgba(#000, 0.5);
+            margin-left: 1px;
+        }
+    }
+
+    &__title {
+        max-width: 389px;
+        margin-bottom: 32px;
+        font-family: "HeliosExtLight", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+    }
+    
+    &__hours {
+        display: block;
+        max-width: 230px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #111;
+        margin-bottom: 35px;
+
+        &-desc {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: #111;
+        }
+    }
+
+    &-benefits {
+        margin-bottom: 38px;
+
+        &__item {
+            display: flex;
+            position: relative;
+            font-size: 14px;
+            line-height: 20px;
+            color: #111;
+
+            &:before {
+                @include pseudo();
+                margin-right: 9px;
+                margin-top: 7px;
+                width: 3px;
+                height: 3px;
+                border-radius: 100%;
+                background-color: currentColor;
+                
+            }
+        }
+    }
+
+    &__tel {
+        display: block;
+        margin-bottom: 30px;
+        max-width: 269px;
+        font-size: 16px;
+        line-height: 17px;
+        color: rgba(#000, 0.5);
+        a {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: #111;
+        }
+    }
+
+    &__desc {
+        margin: 0;
+        max-width: 350px;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(#000, 0.5);
+    }
+}

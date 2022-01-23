@@ -121,6 +121,13 @@
                 display: block;
             }
         }
+
+        &--hidden {
+            display: none;
+            @media (max-width: 1024px) {
+                display: block;
+            }
+        }
     }
 
     &-toggle {
