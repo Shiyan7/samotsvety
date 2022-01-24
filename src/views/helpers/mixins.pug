@@ -418,6 +418,20 @@ mixin searchForm(cls)
               span 14089 
               | Брошь из серебра
 
+mixin cartProduct(cls)
+  .cart-product(class=cls)
+    img.cart-product__image.lozad(src="img/card-2.jpg", srcset="img/card-2@2x.jpg 2x" alt="Ложка из столового серебра")
+    .cart-product__text
+        h2.cart-product__title Ложка из столового серебра
+        span.cart-product__vendor
+            |Артикул: 
+            span 92092
+        a.cart-product__link(href="#") Посмотреть характеристики
+    span.cart-product__size -
+    span.cart-product__quantity 15
+    span.cart-product__price 3 000 ₽
+    span.cart-product__total 18 000 ₽
+
 mixin stepper
   .g-stepper.card__stepper
     span.g-stepper__caption ВЫБЕРИТЕ КОЛИЧЕСТВО:

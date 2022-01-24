@@ -41,7 +41,7 @@ section.ordering
                                 button.btn-reset.g-filters__btn.ordering-switch__btn(type="button" data-filters-path="way3")
                                     span.ordering-switch__title Пункты выдачи СДЭК по РФ
                                     span.ordering-switch__desc Выберите любой из 6000+ пунктов выдачи СДЭК
-                        .g-filters__content.ordering-content__inner.g-filters__content--active(data-filters-target="way1")
+                        .g-filters__content.g-filters__content--active.ordering-content__inner(data-filters-target="way1")
                             .office
                                 img.office__image(src="img/no-image.svg", alt="Санкт-Петербург, пл. Карла Фаберже,  ДОМ 8, БЦ «Золотая Долина»")
                                 .office__text
@@ -62,7 +62,33 @@ section.ordering
                                     span.office__tel Если у вас срочный вопрос, звоните нам по телефону
                                         a(href="tel:+78124486588")  +7 (812) 448-65-88
                                     p.office__desc * для въезда на парковку заранее сообщите менеджеру номер и марку вашего автомобиля.
-                        .g-filters__content.ordering-content__inner(data-filters-target="way2") 2
+                        .g-filters__content.ordering-content__inner.ordering-address(data-filters-target="way2")
+                            h2.ordering-address__title Адрес доставки
+                            label.ordering__label.ordering__input--md
+                                span Город
+                                select.g-select(name="city")
+                                    option(value="city-1") САНКТ-ПЕТЕРБУРГ
+                                    option(value="city-2") Москва
+                                    option(value="city-3") Воронеж
+                                    option(value="city-4") САНКТ-ПЕТЕРБУРГ
+                                    option(value="city-5") Москва
+                                    option(value="city-6") Воронеж
+                            label.ordering__label.ordering__input--md
+                                span Улица
+                                input.g-input(type="text" name="promocode" placeholder="введите НАЗВАНИЕ УЛИЦЫ")
+                            .ordering__row
+                                label.ordering__label
+                                    span Дом, корпус, строение
+                                    input.g-input.ordering__input--lg(type="text" name="name" placeholder="введите номер Дома, корпус")
+                                label.ordering__label
+                                    span Квартира/Офис
+                                    input.g-input.ordering__input--lg(type="tel" name="phoneNumber" placeholder="введите номер Квартиры/Офиса")
+                            .ordering-total
+                                h2.ordering-total__title Стоимость и срок доставки: 
+                                p.ordering-total__desc 
+                                    span от 900 ₽, 
+                                    |1 день
+                                
                         .g-filters__content.ordering-content__inner(data-filters-target="way3") 3
                 .ordering-content__item.g-accordion.isOpen
                     button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
@@ -101,6 +127,11 @@ section.ordering
                             span.ordering-table__caption КОЛИЧЕСТВО
                             span.ordering-table__caption ЦЕНА
                             span.ordering-table__caption СУММА
+                        .ordering-table__items
+                            -for(let i = 0; i < 4; i++)
+                                +cartProduct("ordering-table__item")
+                        button.btn-reset.g-btn.g-btn--stroke.ordering-table__more(type="button") показать ещЁ
+                        
             .ordering-info
                 .ordering-info__top
                     h2.ordering-info__title.g-title ВАШ ЗАКАЗ
