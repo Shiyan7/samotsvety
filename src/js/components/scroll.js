@@ -1,4 +1,4 @@
-const fixBlock = document.querySelector('.fix-block');
+/* const fixBlock = document.querySelector('.fix-block');
 const fixBlockHeight = fixBlock?.offsetTop;
 
 const toggleFixed = () => {
@@ -12,4 +12,4 @@ const toggleFixed = () => {
 
 window.addEventListener('scroll', toggleFixed);
 
-toggleFixed();
+toggleFixed(); */

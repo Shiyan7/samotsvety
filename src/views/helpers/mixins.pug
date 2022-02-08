@@ -421,16 +421,76 @@ mixin searchForm(cls)
 mixin cartProduct(cls)
   .cart-product(class=cls)
     img.cart-product__image.lozad(src="img/card-2.jpg", srcset="img/card-2@2x.jpg 2x" alt="Ложка из столового серебра")
-    .cart-product__text
-        h2.cart-product__title Ложка из столового серебра
-        span.cart-product__vendor
-            |Артикул: 
-            span 92092
-        a.cart-product__link(href="#") Посмотреть характеристики
-    span.cart-product__size -
-    span.cart-product__quantity 15
-    span.cart-product__price 3 000 ₽
-    span.cart-product__total 18 000 ₽
+    .cart-product__right
+      .cart-product__text
+        .cart-product__info
+            h2.cart-product__title Ложка из столового серебра
+            span.cart-product__vendor
+                |Артикул: 
+                span 92092
+        span.cart-product__size 16.5
+        span.cart-product__quantity 15
+        span.cart-product__price 3 000 ₽
+        span.cart-product__total 18 000 ₽
+      .cart-product__bottom.read-more-wrapper
+        .cart-product-features.full-text
+          .card-features__row
+              span.card-features__title Вес изделия:
+              span.card-features__value 3,37 г
+          .card-features__row
+              span.card-features__title Материал:
+              span.card-features__value Белое золото, 585 пробы
+          .card-features__row
+              span.card-features__title Вставка:
+              span.card-features__value
+                ul.card-features-list.list-reset
+                  li.card-features-list__item
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="5" cy="5" r="5" fill="#11C849"/>
+                    </svg>
+                    |Турмалин — 1, огранка «Октагон», 0.16 crt.
+                  li.card-features-list__item
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="5" cy="5" r="5" fill="#FBE151"/>
+                    </svg>
+                    |Цинтрин — 1, огранка «Октагон», 0.16 crt.
+                  li.card-features-list__item
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="5" cy="5" r="5" fill="#FB4861"/>
+                    </svg>
+                    |Рубин — 1, огранка «Октагон», 0.16 crt.
+                  li.card-features-list__item
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="5" cy="5" r="5" fill="#6C80C9"/>
+                    </svg>
+                    |Сапфир — 1, огранка «Октагон», 0.16 crt.
+                  li.card-features-list__item
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="5" cy="5" r="5" fill="#A3D9F8"/>
+                    </svg>
+                    |Топаз — 1, огранка «Октагон», 0.16 crt.
+                  li.card-features-list__item
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="5" cy="5" r="5" fill="#000000"/>
+                    </svg>
+                    |Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+                  
+          .card-features__row
+              span.card-features__title Объем:
+              span.card-features__value 00 мл
+          .card-features__row
+              span.card-features__title Длина:
+              span.card-features__value 00 мл
+          .card-features__row
+              span.card-features__title Ширина :
+              span.card-features__value 15,05 мм
+          .card-features__row
+              span.card-features__title Высота:
+              span.card-features__value 00 мм
+          .card-features__row
+              span.card-features__title Технологии:
+              span.card-features__value Хххххххххххххххххххххххх
+        button.btn-reset.cart-product__more.read-more(type="button" data-text="Посмотреть характеристики") Посмотреть характеристики
 
 mixin stepper
   .g-stepper.card__stepper

@@ -1,13 +1,42 @@
 .office {
     display: flex;
-    align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+    }
 
     &__image {
         display: block;
-        width: 431px;
-        height: 416px;
+        width: vw(431);
+        height: auto;
         object-fit: cover;
-        margin-right: 47px;
+        margin-right: vw(47);
+
+        @media (min-width: 1441px) {
+            width: 431px;
+            margin-right: 47px;
+        }
+
+        @media (max-width: 1024px) {
+            width: vw(600);
+            margin-right: 30px;
+        }
+
+        @media (max-width: 768px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 400px;
+            height: 200px;
+        }
+
+        @media (max-width: 576px) {
+            height: 152px;
+            margin-bottom: 15px;
+        }
     }
 
     &__metro {
@@ -16,12 +45,23 @@
         margin-bottom: 5px;
         margin-left: -4px;
 
+        @media (max-width: 768px) {
+            justify-content: center;
+            margin-bottom: 2px;
+        }
+
         span {
             display: block;
             font-size: 18px;
             line-height: 24px;
             color: rgba(#000, 0.5);
             margin-left: 1px;
+            
+            @media (max-width: 576px) {
+                color: #111;
+                font-size: 13px;
+                line-height: 17px;
+            }
         }
     }
 
@@ -32,6 +72,12 @@
         font-size: 16px;
         line-height: 24px;
         font-weight: 300;
+
+        @media (max-width: 576px) {
+            font-size: 13px;
+            line-height: 17px;
+            margin-bottom: 17px;
+        }
     }
     
     &__hours {
@@ -42,16 +88,45 @@
         color: #111;
         margin-bottom: 35px;
 
+        @media (max-width: 1024px) {
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 768px) {
+            margin: 0 auto 25px;
+        }
+
+        @media (max-width: 576px) {
+            color: rgba(#000, 0.5);
+            line-height: 17px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
         &-desc {
             font-weight: 500;
             font-size: 18px;
             line-height: 24px;
             color: #111;
+
+            @media (max-width: 576px) {
+                font-size: 13px;
+                line-height: 17px;
+                font-weight: 300;
+            }
         }
     }
 
     &-benefits {
         margin-bottom: 38px;
+
+        @media (max-width: 1024px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 25px;
+        }
 
         &__item {
             display: flex;
@@ -60,6 +135,10 @@
             line-height: 20px;
             color: #111;
 
+            @media (max-width: 768px) {
+                justify-content: center;
+            }
+    
             &:before {
                 @include pseudo();
                 margin-right: 9px;
@@ -80,11 +159,29 @@
         font-size: 16px;
         line-height: 17px;
         color: rgba(#000, 0.5);
+
+        @media (max-width: 1024px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            margin: 0 auto 20px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 13px;
+        }
+
         a {
             font-weight: 500;
             font-size: 18px;
             line-height: 24px;
             color: #111;
+
+            @media (max-width: 576px) {
+                font-size: 13px;
+                line-height: 17px;
+            }
         }
     }
 
@@ -94,5 +191,9 @@
         font-size: 14px;
         line-height: 20px;
         color: rgba(#000, 0.5);
+
+        @media (max-width: 768px) {
+            margin: 0 auto;
+        }
     }
 }

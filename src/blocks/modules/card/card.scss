@@ -475,7 +475,6 @@
 
         &__row {
             display: flex;
-            align-items: center;
 
             &:not(:last-child) {
                 margin-bottom: 17px;
@@ -509,6 +508,17 @@
         &__more {
             font-weight: 300;
             color: #111;
+        }
+
+        &-list {
+            &__item {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+                svg {
+                    margin-right: 8px;
+                }
+            }
         }
     }
 
