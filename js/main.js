@@ -948,21 +948,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-"use strict";
+/* const fixBlock = document.querySelector('.fix-block');
+const fixBlockHeight = fixBlock?.offsetTop;
 
-var fixBlock = document.querySelector('.fix-block');
-var fixBlockHeight = fixBlock === null || fixBlock === void 0 ? void 0 : fixBlock.offsetTop;
+const toggleFixed = () => {
+    if (fixBlockHeight <= window.pageYOffset) {
+        fixBlock?.classList.add('fixed');
+    } else {
+        fixBlock?.classList.remove('fixed');
+    }
 
-var toggleFixed = function toggleFixed() {
-  if (fixBlockHeight <= window.pageYOffset) {
-    fixBlock === null || fixBlock === void 0 ? void 0 : fixBlock.classList.add('fixed');
-  } else {
-    fixBlock === null || fixBlock === void 0 ? void 0 : fixBlock.classList.remove('fixed');
-  }
-};
+}
 
 window.addEventListener('scroll', toggleFixed);
-toggleFixed();
+
+toggleFixed(); */
+"use strict";
 "use strict";
 
 var selects = document.querySelectorAll(".g-select");
