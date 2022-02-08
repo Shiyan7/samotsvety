@@ -1,0 +1,17 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Услуги";
+	- const page = "services"
+
+block content
+	.site-container
+		include ../../blocks/modules/header/header
+		main.main
+			include ../../blocks/modules/services/services
+			include ../../blocks/modules/questions/questions
+		include ../../blocks/modules/footer/footer
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

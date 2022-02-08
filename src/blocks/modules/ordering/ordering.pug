@@ -141,7 +141,11 @@ section.ordering
                     span.ordering-info__cost-value 424 200 ₽
                 label.ordering__label
                     span Промокод
-                    input.g-input.ordering__input--lg(type="text" name="промокод" placeholder="ВВЕДИТЕ ПРОМОКОД")
+                    input.g-input.ordering__input--lg.valid(type="text" name="промокод" placeholder="ВВЕДИТЕ ПРОМОКОД")
+                .ordering-info__promocode
+                    span.ordering-info__promocode-desc СКИДКА ПО ПРОМОКОДУ
+                        span -00%
+                    span.ordering-info__promocode-value 5 970 ₽
                 .ordering-info__total
                     span ИТОГО
                     span 417 000 ₽
@@ -152,5 +156,5 @@ section.ordering
                     input.modal-form__checkbox(type="checkbox" checked)
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных
-                p.ordering-info__desc Оформляя заказ, вы подтверждаете, что соглашаетесь с
-                    a(href="policy.html") &nbsp;правилами продажи
+                p.ordering-info__desc Оформляя заказ, вы подтверждаете, что соглашаетесь с 
+                    a(href="policy.html") правилами продажи

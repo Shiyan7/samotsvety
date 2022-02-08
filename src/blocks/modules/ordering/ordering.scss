@@ -361,6 +361,34 @@
             }
         }
 
+        &__promocode {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 29px;
+
+            &-desc {
+                display: flex;
+                font-size: 14px;
+                line-height: 16px;
+                text-transform: uppercase;
+                color: #111;
+
+                span {
+                    display: block;
+                    margin-left: 8px;
+                }
+            }
+
+            &-value {
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 500;
+                font-weight: 500;
+                color: #111;
+            }
+        }
+
         &__total {
             display: flex;
             align-items: center;
