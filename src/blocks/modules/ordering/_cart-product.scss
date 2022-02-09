@@ -1,12 +1,48 @@
 .cart-product {
     position: relative;
-    display: flex;
     padding: 23.5px 0;
     border-bottom: 1px solid rgba(#000, 0.2);
+
+    @media (max-width: 576px) {
+        padding: 23.5px 0 10px;
+    }
+
+    .g-stepper {
+        display: flex;
+        justify-content: center;
+        &__wrapper {
+            width: 51px;
+            height: 20px;
+        }
+
+        &__btn {
+            width: 8px;
+            height: 14px;
+        }
+
+        &__input {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+    }
 
     &__right {
         padding-top: 21px;
         width: 100%;
+
+        @media (max-width: 1280px) {
+            padding-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
     }
 
     &__image {
@@ -15,13 +51,23 @@
         height: 120px;
         object-fit: cover;
         margin-right: 36px;
+
+        @media (max-width: 576px) {
+            min-width: 100px;
+            margin-right: 17px;
+            height: 100px;
+        }
     }
 
     &__text {
         display: flex;
+
+        @media (max-width: 1280px) {
+            display: block;
+        }
     }
 
-    &__info {
+    &__left {
         flex: 0 0 vw(229);
         @media (min-width: 1441px) {
             flex: 0 0 229px;
@@ -43,6 +89,10 @@
         line-height: 16px;
         color: #111;
         margin-bottom: 3px;
+
+        @media (max-width: 576px) {
+            margin-bottom: 9px;
+        }
 
         span {
             color: rgba(#000, 0.5);
@@ -104,6 +154,32 @@
         display: none;
         margin: 5px 0 8px;
 
+        .card-features-list__item {
+            display: flex;
+
+            svg {
+                margin-top: 3px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-features {
+                &__row {
+                    flex-wrap: wrap;
+
+                    &:not(:last-child) {
+                        margin-bottom: 8px;
+                    }
+                }
+
+                &__title {
+                    min-width: auto;
+                    margin-right: 3px;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+
         &.active {
             display: block;
         }
@@ -116,6 +192,11 @@
         color: #111;
         text-decoration: underline;
 
+        @media (max-width: 576px) {
+            font-size: 13px;
+            line-height: 13px;
+        }
+
         @include hover {
             text-decoration: none;
         }
@@ -124,18 +205,79 @@
     &__specifications {
         display: flex;
         padding-top: 32px;
-        @media (max-width: 1024px) {
+        @media (max-width: 1280px) {
             display: none;
         }
     }
 
     &__remove {
+        display: block;
         position: absolute;
         top: 68px;
         right: 0;
-        display: block;
         width: 24px;
         height: 24px;
+
+        @media (max-width: 1280px) {
+            top: 23.5px;
+        }
+    }
+
+    &-info {
+        display: none;
+        flex-wrap: wrap;
+
+        @media (max-width: 1280px) {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            justify-content: space-between;
+        }
+
+        &__item {
+            display: flex;
+            align-items: flex-end;
+            margin-top: 15px;
+            &:not(:last-child) {
+                margin-right: 60px;
+
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                }
+            }
+
+            &:last-child {
+                @media (max-width: 768px) {
+                    justify-content: flex-end;
+                    width: 100%;
+                }
+            }
+        }
+
+        &__caption {
+            display: block;
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+            margin-right: 3px;
+            color: rgba(#000, 0.5);
+        }
+
+        &__value {
+            font-size: 14px;
+            line-height: 16px;
+
+            &--bold {
+                font-weight: 500;
+            }
+
+            &--bolder {
+                font-size: 20px;
+                line-height: 18px;
+                font-weight: 500;
+            }
+        }
     }
 }
 

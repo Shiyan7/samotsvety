@@ -42,6 +42,10 @@
         margin-right: 50px;
         width: 100%;
 
+        @media (max-width: 1024px) {
+            margin-right: 0;
+        }
+
         .g-accordion__content {
             margin-top: 47px;
 

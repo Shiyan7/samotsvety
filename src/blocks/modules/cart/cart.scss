@@ -13,5 +13,10 @@
                 margin-bottom: 44px;
             }
         }
+        .ordering-content__inner {
+            @media (max-width: 576px) {
+                padding: 0;
+            }
+        }
     }
 }
