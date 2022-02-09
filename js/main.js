@@ -747,6 +747,22 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  var orderingOpenPopupBtns = document.querySelectorAll(".js-toggle-ordering-popup");
+  var orderingList = document.querySelector(".ordering-list");
+  var body = document.body;
+
+  function showOrderingPopup() {
+    orderingList.classList.toggle("show");
+    body.classList.toggle("lock");
+  }
+
+  orderingOpenPopupBtns.forEach(function (el) {
+    el.addEventListener("click", showOrderingPopup);
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
   var perfectCombinationSlider = document.querySelector(".perfect-combination-slider");
   var perfectCombinationSliderItems = document.querySelectorAll(".perfect-combination__item");
 
