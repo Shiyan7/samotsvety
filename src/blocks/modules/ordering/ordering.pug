@@ -142,6 +142,10 @@ section.ordering
                             span Комментарий
                             input.g-input.ordering__input--lg(type="text" name="comment" placeholder="Оставьте свои комментарии, мы обязательно примем их во внимание")
                 .ordering-content__item.g-accordion.isOpen.ordering-list(id="order-list")
+                    .ordering-header
+                        h2.g-title.g-title--center.ordering-header__title состав заказа
+                        button.btn-reset.ordering-header__close.js-toggle-ordering-popup(type="button")
+                            +icon("cross2")
                     button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
                         span Состав заказа
                         i.g-accordion__icon
@@ -157,5 +161,6 @@ section.ordering
                             -for(let i = 0; i < 4; i++)
                                 +cartProduct("ordering__product")
                         button.btn-reset.g-btn.g-btn--stroke.cart-table__more(type="button") показать ещЁ
-                        
+                            
             +orderingInfo
+            button.btn-reset.ordering__open-popup.js-toggle-ordering-popup(type="button") состав заказа
