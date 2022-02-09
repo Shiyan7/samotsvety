@@ -1276,7 +1276,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", hiddenLocation);
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') hiddenLocation();
+    if (e.key === 'Escape' && regionSelection.classList.contains("isOpen")) hiddenLocation();
   });
 });
 "use strict";
