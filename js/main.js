@@ -61,6 +61,28 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  var cartShopChoiceBtns = document.querySelectorAll(".cart-shop__choice");
+  var cartShops = document.querySelectorAll(".cart-shop");
+
+  function handleChoice() {
+    var target = this.textContent;
+    var parent = this.closest(".cart-shop");
+    target !== 'Изменить выбор' ? target = 'Изменить выбор' : target = "\u0412\u044B\u0431\u0440\u0430\u0442\u044C";
+    this.textContent = target;
+    cartShops.forEach(function (el) {
+      return el.classList.toggle("cart-shop--hidden");
+    });
+    parent.classList.toggle("cart-shop--selected");
+    parent.classList.remove("cart-shop--hidden");
+  }
+
+  cartShopChoiceBtns.forEach(function (el) {
+    return el.addEventListener("click", handleChoice);
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
   var moreFilters = document.querySelectorAll(".catalog-filter__more");
 
   function loadMoreFilters(e) {
@@ -1130,6 +1152,31 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         stepperInput.style.width = "".concat(stepperInput.value.length + 2, "ex");
       }
+    });
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
+  var switchTabsBtn = document.querySelectorAll(".switch-tabs__btn");
+  switchTabsBtn.forEach(function (el) {
+    el.addEventListener("click", function () {
+      var switchPath = el.dataset.switchPath;
+      var switchTabs = el.closest(".switch-tabs");
+      var switchContent = el.closest(".switch-tabs").querySelectorAll(".switch-tabs__content");
+      switchTabs.querySelector('.switch-tabs__btn--active').classList.remove('switch-tabs__btn--active');
+      switchTabs.querySelector("[data-switch-path=\"".concat(switchPath, "\"]")).classList.add('switch-tabs__btn--active');
+
+      var handleContent = function handleContent(path, el) {
+        var _el$closest, _el$closest$querySele;
+
+        switchContent.forEach(function (el) {
+          return el.classList.remove('switch-tabs__content--active');
+        });
+        (_el$closest = el.closest(".switch-tabs")) === null || _el$closest === void 0 ? void 0 : (_el$closest$querySele = _el$closest.querySelector("[data-switch-target=\"".concat(path, "\"]"))) === null || _el$closest$querySele === void 0 ? void 0 : _el$closest$querySele.classList.add('switch-tabs__content--active');
+      };
+
+      handleContent(switchPath, el);
     });
   });
 });

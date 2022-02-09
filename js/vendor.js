@@ -101,7 +101,7 @@ class GraphModal {
 					return;
 				}
 
-				if (e.target.closest('.modal__close')) {
+				if (e.target.closest('.js-modal-close')) {
 					this.close();
 					return;
 				}

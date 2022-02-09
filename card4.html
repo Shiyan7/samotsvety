@@ -64,7 +64,7 @@
               <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--favorite" href="favorites.html">
                   <div class="shop-nav__icon shop-nav__icon--favorite"></div>
                   <div class="shop-nav__quantity">2</div></a></li>
-              <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cart" href="ordering.html">
+              <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cart" href="cart.html">
                   <div class="shop-nav__icon shop-nav__icon--cart"></div>
                   <div class="shop-nav__quantity">13</div></a></li>
               <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cabinet" href="#">
@@ -2138,7 +2138,7 @@
             <button class="btn-reset down-bar__link toggle-form"><span class="shop-nav__icon shop-nav__icon--search"></span>Поиск</button>
           </div>
           <div class="down-bar__item"><a class="down-bar__link" href="favorites.html"><span class="shop-nav__icon shop-nav__icon--favorite"></span>Избранное</a></div>
-          <div class="down-bar__item"><a class="down-bar__link" href="ordering.html"><span class="shop-nav__icon shop-nav__icon--cart"></span>Корзина</a></div>
+          <div class="down-bar__item"><a class="down-bar__link" href="cart.html"><span class="shop-nav__icon shop-nav__icon--cart"></span>Корзина</a></div>
           <div class="down-bar__item"><a class="down-bar__link" href="#"><span class="shop-nav__icon shop-nav__icon--cabinet"></span>Вход</a></div>
         </div>
         <div class="region-selection">
@@ -4021,7 +4021,7 @@
                 </div>
               </div>
             </div>
-            <div class="g-filters__content class modal-filters__content map-reserve" data-filters-target="map">
+            <div class="g-filters__content modal-filters__content map-reserve" data-filters-target="map">
               <div class="modal-map">
                 <div class="modal-map__item"></div>
               </div>
@@ -4155,6 +4155,21 @@
             </form>
             <div class="modal-tel">
               <p class="modal-tel__desc">Вы можете связаться с нами по телефону</p><a class="modal-tel__value" href="tel:88005553298">8 (800) 555-32-98</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container modal__container--7" role="dialog" aria-modal="true" data-graph-target="delete-product">
+          <button class="btn-reset modal__close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title modal__title--light">Подтвердите действие</h2>
+            <p class="modal__desc modal__desc--center">Вы уверены, что хотите удалить этот&nbsp;товар?</p>
+            <div class="modal__btns">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">Да, удалить</button>
+              <button class="btn-reset g-btn g-btn--stroke modal-form__btn modal__close">Нет, оставить</button>
             </div>
           </div>
         </div>
