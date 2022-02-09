@@ -47,6 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') hiddenLocation();
+        if (e.key === 'Escape' && regionSelection.classList.contains("isOpen")) hiddenLocation();
     });
 });
