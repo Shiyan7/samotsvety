@@ -69,7 +69,7 @@ class GraphModal {
         document.body.classList.add("lock");
     }
     enableScroll() {
-        document.body.classList.remove("lock");
+        if(!document.querySelector(".ordering-list")?.classList.contains("show")) document.body.classList.remove("lock");
     }
 }
 

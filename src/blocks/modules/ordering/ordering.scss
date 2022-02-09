@@ -111,7 +111,7 @@
                 margin: 0 auto;
             }
         }
-        
+
         span {
             display: block;
             font-size: 16px;
@@ -146,6 +146,14 @@
 
         &--lg {
             width: auto;
+
+            @media (max-width: 490px) {
+                &::-webkit-input-placeholder {
+                    white-space: pre-line;
+                    position: relative;
+                    top: -7px;
+                }
+            }
         }
     }
 
@@ -199,7 +207,7 @@
 
     &-switch {
         width: 100%;
-        
+
         &:not(:last-child) {
             margin-right: 0;
 
@@ -241,6 +249,7 @@
 
             &:hover {
                 color: #111;
+
                 &:after {
                     left: 0;
                     width: 100%;
@@ -255,7 +264,7 @@
                 background-color: rgba(#000, 0.5);
                 color: #fff;
                 border: 1px solid transparent;
-                
+
                 @media (max-width: 576px) {
                     .ordering-switch__desc {
                         color: #fff;
@@ -281,7 +290,8 @@
                     cursor: pointer;
                     opacity: 0;
                     overflow: hidden;
-                    &:checked ~ .ordering-switch__btn {
+
+                    &:checked~.ordering-switch__btn {
                         background-color: rgba(#000, 0.5);
                         color: #fff;
                         border: 1px solid transparent;
@@ -293,6 +303,7 @@
                         }
                     }
                 }
+
                 &__btn {
                     width: auto;
                 }
@@ -540,9 +551,11 @@
             overflow-y: auto;
             background-color: #fff;
             transition: transform 0.3s;
+
             &.show {
                 transform: translateX(0%);
             }
+
             .ordering-content {
                 &__top {
                     display: none;
@@ -607,7 +620,7 @@
                 font-size: 24px;
                 line-height: 30px;
             }
-    
+
             @media (max-width: 576px) {
                 font-family: "HeliosExt", sans-serif;
                 font-size: 16px;
@@ -642,6 +655,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         @media (min-width: 1281px) {
             display: none;
         }
