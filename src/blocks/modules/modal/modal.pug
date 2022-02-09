@@ -1,6 +1,6 @@
 .modal
     .modal__container(role="dialog" aria-modal="true" data-graph-target="price-request")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content
             h2.g-title.g-title--center.modal__title Запрос цены
@@ -14,13 +14,13 @@
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных *в рабочее время
     .modal__container.modal__container--2(role="dialog" aria-modal="true" data-graph-target="why-price")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content
             h2.g-title.g-title--center.modal__title ПОЧЕМУ <br>НЕТОЧНАЯ ЦЕНА?
             p.modal__desc.modal__desc--center Цена изделия может значительно варьироваться в&nbsp;зависимости от&nbsp;веса готового изделия, характеристик вставок (цвета, чистоты и&nbsp;качества огранки), а&nbsp;также от&nbsp;общего каратного веса драгоценных камней.
     .modal__container(role="dialog" aria-modal="true" data-graph-target="order-product")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content
             h2.g-title.g-title--center.modal__title Заявка на изделие под заказ
@@ -34,7 +34,7 @@
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных *в рабочее время
     .modal__container.modal__container--2(role="dialog" aria-modal="true" data-graph-target="order-my-size")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content
             h2.g-title.g-title--center.modal__title Заказать изделие по&nbsp;моему&nbsp;размеру
@@ -50,7 +50,7 @@
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных *в рабочее время
     .modal__container.modal__container--2(role="dialog" aria-modal="true" data-graph-target="use-promocode")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content
             h2.g-title.g-title--center.modal__title Как использовать промокод?
@@ -64,7 +64,7 @@
                 span только при покупке on-line 
                 | в&nbsp;интернет-галерее «Русские самоцветы».
     .modal__container.modal__container--3(role="dialog" aria-modal="true" data-graph-target="reduce-price")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content
             h2.g-title.g-title--center.modal__title Снизьте цену на <br> товар за 1 минуту
@@ -85,7 +85,7 @@
                     span.modal-form__switch
                     span.modal-form__desc Я даю согласие на sms-рассылку
     .modal__container.modal__container--4(role="dialog" aria-modal="true" data-graph-target="found-out-size")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content
             h2.g-title.g-title--center.modal__title Как узнать размер?
@@ -99,7 +99,7 @@
                 button.btn-reset.g-btn.g-btn--black.modal-form__btn расчитать
             h2.g-title.g-title--center.modal__title.modal__title--md НУЖНЫЙ ВАМ РАЗМЕР 19
     .modal__container.modal__container--5(role="dialog" aria-modal="true" data-graph-target="reserve")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content.g-filters
             h2.g-title.g-title--center.modal__title ВЫБЕРИТЕ РАЗМЕР
@@ -481,7 +481,7 @@
                         button.btn-reset.g-btn.g-btn--black.list-reserve__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500") оформить резерв
     
     .modal__container.modal__container--6(role="dialog" aria-modal="true" data-graph-target="make-reserve")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         button.btn-reset.modal__back.modal-btn(data-graph-animation="fadeInUp" data-graph-path="reserve" data-graph-speed="500")
             |Назад
@@ -537,7 +537,7 @@
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных
     .modal__container(role="dialog" aria-modal="true" data-graph-target="modal-order")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content
             h2.g-title.g-title--center.modal__title.modal-order__title ОФОРМЛЕНИЕ ЗАКАЗА
@@ -552,7 +552,7 @@
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных
     .modal__container.modal__container--3(role="dialog" aria-modal="true" data-graph-target="tel-order")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content
             h2.g-title.g-title--center.modal__title Оформим заказ <br> по телефону
@@ -569,11 +569,11 @@
                 p.modal-tel__desc Вы можете связаться с нами по телефону
                 a.modal-tel__value(href="tel:88005553298") 8 (800) 555-32-98
     .modal__container.modal__container--7(role="dialog" aria-modal="true" data-graph-target="delete-product")
-        button.btn-reset.modal__close(aria-label="Закрыть модальное окно")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
         .modal-content
             h2.g-title.g-title--center.modal__title.modal__title--light Подтвердите действие
             p.modal__desc.modal__desc--center Вы уверены, что хотите удалить этот&nbsp;товар?
             .modal__btns
                 button.btn-reset.g-btn.g-btn--black.modal-form__btn Да, удалить
-                button.btn-reset.g-btn.g-btn--stroke.modal-form__btn.modal__close Нет, оставить
+                button.btn-reset.g-btn.g-btn--stroke.modal-form__btn.js-modal-close Нет, оставить
