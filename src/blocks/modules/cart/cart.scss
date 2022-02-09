@@ -1,0 +1,17 @@
+.cart {
+    &__container {
+        padding-bottom: 88px;
+
+        .cart-table__items {
+            margin-bottom: 0;
+
+            @media (max-width: 1024px) {
+                margin-bottom: 70px;
+            }
+
+            @media (max-width: 576px) {
+                margin-bottom: 44px;
+            }
+        }
+    }
+}

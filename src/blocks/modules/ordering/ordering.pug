@@ -87,9 +87,34 @@ section.ordering
                                 h2.ordering-total__title Стоимость и срок доставки: 
                                 p.ordering-total__desc 
                                     span от 900 ₽, 
-                                    |1 день
-                                
-                        .g-filters__content.ordering-content__inner(data-filters-target="way3") 3
+                                    |1 день     
+                        .g-filters__content.ordering-content__inner.switch-tabs(data-filters-target="way3")
+                            label.ordering__label.ordering__label--2
+                                span Город
+                                select.g-select(name="city")
+                                    option(value="city-1") САНКТ-ПЕТЕРБУРГ
+                                    option(value="city-2") Москва
+                                    option(value="city-3") Воронеж
+                                    option(value="city-4") САНКТ-ПЕТЕРБУРГ
+                                    option(value="city-5") Москва
+                                    option(value="city-6") Воронеж
+                            ul.switch-tabs__list.list-reset
+                                li.switch-tabs__item
+                                    button.btn-reset.switch-tabs__btn.switch-tabs__btn--active(data-switch-path="list" type="button") Списком
+                                li.switch-tabs__item
+                                    button.btn-reset.switch-tabs__btn(data-switch-path="map" type="button") На карте
+                            .switch-tabs__content.switch-tabs__content--active.cart-shops(data-switch-target="list" data-simplebar)
+                                -for(let i = 0; i < 8; i++)
+                                    .cart-shop
+                                        .cart-shop__text
+                                            span.cart-shop__success вы выбрали
+                                            address.cart-shop__address г. Санкт-Петрбург, ул. Антонова-Овсеенко, д. 35, корп. 3
+                                            span.cart-shop__hours Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00
+                                            span.cart-shop__tel Тел.: + 7 (914) 274-58-58, +7 (812) 375-88-54
+                                        span.cart-shop__price от 2721,96 ₽* 4-5 дней
+                                        a(href="#").g-link.cart-shop__link На карте
+                                        button.btn-reset.g-btn.g-btn--stroke.cart-shop__choice(type="button") Выбрать
+                            .switch-tabs__content(data-switch-target="map") 2
                 .ordering-content__item.g-accordion.isOpen
                     button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
                         span Выберите способ оплаты
@@ -129,32 +154,7 @@ section.ordering
                             span.cart-table__total СУММА
                         .cart-table__items
                             -for(let i = 0; i < 4; i++)
-                                +cartProduct("cart-table__item")
+                                +cartProduct("ordering__product")
                         button.btn-reset.g-btn.g-btn--stroke.cart-table__more(type="button") показать ещЁ
                         
-            .ordering-info
-                .ordering-info__top
-                    h2.ordering-info__title.g-title ВАШ ЗАКАЗ
-                    span.ordering-info__quantity.g-title ТОВАРОВ 450
-                .ordering-info__cost
-                    span.ordering-info__cost-desc ОБЩАЯ СТОИМОСТЬ
-                    span.ordering-info__cost-value 424 200 ₽
-                label.ordering__label
-                    span Промокод
-                    input.g-input.ordering__input--lg.valid(type="text" name="промокод" placeholder="ВВЕДИТЕ ПРОМОКОД")
-                .ordering-info__promocode
-                    span.ordering-info__promocode-desc СКИДКА ПО ПРОМОКОДУ
-                        span -00%
-                    span.ordering-info__promocode-value 5 970 ₽
-                .ordering-info__total
-                    span ИТОГО
-                    span 417 000 ₽
-                .ordering-info__btns
-                    a.g-btn.g-btn--stroke.ordering-info__btn.ordering-info__btn-list.anchor-link(href="#order-list") Состав заказа
-                    button.btn-reset.g-btn.g-btn--black.ordering-info__btn ОФОРМИТЬ ЗАКАЗ
-                label.modal-form__label
-                    input.modal-form__checkbox(type="checkbox" checked)
-                    span.modal-form__switch
-                    span.modal-form__desc Я согласен на обработку персональных данных
-                p.ordering-info__desc Оформляя заказ, вы подтверждаете, что соглашаетесь с 
-                    a(href="policy.html") правилами продажи
+            +orderingInfo

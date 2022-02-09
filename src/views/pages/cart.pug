@@ -2,14 +2,13 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Оформление заказа";
-	- const page = "ordering";
-	- const secondHeader = true;
+	- const title = "Корзина";
+	- const page = "cart";
 
 block content
 	include ../../blocks/modules/header/header
 	main.main
-		include ../../blocks/modules/ordering/ordering
+		include ../../blocks/modules/cart/cart
 	include ../../blocks/modules/footer/footer
 	include ../../blocks/modules/modal/modal
 block scripts

@@ -52,6 +52,10 @@
         &--2 {
             color: #111;
 
+            .region-selection__choice {
+                padding-top: 2px;
+            }
+
             @media (max-width: 1024px) {
                 display: none;
             }

@@ -428,10 +428,11 @@ mixin cartProduct(cls)
             span.cart-product__vendor
                 |Артикул: 
                 span 92092
-        span.cart-product__size 16.5
-        span.cart-product__quantity 15
-        span.cart-product__price 3 000 ₽
-        span.cart-product__total 18 000 ₽
+        .cart-product__specifications
+          span.cart-product__size 16.5
+          span.cart-product__quantity 15
+          span.cart-product__price 3 000 ₽
+          span.cart-product__total 18 000 ₽
       .cart-product__bottom.read-more-wrapper
         .cart-product-features.full-text
           .card-features__row
@@ -491,6 +492,36 @@ mixin cartProduct(cls)
               span.card-features__title Технологии:
               span.card-features__value Хххххххххххххххххххххххх
         button.btn-reset.cart-product__more.read-more(type="button" data-text="Посмотреть характеристики") Посмотреть характеристики
+      .cart-productfew
+    button.btn-reset.cart-product__remove.modal-btn(data-graph-animation="fadeInUp" data-graph-path="delete-product" data-graph-speed="500" type="button")
+      +icon("cross2")
+mixin orderingInfo
+  .ordering-info
+    .ordering-info__top
+        h2.ordering-info__title.g-title ВАШ ЗАКАЗ
+        span.ordering-info__quantity.g-title ТОВАРОВ 450
+    .ordering-info__cost
+        span.ordering-info__cost-desc ОБЩАЯ СТОИМОСТЬ
+        span.ordering-info__cost-value 424 200 ₽
+    label.ordering__label
+        span Промокод
+        input.g-input.ordering__input--lg.valid(type="text" name="промокод" placeholder="ВВЕДИТЕ ПРОМОКОД")
+    .ordering-info__promocode
+        span.ordering-info__promocode-desc СКИДКА ПО ПРОМОКОДУ
+            span -00%
+        span.ordering-info__promocode-value 5 970 ₽
+    .ordering-info__total
+        span ИТОГО
+        span 417 000 ₽
+    .ordering-info__btns
+        a.g-btn.g-btn--stroke.ordering-info__btn.ordering-info__btn-list.anchor-link(href="#order-list") Состав заказа
+        button.btn-reset.g-btn.g-btn--black.ordering-info__btn ОФОРМИТЬ ЗАКАЗ
+    label.modal-form__label
+        input.modal-form__checkbox(type="checkbox" checked)
+        span.modal-form__switch
+        span.modal-form__desc Я согласен на обработку персональных данных
+    p.ordering-info__desc Оформляя заказ, вы подтверждаете, что соглашаетесь с 
+        a(href="policy.html") правилами продажи
 
 mixin stepper
   .g-stepper.card__stepper

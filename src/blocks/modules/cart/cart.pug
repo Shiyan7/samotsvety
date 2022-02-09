@@ -1,0 +1,44 @@
+section.ordering
+    .container.ordering__container.cart__container
+        ul.g-breadcrumbs__list.ordering__breadcrumbs.list-reset
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="/") Главная
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link Корзина
+        h1.g-title.g-title--center.ordering__title В КОРЗИНЕ 5 ПОЗИЦИЙ
+        form.ordering__body.validate-form(action="#")
+            .ordering-content
+     
+                .ordering-content__item.g-accordion.isOpen(id="order-list")
+                    .g-accordion__content.ordering-content__inner(aria-hidden="false")
+                        .cart-table__top
+                            span.cart-table__name НАИМЕНОВАНИЕ
+                            span.cart-table__size РАЗМЕР
+                            span.cart-table__quantity КОЛИЧЕСТВО
+                            span.cart-table__price ЦЕНА
+                            span.cart-table__total СУММА
+                        .cart-table__items
+                            -for(let i = 0; i < 5; i++)
+                                +cartProduct("cart-table__item")
+                        
+            .ordering-info
+                .ordering-info__top
+                    h2.ordering-info__title.g-title ВАШ ЗАКАЗ
+                    span.ordering-info__quantity.g-title ТОВАРОВ 4
+                .ordering-info__cost
+                    span.ordering-info__cost-desc ОБЩАЯ СТОИМОСТЬ
+                    span.ordering-info__cost-value 424 200 ₽
+                label.ordering__label
+                    span Промокод
+                    input.g-input.ordering__input--lg.valid(type="text" name="промокод" placeholder="ВВЕДИТЕ ПРОМОКОД")
+                .ordering-info__promocode
+                    span.ordering-info__promocode-desc СКИДКА ПО ПРОМОКОДУ
+                        span -00%
+                    span.ordering-info__promocode-value 5 970 ₽
+                .ordering-info__total
+                    span ИТОГО
+                    span 417 000 ₽
+                .ordering-info__btns 
+                    a.g-btn.g-btn--black.ordering-info__btn(href="ordering.html") ОФОРМИТЬ ЗАКАЗ
+                p.ordering-info__desc.ordering-info__desc--center Оформляя заказ, вы подтверждаете, что соглашаетесь с 
+                    a(href="policy.html") правилами продажи
