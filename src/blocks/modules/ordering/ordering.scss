@@ -528,6 +528,17 @@
             display: none;
         }
     }
+
+    &__map {
+        width: 100%;
+        height: 552px;
+
+        @media (max-width: 576px) {
+            height: 360px;
+            margin: 0 -37px;
+            min-width: calc(100% + 74px);
+        }
+    }
 }
 
 .payment-method {

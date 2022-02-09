@@ -114,7 +114,8 @@ section.ordering
                                         span.cart-shop__price от 2721,96 ₽* 4-5 дней
                                         a(href="#").g-link.cart-shop__link На карте
                                         button.btn-reset.g-btn.g-btn--stroke.cart-shop__choice(type="button") Выбрать
-                            .switch-tabs__content(data-switch-target="map") 2
+                            .switch-tabs__content.ordering__map(data-switch-target="map")
+                                +map
                 .ordering-content__item.g-accordion.isOpen
                     button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
                         span Выберите способ оплаты
