@@ -416,6 +416,43 @@ tels.forEach(function (el) {
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  new Swiper(".interesting-slider", {
+    spaceBetween: 12,
+    slidesPerView: 1,
+    breakpoints: {
+      577: {
+        slidesPerView: 2
+      },
+      769: {
+        slidesPerView: 3
+      },
+      1025: {
+        slidesPerView: 4
+      }
+    },
+    navigation: {
+      nextEl: '.interesting-slider__btn--next',
+      prevEl: '.interesting-slider__btn--prev'
+    }
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
+  var jsHideBtns = document.querySelectorAll(".js-hide-btn-section");
+
+  function hideSection() {
+    var section = this.closest(".js-section");
+    section.remove();
+  }
+
+  jsHideBtns === null || jsHideBtns === void 0 ? void 0 : jsHideBtns.forEach(function (el) {
+    return el.addEventListener("click", hideSection);
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
   var cabinetContentInputs = document.querySelectorAll(".js-toggle-input");
 
   function toggleInputs() {
@@ -427,7 +464,7 @@ document.addEventListener("DOMContentLoaded", function () {
     txt.innerHTML !== 'Сохранить изменения' ? txt.innerHTML = 'Сохранить изменения' : txt.innerHTML = target;
   }
 
-  cabinetContentInputs.forEach(function (el) {
+  cabinetContentInputs === null || cabinetContentInputs === void 0 ? void 0 : cabinetContentInputs.forEach(function (el) {
     return el.addEventListener("click", toggleInputs);
   });
 });
