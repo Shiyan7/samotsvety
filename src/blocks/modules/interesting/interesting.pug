@@ -1,0 +1,17 @@
+section.interesting.js-section
+    .container.interesting__container
+        .interesting__top
+            h2.g-title.g-title--center.interesting__title ЭТО ИНТЕРЕСНО
+            button.btn-reset.interesting__hide.js-hide-btn-section
+                |Скрыть блок: 
+                +icon("arrow")
+        .swiper.interesting-slider
+            .swiper-wrapper
+                -for(let i = 0; i < 5; i++)
+                    a.swiper-slide.interesting-item(href="post.html") 
+                        img.interesting-item__image(src="img/no-image.svg", alt="Как отличить оригинал от подделки?")
+                        h3.interesting-item__title Как отличить оригинал от подделки?
+            button.btn-reset.g-slider-btn.g-slider-btn--prev.interesting-slider__btn.interesting-slider__btn--prev
+                +icon("arrow")
+            button.btn-reset.g-slider-btn.g-slider-btn--next.interesting-slider__btn.interesting-slider__btn--next
+                +icon("arrow")

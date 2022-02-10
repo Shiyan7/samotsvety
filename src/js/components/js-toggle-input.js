@@ -10,5 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
         txt.innerHTML !== 'Сохранить изменения' ? txt.innerHTML = 'Сохранить изменения' : txt.innerHTML = target;
     }
 
-    cabinetContentInputs.forEach(el => el.addEventListener("click", toggleInputs))
+    cabinetContentInputs?.forEach(el => el.addEventListener("click", toggleInputs))
 });
