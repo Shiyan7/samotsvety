@@ -291,6 +291,29 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  var dateInputs = document.querySelectorAll(".g-input-date");
+  Datepicker.locales.ru = {
+    days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+    daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+    daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+    monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+    today: "Сегодня",
+    clear: "Очистить",
+    format: "dd.mm.yyyy",
+    weekStart: 1,
+    monthsTitle: 'Месяцы'
+  };
+  dateInputs.forEach(function (el) {
+    var datepicker = new Datepicker(el, {
+      language: 'ru',
+      format: 'mm.dd.yy'
+    });
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
   var catalogToggle = document.querySelector(".filters-toggle");
   var catalogFilters = document.querySelector(".catalog-filters");
   var catalogFiltersClose = document.querySelector(".catalog-filters__close");
@@ -370,10 +393,57 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 "use strict";
 
+document.addEventListener("DOMContentLoaded", function () {
+  var inputPasswordBtns = document.querySelectorAll(".g-input-password__btn");
+  inputPasswordBtns.forEach(function (el) {
+    el.addEventListener("click", function () {
+      var parent = el.closest(".g-input-password");
+      var input = parent.querySelector("input");
+      var type = input.type;
+      var target = type !== 'password' ? type = 'password' : type = "text";
+      input.type = target;
+    });
+  });
+});
+"use strict";
+
 var tels = document.querySelectorAll("input[type=\"tel\"]");
 tels.forEach(function (el) {
   var phoneMask = IMask(el, {
     mask: '+{7} (000) 000 0000'
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
+  var cabinetContentInputs = document.querySelectorAll(".js-toggle-input");
+  var flag = 0;
+
+  function clearValue(inputs) {
+    inputs.value = null;
+  }
+
+  function toggleInputs() {
+    var txt = this.querySelector("span");
+    var target = this.dataset.text;
+    var parent = this.closest(".cabinet-accordion__content");
+    var passwordInputs = parent.querySelectorAll(".g-input-password__input");
+    parent.classList.toggle("active");
+    this.classList.add("cabinet-content__edit--active");
+
+    if (flag == 0) {
+      txt.innerHTML = 'Сохранить изменения';
+      flag++;
+    } else {
+      txt.innerHTML = target;
+      /* passwordInputs.forEach(el => clearValue(el)) */
+
+      flag--;
+    }
+  }
+
+  cabinetContentInputs.forEach(function (el) {
+    return el.addEventListener("click", toggleInputs);
   });
 });
 "use strict";
