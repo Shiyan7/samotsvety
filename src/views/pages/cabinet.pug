@@ -1,0 +1,16 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Кабинет";
+	- const page = "cabinet";
+
+block content
+	include ../../blocks/modules/header/header
+	main.main
+		include ../../blocks/modules/cabinet/cabinet
+	include ../../blocks/modules/footer/footer
+	include ../../blocks/modules/modal/modal
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")
