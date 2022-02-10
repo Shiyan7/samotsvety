@@ -417,29 +417,14 @@ tels.forEach(function (el) {
 
 document.addEventListener("DOMContentLoaded", function () {
   var cabinetContentInputs = document.querySelectorAll(".js-toggle-input");
-  var flag = 0;
-
-  function clearValue(inputs) {
-    inputs.value = null;
-  }
 
   function toggleInputs() {
     var txt = this.querySelector("span");
     var target = this.dataset.text;
     var parent = this.closest(".cabinet-accordion__content");
-    var passwordInputs = parent.querySelectorAll(".g-input-password__input");
     parent.classList.toggle("active");
     this.classList.add("cabinet-content__edit--active");
-
-    if (flag == 0) {
-      txt.innerHTML = 'Сохранить изменения';
-      flag++;
-    } else {
-      txt.innerHTML = target;
-      /* passwordInputs.forEach(el => clearValue(el)) */
-
-      flag--;
-    }
+    txt.innerHTML !== 'Сохранить изменения' ? txt.innerHTML = 'Сохранить изменения' : txt.innerHTML = target;
   }
 
   cabinetContentInputs.forEach(function (el) {
