@@ -128,6 +128,16 @@
     &__input {
         width: 218px;
 
+        &-comment {
+            @media (max-width: 490px) {
+                &::-webkit-input-placeholder {
+                    white-space: pre-line;
+                    position: relative;
+                    top: -7px;
+                }
+            }
+        }
+
         @media (max-width: 1024px) {
             width: 400px;
         }
@@ -146,14 +156,6 @@
 
         &--lg {
             width: auto;
-
-            @media (max-width: 490px) {
-                &::-webkit-input-placeholder {
-                    white-space: pre-line;
-                    position: relative;
-                    top: -7px;
-                }
-            }
         }
     }
 

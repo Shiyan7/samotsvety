@@ -24,7 +24,7 @@ section.ordering
                             input.g-input.ordering__input(type="tel" name="phoneNumber" placeholder="Введите ваш телефон")
                 .ordering-content__item.g-accordion.isOpen
                     button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
-                        span Споспоб получения
+                        span Способ получения
                         i.g-accordion__icon
                             +icon("arrow")
                     .g-accordion__content.g-filters.ordering-filters(aria-hidden="false")
@@ -140,7 +140,7 @@ section.ordering
                     .g-accordion__content.ordering-content__inner(aria-hidden="false")
                         label.ordering__label
                             span Комментарий
-                            input.g-input.ordering__input--lg(type="text" name="comment" placeholder="Оставьте свои комментарии, мы обязательно примем их во внимание")
+                            input.g-input.ordering__input--lg.ordering__input-comment(type="text" name="comment" placeholder="Оставьте свои комментарии, мы обязательно примем их во внимание")
                 .ordering-content__item.g-accordion.isOpen.ordering-list(id="order-list")
                     .ordering-header
                         h2.g-title.g-title--center.ordering-header__title состав заказа
