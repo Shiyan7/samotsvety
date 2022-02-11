@@ -4168,7 +4168,7 @@
             <h2 class="g-title g-title--center modal__title modal__title--light">Подтвердите действие</h2>
             <p class="modal__desc modal__desc--center">Вы уверены, что хотите удалить этот&nbsp;товар?</p>
             <div class="modal__btns">
-              <button class="btn-reset g-btn g-btn--black modal-form__btn">Да, удалить</button>
+              <button class="btn-reset g-btn g-btn--black modal-form__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="product-deleted" data-graph-speed="500">Да, удалить</button>
               <button class="btn-reset g-btn g-btn--stroke modal-form__btn js-modal-close">Нет, оставить</button>
             </div>
           </div>
@@ -4186,8 +4186,8 @@
               <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
               <button class="btn-reset g-btn g-btn--black modal-form__btn">Сохранить изменения </button>
               <label class="modal-form__label">
-                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных *в рабочее время</span>
-              </label>
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных<span>*в рабочее время</span></span>
+              </label><span class="modal-form__desc modal-form__desc--2">*в рабочее время</span>
             </form>
           </div>
         </div>
@@ -4215,6 +4215,16 @@
           <div class="modal-content">
             <h2 class="g-title g-title--center modal__title modal__title--light">Заказ № 3001921</h2>
             <p class="modal__desc modal__desc--center">Заказ будет отменен после подтверждения менеджером.</p>
+          </div>
+        </div>
+        <div class="modal__container modal__container--8" role="dialog" aria-modal="true" data-graph-target="product-deleted">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <p class="modal__desc modal__desc--center">Кольцо из золота с изумрудом и бриллиантами, удалено.</p>
           </div>
         </div>
       </div>

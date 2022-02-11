@@ -2457,16 +2457,16 @@
           <ul class="g-breadcrumbs__list cabinet__breadcrumbs list-reset">
             <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link" href="/">Главная</a></li>
             <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link" href="new-cabinet.html">Мой кабинет</a></li>
-            <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link">Мои заказы</a></li>
-          </ul><a class="cabinet__back" href="new-cabinet.html">
+            <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link">Заказ № 3001921 от 21.07.2021</a></li>
+          </ul><a class="cabinet__back" href="new-orders.html">
             <svg class="svg-icon arrow">
               <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
             </svg>Назад</a>
           <h2 class="g-title g-title--center cabinet__title orders__title order__subtitle">мои заказы</h2>
           <div class="cabinet__body">
-            <ul class="cabinet-nav list-reset">
+            <ul class="cabinet-nav cabinet-nav--inner list-reset">
               <li class="cabinet-nav__item"><a class="cabinet-nav__link cabinet-nav__link--current">мои заказы</a></li>
-              <li class="cabinet-nav__item"><a class="cabinet-nav__link" href="new-cabinet.html">ЛИЧНЫЕ ДАННЫЕ</a></li>
+              <li class="cabinet-nav__item"><a class="cabinet-nav__link" href="new-personal.html">ЛИЧНЫЕ ДАННЫЕ</a></li>
               <li class="cabinet-nav__item"><a class="cabinet-nav__link" href="#">ИЗМЕНЕНИЕ ПАРОЛЯ</a></li>
               <li class="cabinet-nav__item"><a class="cabinet-nav__link cabinet-nav__link--gray" href="#">БОНУСНАЯ ПРОГРАММА
                   <svg class="svg-icon tooltip">
@@ -2475,30 +2475,26 @@
               <li class="cabinet-nav__item"><a class="cabinet-nav__link" href="#">СЛУЖБА ПОДДЕРЖКИ</a></li>
             </ul>
             <div class="order-content">
-              <div class="order__top"><a class="cabinet__back order__back" href="new-cabinet.html">
+              <div class="order__top"><a class="cabinet__back order__back" href="new-orders.html">
                   <svg class="svg-icon arrow">
                     <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
                   </svg>Назад</a>
                 <h1 class="g-title order__title">Заказ № 3001921 от  21.07.2021</h1>
               </div>
               <div class="order-content__body">
-                <div class="order-content__column">
-                  <div class="order-content__row"><span class="order-content__caption order-content__caption--bold">Трекномер: </span><span class="order-content__value">128919829101091</span></div>
-                  <div class="order-content__row"><span class="order-content__caption">Сумма: </span><span class="order-content__value">2 890 ₽</span></div>
-                  <div class="order-content__item"><span class="order-content__caption">Данные получателя</span>
-                    <p class="order-content__value">Иванов Иван Иванович</p>
-                    <p class="order-content__value">г. Москва, ул. Луначарского, д. 23, кв. 1</p>
-                    <p class="order-content__value">+ 7 (922) 146 12 12</p>
-                    <p class="order-content__value">info@testmail.ru</p>
-                  </div>
+                <div class="order-content__col order-content__row"><span class="order-content__caption order-content__caption--bold">Трекномер: </span><span class="order-content__value">128919829101091</span></div>
+                <div class="order-content__col order-content__row"><span class="order-content__caption">Сумма: </span><span class="order-content__value">2 890 ₽</span></div>
+                <div class="order-content__col order-content__item"><span class="order-content__caption">Данные получателя</span>
+                  <p class="order-content__value">Иванов Иван Иванович</p>
+                  <p class="order-content__value">г. Москва, ул. Луначарского, д. 23, кв. 1</p>
+                  <p class="order-content__value">+ 7 (922) 146 12 12</p>
+                  <p class="order-content__value">info@testmail.ru</p>
                 </div>
-                <div class="order-content__column">
-                  <div class="order-content__row"><span class="order-content__caption">Статус заказа: </span><span class="order-content__value">На доставке</span></div>
-                  <div class="order-content__item"><span class="order-content__caption">Доставка</span>
-                    <p class="order-content__value"><span>СДЭК</span></p>
-                    <p class="order-content__value"><span>Дата и время доставки: </span>10.11.2021 (с 12:00 до 16:00) </p>
-                    <p class="order-content__value"><span>Стоимость доставки: </span>500 ₽</p>
-                  </div>
+                <div class="order-content__col order-content__row"><span class="order-content__caption">Статус заказа: </span><span class="order-content__value">На доставке</span></div>
+                <div class="order-content__col order-content__item"><span class="order-content__caption">Доставка</span>
+                  <p class="order-content__value"><span>СДЭК</span></p>
+                  <p class="order-content__value"><span>Дата и время доставки: </span>10.11.2021 (с 12:00 до 16:00) </p>
+                  <p class="order-content__value"><span>Стоимость доставки: </span>500 ₽</p>
                 </div>
               </div>
               <h2 class="order-table__title">5 ТОВАРОВ В ЗАКАЗЕ</h2>
@@ -2787,6 +2783,37 @@
               </div>
               <button class="btn-reset g-btn g-btn--stroke cart-table__more" type="button">показать ещЁ</button>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="interesting js-section">
+        <div class="container interesting__container">
+          <div class="interesting__top">
+            <h2 class="g-title g-title--center interesting__title">ЭТО ИНТЕРЕСНО</h2>
+            <button class="btn-reset interesting__hide js-hide-btn-section">Скрыть блок: 
+              <svg class="svg-icon arrow">
+                <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="swiper interesting-slider">
+            <div class="swiper-wrapper"><a class="swiper-slide interesting-item" href="post.html"> <img class="interesting-item__image" src="img/no-image.svg" alt="Как отличить оригинал от подделки?">
+                <h3 class="interesting-item__title">Как отличить оригинал от подделки?</h3></a><a class="swiper-slide interesting-item" href="post.html"> <img class="interesting-item__image" src="img/no-image.svg" alt="Как отличить оригинал от подделки?">
+                <h3 class="interesting-item__title">Как отличить оригинал от подделки?</h3></a><a class="swiper-slide interesting-item" href="post.html"> <img class="interesting-item__image" src="img/no-image.svg" alt="Как отличить оригинал от подделки?">
+                <h3 class="interesting-item__title">Как отличить оригинал от подделки?</h3></a><a class="swiper-slide interesting-item" href="post.html"> <img class="interesting-item__image" src="img/no-image.svg" alt="Как отличить оригинал от подделки?">
+                <h3 class="interesting-item__title">Как отличить оригинал от подделки?</h3></a><a class="swiper-slide interesting-item" href="post.html"> <img class="interesting-item__image" src="img/no-image.svg" alt="Как отличить оригинал от подделки?">
+                <h3 class="interesting-item__title">Как отличить оригинал от подделки?</h3></a>
+            </div>
+            <button class="btn-reset g-slider-btn g-slider-btn--prev interesting-slider__btn interesting-slider__btn--prev">
+              <svg class="svg-icon arrow">
+                <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="btn-reset g-slider-btn g-slider-btn--next interesting-slider__btn interesting-slider__btn--next">
+              <svg class="svg-icon arrow">
+                <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -3492,7 +3519,7 @@
           <h2 class="g-title g-title--center modal__title modal__title--light">Подтвердите действие</h2>
           <p class="modal__desc modal__desc--center">Вы уверены, что хотите удалить этот&nbsp;товар?</p>
           <div class="modal__btns">
-            <button class="btn-reset g-btn g-btn--black modal-form__btn">Да, удалить</button>
+            <button class="btn-reset g-btn g-btn--black modal-form__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="product-deleted" data-graph-speed="500">Да, удалить</button>
             <button class="btn-reset g-btn g-btn--stroke modal-form__btn js-modal-close">Нет, оставить</button>
           </div>
         </div>
@@ -3510,8 +3537,8 @@
             <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
             <button class="btn-reset g-btn g-btn--black modal-form__btn">Сохранить изменения </button>
             <label class="modal-form__label">
-              <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных *в рабочее время</span>
-            </label>
+              <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных<span>*в рабочее время</span></span>
+            </label><span class="modal-form__desc modal-form__desc--2">*в рабочее время</span>
           </form>
         </div>
       </div>
@@ -3539,6 +3566,16 @@
         <div class="modal-content">
           <h2 class="g-title g-title--center modal__title modal__title--light">Заказ № 3001921</h2>
           <p class="modal__desc modal__desc--center">Заказ будет отменен после подтверждения менеджером.</p>
+        </div>
+      </div>
+      <div class="modal__container modal__container--8" role="dialog" aria-modal="true" data-graph-target="product-deleted">
+        <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="svg-icon cross2">
+            <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+          </svg>
+        </button>
+        <div class="modal-content">
+          <p class="modal__desc modal__desc--center">Кольцо из золота с изумрудом и бриллиантами, удалено.</p>
         </div>
       </div>
     </div>

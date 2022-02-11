@@ -2456,14 +2456,13 @@
         <div class="container cabinet__container">
           <ul class="g-breadcrumbs__list cabinet__breadcrumbs list-reset">
             <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link" href="/">Главная</a></li>
-            <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link" href="new-cabinet.html">Мой кабинет</a></li>
-            <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link">Личные данные</a></li>
+            <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link">Мой кабинет</a></li>
           </ul>
-          <h1 class="g-title g-title--center cabinet__title">ЛИЧНЫЕ ДАННЫЕ</h1>
+          <h1 class="g-title g-title--center cabinet__title">Мой кабинет</h1>
           <div class="cabinet__body">
             <ul class="cabinet-nav list-reset">
               <li class="cabinet-nav__item"><a class="cabinet-nav__link" href="new-orders.html">мои заказы</a></li>
-              <li class="cabinet-nav__item"><a class="cabinet-nav__link cabinet-nav__link--current" href="#">ЛИЧНЫЕ ДАННЫЕ</a></li>
+              <li class="cabinet-nav__item"><a class="cabinet-nav__link" href="new-personal.html">ЛИЧНЫЕ ДАННЫЕ</a></li>
               <li class="cabinet-nav__item"><a class="cabinet-nav__link" href="#">ИЗМЕНЕНИЕ ПАРОЛЯ</a></li>
               <li class="cabinet-nav__item"><a class="cabinet-nav__link cabinet-nav__link--gray" href="#">БОНУСНАЯ ПРОГРАММА
                   <svg class="svg-icon tooltip">
@@ -2474,125 +2473,33 @@
             <div class="cabinet-content">
               <div class="cabinet-content__column">
                 <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Имя, фамилия</span><i class="g-accordion__icon">
+                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Личные данные</span><i class="g-accordion__icon">
                       <svg class="svg-icon arrow">
                         <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
                       </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">Иван Андрей Иванович</span>
-                    <input class="g-input cabinet-content__input cabinet-content__input--text js-cabinet-input" type="text" value="Иван Андрей Иванович" placeholder="Введите текст">
-                    <button class="btn-reset cabinet-content__edit js-toggle-input" data-text="Редактировать данные"><span>Редактировать данные</span>
+                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value cabinet-content__value--gray">Иван Андрей Иванович</span><span class="cabinet-content__value">+ 7 (994) 099-02-34</span><span class="cabinet-content__value cabinet-content__value--gray">andreyivanov@yandex.ru</span><a class="cabinet-content__edit" href="new-personal.html"><span>Редактировать данные</span>
                       <svg class="svg-icon edit">
                         <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Пол</span><i class="g-accordion__icon">
-                      <svg class="svg-icon arrow">
-                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-                      </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">Мужской</span>
-                    <div class="cabinet-content__row js-cabinet-input">
-                      <label class="g-radio cabinet-content__radio">
-                        <input class="g-radio__input" type="radio" value="male" name="sex" checked><span class="g-radio__caption">Мужской</span>
-                      </label>
-                      <label class="g-radio cabinet-content__radio">
-                        <input class="g-radio__input" type="radio" value="female" name="sex"><span class="g-radio__caption">Женский</span>
-                      </label>
-                    </div>
-                    <button class="btn-reset cabinet-content__edit js-toggle-input" data-text="Изменить пол"><span>Изменить пол</span>
-                      <svg class="svg-icon edit">
-                        <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Дата рождения</span><i class="g-accordion__icon">
-                      <svg class="svg-icon arrow">
-                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-                      </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">01.01.1980</span><span class="cabinet-content__desc">Подарим скидку 10% в день рождения
-                      <svg class="svg-icon tooltip">
-                        <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
-                      </svg></span>
-                    <p class="cabinet-content__warning">Дату рождения можно указать только один раз. Если вы хотите изменить дату обратитесь в службу поддержки</p>
-                    <input class="g-input js-cabinet-input cabinet-content__input g-input-date" type="text" name="" placeholder="Введите дату рождения">
-                    <button class="btn-reset cabinet-content__edit js-toggle-input" data-text="Редактировать данные"><span>Редактировать данные</span>
-                      <svg class="svg-icon edit">
-                        <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Пароль</span><i class="g-accordion__icon">
-                      <svg class="svg-icon arrow">
-                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-                      </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false">
-                    <label class="g-input-password cabinet-content__input-password js-cabinet-input">
-                      <input class="g-input cabinet-content__input g-input-password__input" type="password" placeholder="Введите пароль">
-                      <button class="btn-reset g-input-password__btn">
-                        <svg class="svg-icon show-password">
-                          <use xlink:href="./img/sprites/sprite.svg#show-password"></use>
-                        </svg>
-                      </button>
-                    </label>
-                    <label class="g-input-password cabinet-content__input-password js-cabinet-input">
-                      <input class="g-input cabinet-content__input g-input-password__input valid" type="password" placeholder="Введите пароль">
-                      <button class="btn-reset g-input-password__btn">
-                        <svg class="svg-icon show-password">
-                          <use xlink:href="./img/sprites/sprite.svg#show-password"></use>
-                        </svg>
-                      </button>
-                    </label>
-                    <label class="g-input-password cabinet-content__input-password js-cabinet-input">
-                      <input class="g-input cabinet-content__input g-input-password__input valid" type="password" placeholder="Введите пароль">
-                      <button class="btn-reset g-input-password__btn">
-                        <svg class="svg-icon show-password">
-                          <use xlink:href="./img/sprites/sprite.svg#show-password"></use>
-                        </svg>
-                      </button>
-                    </label>
-                    <button class="btn-reset cabinet-content__edit js-toggle-input" data-text="Изменить пароль"><span>Изменить пароль</span>
-                      <svg class="svg-icon edit">
-                        <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
+                      </svg></a></div>
                 </div>
               </div>
               <div class="cabinet-content__column">
                 <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Номер телефона</span><i class="g-accordion__icon">
+                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Способ доставки</span><i class="g-accordion__icon">
                       <svg class="svg-icon arrow">
                         <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
                       </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">+ 7 (994) 099-02-34</span>
-                    <button class="btn-reset cabinet-content__edit modal-btn" data-graph-animation="fadeInUp" data-graph-path="edit-phone" data-graph-speed="500" type="button"><span>Редактировать данные</span>
+                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">Курьерская доставка</span><span class="cabinet-content__value cabinet-content__value--gray">г. Москва, ул. Восточная, д. 36.</span><span class="cabinet-content__value cabinet-content__value--gray">Позвонить в домофон *202</span><a class="cabinet-content__edit" href="new-personal.html"><span>Редактировать данные</span>
                       <svg class="svg-icon edit">
                         <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Электронная почта</span><i class="g-accordion__icon">
-                      <svg class="svg-icon arrow">
-                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-                      </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">andreyivanov@yandex.ru</span>
-                    <input class="g-input cabinet-content__input cabinet-content__input--text js-cabinet-input" type="email" value="andreyivanov@yandex.ru" placeholder="Введите email">
-                    <button class="btn-reset cabinet-content__edit js-toggle-input" data-text="Редактировать email"><span>Редактировать Email</span>
-                      <svg class="svg-icon edit">
-                        <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
+                      </svg></a></div>
                 </div>
               </div>
+              <ul class="cabinet-links list-reset">
+                <li class="cabinet-links__item"><a class="g-link cabinet-links__link" href="delivery-payment.html">Доставка и оплата</a></li>
+                <li class="cabinet-links__item"><a class="g-link cabinet-links__link" href="#">Гарантия</a></li>
+                <li class="cabinet-links__item"><a class="g-link cabinet-links__link" href="shops.html">Магазины</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -3330,7 +3237,7 @@
           <h2 class="g-title g-title--center modal__title modal__title--light">Подтвердите действие</h2>
           <p class="modal__desc modal__desc--center">Вы уверены, что хотите удалить этот&nbsp;товар?</p>
           <div class="modal__btns">
-            <button class="btn-reset g-btn g-btn--black modal-form__btn">Да, удалить</button>
+            <button class="btn-reset g-btn g-btn--black modal-form__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="product-deleted" data-graph-speed="500">Да, удалить</button>
             <button class="btn-reset g-btn g-btn--stroke modal-form__btn js-modal-close">Нет, оставить</button>
           </div>
         </div>
@@ -3348,8 +3255,8 @@
             <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
             <button class="btn-reset g-btn g-btn--black modal-form__btn">Сохранить изменения </button>
             <label class="modal-form__label">
-              <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных *в рабочее время</span>
-            </label>
+              <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных<span>*в рабочее время</span></span>
+            </label><span class="modal-form__desc modal-form__desc--2">*в рабочее время</span>
           </form>
         </div>
       </div>
@@ -3377,6 +3284,16 @@
         <div class="modal-content">
           <h2 class="g-title g-title--center modal__title modal__title--light">Заказ № 3001921</h2>
           <p class="modal__desc modal__desc--center">Заказ будет отменен после подтверждения менеджером.</p>
+        </div>
+      </div>
+      <div class="modal__container modal__container--8" role="dialog" aria-modal="true" data-graph-target="product-deleted">
+        <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+          <svg class="svg-icon cross2">
+            <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+          </svg>
+        </button>
+        <div class="modal-content">
+          <p class="modal__desc modal__desc--center">Кольцо из золота с изумрудом и бриллиантами, удалено.</p>
         </div>
       </div>
     </div>
