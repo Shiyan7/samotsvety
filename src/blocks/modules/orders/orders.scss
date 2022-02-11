@@ -2,6 +2,10 @@
 
     &__container {
         padding-bottom: 88px;
+        
+        @media (max-width: 768px) {
+            padding-bottom: 50px;
+        }
     }
 
     .cabinet-nav {
@@ -17,7 +21,7 @@
     }
 
     &-filters {
-        margin-bottom: 54px;
+        margin-bottom: 66px;
 
         .simplebar-content {
             display: flex;
@@ -105,6 +109,20 @@
         text-align: center;
         width: calc(100% - 207px);
 
+        .cart-table__items {
+            @media (max-width: 1280px) {
+                margin-top: 0;
+            }
+
+            @media (max-width: 1130px) {
+                margin-top: -30px;
+            }
+
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+        }
+
         &--offset {
             padding: 121px 0 152px;
 
@@ -113,7 +131,7 @@
             }
 
             @media (max-width: 576px) {
-                padding: 30px 0 52px;
+                padding: 30px 0 30px;
             }
         }
 
@@ -139,6 +157,118 @@
 
         &__link {
             padding: 15px 29px 13px;
+        }
+    }
+
+    &-table {
+        &__top {
+            padding-left: 0;
+
+            @media (max-width: 1280px) {
+                display: flex;
+            }
+
+            @media (max-width: 1130px) {
+                display: none;
+            }
+
+            .cart-table {
+                &__quantity {
+                    flex: 0 0 vw(215);
+                    @media (min-width: 1441px) {
+                        flex: 0 0 215px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-product {
+        padding: 59px 0 57px;
+
+        @media (max-width: 1130px) {
+            &:first-child {
+                border-top: 1px solid rgba(#000, 0.2);
+            }
+        }
+
+        @media (max-width: 768px) {
+            padding: 24px 0 30px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 12px 0 14px;
+        }
+
+        .cart-product {
+
+            &__wrapper {
+                align-items: center;
+
+                @media (max-width: 1130px) {
+                    display: block;
+                    text-align: left;
+                }
+            }
+
+            &__right {
+                padding-top: 0;
+            }
+
+            &__specifications {
+                padding-top: 0;
+                align-items: center;
+
+                @media (max-width: 1280px) {
+                    display: flex;
+                }
+
+                @media (max-width: 1130px) {
+                    display: none;
+                }
+
+                .cart-product {
+                    &__price {
+                        font-weight: 500;
+                    }
+
+                    &__quantity {
+                        flex: 0 0 vw(202);
+                        @media (min-width: 1441px) {
+                            flex: 0 0 202px;
+                        }
+                    }
+                }
+            }
+
+            &-info {
+
+                @media (max-width: 1130px) {
+                    justify-content: space-between;
+                }
+
+                &__item {
+                    &:last-child {
+                        @media (max-width: 768px) {
+                            justify-content: flex-start;
+                            width: auto;
+                        }
+
+                        @media (max-width: 450px) {
+                            justify-content: flex-end;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                @media (max-width: 1280px) {
+                    display: none;
+                }
+
+                @media (max-width: 1130px) {
+                    display: flex;
+                }
+            }
         }
     }
 }

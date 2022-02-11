@@ -591,3 +591,18 @@
                     input.modal-form__checkbox(type="checkbox" checked)
                     span.modal-form__switch
                     span.modal-form__desc Я согласен на обработку персональных данных *в рабочее время
+    .modal__container.modal__container--7(role="dialog" aria-modal="true" data-graph-target="cancel-order")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title.modal__title--light отменить Заказ №&nbsp;3001921
+            p.modal__desc.modal__desc--center Вы уверены, что хотите отменить заказ?
+            .modal__btns
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="order-cancelled" data-graph-speed="500") Да, удалить
+                button.btn-reset.g-btn.g-btn--stroke.modal-form__btn.js-modal-close Нет, оставить
+    .modal__container.modal__container--2(role="dialog" aria-modal="true" data-graph-target="order-cancelled")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title.modal__title--light Заказ № 3001921
+            p.modal__desc.modal__desc--center Заказ будет отменен после подтверждения менеджером.

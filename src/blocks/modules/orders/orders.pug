@@ -14,7 +14,7 @@ section.orders
         .cabinet__body
             ul.cabinet-nav.list-reset
                 li.cabinet-nav__item
-                    a.cabinet-nav__link.cabinet-nav__link--current(href="new-orders-empty.html") мои заказы
+                    a.cabinet-nav__link.cabinet-nav__link--current(href="new-orders.html") мои заказы
                 li.cabinet-nav__item
                     a.cabinet-nav__link(href="new-cabinet.html") ЛИЧНЫЕ ДАННЫЕ
                 li.cabinet-nav__item
@@ -35,9 +35,132 @@ section.orders
                         button.btn-reset.g-filters__btn.orders-filters__btn(data-filters-path="done") ЗАВЕРШЕННЫЕ
                     li.g-filters__item.orders-filters__item
                         button.btn-reset.g-filters__btn.orders-filters__btn.orders-filters__btn--gray(data-filters-path="canceled") ОТМЕНЕННЫЕ
-                .g-filters__content.g-filters__content--active.orders-content.orders-content--offset(data-filters-target="all")
+                .g-filters__content.orders-content.g-filters__content--active.orders-content--offset(data-filters-target="all")
                     h2.orders-content__title.g-title У вас еще нет созданных заказов
                     a.g-btn.g-btn--black.orders-content__link(href="#") Перейти в каталог
                 .g-filters__content.orders-content(data-filters-target="active")
+                    .cart-table__top.orders-table__top
+                        span.cart-table__number НОМЕР ЗАКАЗА
+                        span.cart-table__total СУММА
+                        span.cart-table__quantity КОЛИЧЕСТВО
+                        span.cart-table__status СТАТУС
+                    .cart-table__items
+                        .cart-product.orders-product
+                            .cart-product__wrapper
+                                a.cart-product__link(href="#") Заказ № 30019223421 от 21.07.2021
+                                .cart-product__right
+                                    .cart-product__text
+                                        .cart-product__specifications
+                                            span.cart-product__price 77 975 ₽
+                                            span.cart-product__quantity
+                                                .g-stepper
+                                                    .g-stepper__wrapper
+                                                        label.g-stepper__field
+                                                            input.g-stepper__input(type="text" value="1" maxlength="3")
+                                                        .g-stepper__btns
+                                                            button.btn-reset.g-stepper__btn.g-stepper__btn--down.g-stepper__btn--disabled(tabindex="-1" aria-label="Уменшить количество")
+                                                                +icon("arrow-left")
+                                                            button.btn-reset.g-stepper__btn.g-stepper__btn--up(tabindex="-1" aria-label="Увеличить количество")
+                                                                +icon("arrow-right")
+                                            span.cart-product__status Доставка
+                            .cart-product-info
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Кол-во:
+                                    span.cart-product-info__value
+                                        .g-stepper
+                                            .g-stepper__wrapper
+                                                label.g-stepper__field
+                                                    input.g-stepper__input(type="text" value="1" maxlength="3")
+                                                .g-stepper__btns
+                                                    button.btn-reset.g-stepper__btn.g-stepper__btn--down.g-stepper__btn--disabled(tabindex="-1" aria-label="Уменшить количество")
+                                                        +icon("arrow-left")
+                                                    button.btn-reset.g-stepper__btn.g-stepper__btn--up(tabindex="-1" aria-label="Увеличить количество")
+                                                        +icon("arrow-right")
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Статус:
+                                    span.cart-product-info__value Доставка
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Сумма:
+                                    span.cart-product-info__value.cart-product-info__value--bolder 77 975 ₽
+                            button.btn-reset.cart-product__cancel.modal-btn(data-graph-animation="fadeInUp" data-graph-path="cancel-order" data-graph-speed="500") Отменить заказ
+                        .cart-product.orders-product
+                            .cart-product__wrapper
+                                a.cart-product__link(href="#") Заказ № 3001921 от 21.07.2021
+                                .cart-product__right
+                                    .cart-product__text
+                                        .cart-product__specifications
+                                            span.cart-product__price 77 975 ₽
+                                            span.cart-product__quantity 1
+                                            span.cart-product__status Доставка
+                            .cart-product-info
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Кол-во:
+                                    span.cart-product-info__value 1
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Статус:
+                                    span.cart-product-info__value Доставка
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Сумма:
+                                    span.cart-product-info__value.cart-product-info__value--bolder 77 975 ₽
+                            button.btn-reset.cart-product__cancel.modal-btn(data-graph-animation="fadeInUp" data-graph-path="cancel-order" data-graph-speed="500") Отменить заказ
+                        .cart-product.orders-product
+                            .cart-product__wrapper
+                                a.cart-product__link(href="#") Заказ № 3001921 от 21.07.2021
+                                .cart-product__right
+                                    .cart-product__text
+                                        .cart-product__specifications
+                                            span.cart-product__price 77 975 ₽
+                                            span.cart-product__quantity 1
+                                            span.cart-product__status Доставка
+                            .cart-product-info
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Кол-во:
+                                    span.cart-product-info__value 1
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Статус:
+                                    span.cart-product-info__value Доставка
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Сумма:
+                                    span.cart-product-info__value.cart-product-info__value--bolder 77 975 ₽
+                            button.btn-reset.cart-product__cancel.modal-btn(data-graph-animation="fadeInUp" data-graph-path="cancel-order" data-graph-speed="500") Отменить заказ
+                        .cart-product.orders-product
+                            .cart-product__wrapper
+                                a.cart-product__link(href="#") Заказ № 3001921 от 21.07.2021
+                                .cart-product__right
+                                    .cart-product__text
+                                        .cart-product__specifications
+                                            span.cart-product__price 77 975 ₽
+                                            span.cart-product__quantity 1
+                                            span.cart-product__status Отменён
+                            .cart-product-info
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Кол-во:
+                                    span.cart-product-info__value 1
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Статус:
+                                    span.cart-product-info__value Отменен
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Сумма:
+                                    span.cart-product-info__value.cart-product-info__value--bolder 77 975 ₽
+                        .cart-product.orders-product
+                            .cart-product__wrapper
+                                a.cart-product__link(href="#") Заказ № 3001921 от 21.07.2021
+                                .cart-product__right
+                                    .cart-product__text
+                                        .cart-product__specifications
+                                            span.cart-product__price 77 975 ₽
+                                            span.cart-product__quantity 1
+                                            span.cart-product__status Отменён
+                            .cart-product-info
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Кол-во:
+                                    span.cart-product-info__value 1
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Статус:
+                                    span.cart-product-info__value Отменен
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Сумма:
+                                    span.cart-product-info__value.cart-product-info__value--bolder 77 975 ₽
+                    button.btn-reset.g-btn.g-btn--stroke.cart-table__more(type="button") показать ещё
                 .g-filters__content.orders-content(data-filters-target="done")
                 .g-filters__content.orders-content(data-filters-target="canceled")
