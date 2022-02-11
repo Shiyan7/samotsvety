@@ -1,0 +1,153 @@
+section.orders
+    .container.cabinet__container.orders__container
+        ul.g-breadcrumbs__list.cabinet__breadcrumbs.list-reset
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="/") Главная
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="new-cabinet.html") Мой кабинет
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link Мои заказы
+        a.cabinet__back(href="new-cabinet.html")
+            +icon("arrow")
+            |Назад
+        h2.g-title.g-title--center.cabinet__title.orders__title.order__subtitle мои заказы
+        .cabinet__body
+            ul.cabinet-nav.list-reset
+                li.cabinet-nav__item
+                    a.cabinet-nav__link.cabinet-nav__link--current мои заказы
+                li.cabinet-nav__item
+                    a.cabinet-nav__link(href="new-cabinet.html") ЛИЧНЫЕ ДАННЫЕ
+                li.cabinet-nav__item
+                    a.cabinet-nav__link(href="#") ИЗМЕНЕНИЕ ПАРОЛЯ
+                li.cabinet-nav__item
+                    a.cabinet-nav__link.cabinet-nav__link--gray(href="#")
+                        |БОНУСНАЯ ПРОГРАММА
+                        +icon("tooltip")
+                li.cabinet-nav__item
+                    a.cabinet-nav__link(href="#") СЛУЖБА ПОДДЕРЖКИ
+            .order-content
+                .order__top
+                    a.cabinet__back.order__back(href="new-cabinet.html")
+                        +icon("arrow")
+                        |Назад
+                    h1.g-title.order__title Заказ № 3001921 от  21.07.2021
+                .order-content__body
+                    .order-content__column
+                        .order-content__row
+                            span.order-content__caption.order-content__caption--bold Трекномер: 
+                            span.order-content__value 128919829101091
+                        .order-content__row
+                            span.order-content__caption Сумма: 
+                            span.order-content__value 2 890 ₽
+                        .order-content__item
+                            span.order-content__caption Данные получателя
+                            p.order-content__value Иванов Иван Иванович
+                            p.order-content__value г. Москва, ул. Луначарского, д. 23, кв. 1
+                            p.order-content__value + 7 (922) 146 12 12
+                            p.order-content__value info@testmail.ru
+                    .order-content__column
+                        .order-content__row
+                            span.order-content__caption Статус заказа: 
+                            span.order-content__value На доставке
+                        .order-content__item
+                            span.order-content__caption Доставка
+                            p.order-content__value
+                                span СДЭК
+                            p.order-content__value
+                                span Дата и время доставки: 
+                                |10.11.2021 (с 12:00 до 16:00) 
+                            p.order-content__value
+                                span Стоимость доставки: 
+                                |500 ₽
+                h2.order-table__title 5 ТОВАРОВ В ЗАКАЗЕ
+                .cart-table__top.order-table__top
+                    span.cart-table__name НАИМЕНОВАНИЕ
+                    span.cart-table__size РАЗМЕР
+                    span.cart-table__price ЦЕНА
+                    span.cart-table__total СУММА
+                .cart-table__items
+                    -for(let i = 0; i < 5; i++)
+                        .cart-product.order-product
+                            .cart-product__wrapper
+                                img.cart-product__image.lozad(src="img/card-2.jpg", srcset="img/card-2@2x.jpg 2x" alt="Ложка из столового серебра")
+                                .cart-product__right
+                                    .cart-product__text
+                                        .cart-product__left
+                                            h2.cart-product__title Ложка из столового серебра
+                                            span.cart-product__vendor
+                                                |Артикул: 
+                                                span 92092
+                                        .cart-product__specifications
+                                            span.cart-product__size 16.5
+                                            span.cart-product__price 11 000 000 ₽
+                                            span.cart-product__total 11 000 000 ₽
+                                    .cart-product__bottom.read-more-wrapper
+                                        .cart-product-features.full-text
+                                            .card-features__row
+                                                span.card-features__title Вес изделия: 
+                                                span.card-features__value 3,37 г
+                                            .card-features__row
+                                                span.card-features__title Материал: 
+                                                span.card-features__value Белое золото, 585 пробы
+                                            .card-features__row
+                                                span.card-features__title Вставка:
+                                                span.card-features__value
+                                                    ul.card-features-list.list-reset
+                                                        li.card-features-list__item
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <circle cx="5" cy="5" r="5" fill="#11C849"/>
+                                                            </svg>
+                                                            span Турмалин — 1, огранка «Октагон», 0.16 crt.
+                                                        li.card-features-list__item
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <circle cx="5" cy="5" r="5" fill="#FBE151"/>
+                                                            </svg>
+                                                            span Цинтрин — 1, огранка «Октагон», 0.16 crt.
+                                                        li.card-features-list__item
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <circle cx="5" cy="5" r="5" fill="#FB4861"/>
+                                                            </svg>
+                                                            span Рубин — 1, огранка «Октагон», 0.16 crt.
+                                                        li.card-features-list__item
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <circle cx="5" cy="5" r="5" fill="#6C80C9"/>
+                                                            </svg>
+                                                            span Сапфир — 1, огранка «Октагон», 0.16 crt.
+                                                        li.card-features-list__item
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <circle cx="5" cy="5" r="5" fill="#A3D9F8"/>
+                                                            </svg>
+                                                            span Топаз — 1, огранка «Октагон», 0.16 crt.
+                                                        li.card-features-list__item
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <circle cx="5" cy="5" r="5" fill="#000000"/>
+                                                            </svg>
+                                                            span Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
+
+                                            .card-features__row
+                                                span.card-features__title Объем:
+                                                span.card-features__value 00 мл
+                                            .card-features__row
+                                                span.card-features__title Длина:
+                                                span.card-features__value 00 мл
+                                            .card-features__row
+                                                span.card-features__title Ширина :
+                                                span.card-features__value 15,05 мм
+                                            .card-features__row
+                                                span.card-features__title Высота:
+                                                span.card-features__value 00 мм
+                                            .card-features__row
+                                                span.card-features__title Технологии:
+                                                span.card-features__value Хххххххххххххххххххххххх
+                                        button.btn-reset.cart-product__more.read-more(type="button" data-text="Посмотреть характеристики") Посмотреть характеристики
+                            .cart-product-info
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Размер:
+                                    span.cart-product-info__value 16.6
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Цена:
+                                    span.cart-product-info__value.cart-product-info__value--bold 11 000 000 ₽
+                                .cart-product-info__item
+                                    span.cart-product-info__caption Сумма:
+                                    span.cart-product-info__value.cart-product-info__value--bolder 11 000 000 ₽
+                button.btn-reset.g-btn.g-btn--stroke.cart-table__more(type="button") показать ещЁ
