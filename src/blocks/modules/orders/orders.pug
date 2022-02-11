@@ -1,0 +1,43 @@
+section.orders
+    .container.cabinet__container.orders__container
+        ul.g-breadcrumbs__list.cabinet__breadcrumbs.list-reset
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="/") Главная
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="new-cabinet.html") Мой кабинет
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link Мои заказы
+        a.cabinet__back(href="new-cabinet.html")
+            +icon("arrow")
+            |Назад
+        h1.g-title.g-title--center.cabinet__title.orders__title мои заказы
+        .cabinet__body
+            ul.cabinet-nav.list-reset
+                li.cabinet-nav__item
+                    a.cabinet-nav__link.cabinet-nav__link--current(href="new-orders-empty.html") мои заказы
+                li.cabinet-nav__item
+                    a.cabinet-nav__link(href="new-cabinet.html") ЛИЧНЫЕ ДАННЫЕ
+                li.cabinet-nav__item
+                    a.cabinet-nav__link(href="#") ИЗМЕНЕНИЕ ПАРОЛЯ
+                li.cabinet-nav__item
+                    a.cabinet-nav__link.cabinet-nav__link--gray(href="#")
+                        |БОНУСНАЯ ПРОГРАММА
+                        +icon("tooltip")
+                li.cabinet-nav__item
+                    a.cabinet-nav__link(href="#") СЛУЖБА ПОДДЕРЖКИ
+            .cabinet-content.g-filters
+                ul.g-filters__list.orders-filters.list-reset(data-simplebar)
+                    li.g-filters__item.orders-filters__item
+                        button.btn-reset.g-filters__btn.orders-filters__btn.g-filters__btn--active(data-filters-path="all") ВСЕ ЗАКАЗЫ (000)
+                    li.g-filters__item.orders-filters__item
+                        button.btn-reset.g-filters__btn.orders-filters__btn(data-filters-path="active") активные(2)
+                    li.g-filters__item.orders-filters__item
+                        button.btn-reset.g-filters__btn.orders-filters__btn(data-filters-path="done") ЗАВЕРШЕННЫЕ
+                    li.g-filters__item.orders-filters__item
+                        button.btn-reset.g-filters__btn.orders-filters__btn.orders-filters__btn--gray(data-filters-path="canceled") ОТМЕНЕННЫЕ
+                .g-filters__content.g-filters__content--active.orders-content.orders-content--offset(data-filters-target="all")
+                    h2.orders-content__title.g-title У вас еще нет созданных заказов
+                    a.g-btn.g-btn--black.orders-content__link(href="#") Перейти в каталог
+                .g-filters__content.orders-content(data-filters-target="active")
+                .g-filters__content.orders-content(data-filters-target="done")
+                .g-filters__content.orders-content(data-filters-target="canceled")

@@ -60,6 +60,7 @@
             line-height: 17px;
             color: #111;
             height: 24px;
+            text-transform: uppercase;
 
             @media (max-width: 576px) {
                 width: 100%;
@@ -251,6 +252,35 @@
             @media (max-width: 576px) {
                 max-width: none;
             }
+        }
+    }
+
+    &__back {
+        display: none;
+        align-items: center;
+        font-size: 18px;
+        line-height: 20px;
+        color: #111;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 10px 0;
+
+        @media (max-width: 1024px) {
+            display: inline-flex;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        
+        svg {
+            display: block;
+            width: 8px;
+            height: 14px;
+            margin-right: 6px;
+            object-fit: cover;
+            margin-top: -3px;
         }
     }
 
