@@ -18,6 +18,14 @@
                 padding: 0;
             }
         }
+
+        .ordering-info {
+            padding-top: 6px;
+    
+            @media (max-width: 1024px) {
+                padding-top: 0;
+            }
+        }
     }
 
     &__title {

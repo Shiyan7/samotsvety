@@ -1,0 +1,115 @@
+section.cabinet
+    .container.cabinet__container
+        ul.g-breadcrumbs__list.cabinet__breadcrumbs.list-reset
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="/") Главная
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="new-cabinet.html") Мой кабинет
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link Личные данные
+        a.cabinet__back(href="new-cabinet.html")
+            +icon("arrow")
+            |Назад
+        h1.g-title.g-title--center.cabinet__title ЛИЧНЫЕ ДАННЫЕ
+        .cabinet__body
+            ul.cabinet-nav.cabinet-nav--inner.list-reset
+                li.cabinet-nav__item
+                    a.cabinet-nav__link(href="new-orders.html") мои заказы
+                li.cabinet-nav__item
+                    a.cabinet-nav__link.cabinet-nav__link--current(href="#") ЛИЧНЫЕ ДАННЫЕ
+                li.cabinet-nav__item
+                    a.cabinet-nav__link(href="#") ИЗМЕНЕНИЕ ПАРОЛЯ
+                li.cabinet-nav__item
+                    a.cabinet-nav__link.cabinet-nav__link--gray(href="#")
+                        |БОНУСНАЯ ПРОГРАММА
+                        +icon("tooltip")
+                li.cabinet-nav__item
+                    a.cabinet-nav__link(href="#") СЛУЖБА ПОДДЕРЖКИ
+            .cabinet-content
+                .cabinet-content__column
+                    .cabinet-accordion.g-accordion.isOpen
+                        button.btn-reset.g-accordion__control.cabinet-accordion__title(aria-expanded="true" type="button")
+                            span Имя, фамилия
+                            i.g-accordion__icon
+                                +icon("arrow")
+                        .g-accordion__content.cabinet-accordion__content(aria-hidden="false")
+                            span.cabinet-content__value Иван Андрей Иванович
+                            input.g-input.cabinet-content__input.cabinet-content__input--text.js-cabinet-input(type="text" value="Иван Андрей Иванович" placeholder="Введите текст")
+                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Редактировать данные")
+                                span Редактировать данные
+                                +icon("edit")
+                    .cabinet-accordion.g-accordion.isOpen
+                        button.btn-reset.g-accordion__control.cabinet-accordion__title(aria-expanded="true" type="button")
+                            span Пол
+                            i.g-accordion__icon
+                                +icon("arrow")
+                        .g-accordion__content.cabinet-accordion__content(aria-hidden="false")
+                            span.cabinet-content__value Мужской
+                            .cabinet-content__row.js-cabinet-input
+                                label.g-radio.cabinet-content__radio
+                                    input.g-radio__input(type="radio", value="male" name="sex" checked)
+                                    span.g-radio__caption Мужской
+                                label.g-radio.cabinet-content__radio
+                                    input.g-radio__input(type="radio", value="female" name="sex")
+                                    span.g-radio__caption Женский
+                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Изменить пол")
+                                span Изменить пол
+                                +icon("edit")
+                    .cabinet-accordion.g-accordion.isOpen
+                        button.btn-reset.g-accordion__control.cabinet-accordion__title(aria-expanded="true" type="button")
+                            span Дата рождения
+                            i.g-accordion__icon
+                                +icon("arrow")
+                        .g-accordion__content.cabinet-accordion__content(aria-hidden="false")
+                            span.cabinet-content__value 01.01.1980
+                            span.cabinet-content__desc
+                                |Подарим скидку 10% в день рождения
+                                +icon("tooltip")
+                            p.cabinet-content__warning Дату рождения можно указать только один раз. Если вы хотите изменить дату обратитесь в службу поддержки
+                            input.g-input.js-cabinet-input.cabinet-content__input.g-input-date(type="text", name="" placeholder="Введите дату рождения")
+                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Редактировать данные")
+                                span Редактировать данные
+                                +icon("edit")
+                    .cabinet-accordion.g-accordion.isOpen
+                        button.btn-reset.g-accordion__control.cabinet-accordion__title(aria-expanded="true" type="button")
+                            span Пароль
+                            i.g-accordion__icon
+                                +icon("arrow")
+                        .g-accordion__content.cabinet-accordion__content(aria-hidden="false")
+                            label.g-input-password.cabinet-content__input-password.js-cabinet-input
+                                input.g-input.cabinet-content__input.g-input-password__input(type="password" placeholder="Введите пароль")
+                                button.btn-reset.g-input-password__btn
+                                    +icon("show-password")
+                            label.g-input-password.cabinet-content__input-password.js-cabinet-input
+                                input.g-input.cabinet-content__input.g-input-password__input.valid(type="password" placeholder="Введите пароль")
+                                button.btn-reset.g-input-password__btn
+                                    +icon("show-password")
+                            label.g-input-password.cabinet-content__input-password.js-cabinet-input
+                                input.g-input.cabinet-content__input.g-input-password__input.valid(type="password" placeholder="Введите пароль")
+                                button.btn-reset.g-input-password__btn
+                                    +icon("show-password")
+                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Изменить пароль")
+                                span Изменить пароль
+                                +icon("edit")
+                .cabinet-content__column
+                    .cabinet-accordion.g-accordion.isOpen
+                        button.btn-reset.g-accordion__control.cabinet-accordion__title(aria-expanded="true" type="button")
+                            span Номер телефона
+                            i.g-accordion__icon
+                                +icon("arrow")
+                        .g-accordion__content.cabinet-accordion__content(aria-hidden="false")
+                            span.cabinet-content__value + 7 (994) 099-02-34
+                            button.btn-reset.cabinet-content__edit.modal-btn(data-graph-animation="fadeInUp" data-graph-path="edit-phone" data-graph-speed="500" type="button")
+                                span Редактировать данные
+                                +icon("edit")
+                    .cabinet-accordion.g-accordion.isOpen
+                        button.btn-reset.g-accordion__control.cabinet-accordion__title(aria-expanded="true" type="button")
+                            span Электронная почта
+                            i.g-accordion__icon
+                                +icon("arrow")
+                        .g-accordion__content.cabinet-accordion__content(aria-hidden="false")
+                            span.cabinet-content__value andreyivanov@yandex.ru
+                            input.g-input.cabinet-content__input.cabinet-content__input--text.js-cabinet-input(type="email" value="andreyivanov@yandex.ru" placeholder="Введите email")
+                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Редактировать email")
+                                span Редактировать Email
+                                +icon("edit")

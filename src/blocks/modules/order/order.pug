@@ -6,17 +6,17 @@ section.orders
             li.g-breadcrumbs__item
                 a.g-breadcrumbs__link(href="new-cabinet.html") Мой кабинет
             li.g-breadcrumbs__item
-                a.g-breadcrumbs__link Мои заказы
-        a.cabinet__back(href="new-cabinet.html")
+                a.g-breadcrumbs__link Заказ № 3001921 от 21.07.2021
+        a.cabinet__back(href="new-orders.html")
             +icon("arrow")
             |Назад
         h2.g-title.g-title--center.cabinet__title.orders__title.order__subtitle мои заказы
         .cabinet__body
-            ul.cabinet-nav.list-reset
+            ul.cabinet-nav.cabinet-nav--inner.list-reset
                 li.cabinet-nav__item
                     a.cabinet-nav__link.cabinet-nav__link--current мои заказы
                 li.cabinet-nav__item
-                    a.cabinet-nav__link(href="new-cabinet.html") ЛИЧНЫЕ ДАННЫЕ
+                    a.cabinet-nav__link(href="new-personal.html") ЛИЧНЫЕ ДАННЫЕ
                 li.cabinet-nav__item
                     a.cabinet-nav__link(href="#") ИЗМЕНЕНИЕ ПАРОЛЯ
                 li.cabinet-nav__item
@@ -27,38 +27,36 @@ section.orders
                     a.cabinet-nav__link(href="#") СЛУЖБА ПОДДЕРЖКИ
             .order-content
                 .order__top
-                    a.cabinet__back.order__back(href="new-cabinet.html")
+                    a.cabinet__back.order__back(href="new-orders.html")
                         +icon("arrow")
                         |Назад
                     h1.g-title.order__title Заказ № 3001921 от  21.07.2021
                 .order-content__body
-                    .order-content__column
-                        .order-content__row
-                            span.order-content__caption.order-content__caption--bold Трекномер: 
-                            span.order-content__value 128919829101091
-                        .order-content__row
-                            span.order-content__caption Сумма: 
-                            span.order-content__value 2 890 ₽
-                        .order-content__item
-                            span.order-content__caption Данные получателя
-                            p.order-content__value Иванов Иван Иванович
-                            p.order-content__value г. Москва, ул. Луначарского, д. 23, кв. 1
-                            p.order-content__value + 7 (922) 146 12 12
-                            p.order-content__value info@testmail.ru
-                    .order-content__column
-                        .order-content__row
-                            span.order-content__caption Статус заказа: 
-                            span.order-content__value На доставке
-                        .order-content__item
-                            span.order-content__caption Доставка
-                            p.order-content__value
-                                span СДЭК
-                            p.order-content__value
-                                span Дата и время доставки: 
-                                |10.11.2021 (с 12:00 до 16:00) 
-                            p.order-content__value
-                                span Стоимость доставки: 
-                                |500 ₽
+                    .order-content__col.order-content__row
+                        span.order-content__caption.order-content__caption--bold Трекномер: 
+                        span.order-content__value 128919829101091
+                    .order-content__col.order-content__row
+                        span.order-content__caption Сумма: 
+                        span.order-content__value 2 890 ₽
+                    .order-content__col.order-content__item
+                        span.order-content__caption Данные получателя
+                        p.order-content__value Иванов Иван Иванович
+                        p.order-content__value г. Москва, ул. Луначарского, д. 23, кв. 1
+                        p.order-content__value + 7 (922) 146 12 12
+                        p.order-content__value info@testmail.ru
+                    .order-content__col.order-content__row
+                        span.order-content__caption Статус заказа: 
+                        span.order-content__value На доставке
+                    .order-content__col.order-content__item
+                        span.order-content__caption Доставка
+                        p.order-content__value
+                            span СДЭК
+                        p.order-content__value
+                            span Дата и время доставки: 
+                            |10.11.2021 (с 12:00 до 16:00) 
+                        p.order-content__value
+                            span Стоимость доставки: 
+                            |500 ₽
                 h2.order-table__title 5 ТОВАРОВ В ЗАКАЗЕ
                 .cart-table__top.order-table__top
                     span.cart-table__name НАИМЕНОВАНИЕ

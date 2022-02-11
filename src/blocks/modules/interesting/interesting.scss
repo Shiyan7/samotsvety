@@ -1,6 +1,10 @@
 .interesting {
     &__container {
         padding-bottom: 88px;
+
+        @media (max-width: 576px) {
+            padding-bottom: 52px;
+        }
     }
 
     &__top {

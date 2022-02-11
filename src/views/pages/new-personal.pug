@@ -2,13 +2,13 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Мои заказы";
-	- const page = "orders";
+	- const title = "Кабинет";
+	- const page = "cabinet";
 
 block content
 	include ../../blocks/modules/header/header
 	main.main
-		include ../../blocks/modules/orders/orders
+		include ../../blocks/modules/personal/personal
 		include ../../blocks/modules/interesting/interesting
 	include ../../blocks/modules/footer/footer
 	include ../../blocks/modules/modal/modal

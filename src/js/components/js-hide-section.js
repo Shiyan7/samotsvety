@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function hideSection () {
         let section = this.closest(".js-section");
-
         section.remove();
     }
 

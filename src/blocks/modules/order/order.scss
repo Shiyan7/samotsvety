@@ -55,22 +55,27 @@
         max-width: 908px;
         width: 100%;
         &__body {
-            display: grid;
-            align-items: flex-start;
-            column-gap: 30px;
-            grid-template-columns: repeat(6, 1fr);
-            grid-column: 10 span;
+            columns: 2;
             margin-bottom: 52px;
-            max-width: 670px;
+            max-width: 686px;
 
             @media (max-width: 576px) {
-                grid-template-columns: repeat(3, 1fr);
+                display: grid;
                 margin-bottom: 0;
             }
         }
 
-        &__column {
-            grid-column: 3 span;
+        &__col {
+            break-inside: avoid-column;
+
+            @media (max-width: 576px) {
+                &:nth-child(4) {
+                    grid-area: 2;
+                }
+                &:nth-child(5) {
+                    grid-area: 4;
+                }
+            }
         }
 
         &__caption {

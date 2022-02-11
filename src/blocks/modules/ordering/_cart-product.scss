@@ -77,10 +77,14 @@
         font-weight: 300;
         font-size: 16px;
         line-height: 17px;
-        margin-bottom: 7px;
+        margin-bottom: 10px;
 
         @media (max-width: 1280px) {
             padding-right: 30px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 14px;
         }
     }
 
@@ -89,7 +93,6 @@
         font-size: 14px;
         line-height: 16px;
         color: #111;
-        margin-bottom: 3px;
 
         @media (max-width: 576px) {
             margin-bottom: 9px;
@@ -165,6 +168,15 @@
 
         @media (max-width: 576px) {
             .card-features {
+
+                &-list {
+                    &__item {
+                        &:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
                 &__row {
                     flex-wrap: wrap;
 
@@ -177,6 +189,11 @@
                     min-width: auto;
                     margin-right: 3px;
                     margin-bottom: 4px;
+                }
+
+                &__value {
+                    font-size: 14px;
+                    line-height: 18px;
                 }
             }
         }
@@ -296,7 +313,6 @@
 
         @media (max-width: 1024px) {
             flex: 0 0 100%;
-            margin-right: 100px;
         }
 
         @media (max-width: 576px) {
@@ -341,7 +357,7 @@
         }
 
         @media (max-width: 576px) {
-            top: 15px;
+            top: 19px;
             font-size: 13px;
             line-height: 17px;
             font-weight: 400;

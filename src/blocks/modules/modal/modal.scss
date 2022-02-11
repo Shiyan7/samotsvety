@@ -151,12 +151,27 @@
             font-size: 14px;
             line-height: 20px;
             text-align: center;
+
+            span {
+                @media (max-width: 576px) {
+                    display: none;
+                }
+            }
             
             @media (max-width: 576px) {
                 text-align: left;
                 font-size: 14px;
                 line-height: 17px;
                 font-weight: 400;
+            }
+
+            &--2 {
+                display: none;
+                margin-top: 3px;
+                @media (max-width: 576px) {
+                    display: block;
+                    text-align: center;
+                }
             }
         }
 
@@ -511,6 +526,16 @@
         @media (max-width: 576px) {
             width: 240px;
             padding: 47px 40px 40px;
+        }
+    }
+
+    &--8 {
+        width: 310px;
+        padding: 98px 0 77px;
+
+        @media (max-width: 576px) {
+            width: 310px;
+            padding: 98px 0 77px;
         }
     }
 
