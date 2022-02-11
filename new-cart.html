@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Кабинет</title>
+    <title>Корзина</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,10 +63,10 @@
             <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--favorite" href="favorites.html">
                 <div class="shop-nav__icon shop-nav__icon--favorite"></div>
                 <div class="shop-nav__quantity">2</div></a></li>
-            <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cart" href="cart.html">
+            <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cart" href="new-cart.html">
                 <div class="shop-nav__icon shop-nav__icon--cart"></div>
                 <div class="shop-nav__quantity">13</div></a></li>
-            <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cabinet" href="cabinet.html">
+            <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cabinet" href="new-cabinet.html">
                 <div class="shop-nav__icon shop-nav__icon--cabinet"></div>
                 <div class="shop-nav__quantity">Войти</div></a></li>
           </ul>
@@ -2137,8 +2137,8 @@
           <button class="btn-reset down-bar__link toggle-form"><span class="shop-nav__icon shop-nav__icon--search"></span>Поиск</button>
         </div>
         <div class="down-bar__item"><a class="down-bar__link" href="favorites.html"><span class="shop-nav__icon shop-nav__icon--favorite"></span>Избранное</a></div>
-        <div class="down-bar__item"><a class="down-bar__link" href="cart.html"><span class="shop-nav__icon shop-nav__icon--cart"></span>Корзина</a></div>
-        <div class="down-bar__item"><a class="down-bar__link" href="cabinet.html"><span class="shop-nav__icon shop-nav__icon--cabinet"></span>Вход</a></div>
+        <div class="down-bar__item"><a class="down-bar__link" href="new-cart.html"><span class="shop-nav__icon shop-nav__icon--cart"></span>Корзина</a></div>
+        <div class="down-bar__item"><a class="down-bar__link" href="new-cabinet.html"><span class="shop-nav__icon shop-nav__icon--cabinet"></span>Вход</a></div>
       </div>
       <div class="region-selection">
         <button class="btn-reset region-selection__close">
@@ -2452,179 +2452,441 @@
     </header>
     <div class="overlay"></div>
     <main class="main">
-      <section class="cabinet">
-        <div class="container cabinet__container">
-          <ul class="g-breadcrumbs__list cabinet__breadcrumbs list-reset">
+      <section class="ordering">
+        <div class="container ordering__container cart__container">
+          <ul class="g-breadcrumbs__list ordering__breadcrumbs list-reset">
             <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link" href="/">Главная</a></li>
-            <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link" href="cabinet.html">Мой кабинет</a></li>
-            <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link">Личные данные</a></li>
+            <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link">Корзина</a></li>
           </ul>
-          <h1 class="g-title g-title--center cabinet__title">ЛИЧНЫЕ ДАННЫЕ</h1>
-          <div class="cabinet__body">
-            <ul class="cabinet-nav list-reset">
-              <li class="cabinet-nav__item"><a class="cabinet-nav__link" href="#">МОИ ЗАКАЗЫ</a></li>
-              <li class="cabinet-nav__item"><a class="cabinet-nav__link cabinet-nav__link--current" href="#">ЛИЧНЫЕ ДАННЫЕ</a></li>
-              <li class="cabinet-nav__item"><a class="cabinet-nav__link" href="#">ИЗМЕНЕНИЕ ПАРОЛЯ</a></li>
-              <li class="cabinet-nav__item"><a class="cabinet-nav__link cabinet-nav__link--gray" href="#">БОНУСНАЯ ПРОГРАММА
-                  <svg class="svg-icon tooltip">
-                    <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
-                  </svg></a></li>
-              <li class="cabinet-nav__item"><a class="cabinet-nav__link" href="#">СЛУЖБА ПОДДЕРЖКИ</a></li>
-            </ul>
-            <div class="cabinet-content">
-              <div class="cabinet-content__column">
-                <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Имя, фамилия</span><i class="g-accordion__icon">
-                      <svg class="svg-icon arrow">
-                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-                      </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">Иван Андрей Иванович</span>
-                    <input class="g-input cabinet-content__input cabinet-content__input--text js-cabinet-input" type="text" value="Иван Андрей Иванович" placeholder="Введите текст">
-                    <button class="btn-reset cabinet-content__edit js-toggle-input" data-text="Редактировать данные"><span>Редактировать данные</span>
-                      <svg class="svg-icon edit">
-                        <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Пол</span><i class="g-accordion__icon">
-                      <svg class="svg-icon arrow">
-                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-                      </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">Мужской</span>
-                    <div class="cabinet-content__row js-cabinet-input">
-                      <label class="g-radio cabinet-content__radio">
-                        <input class="g-radio__input" type="radio" value="male" name="sex" checked><span class="g-radio__caption">Мужской</span>
-                      </label>
-                      <label class="g-radio cabinet-content__radio">
-                        <input class="g-radio__input" type="radio" value="female" name="sex"><span class="g-radio__caption">Женский</span>
-                      </label>
+          <h1 class="g-title g-title--center ordering__title cart__title">В КОРЗИНЕ 5 ПОЗИЦИЙ</h1>
+          <div class="ordering__body">
+            <div class="ordering-content">
+              <div class="ordering-content__item g-accordion isOpen" id="order-list">
+                <div class="g-accordion__content ordering-content__inner" aria-hidden="false">
+                  <div class="cart-table__top"><span class="cart-table__name">НАИМЕНОВАНИЕ</span><span class="cart-table__size">РАЗМЕР</span><span class="cart-table__quantity">КОЛИЧЕСТВО</span><span class="cart-table__price">ЦЕНА</span><span class="cart-table__total">СУММА</span></div>
+                  <div class="cart-table__items">
+                    <div class="cart-product cart-table__item">
+                      <div class="cart-product__wrapper"><img class="cart-product__image lozad" src="img/card-2.jpg" srcset="img/card-2@2x.jpg 2x" alt="Ложка из столового серебра"/>
+                        <div class="cart-product__right">
+                          <div class="cart-product__text">
+                            <div class="cart-product__left">
+                              <h2 class="cart-product__title">Ложка из столового серебра</h2><span class="cart-product__vendor">Артикул: <span>92092</span></span>
+                            </div>
+                            <div class="cart-product__specifications"><span class="cart-product__size">16.5</span><span class="cart-product__quantity">15</span><span class="cart-product__price">3 000 ₽</span><span class="cart-product__total">18 000 ₽</span></div>
+                          </div>
+                          <div class="cart-product__bottom read-more-wrapper">
+                            <div class="cart-product-features full-text">
+                              <div class="card-features__row"><span class="card-features__title">Вес изделия: </span><span class="card-features__value">3,37 г</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Материал: </span><span class="card-features__value">Белое золото, 585 пробы</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Вставка:</span><span class="card-features__value">
+                                  <ul class="card-features-list list-reset">
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#11C849"/>
+</svg><span>Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#FBE151"/>
+</svg><span>Цинтрин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#FB4861"/>
+</svg><span>Рубин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#6C80C9"/>
+</svg><span>Сапфир — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#A3D9F8"/>
+</svg><span>Топаз — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#000000"/>
+</svg><span>Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                                    </li>
+                                  </ul></span></div>
+                              <div class="card-features__row"><span class="card-features__title">Объем:</span><span class="card-features__value">00 мл</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Длина:</span><span class="card-features__value">00 мл</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Ширина :</span><span class="card-features__value">15,05 мм</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Высота:</span><span class="card-features__value">00 мм</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Технологии:</span><span class="card-features__value">Хххххххххххххххххххххххх</span></div>
+                            </div>
+                            <button class="btn-reset cart-product__more read-more" type="button" data-text="Посмотреть характеристики">Посмотреть характеристики</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-product-info">
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Размер:</span><span class="cart-product-info__value">16.6</span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Кол-во:</span><span class="cart-product-info__value">
+                            <div class="g-stepper">
+                              <div class="g-stepper__wrapper">
+                                <label class="g-stepper__field">
+                                  <input class="g-stepper__input" type="text" value="1" maxlength="3"/>
+                                </label>
+                                <div class="g-stepper__btns">
+                                  <button class="btn-reset g-stepper__btn g-stepper__btn--down g-stepper__btn--disabled" tabindex="-1" aria-label="Уменшить количество">
+                                    <svg class="svg-icon arrow-left">
+                                      <use xlink:href="./img/sprites/sprite.svg#arrow-left"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="btn-reset g-stepper__btn g-stepper__btn--up" tabindex="-1" aria-label="Увеличить количество">
+                                    <svg class="svg-icon arrow-right">
+                                      <use xlink:href="./img/sprites/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div></span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Цена:</span><span class="cart-product-info__value cart-product-info__value--bold">77 975 ₽</span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Сумма:</span><span class="cart-product-info__value cart-product-info__value--bolder">77 975 ₽</span></div>
+                      </div>
+                      <button class="btn-reset cart-product__remove modal-btn" data-graph-animation="fadeInUp" data-graph-path="delete-product" data-graph-speed="500" type="button">
+                        <svg class="svg-icon cross2">
+                          <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+                        </svg>
+                      </button>
                     </div>
-                    <button class="btn-reset cabinet-content__edit js-toggle-input" data-text="Изменить пол"><span>Изменить пол</span>
-                      <svg class="svg-icon edit">
-                        <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Дата рождения</span><i class="g-accordion__icon">
-                      <svg class="svg-icon arrow">
-                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-                      </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">01.01.1980</span><span class="cabinet-content__desc">Подарим скидку 10% в день рождения
-                      <svg class="svg-icon tooltip">
-                        <use xlink:href="./img/sprites/sprite.svg#tooltip"></use>
-                      </svg></span>
-                    <p class="cabinet-content__warning">Дату рождения можно указать только один раз. Если вы хотите изменить дату обратитесь в службу поддержки</p>
-                    <input class="g-input js-cabinet-input cabinet-content__input g-input-date" type="text" name="" placeholder="Введите дату рождения">
-                    <button class="btn-reset cabinet-content__edit js-toggle-input" data-text="Редактировать данные"><span>Редактировать данные</span>
-                      <svg class="svg-icon edit">
-                        <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Пароль</span><i class="g-accordion__icon">
-                      <svg class="svg-icon arrow">
-                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-                      </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false">
-                    <label class="g-input-password cabinet-content__input-password js-cabinet-input">
-                      <input class="g-input cabinet-content__input g-input-password__input" type="password" placeholder="Введите пароль">
-                      <button class="btn-reset g-input-password__btn">
-                        <svg class="svg-icon show-password">
-                          <use xlink:href="./img/sprites/sprite.svg#show-password"></use>
+                    <div class="cart-product cart-table__item">
+                      <div class="cart-product__wrapper"><img class="cart-product__image lozad" src="img/card-2.jpg" srcset="img/card-2@2x.jpg 2x" alt="Ложка из столового серебра"/>
+                        <div class="cart-product__right">
+                          <div class="cart-product__text">
+                            <div class="cart-product__left">
+                              <h2 class="cart-product__title">Ложка из столового серебра</h2><span class="cart-product__vendor">Артикул: <span>92092</span></span>
+                            </div>
+                            <div class="cart-product__specifications"><span class="cart-product__size">16.5</span><span class="cart-product__quantity">15</span><span class="cart-product__price">3 000 ₽</span><span class="cart-product__total">18 000 ₽</span></div>
+                          </div>
+                          <div class="cart-product__bottom read-more-wrapper">
+                            <div class="cart-product-features full-text">
+                              <div class="card-features__row"><span class="card-features__title">Вес изделия: </span><span class="card-features__value">3,37 г</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Материал: </span><span class="card-features__value">Белое золото, 585 пробы</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Вставка:</span><span class="card-features__value">
+                                  <ul class="card-features-list list-reset">
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#11C849"/>
+</svg><span>Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#FBE151"/>
+</svg><span>Цинтрин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#FB4861"/>
+</svg><span>Рубин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#6C80C9"/>
+</svg><span>Сапфир — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#A3D9F8"/>
+</svg><span>Топаз — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#000000"/>
+</svg><span>Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                                    </li>
+                                  </ul></span></div>
+                              <div class="card-features__row"><span class="card-features__title">Объем:</span><span class="card-features__value">00 мл</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Длина:</span><span class="card-features__value">00 мл</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Ширина :</span><span class="card-features__value">15,05 мм</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Высота:</span><span class="card-features__value">00 мм</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Технологии:</span><span class="card-features__value">Хххххххххххххххххххххххх</span></div>
+                            </div>
+                            <button class="btn-reset cart-product__more read-more" type="button" data-text="Посмотреть характеристики">Посмотреть характеристики</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-product-info">
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Размер:</span><span class="cart-product-info__value">16.6</span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Кол-во:</span><span class="cart-product-info__value">
+                            <div class="g-stepper">
+                              <div class="g-stepper__wrapper">
+                                <label class="g-stepper__field">
+                                  <input class="g-stepper__input" type="text" value="1" maxlength="3"/>
+                                </label>
+                                <div class="g-stepper__btns">
+                                  <button class="btn-reset g-stepper__btn g-stepper__btn--down g-stepper__btn--disabled" tabindex="-1" aria-label="Уменшить количество">
+                                    <svg class="svg-icon arrow-left">
+                                      <use xlink:href="./img/sprites/sprite.svg#arrow-left"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="btn-reset g-stepper__btn g-stepper__btn--up" tabindex="-1" aria-label="Увеличить количество">
+                                    <svg class="svg-icon arrow-right">
+                                      <use xlink:href="./img/sprites/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div></span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Цена:</span><span class="cart-product-info__value cart-product-info__value--bold">77 975 ₽</span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Сумма:</span><span class="cart-product-info__value cart-product-info__value--bolder">77 975 ₽</span></div>
+                      </div>
+                      <button class="btn-reset cart-product__remove modal-btn" data-graph-animation="fadeInUp" data-graph-path="delete-product" data-graph-speed="500" type="button">
+                        <svg class="svg-icon cross2">
+                          <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
                         </svg>
                       </button>
-                    </label>
-                    <label class="g-input-password cabinet-content__input-password js-cabinet-input">
-                      <input class="g-input cabinet-content__input g-input-password__input valid" type="password" placeholder="Введите пароль">
-                      <button class="btn-reset g-input-password__btn">
-                        <svg class="svg-icon show-password">
-                          <use xlink:href="./img/sprites/sprite.svg#show-password"></use>
+                    </div>
+                    <div class="cart-product cart-table__item">
+                      <div class="cart-product__wrapper"><img class="cart-product__image lozad" src="img/card-2.jpg" srcset="img/card-2@2x.jpg 2x" alt="Ложка из столового серебра"/>
+                        <div class="cart-product__right">
+                          <div class="cart-product__text">
+                            <div class="cart-product__left">
+                              <h2 class="cart-product__title">Ложка из столового серебра</h2><span class="cart-product__vendor">Артикул: <span>92092</span></span>
+                            </div>
+                            <div class="cart-product__specifications"><span class="cart-product__size">16.5</span><span class="cart-product__quantity">15</span><span class="cart-product__price">3 000 ₽</span><span class="cart-product__total">18 000 ₽</span></div>
+                          </div>
+                          <div class="cart-product__bottom read-more-wrapper">
+                            <div class="cart-product-features full-text">
+                              <div class="card-features__row"><span class="card-features__title">Вес изделия: </span><span class="card-features__value">3,37 г</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Материал: </span><span class="card-features__value">Белое золото, 585 пробы</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Вставка:</span><span class="card-features__value">
+                                  <ul class="card-features-list list-reset">
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#11C849"/>
+</svg><span>Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#FBE151"/>
+</svg><span>Цинтрин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#FB4861"/>
+</svg><span>Рубин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#6C80C9"/>
+</svg><span>Сапфир — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#A3D9F8"/>
+</svg><span>Топаз — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#000000"/>
+</svg><span>Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                                    </li>
+                                  </ul></span></div>
+                              <div class="card-features__row"><span class="card-features__title">Объем:</span><span class="card-features__value">00 мл</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Длина:</span><span class="card-features__value">00 мл</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Ширина :</span><span class="card-features__value">15,05 мм</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Высота:</span><span class="card-features__value">00 мм</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Технологии:</span><span class="card-features__value">Хххххххххххххххххххххххх</span></div>
+                            </div>
+                            <button class="btn-reset cart-product__more read-more" type="button" data-text="Посмотреть характеристики">Посмотреть характеристики</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-product-info">
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Размер:</span><span class="cart-product-info__value">16.6</span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Кол-во:</span><span class="cart-product-info__value">
+                            <div class="g-stepper">
+                              <div class="g-stepper__wrapper">
+                                <label class="g-stepper__field">
+                                  <input class="g-stepper__input" type="text" value="1" maxlength="3"/>
+                                </label>
+                                <div class="g-stepper__btns">
+                                  <button class="btn-reset g-stepper__btn g-stepper__btn--down g-stepper__btn--disabled" tabindex="-1" aria-label="Уменшить количество">
+                                    <svg class="svg-icon arrow-left">
+                                      <use xlink:href="./img/sprites/sprite.svg#arrow-left"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="btn-reset g-stepper__btn g-stepper__btn--up" tabindex="-1" aria-label="Увеличить количество">
+                                    <svg class="svg-icon arrow-right">
+                                      <use xlink:href="./img/sprites/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div></span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Цена:</span><span class="cart-product-info__value cart-product-info__value--bold">77 975 ₽</span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Сумма:</span><span class="cart-product-info__value cart-product-info__value--bolder">77 975 ₽</span></div>
+                      </div>
+                      <button class="btn-reset cart-product__remove modal-btn" data-graph-animation="fadeInUp" data-graph-path="delete-product" data-graph-speed="500" type="button">
+                        <svg class="svg-icon cross2">
+                          <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
                         </svg>
                       </button>
-                    </label>
-                    <label class="g-input-password cabinet-content__input-password js-cabinet-input">
-                      <input class="g-input cabinet-content__input g-input-password__input valid" type="password" placeholder="Введите пароль">
-                      <button class="btn-reset g-input-password__btn">
-                        <svg class="svg-icon show-password">
-                          <use xlink:href="./img/sprites/sprite.svg#show-password"></use>
+                    </div>
+                    <div class="cart-product cart-table__item">
+                      <div class="cart-product__wrapper"><img class="cart-product__image lozad" src="img/card-2.jpg" srcset="img/card-2@2x.jpg 2x" alt="Ложка из столового серебра"/>
+                        <div class="cart-product__right">
+                          <div class="cart-product__text">
+                            <div class="cart-product__left">
+                              <h2 class="cart-product__title">Ложка из столового серебра</h2><span class="cart-product__vendor">Артикул: <span>92092</span></span>
+                            </div>
+                            <div class="cart-product__specifications"><span class="cart-product__size">16.5</span><span class="cart-product__quantity">15</span><span class="cart-product__price">3 000 ₽</span><span class="cart-product__total">18 000 ₽</span></div>
+                          </div>
+                          <div class="cart-product__bottom read-more-wrapper">
+                            <div class="cart-product-features full-text">
+                              <div class="card-features__row"><span class="card-features__title">Вес изделия: </span><span class="card-features__value">3,37 г</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Материал: </span><span class="card-features__value">Белое золото, 585 пробы</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Вставка:</span><span class="card-features__value">
+                                  <ul class="card-features-list list-reset">
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#11C849"/>
+</svg><span>Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#FBE151"/>
+</svg><span>Цинтрин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#FB4861"/>
+</svg><span>Рубин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#6C80C9"/>
+</svg><span>Сапфир — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#A3D9F8"/>
+</svg><span>Топаз — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#000000"/>
+</svg><span>Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                                    </li>
+                                  </ul></span></div>
+                              <div class="card-features__row"><span class="card-features__title">Объем:</span><span class="card-features__value">00 мл</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Длина:</span><span class="card-features__value">00 мл</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Ширина :</span><span class="card-features__value">15,05 мм</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Высота:</span><span class="card-features__value">00 мм</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Технологии:</span><span class="card-features__value">Хххххххххххххххххххххххх</span></div>
+                            </div>
+                            <button class="btn-reset cart-product__more read-more" type="button" data-text="Посмотреть характеристики">Посмотреть характеристики</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-product-info">
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Размер:</span><span class="cart-product-info__value">16.6</span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Кол-во:</span><span class="cart-product-info__value">
+                            <div class="g-stepper">
+                              <div class="g-stepper__wrapper">
+                                <label class="g-stepper__field">
+                                  <input class="g-stepper__input" type="text" value="1" maxlength="3"/>
+                                </label>
+                                <div class="g-stepper__btns">
+                                  <button class="btn-reset g-stepper__btn g-stepper__btn--down g-stepper__btn--disabled" tabindex="-1" aria-label="Уменшить количество">
+                                    <svg class="svg-icon arrow-left">
+                                      <use xlink:href="./img/sprites/sprite.svg#arrow-left"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="btn-reset g-stepper__btn g-stepper__btn--up" tabindex="-1" aria-label="Увеличить количество">
+                                    <svg class="svg-icon arrow-right">
+                                      <use xlink:href="./img/sprites/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div></span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Цена:</span><span class="cart-product-info__value cart-product-info__value--bold">77 975 ₽</span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Сумма:</span><span class="cart-product-info__value cart-product-info__value--bolder">77 975 ₽</span></div>
+                      </div>
+                      <button class="btn-reset cart-product__remove modal-btn" data-graph-animation="fadeInUp" data-graph-path="delete-product" data-graph-speed="500" type="button">
+                        <svg class="svg-icon cross2">
+                          <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
                         </svg>
                       </button>
-                    </label>
-                    <button class="btn-reset cabinet-content__edit js-toggle-input" data-text="Изменить пароль"><span>Изменить пароль</span>
-                      <svg class="svg-icon edit">
-                        <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="cabinet-content__column">
-                <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Номер телефона</span><i class="g-accordion__icon">
-                      <svg class="svg-icon arrow">
-                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-                      </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">+ 7 (994) 099-02-34</span>
-                    <button class="btn-reset cabinet-content__edit modal-btn" data-graph-animation="fadeInUp" data-graph-path="edit-phone" data-graph-speed="500" type="button"><span>Редактировать данные</span>
-                      <svg class="svg-icon edit">
-                        <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="cabinet-accordion g-accordion isOpen">
-                  <button class="btn-reset g-accordion__control cabinet-accordion__title" aria-expanded="true" type="button"><span>Электронная почта</span><i class="g-accordion__icon">
-                      <svg class="svg-icon arrow">
-                        <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-                      </svg></i></button>
-                  <div class="g-accordion__content cabinet-accordion__content" aria-hidden="false"><span class="cabinet-content__value">andreyivanov@yandex.ru</span>
-                    <input class="g-input cabinet-content__input cabinet-content__input--text js-cabinet-input" type="email" value="andreyivanov@yandex.ru" placeholder="Введите email">
-                    <button class="btn-reset cabinet-content__edit js-toggle-input" data-text="Редактировать email"><span>Редактировать Email</span>
-                      <svg class="svg-icon edit">
-                        <use xlink:href="./img/sprites/sprite.svg#edit"></use>
-                      </svg>
-                    </button>
+                    </div>
+                    <div class="cart-product cart-table__item">
+                      <div class="cart-product__wrapper"><img class="cart-product__image lozad" src="img/card-2.jpg" srcset="img/card-2@2x.jpg 2x" alt="Ложка из столового серебра"/>
+                        <div class="cart-product__right">
+                          <div class="cart-product__text">
+                            <div class="cart-product__left">
+                              <h2 class="cart-product__title">Ложка из столового серебра</h2><span class="cart-product__vendor">Артикул: <span>92092</span></span>
+                            </div>
+                            <div class="cart-product__specifications"><span class="cart-product__size">16.5</span><span class="cart-product__quantity">15</span><span class="cart-product__price">3 000 ₽</span><span class="cart-product__total">18 000 ₽</span></div>
+                          </div>
+                          <div class="cart-product__bottom read-more-wrapper">
+                            <div class="cart-product-features full-text">
+                              <div class="card-features__row"><span class="card-features__title">Вес изделия: </span><span class="card-features__value">3,37 г</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Материал: </span><span class="card-features__value">Белое золото, 585 пробы</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Вставка:</span><span class="card-features__value">
+                                  <ul class="card-features-list list-reset">
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#11C849"/>
+</svg><span>Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#FBE151"/>
+</svg><span>Цинтрин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#FB4861"/>
+</svg><span>Рубин — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#6C80C9"/>
+</svg><span>Сапфир — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#A3D9F8"/>
+</svg><span>Топаз — 1, огранка «Октагон», 0.16 crt.</span>
+                                    </li>
+                                    <li class="card-features-list__item"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="5" cy="5" r="5" fill="#000000"/>
+</svg><span>Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                                    </li>
+                                  </ul></span></div>
+                              <div class="card-features__row"><span class="card-features__title">Объем:</span><span class="card-features__value">00 мл</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Длина:</span><span class="card-features__value">00 мл</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Ширина :</span><span class="card-features__value">15,05 мм</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Высота:</span><span class="card-features__value">00 мм</span></div>
+                              <div class="card-features__row"><span class="card-features__title">Технологии:</span><span class="card-features__value">Хххххххххххххххххххххххх</span></div>
+                            </div>
+                            <button class="btn-reset cart-product__more read-more" type="button" data-text="Посмотреть характеристики">Посмотреть характеристики</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-product-info">
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Размер:</span><span class="cart-product-info__value">16.6</span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Кол-во:</span><span class="cart-product-info__value">
+                            <div class="g-stepper">
+                              <div class="g-stepper__wrapper">
+                                <label class="g-stepper__field">
+                                  <input class="g-stepper__input" type="text" value="1" maxlength="3"/>
+                                </label>
+                                <div class="g-stepper__btns">
+                                  <button class="btn-reset g-stepper__btn g-stepper__btn--down g-stepper__btn--disabled" tabindex="-1" aria-label="Уменшить количество">
+                                    <svg class="svg-icon arrow-left">
+                                      <use xlink:href="./img/sprites/sprite.svg#arrow-left"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="btn-reset g-stepper__btn g-stepper__btn--up" tabindex="-1" aria-label="Увеличить количество">
+                                    <svg class="svg-icon arrow-right">
+                                      <use xlink:href="./img/sprites/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div></span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Цена:</span><span class="cart-product-info__value cart-product-info__value--bold">77 975 ₽</span></div>
+                        <div class="cart-product-info__item"><span class="cart-product-info__caption">Сумма:</span><span class="cart-product-info__value cart-product-info__value--bolder">77 975 ₽</span></div>
+                      </div>
+                      <button class="btn-reset cart-product__remove modal-btn" data-graph-animation="fadeInUp" data-graph-path="delete-product" data-graph-speed="500" type="button">
+                        <svg class="svg-icon cross2">
+                          <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="interesting js-section">
-        <div class="container interesting__container">
-          <div class="interesting__top">
-            <h2 class="g-title g-title--center interesting__title">ЭТО ИНТЕРЕСНО</h2>
-            <button class="btn-reset interesting__hide js-hide-btn-section">Скрыть блок: 
-              <svg class="svg-icon arrow">
-                <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="swiper interesting-slider">
-            <div class="swiper-wrapper"><a class="swiper-slide interesting-item" href="post.html"> <img class="interesting-item__image" src="img/no-image.svg" alt="Как отличить оригинал от подделки?">
-                <h3 class="interesting-item__title">Как отличить оригинал от подделки?</h3></a><a class="swiper-slide interesting-item" href="post.html"> <img class="interesting-item__image" src="img/no-image.svg" alt="Как отличить оригинал от подделки?">
-                <h3 class="interesting-item__title">Как отличить оригинал от подделки?</h3></a><a class="swiper-slide interesting-item" href="post.html"> <img class="interesting-item__image" src="img/no-image.svg" alt="Как отличить оригинал от подделки?">
-                <h3 class="interesting-item__title">Как отличить оригинал от подделки?</h3></a><a class="swiper-slide interesting-item" href="post.html"> <img class="interesting-item__image" src="img/no-image.svg" alt="Как отличить оригинал от подделки?">
-                <h3 class="interesting-item__title">Как отличить оригинал от подделки?</h3></a><a class="swiper-slide interesting-item" href="post.html"> <img class="interesting-item__image" src="img/no-image.svg" alt="Как отличить оригинал от подделки?">
-                <h3 class="interesting-item__title">Как отличить оригинал от подделки?</h3></a>
+            <div class="ordering-info">
+              <div class="ordering-info__top">
+                <h2 class="ordering-info__title g-title">ВАШ ЗАКАЗ</h2><span class="ordering-info__quantity g-title">ТОВАРОВ 4</span>
+              </div>
+              <div class="ordering-info__cost"><span class="ordering-info__cost-desc">ОБЩАЯ СТОИМОСТЬ</span><span class="ordering-info__cost-value">424 200 ₽</span></div>
+              <label class="ordering__label"><span>Промокод</span>
+                <input class="g-input ordering__input--lg valid" type="text" name="промокод" placeholder="ВВЕДИТЕ ПРОМОКОД">
+              </label>
+              <div class="ordering-info__promocode"><span class="ordering-info__promocode-desc">СКИДКА ПО ПРОМОКОДУ<span>-00%</span></span><span class="ordering-info__promocode-value">5 970 ₽</span></div>
+              <div class="ordering-info__total"><span>ИТОГО</span><span>417 000 ₽</span></div>
+              <div class="ordering-info__btns"> <a class="g-btn g-btn--black ordering-info__btn" href="new-ordering.html">ОФОРМИТЬ ЗАКАЗ</a></div>
+              <p class="ordering-info__desc ordering-info__desc--center">Оформляя заказ, вы подтверждаете, что соглашаетесь с <a href="policy.html">правилами продажи</a></p>
             </div>
-            <button class="btn-reset g-slider-btn g-slider-btn--prev interesting-slider__btn interesting-slider__btn--prev">
-              <svg class="svg-icon arrow">
-                <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <button class="btn-reset g-slider-btn g-slider-btn--next interesting-slider__btn interesting-slider__btn--next">
-              <svg class="svg-icon arrow">
-                <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
-              </svg>
-            </button>
           </div>
         </div>
       </section>
@@ -2662,7 +2924,7 @@
               <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">оплата</a></li>
               <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">гарантия</a></li>
               <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">Вопросы и ответы</a></li>
-              <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="services.html">услуги</a></li>
+              <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="new-services.html">услуги</a></li>
               <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">блог</a></li>
               <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">правила продажи</a></li>
               <li class="footer-menu__item footer-menu__item--2 footer-menu__item--hidden"><a class="footer-menu__link footer-menu__link--2" href="#">о компании</a></li>

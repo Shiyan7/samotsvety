@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
   dateInputs.forEach(function (el) {
     var datepicker = new Datepicker(el, {
       language: 'ru',
-      format: 'mm.dd.yy'
+      format: 'dd.mm.yyyy'
     });
   });
 });
