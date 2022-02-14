@@ -11,7 +11,7 @@ section.ordering
         form.ordering__body.validate-form(action="#")
             .ordering-content
                 .ordering-content__item.g-accordion.isOpen
-                    button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
+                    button.btn-reset.ordering-content__top.ordering-content__top--numbered.g-accordion__control.g-title(aria-expanded="true" type="button")
                         span Контактные данные
                         i.g-accordion__icon
                             +icon("arrow")
@@ -23,7 +23,7 @@ section.ordering
                             span Номер телефона
                             input.g-input.ordering__input(type="tel" name="phoneNumber" placeholder="Введите ваш телефон")
                 .ordering-content__item.g-accordion.isOpen
-                    button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
+                    button.btn-reset.ordering-content__top.ordering-content__top--numbered.g-accordion__control.g-title(aria-expanded="true" type="button")
                         span Способ получения
                         i.g-accordion__icon
                             +icon("arrow")
@@ -43,7 +43,8 @@ section.ordering
                                     span.ordering-switch__desc Выберите любой из 6000+ пунктов выдачи СДЭК
                         .g-filters__content.g-filters__content--active.ordering-content__inner(data-filters-target="way1")
                             .office
-                                img.office__image(src="img/no-image.svg", alt="Санкт-Петербург, пл. Карла Фаберже,  ДОМ 8, БЦ «Золотая Долина»")
+                                .office__map
+                                    +map
                                 .office__text
                                     span.office__metro
                                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +83,7 @@ section.ordering
                                     input.g-input.ordering__input--lg(type="text" name="name" placeholder="введите номер Дома, корпус")
                                 label.ordering__label
                                     span Квартира/Офис
-                                    input.g-input.ordering__input--lg(type="tel" name="phoneNumber" placeholder="введите номер Квартиры/Офиса")
+                                    input.g-input.ordering__input--lg(type="tel" name="number" placeholder="введите номер Квартиры/Офиса")
                             .ordering-total
                                 h2.ordering-total__title Стоимость и срок доставки: 
                                 p.ordering-total__desc 
@@ -116,31 +117,31 @@ section.ordering
                                         button.btn-reset.g-btn.g-btn--stroke.cart-shop__choice(type="button") Выбрать
                             .switch-tabs__content.ordering__map(data-switch-target="map")
                                 +map
+                //- .ordering-content__item.g-accordion.isOpen
+                //-     button.btn-reset.ordering-content__top.ordering-content__top--numbered.g-accordion__control.g-title(aria-expanded="true" type="button")
+                //-         span Выберите способ оплаты
+                //-         i.g-accordion__icon
+                //-             +icon("arrow")
+                //-     .g-accordion__content.payment-method(aria-hidden="false")
+                //-         .ordering-switch__item
+                //-             input.ordering-switch__input(type="radio", name="Selected radio" value="way1" checked)
+                //-             label.ordering-switch__btn.ordering-switch__label
+                //-                 span.ordering-switch__title оплата при получении
+                //-                 span.ordering-switch__desc Наличными или банковской картой
+                //-         .ordering-switch__item
+                //-             input.ordering-switch__input(type="radio", name="Selected radio" value="way2")
+                //-             label.ordering-switch__btn.ordering-switch__label
+                //-                 span.ordering-switch__title Оплата ONLINE
+                //-                 span.ordering-switch__desc Банковские карты, электронные деньги
                 .ordering-content__item.g-accordion.isOpen
-                    button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
-                        span Выберите способ оплаты
-                        i.g-accordion__icon
-                            +icon("arrow")
-                    .g-accordion__content.payment-method(aria-hidden="false")
-                        .ordering-switch__item
-                            input.ordering-switch__input(type="radio", name="Selected radio" value="way1" checked)
-                            label.ordering-switch__btn.ordering-switch__label
-                                span.ordering-switch__title оплата при получении
-                                span.ordering-switch__desc Наличными или банковской картой
-                        .ordering-switch__item
-                            input.ordering-switch__input(type="radio", name="Selected radio" value="way2")
-                            label.ordering-switch__btn.ordering-switch__label
-                                span.ordering-switch__title оплата при получении
-                                span.ordering-switch__desc Наличными или банковской картой
-                .ordering-content__item.g-accordion.isOpen
-                    button.btn-reset.ordering-content__top.g-accordion__control.g-title(aria-expanded="true" type="button")
+                    button.btn-reset.ordering-content__top.ordering-content__top--numbered.g-accordion__control.g-title(aria-expanded="true" type="button")
                         span Комментарии к заказу
                         i.g-accordion__icon
                             +icon("arrow")
                     .g-accordion__content.ordering-content__inner(aria-hidden="false")
                         label.ordering__label
                             span Комментарий
-                            input.g-input.ordering__input--lg.ordering__input-comment(type="text" name="comment" placeholder="Оставьте свои комментарии, мы обязательно примем их во внимание")
+                            textarea.g-input.ordering__input--lg.ordering__input-comment.g-textarea.js-textarea-auto-height(type="text" name="comment" placeholder="Оставьте свои комментарии, мы обязательно примем их во внимание")
                 .ordering-content__item.g-accordion.isOpen.ordering-list(id="order-list")
                     .ordering-header
                         h2.g-title.g-title--center.ordering-header__title состав заказа

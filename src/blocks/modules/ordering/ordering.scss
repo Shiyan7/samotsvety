@@ -88,9 +88,11 @@
                 }
             }
 
-            span::before {
-                counter-increment: section;
-                content: counter(section) ". ";
+            &--numbered {
+                span::before {
+                    counter-increment: section;
+                    content: counter(section) ". ";
+                }
             }
         }
 

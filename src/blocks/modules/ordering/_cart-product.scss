@@ -257,6 +257,11 @@
             display: flex;
             align-items: flex-end;
             margin-top: 15px;
+            @media (max-width: 576px) {
+                &:first-child {
+                    padding-right: 10px;
+                }
+            }
             &:not(:last-child) {
                 margin-right: 60px;
 

@@ -12,14 +12,14 @@ section.cabinet
                     a.cabinet-nav__link(href="new-orders.html") мои заказы
                 li.cabinet-nav__item
                     a.cabinet-nav__link(href="new-personal.html") ЛИЧНЫЕ ДАННЫЕ
+                //- li.cabinet-nav__item
+                //-     a.cabinet-nav__link(href="#") ИЗМЕНЕНИЕ ПАРОЛЯ
                 li.cabinet-nav__item
-                    a.cabinet-nav__link(href="#") ИЗМЕНЕНИЕ ПАРОЛЯ
-                li.cabinet-nav__item
-                    a.cabinet-nav__link.cabinet-nav__link--gray(href="#")
+                    button.btn-reset.cabinet-nav__link.cabinet-nav__link--gray.modal-btn(data-graph-animation="fadeInUp" data-graph-path="bonus" data-graph-speed="500")
                         |БОНУСНАЯ ПРОГРАММА
                         +icon("tooltip")
-                li.cabinet-nav__item
-                    a.cabinet-nav__link(href="#") СЛУЖБА ПОДДЕРЖКИ
+                //- li.cabinet-nav__item
+                //-     a.cabinet-nav__link(href="#") СЛУЖБА ПОДДЕРЖКИ
             .cabinet-content
                 .cabinet-content__column
                     .cabinet-accordion.g-accordion.isOpen

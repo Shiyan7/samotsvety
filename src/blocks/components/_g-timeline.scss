@@ -1,0 +1,70 @@
+.g-timeline {
+    margin-bottom: 40px;
+
+    .simplebar-vertical {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        margin-bottom: 5px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(#000, 0.5);
+        padding: 0 22px;
+        width: fit-content;
+        min-width: calc(100% - 44px);
+
+        @media (max-width: 1024px) {
+            padding-bottom: 0;
+            overflow: visible;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        font-family: "TTCommons", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        padding-bottom: 6.5px;
+        color: #000;
+        min-width: 30px;
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+            line-height: 18px;
+            min-width: 45px;
+        }
+
+        &.g-filters__btn--active {
+            font-weight: 500;
+
+            &::before {
+                display: block;
+            }
+        }
+
+        &:after {
+            display: none;
+        }
+
+        &:before {
+            content: "";
+            display: none;
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            bottom: -5px;
+            left: 11px;
+            background-color: #000;
+            border: 1px solid #fff;
+        }
+    }
+}

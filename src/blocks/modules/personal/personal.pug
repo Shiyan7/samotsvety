@@ -17,14 +17,14 @@ section.cabinet
                     a.cabinet-nav__link(href="new-orders.html") мои заказы
                 li.cabinet-nav__item
                     a.cabinet-nav__link.cabinet-nav__link--current(href="#") ЛИЧНЫЕ ДАННЫЕ
+                //- li.cabinet-nav__item
+                //-     a.cabinet-nav__link(href="#") ИЗМЕНЕНИЕ ПАРОЛЯ
                 li.cabinet-nav__item
-                    a.cabinet-nav__link(href="#") ИЗМЕНЕНИЕ ПАРОЛЯ
-                li.cabinet-nav__item
-                    a.cabinet-nav__link.cabinet-nav__link--gray(href="#")
+                    button.btn-reset.cabinet-nav__link.cabinet-nav__link--gray.modal-btn(data-graph-animation="fadeInUp" data-graph-path="bonus" data-graph-speed="500")
                         |БОНУСНАЯ ПРОГРАММА
                         +icon("tooltip")
-                li.cabinet-nav__item
-                    a.cabinet-nav__link(href="#") СЛУЖБА ПОДДЕРЖКИ
+                //- li.cabinet-nav__item
+                //-     a.cabinet-nav__link(href="#") СЛУЖБА ПОДДЕРЖКИ
             .cabinet-content
                 .cabinet-content__column
                     .cabinet-accordion.g-accordion.isOpen
@@ -109,7 +109,7 @@ section.cabinet
                                 +icon("arrow")
                         .g-accordion__content.cabinet-accordion__content(aria-hidden="false")
                             span.cabinet-content__value andreyivanov@yandex.ru
-                            input.g-input.cabinet-content__input.cabinet-content__input--text.js-cabinet-input(type="email" value="andreyivanov@yandex.ru" placeholder="Введите email")
+                            input.g-input.cabinet-content__input.cabinet-content__input--text.js-cabinet-input(type="email" name="email" value="andreyivanov@yandex.ru" placeholder="Введите email")
                             button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Редактировать email")
                                 span Редактировать Email
                                 +icon("edit")

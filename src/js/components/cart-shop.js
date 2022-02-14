@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
         cartShops.forEach(el => el.classList.toggle("cart-shop--hidden"));
         parent.classList.toggle("cart-shop--selected");
         parent.classList.remove("cart-shop--hidden");
+
+        parent.scrollIntoView({
+            block: "center",
+        });
     }
 
     cartShopChoiceBtns.forEach(el => el.addEventListener("click", handleChoice));

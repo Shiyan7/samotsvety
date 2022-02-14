@@ -45,11 +45,11 @@
         &::after {
             @include pseudo();
             position: absolute;
-            top: 3.5px;
-            left: 5.5px;
+            top: 4px;
+            left: 6px;
             border-radius: 100%;
-            width: 5px;
-            height: 5px;
+            width: 4px;
+            height: 4px;
             background-color: currentColor;
             opacity: 0;
             visibility: hidden;
