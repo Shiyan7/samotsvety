@@ -74,6 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     parent.classList.toggle("cart-shop--selected");
     parent.classList.remove("cart-shop--hidden");
+    parent.scrollIntoView({
+      block: "center"
+    });
   }
 
   cartShopChoiceBtns.forEach(function (el) {
@@ -450,6 +453,19 @@ document.addEventListener("DOMContentLoaded", function () {
     return el.addEventListener("click", hideSection);
   });
 });
+/* document.addEventListener("DOMContentLoaded", () => {
+    const textareas = document.querySelectorAll(".js-textarea-auto-height");
+
+    textareas.forEach(el => {
+        el.style.height = el.setAttribute('style', 'height: ' + (el.scrollHeight - 2) + 'px');
+        el.addEventListener('input', e => {
+            el.classList.add('auto');
+            el.style.height = 'auto';
+            el.style.height = (el.scrollHeight) + 'px';
+        });
+    })
+}); */
+"use strict";
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
