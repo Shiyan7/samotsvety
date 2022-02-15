@@ -12,14 +12,14 @@ section.about
                 p Более ста лет «Русские самоцветы» сохраняют технологии знаменитой петербургской ювелирной школы и разрабатывают инновационные методы изготовления драгоценных шедевров. Мастера создают роскошные украшения, столовое серебро, эмалево-филигранные изделия и предметы интерьера, которые отличают оригинальность авторских идей и непревзойденный уровень исполнения. 
                 p Императорский ювелирный дом «Русские самоцветы» неоднократно завоевывал престижные награды от ведущих экспертов отрасли, что подтверждает качество и высокую художественную ценность изделий. 
             button.btn-reset.g-link.read-more.about-top__more(data-text="Развернуть") Развернуть
-        nav.about-nav
-            ul.about-nav__list.list-reset(data-simplebar)
-                li.about-nav__item
-                    a.about-nav__link.about-nav__link--current КОМПАНИЯ
-                li.about-nav__item
-                    a.about-nav__link(href="#") ПРОИЗВОДСТВО
-                li.about-nav__item
-                    a.about-nav__link(href="#") гарантия
+        //- nav.about-nav
+        //-     ul.about-nav__list.list-reset(data-simplebar)
+        //-         li.about-nav__item
+        //-             a.about-nav__link.about-nav__link--current КОМПАНИЯ
+        //-         li.about-nav__item
+        //-             a.about-nav__link(href="#") ПРОИЗВОДСТВО
+        //-         li.about-nav__item
+        //-             a.about-nav__link(href="#") гарантия
     .about__wrapper
         .about-content
             img.about-content__image.lozad(src="img/about-1.jpg", srcset="img/about-1@2x.jpg 2x", alt="")
@@ -33,46 +33,46 @@ section.about
             .about-content__text
                 h2.g-title.about-content__title 5 000+ МОДЕЛЕЙ В КАТАЛОГЕ
                 p.about-content__desc В коллекциях представлены как украшения базового ювелирного гардероба, так и истинные произведения искусства high jewelry. Каждое изделие хранит в себе историю вдохновения, ручной труд и вековое совершенствование мастерства.
-        .about-box.g-filters
-            h2.g-title.g-title--center.about__title.about-box__title Вековая история бренда - <br> 110 ЛЕТ ЮВЕЛИРНОГО МАСТЕРСТВА
-            .g-timeline(data-simplebar)
-                ul.g-filters__list.g-timeline__list.list-reset
-                    li.g-filters__item.g-timeline__item
-                        button.btn-reset.g-filters__btn.g-timeline__btn.g-filters__btn--active(data-filters-path="1912") 1912
-                    -for(let i = 0; i < 9; i++)
-                        li.g-filters__item.g-timeline__item
-                            button.btn-reset.g-filters__btn.g-timeline__btn(data-filters-path=`192${i}`) 192#{i}
-            .about-box__content.g-filters__content.g-filters__content--active(data-filters-target="1912")
-                .about-box__text
-                    h2.g-title.about-box__year 1912
-                    p.about-box__desc Входной контроль драгоценных металлов и контроль за их дальнейшим состоянием ведется Центральной заводской лабораторией, а так же Пробирной инспекцией. У всех драгоценных камней есть сертификаты качества и подлинности. контроль за их дальнейшим состоянием ведется Центральной заводской лабораторией, а так же Пробирной инспекцией. У всех драгоценных камней есть сертификаты качества и подлинности.
-                    a.g-link.about-box__link(href="#") Подробнее
-                img.about-box__image.lozad(src="img/about-6.jpg", srcset="img/about-6@2x.jpg 2x", alt="")
-            -for(let i = 0; i < 9; i++)
-                .about-box__content.g-filters__content(data-filters-target=`192${i}`)
-                    .about-box__text
-                        h2.g-title.about-box__year 192#{i}
-                        p.about-box__desc Входной контроль драгоценных металлов и контроль за их дальнейшим состоянием ведется Центральной заводской лабораторией, а так же Пробирной инспекцией. У всех драгоценных камней есть сертификаты качества и подлинности. контроль за их дальнейшим состоянием ведется Центральной заводской лабораторией, а так же Пробирной инспекцией. У всех драгоценных камней есть сертификаты качества и подлинности.
-                        a.g-link.about-box__link(href="#") Подробнее
-                    img.about-box__image.lozad(src="img/about-6.jpg", srcset="img/about-6@2x.jpg 2x", alt="")
+        //- .about-box.g-filters
+        //-     h2.g-title.g-title--center.about__title.about-box__title Вековая история бренда - <br> 110 ЛЕТ ЮВЕЛИРНОГО МАСТЕРСТВА
+        //-     .g-timeline(data-simplebar)
+        //-         ul.g-filters__list.g-timeline__list.list-reset
+        //-             li.g-filters__item.g-timeline__item
+        //-                 button.btn-reset.g-filters__btn.g-timeline__btn.g-filters__btn--active(data-filters-path="1912") 1912
+        //-             -for(let i = 0; i < 9; i++)
+        //-                 li.g-filters__item.g-timeline__item
+        //-                     button.btn-reset.g-filters__btn.g-timeline__btn(data-filters-path=`192${i}`) 192#{i}
+        //-     .about-box__content.g-filters__content.g-filters__content--active(data-filters-target="1912")
+        //-         .about-box__text
+        //-             h2.g-title.about-box__year 1912
+        //-             p.about-box__desc Входной контроль драгоценных металлов и контроль за их дальнейшим состоянием ведется Центральной заводской лабораторией, а так же Пробирной инспекцией. У всех драгоценных камней есть сертификаты качества и подлинности. контроль за их дальнейшим состоянием ведется Центральной заводской лабораторией, а так же Пробирной инспекцией. У всех драгоценных камней есть сертификаты качества и подлинности.
+        //-             //a.g-link.about-box__link(href="#") Подробнее
+        //-         img.about-box__image.lozad(src="img/about-6.jpg", srcset="img/about-6@2x.jpg 2x", alt="")
+        //-     -for(let i = 0; i < 9; i++)
+        //-         .about-box__content.g-filters__content(data-filters-target=`192${i}`)
+        //-             .about-box__text
+        //-                 h2.g-title.about-box__year 192#{i}
+        //-                 p.about-box__desc Входной контроль драгоценных металлов и контроль за их дальнейшим состоянием ведется Центральной заводской лабораторией, а так же Пробирной инспекцией. У всех драгоценных камней есть сертификаты качества и подлинности. контроль за их дальнейшим состоянием ведется Центральной заводской лабораторией, а так же Пробирной инспекцией. У всех драгоценных камней есть сертификаты качества и подлинности.
+        //-                 //a.g-link.about-box__link(href="#") Подробнее
+        //-             img.about-box__image.lozad(src="img/about-6.jpg", srcset="img/about-6@2x.jpg 2x", alt="")
         .about-content
             img.about-content__image.lozad(src="img/about-3.jpg", srcset="img/about-3@2x.jpg 2x", alt="")
 
             .about-content__text
                 h2.g-title.about-content__title Качество
                 p.about-content__desc Специалисты проверяют каждый элемент изделия на всех этапах производства и не упускают из виду ни единой мелочи, что гарантирует эталонное качество. Чистоту и цвет драгоценных камней оценивает геммолог, а пробу золота и серебра подтверждает Пробирная палата РФ.
-                a.g-link.about-content__link(href="#") Подробнее
+                //- a.g-link.about-content__link(href="#") Подробнее
         .about-content.about-content--reverse
             img.about-content__image.lozad(src="img/about-4.jpg", srcset="img/about-4@2x.jpg 2x", alt="")
 
             .about-content__text
                 h2.g-title.about-content__title ПРОИЗВОДСТВО
                 p.about-content__desc Более ста лет мастера бережно сохраняют наследие великого Карла Фаберже и совершенствуют знаменитые техники времен императорской России. Дизайнеры и ювелиры постоянно находят новые способы создания драгоценных произведений и соединяют в изделиях ручную работу, ювелирные традиции и инновационные технологии.
-                a.g-link.about-content__link(href="#") Подробнее
+                //- a.g-link.about-content__link(href="#") Подробнее
         .about-content
             img.about-content__image.lozad(src="img/about-5.jpg", srcset="img/about-5@2x.jpg 2x", alt="")
 
             .about-content__text
                 h2.g-title.about-content__title гарантия
                 p.about-content__desc Изделия от Императорского ювелирного дома «Русские самоцветы» проходят тщательный контроль и полностью соответствуют государственными и мировым стандартам. На всю продукцию действует гарантия 2 года.
-                a.g-link.about-content__link(href="#") Подробнее
+                //- a.g-link.about-content__link(href="#") Подробнее

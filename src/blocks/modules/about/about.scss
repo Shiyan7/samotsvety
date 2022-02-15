@@ -299,6 +299,12 @@
             font-size: 20px;
             line-height: 24px;
             margin-bottom: 35px;
+
+            @media (max-width: 576px) {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 15px;
+            }
         }
 
         &__desc {
@@ -312,6 +318,11 @@
                 max-width: none;
             }
 
+            @media (max-width: 576px) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 36px;
             }
@@ -321,6 +332,11 @@
             font-size: 16px;
             line-height: 22px;
             color: #111;
+
+            @media (max-width: 576px) {
+                font-size: 13px;
+                line-height: 17px;
+            }
 
             @include hover {
                 text-decoration: none;
