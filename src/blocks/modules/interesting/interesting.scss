@@ -114,6 +114,7 @@
         @include pseudo();
         width: 8px;
         height: 14px;
+        margin-top: -2px;
         margin-left: 7px;
         transform: rotate(90deg);
         background-image: url(../img/svg/arrow.svg);
