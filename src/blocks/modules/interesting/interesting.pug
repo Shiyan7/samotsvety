@@ -2,10 +2,8 @@ section.interesting.js-section
     .container.interesting__container
         .interesting__top
             h2.g-title.g-title--center.interesting__title ЭТО ИНТЕРЕСНО
-            button.btn-reset.interesting__hide.js-hide-btn-section
-                |Скрыть блок: 
-                +icon("arrow")
-        .swiper.interesting-slider
+            button.btn-reset.interesting__hide.js-hide-btn-section Скрыть блок: 
+        .swiper.interesting-slider.js-section-content
             .swiper-wrapper
                 -for(let i = 0; i < 5; i++)
                     a.swiper-slide.interesting-item(href="post.html") 
