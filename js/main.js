@@ -317,6 +317,23 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  new Swiper(".entry-slider", {
+    slidesPerView: 'auto',
+    spaceBetween: 25,
+    pagination: {
+      el: '.entry-slider__pag',
+      type: 'bullets',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.post-slider__btn--next',
+      prevEl: '.post-slider__btn--prev'
+    }
+  });
+});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", function () {
   var catalogToggle = document.querySelector(".filters-toggle");
   var catalogFilters = document.querySelector(".catalog-filters");
   var catalogFiltersClose = document.querySelector(".catalog-filters__close");
