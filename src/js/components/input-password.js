@@ -5,9 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         el.addEventListener("click", () => {
             let parent = el.closest(".g-input-password");
             let input = parent.querySelector("input");
-            let type = input.type;
-            let target = type !== 'password' ? type = 'password' : type = `text`;
-            input.type = target;
+            input.type !== 'password' ? input.type = 'password' : input.type = `text`;
         });
     });
 })
