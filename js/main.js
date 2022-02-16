@@ -419,9 +419,7 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("click", function () {
       var parent = el.closest(".g-input-password");
       var input = parent.querySelector("input");
-      var type = input.type;
-      var target = type !== 'password' ? type = 'password' : type = "text";
-      input.type = target;
+      input.type !== 'password' ? input.type = 'password' : input.type = "text";
     });
   });
 });
@@ -496,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var parent = this.closest(".cabinet-accordion__content");
     var input = parent.querySelector("input");
 
-    if (!input.classList.contains("error") && input.value.length > 0) {
+    if (!input.classList.contains("error")) {
       parent.classList.toggle("active");
       this.classList.add("cabinet-content__edit--active");
       txt.innerHTML !== 'Сохранить изменения' ? txt.innerHTML = 'Сохранить изменения' : txt.innerHTML = target;
