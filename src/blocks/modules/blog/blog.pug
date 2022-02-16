@@ -1,0 +1,103 @@
+section.blog
+    .container.blog__container
+        ul.g-breadcrumbs__list.blog__breadcrumbs.list-reset
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link(href="/") Главная
+            li.g-breadcrumbs__item
+                a.g-breadcrumbs__link Блог
+        h1.g-title.g-title--center.blog__title Блог
+        .blog__top
+            ul.g-tabs.list-reset.blog__tabs(data-simplebar)
+                li.g-tabs__item
+                    button.btn-reset.g-tabs__btn Новинки
+                li.g-tabs__item
+                    button.btn-reset.g-tabs__btn На свадьбу
+                li.g-tabs__item
+                    button.btn-reset.g-tabs__btn Женские
+                li.g-tabs__item
+                    button.btn-reset.g-tabs__btn Мужские
+                li.g-tabs__item
+                    button.btn-reset.g-tabs__btn Детям
+                li.g-tabs__item
+                    button.btn-reset.g-tabs__btn Необычные
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn Новинки
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn На свадьбу
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn Женские
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn На каждый день
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn Для вечернего образа
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn Необычные
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn Новинки
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn На свадьбу
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn Актуальная классика
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn На каждый день
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn Необычные
+                li.g-tabs__item.g-tabs__item--hidden
+                    button.btn-reset.g-tabs__btn Детям
+                li.g-tabs__item
+                    button.btn-reset.g-tabs__btn.g-tabs__btn--more
+                        |Ещё
+                        +icon("arrow")
+            .search-form.search-form--sm.blog__search-form
+                form.search-form__form(action="#")
+                    input.search-form__input(type="search", name="s" placeholder="Найти")
+                    button.btn-reset.search-form__btn
+                        +icon("search-icon")
+        ul.blog__grid.list-reset
+            li.blog__item
+                article.blog-article
+                    a.blog-article__image(href="new-entry.html")
+                        img(src="img/no-image.svg", alt="С работы на вечеринку")
+                    header.blog-article__header
+                        span.g-title.blog-article__date 17 января 2022
+                        span.g-title.blog-article__category новинки
+                    a.g-title.blog-article__title(href="new-entry.html") С работы на вечеринку
+                    span.blog-article__author Смеянова Алена
+            li.blog__item.blog__item--lg
+                article.blog-article
+                    a.blog-article__image(href="new-entry.html")
+                        img(src="img/no-image.svg", alt="С работы на вечеринку")
+                    header.blog-article__header
+                        span.g-title.blog-article__date 17 января 2022
+                        span.g-title.blog-article__category новинки
+                    a.g-title.blog-article__title(href="new-entry.html") С работы на вечеринку
+                    span.blog-article__author Смеянова Алена
+            li.blog__item.blog__item--md
+                article.blog-article
+                    a.blog-article__image(href="new-entry.html")
+                        img(src="img/no-image.svg", alt="С работы на вечеринку")
+                    header.blog-article__header
+                        span.g-title.blog-article__date 17 января 2022
+                        span.g-title.blog-article__category новинки
+                    a.g-title.blog-article__title(href="new-entry.html") С работы на вечеринку
+                    span.blog-article__author Смеянова Алена
+            li.blog__item.blog__item--md
+                article.blog-article
+                    a.blog-article__image(href="new-entry.html")
+                        img(src="img/no-image.svg", alt="С работы на вечеринку")
+                    header.blog-article__header
+                        span.g-title.blog-article__date 17 января 2022
+                        span.g-title.blog-article__category новинки
+                    a.g-title.blog-article__title(href="new-entry.html") С работы на вечеринку
+                    span.blog-article__author Смеянова Алена
+            -for(let i = 0; i < 3; i++)
+                li.blog__item
+                    article.blog-article
+                        a.blog-article__image(href="new-entry.html")
+                            img(src="img/no-image.svg", alt="С работы на вечеринку")
+                        header.blog-article__header
+                            span.g-title.blog-article__date 17 января 2022
+                            span.g-title.blog-article__category новинки
+                        a.g-title.blog-article__title(href="new-entry.html") С работы на вечеринку
+                        span.blog-article__author Смеянова Алена
+        button.btn-reset.g-btn.g-btn--stroke.blog__more Показать ещё

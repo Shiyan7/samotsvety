@@ -128,6 +128,56 @@
                 display: block;
             }
         }
+
+        &--sm {
+            width: 304px;
+
+            @media (max-width: 1024px) {
+                position: static;
+                opacity: 1;
+                background-color: #fff;
+                visibility: visible;
+            }
+            
+            .search-form {
+                &__form {
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    max-width: none;
+                    margin: 0;
+                    opacity: 1;
+                    visibility: visible;
+
+                    @media (max-width: 1024px) {
+                        box-shadow: none;
+                        padding: 0;
+                        height: auto;
+                    }
+                }
+
+                &__input {
+
+                    @media (max-width: 1024px) {
+                        padding-right: 30px;
+                    }
+                    
+                    &:not(:last-child) {
+                        margin-right: 0;
+                    }
+                }
+
+                &__btn {
+                    right: 0;
+
+                    @media (max-width: 1024px) {
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 
     &-toggle {

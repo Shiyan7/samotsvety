@@ -1,6 +1,8 @@
 .banner {
+    position: relative;
     background-color: #56323f;
     overflow: hidden;
+    margin-bottom: -1px;
     &__container {
         display: flex;
         justify-content: space-between;
