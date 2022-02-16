@@ -25,7 +25,7 @@ section.cabinet
                         +icon("tooltip")
                 //- li.cabinet-nav__item
                 //-     a.cabinet-nav__link(href="#") СЛУЖБА ПОДДЕРЖКИ
-            .cabinet-content
+            form.cabinet-content.validate-form(action="#")
                 .cabinet-content__column
                     .cabinet-accordion.g-accordion.isOpen
                         button.btn-reset.g-accordion__control.cabinet-accordion__title(aria-expanded="true" type="button")
@@ -35,7 +35,7 @@ section.cabinet
                         .g-accordion__content.cabinet-accordion__content(aria-hidden="false")
                             span.cabinet-content__value Иван Андрей Иванович
                             input.g-input.cabinet-content__input.cabinet-content__input--text.js-cabinet-input(type="text" value="Иван Андрей Иванович" placeholder="Введите текст")
-                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Редактировать данные")
+                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Редактировать данные" type="button")
                                 span Редактировать данные
                                 +icon("edit")
                     .cabinet-accordion.g-accordion.isOpen
@@ -52,7 +52,7 @@ section.cabinet
                                 label.g-radio.cabinet-content__radio
                                     input.g-radio__input(type="radio", value="female" name="sex")
                                     span.g-radio__caption Женский
-                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Изменить пол")
+                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Изменить пол" type="button")
                                 span Изменить пол
                                 +icon("edit")
                     .cabinet-accordion.g-accordion.isOpen
@@ -67,7 +67,7 @@ section.cabinet
                                 +icon("tooltip")
                             p.cabinet-content__warning Дату рождения можно указать только один раз. Если вы хотите изменить дату обратитесь в службу поддержки
                             input.g-input.js-cabinet-input.cabinet-content__input.g-input-date(type="text", name="" placeholder="Введите дату рождения")
-                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Редактировать данные")
+                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Редактировать данные" type="button")
                                 span Редактировать данные
                                 +icon("edit")
                     .cabinet-accordion.g-accordion.isOpen
@@ -88,7 +88,7 @@ section.cabinet
                                 input.g-input.cabinet-content__input.g-input-password__input.valid(type="password" placeholder="Введите пароль")
                                 button.btn-reset.g-input-password__btn
                                     +icon("show-password")
-                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Изменить пароль")
+                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Изменить пароль" type="button")
                                 span Изменить пароль
                                 +icon("edit")
                 .cabinet-content__column
@@ -110,6 +110,6 @@ section.cabinet
                         .g-accordion__content.cabinet-accordion__content(aria-hidden="false")
                             span.cabinet-content__value andreyivanov@yandex.ru
                             input.g-input.cabinet-content__input.cabinet-content__input--text.js-cabinet-input(type="email" name="email" value="andreyivanov@yandex.ru" placeholder="Введите email")
-                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Редактировать email")
+                            button.btn-reset.cabinet-content__edit.js-toggle-input(data-text="Редактировать email" type="button")
                                 span Редактировать Email
                                 +icon("edit")
