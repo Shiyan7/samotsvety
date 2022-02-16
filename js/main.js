@@ -494,9 +494,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var txt = this.querySelector("span");
     var target = this.dataset.text;
     var parent = this.closest(".cabinet-accordion__content");
-    parent.classList.toggle("active");
-    this.classList.add("cabinet-content__edit--active");
-    txt.innerHTML !== 'Сохранить изменения' ? txt.innerHTML = 'Сохранить изменения' : txt.innerHTML = target;
+
+    if (!parent.querySelector("input.error")) {
+      parent.classList.toggle("active");
+      this.classList.add("cabinet-content__edit--active");
+      txt.innerHTML !== 'Сохранить изменения' ? txt.innerHTML = 'Сохранить изменения' : txt.innerHTML = target;
+    }
   }
 
   cabinetContentInputs === null || cabinetContentInputs === void 0 ? void 0 : cabinetContentInputs.forEach(function (el) {
