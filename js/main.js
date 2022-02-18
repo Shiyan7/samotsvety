@@ -1425,7 +1425,13 @@ $(document).ready(function () {
         value: {
           required: true
         },
+        text: {
+          required: true
+        },
         name: {
+          required: true
+        },
+        password: {
           required: true
         },
         email: {

@@ -67,9 +67,12 @@
               <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cart" href="new-cart.html">
                   <div class="shop-nav__icon shop-nav__icon--cart"></div>
                   <div class="shop-nav__quantity">13</div></a></li>
-              <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cabinet" href="new-cabinet.html">
+              <li class="shop-nav__item">
+                <button class="btn-reset shop-nav__link shop-nav__link--cabinet modal-btn" data-graph-animation="fadeInUp" data-graph-path="login-or-register" data-graph-speed="500" type="button">
                   <div class="shop-nav__icon shop-nav__icon--cabinet"></div>
-                  <div class="shop-nav__quantity">Войти</div></a></li>
+                  <div class="shop-nav__quantity">Войти</div>
+                </button>
+              </li>
             </ul>
           </div>
           <div class="header__bottom">
@@ -2071,10 +2074,12 @@
                 <li class="header-menu__item"><a class="header-menu__link" href="new-about.html">Вселенная бренда</a></li>
                 <li class="header-menu__item"><a class="header-menu__link" href="delivery-payment.html">Доставка и оплата</a></li>
                 <li class="header-menu__item"><a class="header-menu__link" href="shops.html">Фирменные салоны</a></li>
-              </ul><a class="nav__cabinet" href="#">
+              </ul>
+              <button class="btn-reset nav__cabinet modal-btn" data-graph-animation="fadeInUp" data-graph-path="login-or-register" data-graph-speed="500" type="button">
                 <svg class="svg-icon cabinet">
                   <use xlink:href="./img/sprites/sprite.svg#cabinet"></use>
-                </svg>ВОЙТИ В КАБИНЕТ</a>
+                </svg>ВОЙТИ В КАБИНЕТ
+              </button>
               <button class="btn-reset nav-location toggle-location"><span class="nav-location__caption">Ваш город:</span><span class="nav-location__value region-selection__choice">САНКТ-ПЕТЕРБУРГ</span></button>
               <div class="tel nav-tel"><a class="tel__value nav-tel__value" href="tel:88005553298">8 (800) 555-32-98</a><span class="tel__desc nav-tel__desc">Пн-Пт 10:00-20:00, Сб, Вс до 17:00</span></div>
             </div>
@@ -2139,7 +2144,9 @@
           </div>
           <div class="down-bar__item"><a class="down-bar__link" href="favorites.html"><span class="shop-nav__icon shop-nav__icon--favorite"></span>Избранное</a></div>
           <div class="down-bar__item"><a class="down-bar__link" href="new-cart.html"><span class="shop-nav__icon shop-nav__icon--cart"></span>Корзина</a></div>
-          <div class="down-bar__item"><a class="down-bar__link" href="new-cabinet.html"><span class="shop-nav__icon shop-nav__icon--cabinet"></span>Вход</a></div>
+          <div class="down-bar__item">
+            <button class="btn-reset down-bar__link modal-btn" data-graph-animation="fadeInUp" data-graph-path="login-or-register" data-graph-speed="500" type="button"><span class="shop-nav__icon shop-nav__icon--cabinet"></span>Вход</button>
+          </div>
         </div>
         <div class="region-selection">
           <button class="btn-reset region-selection__close">
@@ -4315,6 +4322,771 @@
           <p class="footer__desc">Предложение не является публичной офертой. Цены на сайте и в розничной сети могут отличаться. Информация на сайте о товаре носит рекламный характер и расценивается как приглашение делать оферты на основании п.1 ст. 437 Гражданского кодекса РФ.</p>
         </div>
       </footer>
+      <div class="modal">
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="price-request">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Запрос цены</h2>
+            <p class="modal__desc modal__desc--center">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение 30&nbsp;мин и&nbsp;сообщим стоимость и&nbsp;условия заказа&nbsp;товара.</p>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">оставить заявку</button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных *в рабочее время</span>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="modal__container modal__container--2" role="dialog" aria-modal="true" data-graph-target="why-price">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">ПОЧЕМУ <br>НЕТОЧНАЯ ЦЕНА?</h2>
+            <p class="modal__desc modal__desc--center">Цена изделия может значительно варьироваться в&nbsp;зависимости от&nbsp;веса готового изделия, характеристик вставок (цвета, чистоты и&nbsp;качества огранки), а&nbsp;также от&nbsp;общего каратного веса драгоценных камней.</p>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="order-product">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Заявка на изделие под заказ</h2>
+            <p class="modal__desc modal__desc--center">Оставьте заявку на&nbsp;консультацию с&nbsp;экспертом, мы&nbsp;перезвоним в&nbsp;течение 30&nbsp;минут*</p>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">оставить заявку</button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных *в рабочее время</span>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="modal__container modal__container--2" role="dialog" aria-modal="true" data-graph-target="order-my-size">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Заказать изделие по&nbsp;моему&nbsp;размеру</h2>
+            <h3 class="g-title g-title--center modal__subtitle">Изготовим изделие <br> по вашему размеру <span>за&nbsp;7-45&nbsp;дней</span></h3>
+            <p class="modal__desc modal__desc--center">Оставьте заявку на консультацию <br> с экспертом, мы перезвоним <br> в течение 30 минут*</p>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">оставить заявку</button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных *в рабочее время</span>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="modal__container modal__container--2" role="dialog" aria-modal="true" data-graph-target="use-promocode">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Как использовать промокод?</h2>
+            <p class="modal__desc modal__desc--2 modal__desc--center">Укажите полученный промокод <br> при оформлении заказа и&nbsp;<span>получите СКИДКУ 5%. </span>Или сообщите промокод менеджеру.</p>
+            <p class="modal__desc modal__desc--2 modal__desc--center">Скидка закрепляется за вашим номером <br> телефона и действует 14 дней.</p>
+            <p class="modal__desc modal__desc--2 modal__desc--gray modal__desc--center">Скидка действует <span>только при покупке on-line </span>в&nbsp;интернет-галерее «Русские самоцветы».</p>
+          </div>
+        </div>
+        <div class="modal__container modal__container--3" role="dialog" aria-modal="true" data-graph-target="reduce-price">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Снизьте цену на <br> товар за 1 минуту</h2>
+            <h3 class="g-title g-title--center modal__subtitle">Получите промокод на <span>скидку 5%</span></h3>
+            <p class="modal__desc modal__desc--center">Отправим промокод SMS-сообщением в&nbsp;течение 1&nbsp;минуты. Промокод закрепляется за&nbsp;вашим номером телефона и&nbsp;действует 14&nbsp;дней<br><span>только при покупке on-line</span></p>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">ПОЛУЧИТЬ ПОМОКОД</button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
+              </label>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я даю согласие на sms-рассылку</span>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="modal__container modal__container--4" role="dialog" aria-modal="true" data-graph-target="found-out-size">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Как узнать размер?</h2>
+            <p class="modal__desc modal__desc--center">Обмотайте нужный палец ниткой, шнурком или бумажной лентой в самом толстом месте.</p><img class="lozad modal__image" src="img/found-out-size.jpg" srcset="img/found-out-size@2x.jpg 2x" alt="Как узнать размер?">
+            <p class="modal__desc modal__desc--center">Линейкой замерьте полученную длину</p>
+            <form class="modal-form validate-form" action="#">
+              <label class="modal-form__item"><span class="modal-form__caption">Введите результат измерений в миллиметрах</span>
+                <input class="g-input modal-form__input" type="text" name="value" placeholder="ВВЕДИТЕ ПОЛУЧЕННОЕ ЗНАЧЕНИЕ">
+              </label>
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">расчитать</button>
+            </form>
+            <h2 class="g-title g-title--center modal__title modal__title--md">НУЖНЫЙ ВАМ РАЗМЕР 19</h2>
+          </div>
+        </div>
+        <div class="modal__container modal__container--5" role="dialog" aria-modal="true" data-graph-target="reserve">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content g-filters">
+            <h2 class="g-title g-title--center modal__title">ВЫБЕРИТЕ РАЗМЕР</h2>
+            <select class="g-select" name="selected size">
+              <option value="">Выберите размер</option>
+              <option value="size-1">15</option>
+              <option value="size-2">15.5</option>
+              <option value="size-3">16</option>
+              <option value="size-4">16.5</option>
+              <option value="size-5">17</option>
+              <option value="size-6">17.5</option>
+              <option value="size-9">18</option>
+              <option value="size-10">15</option>
+              <option value="size-11">15.5</option>
+              <option value="size-12">16</option>
+              <option value="size-13">16.5</option>
+              <option value="size-14">17</option>
+              <option value="size-15">17.5</option>
+              <option value="size-16">18</option>
+            </select>
+            <p class="modal__desc modal__desc--sm modal__desc--center">Изделие 15 размера есть в 5 магазинах</p>
+            <ul class="g-filters__list modal-filters list-reset">
+              <li class="g-filters__item">
+                <button class="btn-reset g-filters__btn g-filters__btn--active" data-filters-path="list">Списком</button>
+              </li>
+              <li class="g-filters__item">
+                <button class="btn-reset g-filters__btn" data-filters-path="map">На карте</button>
+              </li>
+            </ul>
+            <div class="g-filters__content list-reserve__items modal-filters__content g-filters__content--active" data-filters-target="list" data-simplebar>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+              <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                  <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                    <div class="insert-product full-text">
+                      <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                        <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                      </div>
+                      <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                        <div class="insert-product__right">
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                          </div>
+                          <div class="insert-product__content">
+                            <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  </div>
+                  <button class="btn-reset g-btn g-btn--stroke list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв</button>
+                </div>
+              </div>
+            </div>
+            <div class="g-filters__content modal-filters__content map-reserve" data-filters-target="map">
+              <div class="modal-map">
+                <div class="modal-map__item"></div>
+              </div>
+              <div class="list-reserve__item map-reserve__item"><img class="list-reserve__image lozad" src="img/location.jpg" srcset="img/location@2x.jpg 2x" alt="">
+                <div class="list-reserve__content">
+                  <div class="list-reserve__text">
+                    <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                      <svg class="svg-icon metro">
+                        <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                      </svg><span>Ленинский пр.</span></span>
+                  </div>
+                </div>
+                <div class="list-reserve__info read-more-wrapper"><span class="list-reserve__price">Цена изделия: <span>77,975 ₽</span></span>
+                  <div class="insert-product full-text">
+                    <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                      <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                    </div>
+                    <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                      <div class="insert-product__right">
+                        <div class="insert-product__content">
+                          <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                        </div>
+                        <div class="insert-product__content">
+                          <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                  <button class="btn-reset g-btn g-btn--black list-reserve__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500">оформить резерв  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container modal__container--6" role="dialog" aria-modal="true" data-graph-target="make-reserve">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <button class="btn-reset modal__back modal-btn" data-graph-animation="fadeInUp" data-graph-path="reserve" data-graph-speed="500">Назад
+            <svg class="svg-icon back">
+              <use xlink:href="./img/sprites/sprite.svg#back"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title modal__title--2">Оформить резерв</h2>
+            <p class="modal__desc modal__desc--sm modal__desc--center">Срок резерва — 2 дня</p>
+            <div class="reserve__content">
+              <div class="reserve__item"><span class="reserve__caption">Адрес пункта выдачи:</span>
+                <div class="list-reserve__item"><img class="list-reserve__image" src="img/list-reserve-1.jpg" alt="">
+                  <div class="list-reserve__content">
+                    <div class="list-reserve__text">
+                      <p class="modal__desc list-reserve__street">ул. Дзержинского, 35/3</p><span class="list-reserve__hours">Пн-Пт 10:00-20:00, Сб,Вс 10:00-18:00</span><a class="modal__desc modal__desc--sm list-reserve__tel" href="#">+7 (812) 777-78-61 </a><span class="list-reserve__metro">
+                        <svg class="svg-icon metro">
+                          <use xlink:href="./img/sprites/sprite.svg#metro"></use>
+                        </svg><span>Ленинский пр.</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reserve__item"><span class="reserve__caption">Информация о товаре:</span>
+                <div class="mini-product"><img class="mini-product__image" src="img/card-1.jpg" alt="">
+                  <div class="mini-product__right"><span class="mini-product__name-collection">NIGHTSHADE</span>
+                    <h2 class="g-title mini-product__title">Кольцо с турмалином и&nbsp;бриллиантами</h2><span class="mini-product__price">Цена изделия:<span>77 975 ₽</span></span>
+                    <div class="read-more-wrapper">
+                      <div class="insert-product full-text">
+                        <div class="insert-product__item"><span class="insert-product__title">Размер:</span>
+                          <div class="insert-product__right"><span class="insert-product__caption">15 мм</span></div>
+                        </div>
+                        <div class="insert-product__item"><span class="insert-product__title">Вставка:</span>
+                          <div class="insert-product__right">
+                            <div class="insert-product__content">
+                              <div class="insert-product__color insert-product__color--green"></div><span class="insert-product__caption">Турмалин — 1, огранка «Октагон», 0.16 crt.</span>
+                            </div>
+                            <div class="insert-product__content">
+                              <div class="insert-product__color insert-product__color--black"></div><span class="insert-product__caption">Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn-reset g-link read-more list-reserve__more" data-text="Развернуть">Развернуть</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form class="modal-form validate-form reserve__form" action="#">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">оставить заявку</button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="modal-order">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title modal-order__title">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
+            <p class="modal__desc modal__desc--center">Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;вами для&nbsp;уточнения деталей заказа</p>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон"><a class="btn-reset modal__link modal__promocode">Ввести промокод</a>
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">Оформить заказ</button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="modal__container modal__container--3" role="dialog" aria-modal="true" data-graph-target="tel-order">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title">Оформим заказ <br> по телефону</h2>
+            <p class="modal__desc modal__desc--center">Заполните форму, и мы свяжемся с вами для уточнения деталей заказа</p>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">оформить быстрый заказ</button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
+              </label>
+            </form>
+            <div class="modal-tel">
+              <p class="modal-tel__desc">Вы можете связаться с нами по телефону</p><a class="modal-tel__value" href="tel:88005553298">8 (800) 555-32-98</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container modal__container--7" role="dialog" aria-modal="true" data-graph-target="delete-product">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title modal__title--light">Подтвердите действие</h2>
+            <p class="modal__desc modal__desc--center">Вы уверены, что хотите удалить этот&nbsp;товар?</p>
+            <div class="modal__btns">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="product-deleted" data-graph-speed="500">Да, удалить</button>
+              <button class="btn-reset g-btn g-btn--stroke modal-form__btn js-modal-close">Нет, оставить</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container" role="dialog" aria-modal="true" data-graph-target="edit-phone">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title modal__title--light">ИЗМЕНИТЬ ТЕЛЕФОН</h2>
+            <p class="modal__desc modal__desc--center">На указанный телефон придет СМС&nbsp;уведомление</p>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" type="tel" name="phoneNumber" placeholder="Введите телефон">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">Сохранить изменения </button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных<span>*в рабочее время</span></span>
+              </label><span class="modal-form__desc modal-form__desc--2">*в рабочее время</span>
+            </form>
+          </div>
+        </div>
+        <div class="modal__container modal__container--7" role="dialog" aria-modal="true" data-graph-target="cancel-order">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title modal__title--light">отменить Заказ №&nbsp;3001921</h2>
+            <p class="modal__desc modal__desc--center">Вы уверены, что хотите отменить заказ?</p>
+            <div class="modal__btns">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn modal-btn" data-graph-animation="fadeInUp" data-graph-path="order-cancelled" data-graph-speed="500">Да, удалить</button>
+              <button class="btn-reset g-btn g-btn--stroke modal-form__btn js-modal-close">Нет, оставить</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container modal__container--2" role="dialog" aria-modal="true" data-graph-target="order-cancelled">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title modal__title--light">Заказ № 3001921</h2>
+            <p class="modal__desc modal__desc--center">Заказ будет отменен после подтверждения менеджером.</p>
+          </div>
+        </div>
+        <div class="modal__container modal__container--8" role="dialog" aria-modal="true" data-graph-target="product-deleted">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <p class="modal__desc modal__desc--center">Кольцо из золота с изумрудом и бриллиантами, удалено.</p>
+          </div>
+        </div>
+        <div class="modal__container modal__container--8" role="dialog" aria-modal="true" data-graph-target="bonus">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <p class="modal__desc modal__desc--center">Бонусная программа <br> будет доступна позже</p>
+          </div>
+        </div>
+        <div class="modal__container modal__container--8" role="dialog" aria-modal="true" data-graph-target="birthday">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <p class="modal__desc modal__desc--center">Дату рождения можно указать только один раз. Если вы хотите изменить дату обратитесь в службу поддержки</p>
+          </div>
+        </div>
+        <div class="modal__container modal__container--2" role="dialog" aria-modal="true" data-graph-target="password-recovery">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title modal__title--light">восстановление пароля</h2>
+            <p class="modal__desc modal__desc--center">Введите адрес электронной почты, который вы&nbsp;указывали при регистрации на сайте.</p>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" type="text" name="text" placeholder="ВВЕДИТЕ ТЕЛЕФОН ИЛИ E-mail">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn">Отправить</button>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="modal__container modal__container--7" role="dialog" aria-modal="true" data-graph-target="login-or-register">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title modal__title--light">войти или зарегистрироваться</h2>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" type="text" name="text" placeholder="ВВЕДИТЕ ТЕЛЕФОН ИЛИ E-mail">
+              <button class="btn-reset g-btn g-btn--black modal-form__btn modal-form__btn--2">Отправить</button><span class="modal__caption"><span>Другие способы входа:</span>
+                <button class="btn-reset modal__link modal-btn" data-graph-animation="fadeInUp" data-graph-path="login-with-password" data-graph-speed="500" type="button">Войти с паролем</button></span>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="modal__container modal__container--7" role="dialog" aria-modal="true" data-graph-target="login-with-password">
+          <button class="btn-reset modal__close js-modal-close" aria-label="Закрыть модальное окно">
+            <svg class="svg-icon cross2">
+              <use xlink:href="./img/sprites/sprite.svg#cross2"></use>
+            </svg>
+          </button>
+          <div class="modal-content">
+            <h2 class="g-title g-title--center modal__title modal__title--light">войти c паролем</h2>
+            <form class="modal-form validate-form" action="#">
+              <input class="g-input modal-form__input" type="text" name="text" placeholder="ВВЕДИТЕ ТЕЛЕФОН ИЛИ E-mail">
+              <label class="g-input-password modal-form__label modal-form__label--2 js-cabinet-input">
+                <input class="g-input modal-form__input g-input-password__input" type="password" name="password" placeholder="Введите пароль">
+                <button class="btn-reset g-input-password__btn" type="button">
+                  <svg class="svg-icon show-password">
+                    <use xlink:href="./img/sprites/sprite.svg#show-password"></use>
+                  </svg>
+                </button>
+              </label>
+              <button class="btn-reset g-btn g-btn--black modal-form__btn modal-form__btn--2">Отправить</button><span class="modal__caption">
+                <button class="btn-reset modal__link modal__link--2 modal-btn" data-graph-animation="fadeInUp" data-graph-path="password-recovery" data-graph-speed="500" type="button">Забыли пароль?</button></span>
+              <label class="modal-form__label">
+                <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
