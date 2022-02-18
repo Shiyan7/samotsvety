@@ -478,8 +478,7 @@
                                         .insert-product__color.insert-product__color--black
                                         span.insert-product__caption Бриллиант — 10, огранка «Круг», цвет 7, чистота 9, 0.15 crt.
                         button.btn-reset.g-link.read-more.list-reserve__more(data-text="Развернуть") Развернуть
-                        button.btn-reset.g-btn.g-btn--black.list-reserve__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500") оформить резерв
-    
+                        button.btn-reset.g-btn.g-btn--black.list-reserve__btn.modal-btn(data-graph-animation="fadeInUp" data-graph-path="make-reserve" data-graph-speed="500") оформить резерв  
     .modal__container.modal__container--6(role="dialog" aria-modal="true" data-graph-target="make-reserve")
         button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
             +icon("cross2")
@@ -623,3 +622,50 @@
             +icon("cross2")
         .modal-content
             p.modal__desc.modal__desc--center Дату рождения можно указать только один раз. Если вы хотите изменить дату обратитесь в службу поддержки
+    .modal__container.modal__container--2(role="dialog" aria-modal="true" data-graph-target="password-recovery")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title.modal__title--light восстановление пароля
+            p.modal__desc.modal__desc--center Введите адрес электронной почты, который вы&nbsp;указывали при регистрации на сайте.
+
+            form.modal-form.validate-form(action="#")
+                input.g-input.modal-form__input(type="text" name="text" placeholder="ВВЕДИТЕ ТЕЛЕФОН ИЛИ E-mail")
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn Отправить
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я согласен на обработку персональных данных
+    .modal__container.modal__container--7(role="dialog" aria-modal="true" data-graph-target="login-or-register")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title.modal__title--light войти или зарегистрироваться
+            form.modal-form.validate-form(action="#")
+                input.g-input.modal-form__input(type="text" name="text" placeholder="ВВЕДИТЕ ТЕЛЕФОН ИЛИ E-mail")
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn.modal-form__btn--2 Отправить
+                span.modal__caption
+                    span Другие способы входа:
+                    button.btn-reset.modal__link.modal-btn(data-graph-animation="fadeInUp" data-graph-path="login-with-password" data-graph-speed="500" type="button") Войти с паролем
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я согласен на обработку персональных данных
+    .modal__container.modal__container--7(role="dialog" aria-modal="true" data-graph-target="login-with-password")
+        button.btn-reset.modal__close.js-modal-close(aria-label="Закрыть модальное окно")
+            +icon("cross2")
+        .modal-content
+            h2.g-title.g-title--center.modal__title.modal__title--light войти c паролем
+            form.modal-form.validate-form(action="#")
+                input.g-input.modal-form__input(type="text" name="text" placeholder="ВВЕДИТЕ ТЕЛЕФОН ИЛИ E-mail")
+                label.g-input-password.modal-form__label.modal-form__label--2.js-cabinet-input
+                    input.g-input.modal-form__input.g-input-password__input(type="password" name="password" placeholder="Введите пароль")
+                    button.btn-reset.g-input-password__btn(type="button")
+                        +icon("show-password")
+                button.btn-reset.g-btn.g-btn--black.modal-form__btn.modal-form__btn--2 Отправить
+                span.modal__caption
+                    button.btn-reset.modal__link.modal__link--2.modal-btn(data-graph-animation="fadeInUp" data-graph-path="password-recovery" data-graph-speed="500" type="button") Забыли пароль?
+                label.modal-form__label
+                    input.modal-form__checkbox(type="checkbox" checked)
+                    span.modal-form__switch
+                    span.modal-form__desc Я согласен на обработку персональных данных

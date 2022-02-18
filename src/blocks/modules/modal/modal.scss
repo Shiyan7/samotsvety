@@ -14,6 +14,7 @@
     overflow-x: hidden;
     opacity: 0;
     visibility: hidden;
+    min-width: 360px;
 
     .choices {
         max-width: 258px;
@@ -131,6 +132,39 @@
         }
     }
 
+    &__caption {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        color: #111;
+        line-height: 24px;
+        margin-bottom: 10px;
+        white-space: nowrap;
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .modal__link {
+            margin: 0;
+            align-self: center;
+
+            &--2 {
+                margin-bottom: 9px;
+            }
+
+            &:after {
+                border-bottom: 1px solid #111;
+            }
+        }
+
+        span {
+            display: block;
+            margin-right: 4px;
+        }
+    }
+
     &-form {
         display: flex;
         flex-direction: column;
@@ -144,9 +178,14 @@
         &__btn {
             padding: 15.5px 0 13.5px;
             margin-bottom: 35px;
+
+            &--2 {
+                margin-bottom: 24px;
+            }
         }
 
         &__desc {
+            margin: 0;
             color: rgba(#000, 0.5);
             font-size: 14px;
             line-height: 20px;
@@ -173,14 +212,30 @@
                     text-align: center;
                 }
             }
+
+            &--3 {
+                text-align: left;
+                margin-bottom: 10px;
+            }
         }
 
         &__label {
             display: flex;
             position: relative;
 
+            .modal-form__input {
+                margin-bottom: 0;
+                width: 100%;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 8px;
+            }
+
+            &--2 {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
             }
         }
 

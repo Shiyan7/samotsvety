@@ -203,6 +203,10 @@
             width: 218px;
             margin-bottom: 8px;
 
+            .js-cabinet-input {
+                display: none;
+            }
+
             @media (max-width: 576px) {
                 width: calc(100% - 20px);
             }
@@ -384,8 +388,4 @@
             }
         }
     }
-}
-
-.js-cabinet-input {
-    display: none;
 }

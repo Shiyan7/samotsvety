@@ -6,12 +6,14 @@ block variables
 	- const page = "about";
 
 block content
-	include ../../blocks/modules/header/header
-	main.main
-		include ../../blocks/modules/about/about
-		include ../../blocks/modules/subscribe-form/subscribe-form
-		include ../../blocks/modules/questions/questions
-	include ../../blocks/modules/footer/footer
+	.site-container
+		include ../../blocks/modules/header/header
+		main.main
+			include ../../blocks/modules/about/about
+			include ../../blocks/modules/subscribe-form/subscribe-form
+			include ../../blocks/modules/questions/questions
+		include ../../blocks/modules/footer/footer
+		include ../../blocks/modules/modal/modal
 block scripts
 	script(src="js/vendor.js")
 	script(src="js/main.js")
