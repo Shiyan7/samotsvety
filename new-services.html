@@ -61,17 +61,10 @@
             <div class="tel header__tel"><a class="tel__value" href="tel:88005553298">8 (800) 555-32-98</a><span class="tel__desc">Пн-Пт 10:00-20:00, Сб, Вс до 17:00</span></div><a class="logo header__logo" href="/"><img src="img/logo-icon.svg" alt="Russkiye samotsvety"></a>
             <button class="btn-reset burger" aria-label="Кпопка бургер"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button>
             <ul class="header__shop-nav shop-nav list-reset">
-              <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--favorite" href="favorites.html">
-                  <div class="shop-nav__icon shop-nav__icon--favorite"></div>
-                  <div class="shop-nav__quantity">2</div></a></li>
-              <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cart" href="new-cart.html">
-                  <div class="shop-nav__icon shop-nav__icon--cart"></div>
-                  <div class="shop-nav__quantity">13</div></a></li>
+              <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--favorite" href="favorites.html"><span class="shop-nav__icon shop-nav__icon--favorite"></span><span class="shop-nav__quantity">2</span></a></li>
+              <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cart" href="new-cart.html"><span class="shop-nav__icon shop-nav__icon--cart"></span><span class="shop-nav__quantity">13</span></a></li>
               <li class="shop-nav__item">
-                <button class="btn-reset shop-nav__link shop-nav__link--cabinet modal-btn" data-graph-animation="fadeInUp" data-graph-path="login-or-register" data-graph-speed="500" type="button">
-                  <div class="shop-nav__icon shop-nav__icon--cabinet"></div>
-                  <div class="shop-nav__quantity">Войти</div>
-                </button>
+                <button class="btn-reset shop-nav__link shop-nav__link--cabinet modal-btn" data-graph-animation="fadeInUp" data-graph-path="login-or-register" data-graph-speed="500" type="button"><span class="shop-nav__icon shop-nav__icon--cabinet"></span><span class="shop-nav__quantity">Войти</span></button>
               </li>
             </ul>
           </div>
@@ -3311,7 +3304,7 @@
             <h2 class="g-title g-title--center modal__title modal__title--light">войти или зарегистрироваться</h2>
             <form class="modal-form validate-form" action="#">
               <input class="g-input modal-form__input" type="text" name="text" placeholder="ВВЕДИТЕ ТЕЛЕФОН ИЛИ E-mail">
-              <button class="btn-reset g-btn g-btn--black modal-form__btn modal-form__btn--2">Получить код</button><span class="modal__caption"><span>Другие способы входа:</span>
+              <button class="btn-reset g-btn g-btn--black modal-form__btn modal-form__btn--2">Получить код</button><span class="modal-form__bottom"><span>Другие способы входа:</span>
                 <button class="btn-reset modal__link modal-btn" data-graph-animation="fadeInUp" data-graph-path="login-with-password" data-graph-speed="500" type="button">Войти с паролем</button></span>
               <label class="modal-form__label">
                 <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
@@ -3329,15 +3322,15 @@
             <h2 class="g-title g-title--center modal__title modal__title--light">войти c паролем</h2>
             <form class="modal-form validate-form" action="#">
               <input class="g-input modal-form__input" type="text" name="text" placeholder="ВВЕДИТЕ ТЕЛЕФОН ИЛИ E-mail">
-              <label class="g-input-password modal-form__label modal-form__label--2 js-cabinet-input">
+              <div class="g-input-password modal-form__label modal-form__label--2 js-cabinet-input">
                 <input class="g-input modal-form__input g-input-password__input" type="password" name="password" placeholder="Введите пароль">
                 <button class="btn-reset g-input-password__btn" type="button">
                   <svg class="svg-icon show-password">
                     <use xlink:href="./img/sprites/sprite.svg#show-password"></use>
                   </svg>
                 </button>
-              </label>
-              <button class="btn-reset g-btn g-btn--black modal-form__btn modal-form__btn--2">Получить код</button><span class="modal__caption">
+              </div>
+              <button class="btn-reset g-btn g-btn--black modal-form__btn modal-form__btn--2">Получить код</button><span class="modal-form__bottom">
                 <button class="btn-reset modal__link modal__link--2 modal-btn" data-graph-animation="fadeInUp" data-graph-path="password-recovery" data-graph-speed="500" type="button">Забыли пароль?</button></span>
               <label class="modal-form__label">
                 <input class="modal-form__checkbox" type="checkbox" checked><span class="modal-form__switch"></span><span class="modal-form__desc">Я согласен на обработку персональных данных</span>
