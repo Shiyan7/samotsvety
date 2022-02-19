@@ -495,11 +495,11 @@ mixin cartProduct(cls)
           button.btn-reset.cart-product__more.read-more(type="button" data-text="Посмотреть характеристики") Посмотреть характеристики
     .cart-product-info
       .cart-product-info__item
-        span.cart-product-info__caption Размер:
-        span.cart-product-info__value 16.6
+        .cart-product-info__caption Размер:
+        .cart-product-info__value 16.6
       .cart-product-info__item
-        span.cart-product-info__caption Кол-во:
-        span.cart-product-info__value
+        .cart-product-info__caption Кол-во:
+        .cart-product-info__value
           .g-stepper
             .g-stepper__wrapper
               label.g-stepper__field
@@ -510,11 +510,11 @@ mixin cartProduct(cls)
                 button.btn-reset.g-stepper__btn.g-stepper__btn--up(tabindex="-1" aria-label="Увеличить количество")
                   +icon("arrow-right")
       .cart-product-info__item
-        span.cart-product-info__caption Цена:
-        span.cart-product-info__value.cart-product-info__value--bold 77 975 ₽
+        .cart-product-info__caption Цена:
+        .cart-product-info__value.cart-product-info__value--bold 77 975 ₽
       .cart-product-info__item
-        span.cart-product-info__caption Сумма:
-        span.cart-product-info__value.cart-product-info__value--bolder 77 975 ₽
+        .cart-product-info__caption Сумма:
+        .cart-product-info__value.cart-product-info__value--bolder 77 975 ₽
     button.btn-reset.cart-product__remove.modal-btn(data-graph-animation="fadeInUp" data-graph-path="delete-product" data-graph-speed="500" type="button")
       +icon("cross2")
 
