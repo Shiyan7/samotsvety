@@ -76,6 +76,11 @@
         
         @media (min-width: 1241px) {
             display: flex;
+            position: absolute;
+            justify-content: center;
+            transform: translateX(30px);
+            left: 271px;
+            z-index: 11;
         }
 
         .g-tabs__item {
@@ -100,6 +105,10 @@
         display: flex;
         align-items: center;
         margin-bottom: 23px;
+
+        @media (min-width: 1241px) {
+            position: relative;
+        }
 
         @media (max-width: 576px) {
             border-top: 1px solid #d9d9d9;
