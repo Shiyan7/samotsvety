@@ -598,13 +598,20 @@
     }
 
     &__map {
-        width: 100%;
-        height: 552px;
+        position: relative;
 
-        @media (max-width: 576px) {
-            height: 360px;
+        @media (max-width: 768px) {
             margin: 0 -37px;
             min-width: calc(100% + 74px);
+        }
+
+        .map {
+            width: 100%;
+            height: 552px;
+
+            @media (max-width: 768px) {
+                height: 360px;
+            }
         }
     }
 
@@ -691,4 +698,134 @@
 
 .g-accordion.isOpen .payment-method {
     display: flex;
+}
+
+.map-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    padding: 60px 47px;
+    
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: 300px;
+        position: static;
+        padding: 30px 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 576px) {
+        padding: 20px 0;
+    }
+
+    &__success {
+        display: block;
+        margin-bottom: 32px;
+        color: #008315;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        @media (max-width: 576px) {
+            margin-bottom: 18px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__address {
+        display: block;
+        font-size: 18px;
+        line-height: 24px;
+        color: #111;
+        max-width: 269px;
+        font-style: normal;
+        margin-bottom: 9px;
+        
+        @media (max-width: 768px) {
+            margin: 0 auto 9px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 13px;
+            line-height: 17px;
+        }
+    }
+
+    &__hours {
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        margin-bottom: 22px;
+        color: rgba(#000, 0.5);
+
+        @media (max-width: 576px) {
+            font-size: 13px;
+            line-height: 17px;
+            margin-bottom: 15px;
+        }
+
+        span {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            margin: 0 auto 22px;
+        }
+    }
+
+    &__tel {
+        display: block;
+        margin-bottom: 57px;
+        font-size: 14px;
+        line-height: 24px;
+        color: #111;
+
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 25px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        span {
+            display: block;
+            padding-left: 30px;
+
+            @media (max-width: 768px) {
+                display: inline;
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__price {
+        display: block;
+        font-size: 22px;
+        line-height: 30px;
+        color: #111;
+        font-weight: 500;
+        margin-bottom: 31px;
+
+        @media (max-width: 576px) {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__btn {
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
 }
